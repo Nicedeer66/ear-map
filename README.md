@@ -73,6 +73,10 @@ python3 meta.py    # 重新写入分享预览信息
 
 各章共用 `a1-blues/` 里的音频引擎，所以 `build.py` 会先构建 A1。
 
+## 给 AI 助手
+
+用 AI 编程助手修改这个仓库时，请先让它阅读 [AGENTS.md](AGENTS.md)，里面是项目的规则和已确认的决定。
+
 ## 授权
 
 - **原创内容**（文字、图解、合成示例、插画）：[CC BY-NC-SA 4.0](LICENSE-CONTENT.md)
