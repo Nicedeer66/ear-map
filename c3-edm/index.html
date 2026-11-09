@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>C3 电子舞曲 · 耳朵的地图</title>
+<!--share-->
+<meta name="description" content="没有乐队，没有歌手站在台前，只有机器、低音和一整夜不停的四拍底鼓。从慕尼黑的合成器、芝加哥的仓库、底特律的工厂，到英国田野里的锐舞和今天的万人音乐节：这一章讲人怎样用机器让身体跳起来。">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="耳朵的地图">
+<meta property="og:title" content="C3 电子舞曲 · 耳朵的地图">
+<meta property="og:description" content="没有乐队，没有歌手站在台前，只有机器、低音和一整夜不停的四拍底鼓。从慕尼黑的合成器、芝加哥的仓库、底特律的工厂，到英国田野里的锐舞和今天的万人音乐节：这一章讲人怎样用机器让身体跳起来。">
+<meta property="og:image" content="https://earmap.liangdeer.com/c3-edm/img/c3-edm.jpg">
+<meta property="og:url" content="https://earmap.liangdeer.com/c3-edm/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<!--/share-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@700;900&family=Monoton&family=Space+Mono:wght@400;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@700;900&family=Monoton&family=Space+Mono:wght@400;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
+<style>
+/* 全书骨架固定；本章皮肤：电子舞曲 = 合成器面板、步进音序器按键、液晶屏、激光和霓虹传单 */
+:root{
+  --paper:#F1F1EC; --paper-2:#E4E4DE; --ink:#101014; --ink-2:#585865;
+  --red:#D4148F; --denim:#0088B0; --mustard:#8FA300; --soft:#F3FFC2;
+  --line:rgba(16,16,20,.14); --card:#FBFBF8;
+  --font-display:"Noto Serif SC","Songti SC",serif;
+  --font-body:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --font-wood:"Monoton","Noto Sans SC",sans-serif; --font-lcd:"Space Mono",ui-monospace,monospace;
+  --font-mono:"IBM Plex Mono",ui-monospace,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0B0B10; --paper-2:#14141B; --ink:#ECECF2; --ink-2:#9C9CAE;
+    --red:#FF4FD8; --denim:#2FE3FF; --mustard:#E6FF3A; --soft:#22281A;
+    --line:rgba(236,236,242,.13); --card:#15151C; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0B0B10; --paper-2:#14141B; --ink:#ECECF2; --ink-2:#9C9CAE;
+  --red:#FF4FD8; --denim:#2FE3FF; --mustard:#E6FF3A; --soft:#22281A;
+  --line:rgba(236,236,242,.13); --card:#15151C; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.9;padding-bottom:40px}
+a{color:var(--red)}
+:focus-visible{outline:3px solid var(--denim);outline-offset:2px}
+.wrap{max-width:700px;margin:0 auto;padding:0 20px}
+.wide{max-width:1040px;margin:0 auto;padding:0 20px}
+
+.albumbar{border-bottom:1px solid var(--line);font-family:var(--font-mono);font-size:12.5px;background:var(--paper)}
+.albumbar .wide{display:flex;gap:16px;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+.albumbar .book{color:var(--ink-2);letter-spacing:.04em}
+.tracks{display:flex;gap:6px;flex-wrap:wrap}
+.tracks span{padding:3px 9px;border:1px solid var(--line);border-radius:99px;color:var(--ink-2)}
+.tracks span.on{background:var(--red);border-color:var(--red);color:var(--paper)}
+.tracks span.soon{opacity:.55}
+
+/* 章首：仓库锐舞的激光，颜色固定 */
+.hero{color:#fff;background:#07070B;background-image:linear-gradient(115deg,rgba(0,0,0,0) 49.6%,rgba(255,79,216,.55) 50%,rgba(0,0,0,0) 50.4%),linear-gradient(65deg,rgba(0,0,0,0) 49.7%,rgba(47,227,255,.5) 50%,rgba(0,0,0,0) 50.3%),linear-gradient(95deg,rgba(0,0,0,0) 49.8%,rgba(230,255,58,.45) 50%,rgba(0,0,0,0) 50.2%),radial-gradient(ellipse 70% 60% at 50% 0,rgba(140,60,255,.35),rgba(0,0,0,0) 70%);border-bottom:4px solid #E6FF3A}
+.opener{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:40px;align-items:center;padding-top:52px;padding-bottom:60px}
+.code{font-family:var(--font-lcd);font-size:13px;letter-spacing:.12em;color:#E6FF3A;border:1px solid #E6FF3A;display:inline-block;padding:3px 10px}
+.rave{font-family:var(--font-body);font-weight:900;font-size:clamp(64px,10vw,104px);line-height:1.05;margin:18px 0 0;color:#F6FFD0;text-shadow:0 0 6px #E6FF3A,0 0 24px rgba(230,255,58,.7),0 0 60px rgba(255,79,216,.6);letter-spacing:.03em}
+.sub{font-family:var(--font-wood);font-size:44px;font-weight:400;margin:14px 0 14px;color:#2FE3FF;text-shadow:0 0 18px rgba(47,227,255,.7);letter-spacing:.02em}
+.lede{font-size:18px;margin:0;max-width:30em;color:#E3E3EE}
+.meta-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;font-family:var(--font-lcd);font-size:12px}
+.meta-row span{padding:3px 10px;border:1px solid rgba(255,255,255,.35);color:#fff}
+figure{margin:0}
+.art{width:100%;aspect-ratio:4/3;display:block;background:#07070B;border:1px solid rgba(255,255,255,.25);box-shadow:0 0 0 6px #07070B,0 0 0 7px rgba(255,79,216,.6),0 0 40px rgba(255,79,216,.35)}
+.opener figcaption{font-family:var(--font-lcd);font-size:11.5px;color:#BDBDCC;margin-top:16px}
+
+.mapstrip{display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:14px 0 6px;font-size:13px}
+.mapstrip b{font-family:var(--font-mono);font-weight:500;font-size:12px;color:var(--ink-2);margin-right:4px}
+.mapstrip span{padding:3px 10px;border-radius:99px;border:1px dashed var(--line);color:var(--ink-2)}
+.mapstrip span.here{border:1px solid var(--red);background:var(--red);font-weight:700;color:var(--paper)}
+
+.toc{border-top:3px double var(--ink);border-bottom:3px double var(--ink);padding:16px 4px;margin:32px 0;font-size:14.5px}
+.toc b{font-family:var(--font-wood);font-size:16px;color:var(--red);font-weight:400;letter-spacing:.04em}
+.toc ol{margin:8px 0 0;padding-left:1.4em;columns:2;column-gap:28px}
+.toc li{break-inside:avoid;margin-bottom:2px}
+.toc a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--ink-2)}
+.toc a:hover{color:var(--red)}
+
+article h2{font-family:var(--font-display);font-weight:900;font-size:30px;line-height:1.35;margin:80px 0 16px;text-wrap:balance;scroll-margin-top:20px}
+article h2 .n{font-family:var(--font-wood);font-size:15px;font-weight:400;color:var(--red);display:block;margin-bottom:6px;letter-spacing:.06em}
+article h2 .n::before{content:"★ "}
+article h3{font-family:var(--font-display);font-size:20px;font-weight:900;margin:36px 0 8px;text-wrap:balance}
+article p{margin:0 0 18px}
+.mark{background:linear-gradient(transparent 60%,var(--soft) 60%);color:inherit}
+.scene{font-family:var(--font-display);font-weight:600;font-size:18.5px;line-height:2;border-left:3px solid var(--red);padding-left:20px;margin:40px 0}
+.scene p{margin:0 0 12px}
+ul.clean,ol.clean{padding-left:1.3em;margin:0 0 18px}
+ul.clean li,ol.clean li{margin-bottom:8px}
+.k{background:var(--soft);padding:0 5px;border-radius:3px}
+
+.ask{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:start;background:var(--card);border:1px solid var(--line);border-left:5px solid var(--denim);padding:16px 18px;margin:28px 0;border-radius:4px}
+.ask .who{font-family:var(--font-mono);font-size:12px;background:var(--denim);color:var(--paper);padding:2px 10px;margin-top:3px;white-space:nowrap;border-radius:3px}
+.ask p{margin:0}
+.ask p.q{font-weight:700}
+
+.lab{background:var(--card);border:1px solid var(--line);border-top:6px solid var(--denim);padding:20px;margin:28px 0;border-radius:4px;box-shadow:0 1px 0 var(--line)}
+.lab .head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.lab .head strong{font-size:16px}
+.lab .head .tag{font-family:var(--font-wood);font-size:14px;color:var(--red);letter-spacing:.04em}
+.lab .head small{color:var(--ink-2);font-size:13px}
+.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:14px}
+button{font:inherit;font-size:14px;line-height:1.4;border:1px solid var(--ink);background:transparent;color:var(--ink);padding:6px 14px;cursor:pointer;border-radius:99px}
+button.primary{background:var(--denim);border-color:var(--denim);color:var(--paper)}
+button:hover{background:var(--soft);color:var(--ink)}
+button.playing{background:var(--red);border-color:var(--red);color:var(--paper)}
+.controls label{font-size:13px;color:var(--ink-2);display:flex;gap:8px;align-items:center}
+.note{font-size:13.5px;color:var(--ink-2);margin:10px 0 0;line-height:1.75}
+.cols3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:6px}
+.cols2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:6px}
+.cols4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:6px}
+.opt{border:1px solid var(--line);padding:12px;background:var(--paper);border-radius:4px}
+.opt b{display:block;font-size:15px}
+.opt p{font-size:13.5px;color:var(--ink-2);margin:4px 0 10px;line-height:1.7}
+.strip{display:grid;grid-template-columns:repeat(var(--n,12),minmax(0,1fr));gap:4px;margin-top:12px}
+.strip i{display:block;height:8px;background:var(--line);border-radius:2px}
+.strip i.now{background:var(--red)}
+
+.fig{margin:34px 0}
+.fig svg{width:100%;height:auto;display:block}
+.fig figcaption,.photo figcaption{font-family:var(--font-mono);font-size:12px;color:var(--ink-2);margin-top:8px;line-height:1.6}
+.fig .frame{background:var(--card);border:1px solid var(--line);padding:16px;border-radius:4px}
+.photo{margin:34px 0}
+.photo img{width:100%;display:block;filter:sepia(.35) contrast(1.04);border:1px solid var(--line);border-radius:4px}
+.photo .cap b{color:var(--ink);font-family:var(--font-body);font-size:13.5px;font-weight:700;display:block;margin-bottom:2px}
+.photo-fallback{border:1px dashed var(--ink-2);padding:28px 18px;text-align:center;font-size:13.5px;color:var(--ink-2);background:var(--paper-2);line-height:1.7;border-radius:4px}
+.photo-fallback a{font-family:var(--font-mono);font-size:12.5px}
+.sv-ink{fill:var(--ink)}.sv-paper{fill:var(--paper)}.sv-p2{fill:var(--paper-2)}.sv-card{fill:var(--card)}
+.sv-red{fill:var(--red)}.sv-denim{fill:var(--denim)}.sv-must{fill:var(--mustard)}.sv-soft{fill:var(--soft)}
+.sv-l{stroke:var(--ink);fill:none}.sv-lr{stroke:var(--red);fill:none}.sv-ld{stroke:var(--denim);fill:none}.sv-lline{stroke:var(--line);fill:none}
+.sv-t{fill:var(--ink);font-family:var(--font-body);font-size:13px}
+.sv-tb{fill:var(--ink);font-family:var(--font-display);font-size:15px;font-weight:900}
+.sv-ts{fill:var(--ink-2);font-family:var(--font-body);font-size:11.5px}
+.sv-m{fill:var(--ink-2);font-family:var(--font-mono);font-size:11px}
+.sv-on{fill:var(--paper);font-family:var(--font-body);font-size:12.5px;font-weight:700}
+.sv-onm{fill:var(--paper);font-family:var(--font-mono);font-size:12px}
+.sv-r{fill:var(--red);font-family:var(--font-body);font-size:12px}
+.sv-d{fill:var(--denim);font-family:var(--font-body);font-size:12px}
+.sv-wood{fill:var(--ink);font-family:var(--font-wood);font-size:18px}
+
+table.cmp{width:100%;border-collapse:collapse;font-size:14.5px;margin:18px 0;line-height:1.65}
+table.cmp th,table.cmp td{border-bottom:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+table.cmp th{font-family:var(--font-display);font-weight:900;border-bottom:3px double var(--ink)}
+table.cmp td:first-child{font-weight:700;width:6.5em}
+.tablewrap{overflow-x:auto}
+
+.timeline{list-style:none;padding:0;margin:20px 0;border-left:2px solid var(--ink)}
+.timeline li{position:relative;padding:0 0 20px 22px}
+.timeline li::before{content:"★";position:absolute;left:-9px;top:2px;font-size:15px;color:var(--red);background:var(--paper);line-height:1.2}
+.timeline .yr{font-family:var(--font-mono);font-size:13px;color:var(--red)}
+.timeline b{display:block;font-size:17px}
+.timeline p{margin:4px 0 0;font-size:15.5px}
+
+.side{font-family:var(--font-mono);font-size:12px;color:var(--ink-2);letter-spacing:.06em;border-bottom:3px double var(--ink);padding-bottom:6px;margin:30px 0 4px;display:flex;justify-content:space-between;gap:10px}
+.song{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}
+.playlink{display:grid;place-items:center;width:44px;height:44px;background:var(--denim);color:var(--paper);border-radius:50%}
+.playlink:hover{background:var(--red)}
+.song .meta{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}
+.song .title{font-family:var(--font-display);font-weight:900;font-size:17px}
+.song .by{color:var(--ink-2);font-size:14px}
+.song .yr{font-family:var(--font-mono);font-size:12px;color:var(--red)}
+.song .style{font-family:var(--font-mono);font-size:11.5px;border:1px solid var(--line);border-radius:99px;padding:0 8px;color:var(--ink-2)}
+.song p{margin:6px 0 8px;font-size:15px;line-height:1.75}
+.song .listen{font-size:14.5px;margin:0 0 8px;padding-left:1.2em}
+.song .listen li{margin-bottom:4px}
+.listen-links{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:6px}
+.listen-links a{font-family:var(--font-mono);font-size:12px;border:1px solid var(--line);border-radius:99px;padding:3px 10px;text-decoration:none;color:var(--ink);background:var(--card)}
+.listen-links a.main{background:var(--denim);border-color:var(--denim);color:var(--paper)}
+.listen-links a:hover{border-color:var(--red);color:var(--red)}
+.listen-links a.main:hover{background:var(--red);color:#FAF5EA}
+
+.mine{border:1px dashed var(--ink-2);padding:16px 18px;margin:28px 0;color:var(--ink-2);border-radius:4px}
+.mine .lbl{font-family:var(--font-wood);font-size:14px;color:var(--red)}
+dl.gloss{display:grid;grid-template-columns:minmax(0,8.5em) minmax(0,1fr);gap:10px 18px;font-size:15px;line-height:1.7;margin:16px 0}
+dl.gloss dt{font-weight:900;font-family:var(--font-display)}
+dl.gloss dd{margin:0;color:var(--ink-2)}
+
+.credits{background:#2B2621;color:#EEE5D3;margin-top:72px;padding:40px 0 48px;border-top:6px double #D7A13E}
+.credits h2{font-family:var(--font-wood);font-weight:400;font-size:30px;margin:0 0 16px;color:#E4B65A}
+.credits dl{display:grid;grid-template-columns:minmax(0,9em) minmax(0,1fr);gap:8px 16px;margin:0;font-size:14px;line-height:1.75}
+.credits dt{font-family:var(--font-mono);font-size:12px;opacity:.7;padding-top:3px}
+.credits dd{margin:0}
+.credits a{color:#E4B65A}
+.next{display:flex;justify-content:space-between;gap:12px;margin-top:28px;font-family:var(--font-mono);font-size:13px;opacity:.85;flex-wrap:wrap}
+.stopfab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:10;display:none;background:var(--red);border-color:var(--red);color:#FAF5EA}
+.stopfab.on{display:inline-block}
+
+@media (max-width:760px){
+  .opener{grid-template-columns:1fr;gap:24px;padding-top:28px}
+  .cols3,.cols2,.cols4{grid-template-columns:1fr}
+  .toc ol{columns:1}
+  .credits dl,dl.gloss{grid-template-columns:1fr}
+  dl.gloss dd{margin-bottom:6px}
+}
+
+/* ================= C3 正文：合成器面板、液晶屏、步进按键、霓虹 ================= */
+:root:not(#x){--panel:#1A1A20;--panel2:#24242C;--lcd:#B7D97A;--lcdink:#1D2A0E;--neon:linear-gradient(90deg,#FF4FD8,#8C5CFF,#2FE3FF);--gridl:rgba(16,16,20,.06)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]):not(#x){--gridl:rgba(236,236,242,.04)}}
+body{background-image:linear-gradient(var(--gridl) 1px,rgba(0,0,0,0) 1px),linear-gradient(90deg,var(--gridl) 1px,rgba(0,0,0,0) 1px);background-size:24px 24px}
+.albumbar{background:#07070B;color:#ddd;border-color:#07070B}.albumbar .book{color:#ddd}
+.tracks span{border-radius:2px;border-color:#333;color:#ccc;font-family:var(--font-lcd)}.tracks span.on{background:#E6FF3A;border-color:#E6FF3A;color:#07070B}
+.mapstrip span{border-radius:2px}.mapstrip .here{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+/* 小节标题：液晶屏 */
+article h2{font-weight:900;font-size:32px;margin:96px 0 22px;display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+article h2 .n{font-family:var(--font-lcd);font-size:14px;font-weight:700;letter-spacing:.1em;color:var(--lcdink);background:var(--lcd);padding:4px 12px;border-radius:3px;box-shadow:inset 0 0 0 2px rgba(0,0,0,.25),0 0 0 3px var(--panel);margin:0;text-transform:uppercase}
+article h2 .n::before{content:"▶ "}
+article h2::after{content:"";width:100%;height:3px;background:var(--neon);border-radius:2px;margin-top:4px}
+article h3{font-weight:900}
+.mark{background:none;color:inherit;font-weight:700;box-shadow:inset 0 -.45em 0 rgba(212,20,143,.22)}
+/* 开场：深色面板 + 一道扫过的激光 */
+.scene{position:relative;border:0;border-radius:8px;background:#07070B;color:#E3E3EE;padding:34px 30px 24px;overflow:hidden;box-shadow:0 0 0 1px #2a2a33,0 18px 40px rgba(0,0,0,.25)}
+.scene::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:var(--neon)}
+.scene::after{content:"MÜNCHEN · 1977";position:absolute;top:10px;right:14px;font-family:var(--font-lcd);font-size:11px;letter-spacing:.14em;color:#E6FF3A}
+.scene p:first-child{font-family:var(--font-lcd);font-size:13px;letter-spacing:.12em;color:#2FE3FF}
+/* 目录：带 BPM 的曲目单 */
+.toc{border:0;border-radius:8px;padding:22px 24px;background:var(--panel);color:#E3E3EE;box-shadow:0 0 0 1px #000,0 10px 26px rgba(0,0,0,.2)}
+.toc b{font-family:var(--font-lcd);font-size:14px;letter-spacing:.14em;color:#E6FF3A;font-weight:700}
+.toc ol{list-style:none;padding:0;counter-reset:t}
+.toc li{counter-increment:t;display:flex;gap:12px;align-items:baseline;padding:4px 0;border-bottom:1px dashed #333}
+.toc li::before{content:counter(t,decimal-leading-zero);font-family:var(--font-lcd);color:#FF4FD8;font-size:13px}
+.toc a{color:#E3E3EE;border:0}
+/* 实验框：合成器模块（深色固定） */
+.lab{position:relative;border:0;border-radius:6px;background:var(--panel);color:#E3E3EE;padding:22px 22px 20px;box-shadow:0 0 0 1px #000,inset 0 1px 0 rgba(255,255,255,.08),0 12px 26px rgba(0,0,0,.25)}
+.lab::before{content:"";position:absolute;inset:7px;pointer-events:none;background:radial-gradient(circle,#6a6a74 0 2.5px,#2a2a30 3px 4px,rgba(0,0,0,0) 4.5px) 0 0/9px 9px no-repeat,radial-gradient(circle,#6a6a74 0 2.5px,#2a2a30 3px 4px,rgba(0,0,0,0) 4.5px) 100% 0/9px 9px no-repeat,radial-gradient(circle,#6a6a74 0 2.5px,#2a2a30 3px 4px,rgba(0,0,0,0) 4.5px) 0 100%/9px 9px no-repeat,radial-gradient(circle,#6a6a74 0 2.5px,#2a2a30 3px 4px,rgba(0,0,0,0) 4.5px) 100% 100%/9px 9px no-repeat}
+.lab .head{display:flex;flex-wrap:wrap;align-items:center;gap:12px;border-bottom:1px solid #33333c;padding-bottom:12px;margin-bottom:14px}
+.lab .head .tag{font-family:var(--font-lcd);font-size:12px;font-weight:700;color:#1D2A0E;background:#B7D97A;padding:3px 8px;border-radius:2px;letter-spacing:.1em}
+.lab .head strong{color:#fff;font-weight:900}.lab .head small{color:#9C9CAE;font-family:var(--font-lcd);font-size:11.5px}
+.lab .head::after{content:"";margin-left:auto;width:62px;height:16px;background:radial-gradient(circle,#0a0a0c 0 4px,#55555e 4.5px 6px,rgba(0,0,0,0) 6.5px) 0 50%/16px 16px repeat-x}
+.lab .note{color:#C4C4D2}
+.opt{background:var(--panel2);border:1px solid #33333c;border-radius:4px}.opt b{color:#fff}.opt p{color:#C4C4D2}
+button{border-radius:3px;border:0;background:#E8E6DF;color:#141414;font-weight:900;font-family:var(--font-body);box-shadow:inset 0 -4px 0 rgba(0,0,0,.18),0 2px 0 #000}
+button:hover{background:#fff}
+button.primary{background:#FF6A1F;color:#fff;box-shadow:inset 0 -4px 0 rgba(0,0,0,.22),0 2px 0 #000}
+button.playing{background:#E6FF3A;color:#141414;box-shadow:0 0 0 2px #000,0 0 18px rgba(230,255,58,.9)}
+.strip i{border-radius:2px;background:#3a3a44}.strip i.now{background:#FF6A1F;box-shadow:0 0 10px #FF6A1F}
+/* 图解：示波器方格 + 四角括号 */
+.fig .frame{position:relative;border:0;border-radius:4px;padding:28px 24px;background-color:var(--card);background-image:linear-gradient(var(--gridl) 1px,rgba(0,0,0,0) 1px),linear-gradient(90deg,var(--gridl) 1px,rgba(0,0,0,0) 1px);background-size:20px 20px;box-shadow:0 8px 20px rgba(0,0,0,.08)}
+.fig .frame::before,.fig .frame::after{content:"";position:absolute;width:22px;height:22px;border:3px solid var(--red)}
+.fig .frame::before{left:8px;top:8px;border-right:0;border-bottom:0}.fig .frame::after{right:8px;bottom:8px;border-left:0;border-top:0}
+.photo{border-radius:4px;background:var(--panel);padding:10px;box-shadow:0 8px 20px rgba(0,0,0,.15)}.photo img{border:0;border-radius:0}.photo .cap{color:#C4C4D2;padding:10px 4px 2px}.photo .cap b{color:#fff}
+/* 曲目：霓虹传单（深色固定） */
+#songsA,#songsB{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.side{border:0;margin:40px 0 14px;font-family:var(--font-lcd);font-size:15px;letter-spacing:.12em;text-transform:uppercase}
+.song{position:relative;display:block;margin:0;border:0;border-radius:6px;background:#0B0B10;color:#E3E3EE;padding:18px 18px 16px;box-shadow:0 0 0 1px var(--nc,#FF4FD8),0 0 18px -4px var(--nc,#FF4FD8),inset 0 0 30px -12px var(--nc,#FF4FD8)}
+.song .meta{display:block;margin-bottom:6px}
+.song .yr{display:inline-block;font-family:var(--font-lcd);font-size:12px;color:#0B0B10;background:var(--nc,#FF4FD8);padding:1px 8px;border-radius:2px}
+.song .title{display:block;font-family:var(--font-body);font-weight:900;font-size:19px;line-height:1.3;color:#fff;margin-top:8px;text-shadow:0 0 12px var(--nc,#FF4FD8)}
+.song .by{display:block;color:var(--nc,#FF4FD8);font-weight:700;font-size:14px}
+.song .pmeta{display:flex;gap:8px;align-items:center}
+.song .style{font-size:11.5px;border:1px solid #444;color:#bbb;padding:0 8px;border-radius:2px}
+.song p{font-size:13.8px;color:#CFCFDC}.song .listen{font-size:13.2px;color:#AFAFC0;padding-left:18px}
+.playlink{position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:50%;background:var(--nc,#FF4FD8);color:#0B0B10}
+.listen-links a{border-radius:2px;border-color:#444;color:#ddd;background:transparent}.listen-links a.main{background:var(--nc,#FF4FD8);border-color:var(--nc,#FF4FD8);color:#0B0B10}
+/* 术语表与其他 */
+dl.gloss dt{justify-self:start;align-self:start;font-family:var(--font-lcd);font-weight:700;font-size:12.5px;color:#1D2A0E;background:#B7D97A;padding:3px 10px;border-radius:2px}
+.mine{border:1px solid var(--line);border-radius:6px;background:var(--soft);color:var(--ink)}.mine .lbl{font-family:var(--font-lcd);font-weight:700;color:var(--red)}
+.law{border-left:4px solid #FF6A1F;background:var(--card);padding:14px 18px;margin:24px 0;border-radius:0 6px 6px 0}
+.credits{background:#07070B;color:#ddd;border-top:3px solid transparent;border-image:linear-gradient(90deg,#FF4FD8,#8C5CFF,#2FE3FF) 1}.credits h2{font-family:var(--font-wood);font-weight:400;color:#E6FF3A;font-size:42px;text-shadow:0 0 18px rgba(230,255,58,.6)}.credits a{color:#2FE3FF}
+@media (max-width:760px){.opener{grid-template-columns:1fr}#songsA,#songsB{grid-template-columns:1fr}}
+
+.scene{font-family:var(--font-body)}.scene p{font-weight:400}
+
+.opener .cover-preview {
+  --preview-bg: #12121b;
+  --preview-ink: #dedeea;
+  --preview-line: #555563;
+  --preview-active: #E6FF3A;
+}
+/*nav-unify*/.albumbar a{color:inherit;text-decoration:none}.albumbar a.book:hover{text-decoration:underline}.tracks span a{color:inherit;text-decoration:none;display:block}.tracks span:not(.on):hover{opacity:.72}.next a{color:inherit;text-decoration:none;border-bottom:1px solid currentColor}.next a:hover{opacity:.7}</style>
+<link rel="stylesheet" href="../cover-preview.css">
+</head>
+<body>
+
+<header class="albumbar">
+  <div class="wide">
+    <a class="book" href="../index.html" data-nav="toc">耳朵的地图 · 第二张唱片 · SIDE C 律动 · 目录</a>
+    <nav class="tracks" aria-label="本面曲目">
+      <span><a href="../c1-soul/index.html" data-nav="c1-soul">C1 灵魂乐与放克</a></span>
+      <span><a href="../c2-hiphop/index.html" data-nav="c2-hiphop">C2 嘻哈</a></span>
+      <span class="on"><a aria-current="page">C3 电子舞曲</a></span>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+<section class="wide opener">
+  <div>
+    <div class="code">SIDE C · TRACK 03 · 律动</div>
+    <div class="rave">电子舞曲</div>
+    <p class="sub">Dance</p>
+    <p class="lede">没有乐队，没有歌手站在台前，只有机器、低音和一整夜不停的四拍底鼓。从慕尼黑的合成器、芝加哥的仓库、底特律的工厂，到英国田野里的锐舞和今天的万人音乐节：这一章讲人怎样用机器让身体跳起来。</p>
+    <div class="meta-row"><span>阅读约 55 分钟</span><span>可听示例 18 个</span><span>插图 8 幅</span><span>推荐曲目 12 首</span></div>
+  </div>
+  <figure>
+    <img class="art" src="img/c3-edm.jpg" width="1600" height="1200" alt="旧仓库里的人群剪影，绿、蓝和品红色激光扫过烟雾" style="height:auto">
+    <figcaption>章首插画 · 旧仓库里的人群剪影，绿、蓝和品红色激光扫过烟雾</figcaption>
+    <button class="cover-preview" type="button" data-demo="drop">
+      <span class="preview-play"><span aria-hidden="true">▶</span> 试听 · 电子舞曲</span>
+      <span class="preview-stop"><span aria-hidden="true">■</span> 停止</span>
+    </button>
+  </figure>
+</section>
+</div>
+
+<div class="wide">
+  <div class="mapstrip" aria-label="地图定位">
+    <b>你在这里 →</b>
+    <span>灵魂乐与放克</span><span>嘻哈</span><span class="here">电子舞曲</span><span>另类</span><span>当代流行</span>
+  </div>
+</div>
+
+<article class="wrap">
+
+  <div class="scene">
+    <p>SEQUENCE 001</p>
+    <p>1977 年，西德慕尼黑。意大利制作人 Giorgio Moroder 正在给美国歌手 Donna Summer 做一首新歌。和当时所有的迪斯科不同，这首歌的伴奏几乎全部来自一台 Moog 合成器：一条贝斯线以十六分音符的速度永不停歇地跳动，像一台精确的机器。</p>
+    <p>据说，当时正在柏林录音的 David Bowie 听到这首歌时，他的合作者 Brian Eno 冲进录音室说：就是它了，这首歌会改变接下来十几年的舞曲。</p>
+    <p>这首歌叫《I Feel Love》。Eno 说对了：接下来出现的浩室、Techno、Trance，几乎都能在那条机器般的贝斯线里找到影子。</p>
+  </div>
+
+  <p>上一章的嘻哈用唱片和采样器做音乐；这一章的音乐更彻底，几乎全部由<b>机器</b>生成：鼓机、合成器、音序器，后来是电脑。它们最初只为一个目的服务：<span class="mark">让舞池里的人一整夜跳下去</span>。</p>
+  <p>“电子舞曲”（electronic dance music）是一个很大的伞，下面有几十种子类型，乐迷对它们的区分非常讲究，往往从速度、鼓的打法和低音的样子就能分出来。这一章按历史顺序走一遍，每到一站都听一听它的“发动机”。</p>
+
+  <nav class="toc" aria-label="本章目录">
+    <b>TRACKLIST</b>
+    <ol>
+      <li><a href="#what">什么是电子舞曲</a></li>
+      <li><a href="#disco">迪斯科：舞池的诞生</a></li>
+      <li><a href="#house">芝加哥：浩室与酸性</a></li>
+      <li><a href="#techno">底特律与柏林：Techno</a></li>
+      <li><a href="#dj">DJ：积累、drop 与混音</a></li>
+      <li><a href="#rave">英国：锐舞、丛林与 dubstep</a></li>
+      <li><a href="#edm">Trance 与 EDM：万人的 drop</a></li>
+      <li><a href="#listen-mode">不只是跳舞：氛围与日本</a></li>
+      <li><a href="#chinese">中文世界的电子乐</a></li>
+      <li><a href="#listen">听：本章十二首曲目</a></li>
+      <li><a href="#practice">练 · 术语表</a></li>
+    </ol>
+  </nav>
+
+  <!-- 01 -->
+  <h2 id="what"><span class="n">01 · what</span>什么是电子舞曲</h2>
+  <p>和前面的类型比，电子舞曲有几个特别之处：</p>
+  <ul class="clean">
+    <li><b>机器演奏</b>：鼓机、合成器、采样器和电脑，大多数声音没有“演奏者”</li>
+    <li><b>为舞池设计</b>：稳定的速度（BPM）、反复的律动、长长的前奏和尾奏，方便 DJ 把一首接到下一首</li>
+    <li><b>DJ 是主角</b>：观众去俱乐部往往不是为了看某首歌的作者，而是为了听某位 DJ 一整晚的混音</li>
+    <li><b>积累与释放</b>：几分钟慢慢积累张力，然后在某一刻全部释放（drop）</li>
+    <li><b>按速度分家</b>：浩室约 120–128 BPM，Techno 约 125–140，丛林和鼓打贝斯约 160–180……速度常常是一种风格的身份证</li>
+  </ul>
+
+  <figure class="fig">
+    <div class="frame"><svg viewBox="0 0 680 360" role="img" aria-label="家谱：迪斯科和德国电子乐分别通向芝加哥浩室、底特律 Techno；浩室分出酸性浩室，进入英国锐舞；锐舞加上嘻哈的 breakbeat 变成丛林和鼓打贝斯、英国车库、dubstep；Techno 和浩室又通向 Trance 和 2010 年代的 EDM"><g id="tree-fig"></g></svg></div>
+    <figcaption>图 1 · 电子舞曲家谱（大大简化）。左边两个源头：美国的迪斯科，和德国乐队 Kraftwerk 为代表的电子乐。</figcaption>
+  </figure>
+
+  <!-- 02 -->
+  <h2 id="disco"><span class="n">02 · disco</span>迪斯科：舞池的诞生</h2>
+  <p>1970 年代初，纽约出现了一些新的夜店：DJ 不再只是放完一首换一首，而是把歌接起来，让音乐整夜不停。舞池里有很多黑人、拉丁裔和同性恋者，他们在主流社会里常常没有位置，在舞池里却可以自由地做自己。</p>
+  <p>为了让 DJ 好接歌，唱片公司开始发行<b>12 英寸单曲</b>：同一首歌，加长前奏和间奏，沟槽更宽，声音更响。上一章说过的费城灵魂乐的鼓手，用“每拍一下底鼓，反拍一下开镲”的打法，给迪斯科定下了节奏的基础：</p>
+
+  <figure class="fig">
+    <div class="frame"><svg viewBox="0 0 680 270" role="img" aria-label="鼓型对比：迪斯科和浩室都是每拍一下底鼓、反拍开镲；浩室用鼓机，加上第二四拍的拍手和十六分音符的踩镲"><g id="beat-fig"></g></svg></div>
+    <figcaption>图 2 · 迪斯科（真鼓）和浩室（鼓机）几乎是同一个节奏型。“咚 嚓 咚 嚓”里的“嚓”，就是反拍上的开镲。</figcaption>
+  </figure>
+
+  <p>迪斯科在 1970 年代末火遍全球，也招来了强烈的反感。1979 年在芝加哥的一场棒球赛上，一位电台 DJ 组织了“迪斯科粉碎之夜”，当众炸毁了大量迪斯科唱片，现场一度失控。很多人后来指出，这场“反迪斯科”运动里夹杂着对黑人和同性恋群体的敌意。迪斯科从主流退场了，但它在地下活了下来，变成了下一节的浩室。</p>
+
+  <div class="lab">
+    <div class="head"><span class="tag">LAB 01</span><strong>迪斯科与机器</strong><small>原创</small></div>
+    <div class="cols3">
+      <div class="opt"><b>迪斯科</b><p>四拍底鼓、反拍开镲、八度跳动的贝斯、弦乐。</p><button type="button" data-demo="disco">播放</button></div>
+      <div class="opt"><b>音序器</b><p>Moroder 式：一条十六分音符的合成器贝斯，像机器一样不停跳动。</p><button class="primary" type="button" data-demo="seq">播放</button></div>
+      <div class="opt"><b>人声合成器</b><p>Kraftwerk 式的机器人声：把人声变成合成器。</p><button type="button" data-demo="vocoder">播放</button></div>
+    </div>
+  </div>
+
+  <!-- 03 -->
+  <h2 id="house"><span class="n">03 · house</span>芝加哥：浩室与酸性</h2>
+  <p>1977 年，纽约 DJ Frankie Knuckles 搬到芝加哥，在一家叫 The Warehouse（仓库）的俱乐部打碟。他把迪斯科、欧洲电子乐和灵魂乐混在一起，还用鼓机给老唱片“加鼓”。人们去唱片店找“仓库里放的那种音乐”，店员就在架子上标“house music”，这就是<b>浩室</b>（house）名字的一种常见说法。</p>
+  <p>浩室的声音很简单：<b>罗兰 TR-909 / TR-808</b> 鼓机的四拍底鼓，反拍的开镲，钢琴和弦的切分“刺”，一条灵魂乐式的人声。它便宜、好做，芝加哥的年轻人用几台二手机器就能在家里做出唱片。</p>
+  <h3>酸性：一台“失败”的低音机</h3>
+  <p>罗兰公司 1981 年推出过一台小小的低音合成器 <b>TB-303</b>，本来是给吉他手练琴时当“电子贝斯手”用的。它模仿真贝斯模仿得很差，很快停产，在二手店里很便宜。芝加哥的几个年轻人买到一台，把它的“共振”旋钮拧到底，一边播放一边转动“截止频率”旋钮，得到一种尖叫、扭曲、像液体一样“吱吱”作响的声音。1987 年 Phuture 的《Acid Tracks》让这种声音有了名字：<b>酸性浩室</b>（acid house）。</p>
+
+  <figure class="fig">
+    <div class="frame"><svg viewBox="0 0 680 270" role="img" aria-label="滤波器示意：横轴是频率，纵轴是音量；一条低通滤波曲线在截止频率处有一个高高的共振峰；箭头表示截止频率左右移动时，共振峰扫过不同频率"><g id="filter-fig"></g></svg></div>
+    <figcaption>图 3 · 低通滤波器和“共振峰”。截止频率左右移动，那个尖尖的峰就扫过不同的频率，发出“哇—吱—”的声音。这就是酸性浩室的秘密。</figcaption>
+  </figure>
+
+  <div class="lab">
+    <div class="head"><span class="tag">LAB 02</span><strong>浩室与 303</strong><small>原创，124–126 BPM</small></div>
+    <div class="cols3">
+      <div class="opt"><b>浩室</b><p>909 式鼓、钢琴和弦的切分、温暖的低音。</p><button type="button" data-demo="house">播放</button></div>
+      <div class="opt"><b>303 · 不扭</b><p>同一条低音线，共振和滤波都不动。</p><button type="button" data-demo="flat303">播放</button></div>
+      <div class="opt"><b>303 · 酸性</b><p>共振拧高，滤波旋钮来回扫。</p><button class="primary" type="button" data-demo="acid">播放</button></div>
+    </div>
+  </div>
+
+  <figure class="photo">
+    <img src="img/tb-303.jpg" alt="罗兰 TB-303 低音合成器的正面，银色面板上有一排旋钮和一排小键" data-file="TB303_Front_View.jpg">
+    <figcaption class="cap"><b>Roland TB-303</b>维基共享资源 · 上传者声明为公有领域。上面一排旋钮里，“CUTOFF FREQ”和“RESONANCE”就是酸性浩室的两个关键旋钮</figcaption>
+  </figure>
+
+  <!-- 04 -->
+  <h2 id="techno"><span class="n">04 · techno</span>底特律与柏林：Techno</h2>
+  <p>在芝加哥东边的底特律，三个在郊区贝尔维尔一起长大的黑人少年 Juan Atkins、Derrick May 和 Kevin Saunderson（人称“贝尔维尔三人组”），同时迷上了德国乐队 Kraftwerk 的冷峻电子乐和美国的放克。底特律是一座汽车工业衰落中的城市，他们想象的是一种属于未来、属于机器的音乐。1988 年，一张英国发行的合辑《Techno! The New Dance Sound of Detroit》让 <b>Techno</b> 这个名字流传开来。</p>
+  <p>和浩室比，Techno 通常更快、更冷、更少人声，更像一台循环运转的机器：一个短小的动机反复几分钟，只靠音色和滤波的细微变化推动。Derrick May 的《Strings of Life》则证明了它也可以充满弦乐般的激情。</p>
+  <p>1989 年柏林墙倒塌后，东柏林留下了大量空置的工厂、发电站和地下室。Techno 在这些废墟里找到了第二个家：1991 年开业的 Tresor 俱乐部就在一座旧百货公司的金库里。今天的柏林仍是世界 Techno 的中心。</p>
+
+  <div class="lab">
+    <div class="head"><span class="tag">LAB 03</span><strong>底特律与柏林</strong><small>原创，130 BPM</small></div>
+    <div class="cols2">
+      <div class="opt"><b>底特律</b><p>有旋律的合成器弦乐，放克的切分。</p><button type="button" data-demo="detroit">播放</button></div>
+      <div class="opt"><b>柏林</b><p>黑暗、极简、低沉的轰鸣，一个动机重复到催眠。</p><button class="primary" type="button" data-demo="berlin">播放</button></div>
+    </div>
+  </div>
+
+  <!-- 05 -->
+  <h2 id="dj"><span class="n">05 · dj</span>DJ：积累、drop 与混音</h2>
+  <p>电子舞曲的结构是为 DJ 和舞池设计的。一首典型的舞曲大致是这样：</p>
+  <ul class="clean">
+    <li><b>前奏</b>：只有鼓，方便 DJ 和上一首歌对齐</li>
+    <li><b>积累</b>（build-up）：底鼓停下或变稀，军鼓越来越密，一个“上升音效”（riser）越来越高，滤波器慢慢打开</li>
+    <li><b>Drop</b>：一切在同一瞬间落下，底鼓和低音全力回来。舞池在这一刻举手</li>
+    <li><b>间歇</b>（breakdown）：再次抽空，给大家喘口气，然后再积累、再 drop</li>
+  </ul>
+
+  <figure class="fig">
+    <div class="frame"><svg viewBox="0 0 680 270" role="img" aria-label="能量曲线：一首电子舞曲的能量随时间变化，前奏平稳，积累段逐渐升高，drop 处达到顶点，间歇段骤降，再积累，再 drop，然后尾奏"><g id="energy-fig"></g></svg></div>
+    <figcaption>图 4 · 一首电子舞曲的“能量曲线”。注意 drop 前那一瞬间的空白：最响的地方，前面往往是最安静的一拍。</figcaption>
+  </figure>
+
+  <p>DJ 的基本功是<b>对拍</b>（beatmatching）：把下一首歌的速度调到和正在放的歌一样，让两首的底鼓完全重叠，然后在一个乐句的开头（通常是 16 或 32 小节）把音量慢慢交给下一首。观众听到的是一整晚不停的音乐。</p>
+
+  <figure class="fig">
+    <div class="frame"><svg viewBox="0 0 680 230" role="img" aria-label="混音示意：两首歌的方块在时间上重叠一段，交叉渐变器的曲线显示第一首逐渐变小、第二首逐渐变大；底部的拍子刻度显示两首歌的底鼓对齐"><g id="mix-fig"></g></svg></div>
+    <figcaption>图 5 · 两首歌在 16 小节里交接。只要底鼓对齐，换歌的那一刻舞池几乎察觉不到。</figcaption>
+  </figure>
+
+  <div class="lab">
+    <div class="head"><span class="tag">LAB 04</span><strong>DJ 台上的三件事</strong><small>原创</small></div>
+    <div class="cols3">
+      <div class="opt"><b>积累与 drop</b><p>军鼓越来越密，音效越来越高，然后一下落地。</p><button class="primary" type="button" data-demo="build">播放</button></div>
+      <div class="opt"><b>滤波扫频</b><p>同一段音乐，先“关在门外”，再慢慢把门打开。</p><button type="button" data-demo="filter">播放</button></div>
+      <div class="opt"><b>两首歌交接</b><p>两首不同的曲子对齐底鼓，交叉渐变。</p><button type="button" data-demo="mix">播放</button></div>
+    </div>
+    <div class="strip" data-strip="8" aria-hidden="true"></div>
+  </div>
+
+  <!-- 06 -->
+  <h2 id="rave"><span class="n">06 · rave</span>英国：锐舞、丛林与 dubstep</h2>
+  <p>1987 年，几个英国年轻人在西班牙伊维萨岛度假，听到了芝加哥的浩室；回国后，酸性浩室在英国爆发。1988 年和 1989 年的夏天被称为“第二次爱之夏”：成千上万的年轻人开车去乡间的仓库和田野，参加通宵的非法派对，这就是<b>锐舞</b>（rave）。</p>
+  <div class="law"><b>和法律有关的一段</b>：锐舞让英国政府很头疼。1994 年通过的《刑事司法与公共秩序法》里有一条专门针对户外锐舞的规定，赋予警方驱散聚会的权力，并在条文里给“音乐”下了一个后来常被引用的定义：主要由“一连串重复的节拍”构成的声音。很多乐手把这一条看作国家对一种音乐的点名，有乐队甚至专门写歌回应。</div>
+  <p>英国人接着把舞曲往不同的方向推：</p>
+  <ul class="clean">
+    <li><b>丛林 / 鼓打贝斯</b>（jungle / drum and bass）：把上一章的“Amen break”等嘻哈鼓点加速到 160–180 BPM，切碎重排，底下是缓慢而极深的低音。上半身跟着鼓狂奔，下半身跟着低音摇摆</li>
+    <li><b>英国车库</b>（UK garage / 2-step）：更慢、更摇摆，底鼓故意“漏掉”几拍，跳起来一步一顿</li>
+    <li><b>Dubstep</b>：2000 年代初起源于伦敦南部的克罗伊登，140 BPM 但军鼓只在第三拍，听起来像半速；最有名的是“摇摆低音”（wobble bass）：低音被一个周期性的滤波器拧来拧去，发出“哇哇哇”的声音</li>
+  </ul>
+
+  <figure class="fig">
+    <div class="frame"><svg viewBox="0 0 680 260" role="img" aria-label="摇摆低音示意：上面是一条正弦波形的 LFO，控制下面的滤波器截止频率；低音的亮度随 LFO 起伏，LFO 的速度可以是每拍一次、两次或三次"><g id="wobble-fig"></g></svg></div>
+    <figcaption>图 6 · 摇摆低音：一个慢速振荡器（LFO）控制滤波器。LFO 每拍转几圈，低音就“哇”几下。</figcaption>
+  </figure>
+
+  <div class="lab">
+    <div class="head"><span class="tag">LAB 05</span><strong>英国的三条路</strong><small>原创</small></div>
+    <div class="cols3">
+      <div class="opt"><b>丛林</b><p>约 170 BPM 的碎鼓，极深的低音。</p><button type="button" data-demo="jungle">播放</button></div>
+      <div class="opt"><b>2-step 车库</b><p>约 132 BPM，一步一顿的摇摆。</p><button type="button" data-demo="garage">播放</button></div>
+      <div class="opt"><b>Dubstep</b><p>140 BPM 半速感，摇摆低音。</p><button class="primary" type="button" data-demo="dubstep">播放</button></div>
+    </div>
+  </div>
+
+  <!-- 07 -->
+  <h2 id="edm"><span class="n">07 · edm</span>Trance 与 EDM：万人的 drop</h2>
+  <p>1990 年代的德国和荷兰发展出了 <b>Trance</b>（迷幻舞曲）：约 130–140 BPM，大段的积累，宽广的“超级锯齿波”和弦，悠长而充满希望的旋律。西班牙的伊维萨岛成了全世界电子乐迷的度假圣地。</p>
+  <p>进入 2010 年代，电子舞曲在美国爆发，被统称为 <b>EDM</b>。DJ 成了体育场级的明星，比利时的 Tomorrowland（2005 年创办）、美国的 Electric Daisy Carnival 等音乐节吸引数十万人。EDM 的 drop 越来越夸张，越来越像一次集体的“爆炸”；它也和流行音乐深度融合，《当代流行》一章讲的侧链压缩、四拍底鼓，很多就是从这里流进去的。</p>
+
+  <div class="lab">
+    <div class="head"><span class="tag">LAB 06</span><strong>大合唱式的电子乐</strong><small>原创</small></div>
+    <div class="cols2">
+      <div class="opt"><b>Trance</b><p>138 BPM，超级锯齿波和弦与长长的旋律。</p><button type="button" data-demo="trance">播放</button></div>
+      <div class="opt"><b>EDM drop</b><p>积累、一拍安静，然后一个巨大的合成器“炸”下来。</p><button class="primary" type="button" data-demo="drop">播放</button></div>
+    </div>
+  </div>
+
+  <figure class="fig">
+    <div class="frame"><svg viewBox="0 0 680 320" role="img" aria-label="速度地图：电子舞曲各子类型的常见速度范围：浩室约 118 到 128，Techno 约 125 到 140，Trance 约 130 到 140，dubstep 约 140 但听起来半速，丛林和鼓打贝斯约 160 到 180，硬核约 160 到 200 以上"><g id="bpm-fig"></g></svg></div>
+    <figcaption>图 7 · 电子舞曲的速度地图（大致）。同样是 140，dubstep 听起来像 70，Trance 听起来就是 140。</figcaption>
+  </figure>
+
+  <!-- 08 -->
+  <h2 id="listen-mode"><span class="n">08 · ambient</span>不只是跳舞：氛围与日本</h2>
+  <p>电子乐并不都在舞池里。1978 年，Brian Eno 发行了《Music for Airports》，提出“氛围音乐”（ambient）的概念：一种可以被认真听，也可以被忽略的音乐，像房间里的光线一样。他的一个方法是把几段长度不同的录音带做成循环同时播放：因为长度不同，它们永远不会以同样的方式重合，音乐也就永远在缓慢变化。</p>
+
+  <figure class="fig">
+    <div class="frame"><svg viewBox="0 0 680 250" role="img" aria-label="不同长度的循环示意：三条横带分别表示长度为 7 秒、9 秒、11 秒的循环，每条上的音符在时间上重复，它们重新同时开始要等很久"><g id="loops-fig"></g></svg></div>
+    <figcaption>图 8 · 三个长度不同的循环同时播放。7、9、11 秒的循环要过 693 秒（十一分多钟）才会再次同时从头开始。</figcaption>
+  </figure>
+
+  <div class="lab">
+    <div class="head"><span class="tag">LAB 07</span><strong>不同长度的循环</strong><small>原创，三条循环：7、9、11 拍</small></div>
+    <div class="cols2">
+      <div class="opt"><b>氛围</b><p>三条长度不同的钢琴和长音循环，自己慢慢变化。</p><button class="primary" type="button" data-demo="ambient">播放</button></div>
+      <div class="opt"><b>电子游戏的方波</b><p>早期电脑和游戏机的“芯片音乐”：方波旋律、噪声鼓。</p><button type="button" data-demo="chip">播放</button></div>
+    </div>
+  </div>
+
+  <p>还有一件很容易被忽略的事：电子舞曲的很多“乐器”来自<b>日本</b>。罗兰公司（1972 年创立于大阪）的 TR-808、TR-909、TB-303，以及雅马哈、Korg 的合成器，几乎塑造了整部电子舞曲史。1978 年成立的日本乐队 Yellow Magic Orchestra（YMO）用电脑和合成器演奏流行歌，影响了欧美的电子流行、早期嘻哈，也影响了日本的游戏音乐。</p>
+  <p>不只是舞池之外，电子乐也走进了家里的耳机：Aphex Twin 等人的“智能舞曲”（IDM）、为学习和放松做的 lo-fi，都是从舞曲长出来、却不一定用来跳舞的分支。</p>
+
+  <!-- 09 -->
+  <h2 id="chinese"><span class="n">09 · chinese</span>中文世界的电子乐</h2>
+  <p>中文世界的电子舞曲场景起步较晚，但发展很快：</p>
+  <ul class="clean">
+    <li><b>1990 年代末到 2000 年代</b>：北京、上海出现了第一批地下电子乐派对和俱乐部。上海一家开在旧防空洞里的俱乐部 Shelter（2007–2016），被很多人看作中国地下电子乐的摇篮</li>
+    <li><b>独立制作人</b>：北京的 Howie Lee 等制作人把中国乐器、戏曲和方言采样放进电子乐，发展出带有强烈地方色彩的声音</li>
+    <li><b>2010 年代 · 电音节</b>：大型电音节在上海、北京等城市兴起，国际 DJ 频繁来华演出，电子舞曲进入了更多年轻人的视野</li>
+    <li><b>流行与短视频</b>：今天的中文流行歌和短视频配乐里，大量使用 EDM 的 drop、侧链压缩和电子鼓，这也是《当代流行》一章讲的“流行吸收一切”</li>
+  </ul>
+
+  <!-- 10 -->
+  <h2 id="listen"><span class="n">10 · listen</span>听：本章十二首曲目</h2>
+  <p>按时间排成十二张霓虹传单。电子舞曲很多是七八分钟的“俱乐部版”，平台上常常同时有短的“电台版”，两种都可以听。</p>
+  <div class="side"><span>SIDE A · 1977–1987 · 机器的诞生</span><span>先听这六首</span></div>
+  <div id="songsA"></div>
+  <div class="side"><span>SIDE B · 1994–2011 · 从锐舞到体育场</span><span>再听这六首</span></div>
+  <div id="songsB"></div>
+
+  <!-- 11 -->
+  <h2 id="practice"><span class="n">11 · practice</span>练 · 术语表</h2>
+  <h3>练习 1：找那条贝斯线</h3>
+  <p>听《I Feel Love》，跟着那条不停跳动的贝斯线拍桌子。它一直在变吗？什么在变？</p>
+  <h3>练习 2：听 303</h3>
+  <p>听《Acid Tracks》，找出 303 的声音什么时候变“亮”、什么时候变“闷”。对照图 3。</p>
+  <h3>练习 3：等 drop</h3>
+  <p>听《Levels》或《Scary Monsters and Nice Sprites》，在 drop 来临前一秒举手。你猜对了吗？对照图 4。</p>
+  <h3>练习 4：数 BPM</h3>
+  <p>跟着《Around the World》和《Inner City Life》拍手，各数十五秒，乘以四，大约就是 BPM。哪首更快？对照图 7。</p>
+  <h3>练习 5：在家里听氛围</h3>
+  <p>找 Brian Eno 的《Music for Airports》，在做别的事时放着。过一会儿你还注意到它吗？</p>
+
+  <div class="mine">
+    <div class="lbl">我的听感 · 待写</div>
+    这里留给你：电子舞曲几乎没有“演奏者”，你觉得它的“人味”在哪里？在 DJ 身上、在舞池里，还是在那些旋钮被转动的瞬间？
+  </div>
+
+  <h3 id="gloss">术语表</h3>
+  <dl class="gloss">
+    <dt>电子舞曲</dt><dd>以电子乐器制作、为舞池设计的音乐总称</dd>
+    <dt>BPM</dt><dd>每分钟拍数，电子舞曲风格的重要标志</dd>
+    <dt>四拍底鼓</dt><dd>four-on-the-floor，每拍一下底鼓</dd>
+    <dt>12 英寸单曲</dt><dd>为 DJ 设计的加长版单曲唱片</dd>
+    <dt>音序器</dt><dd>按设定顺序自动演奏音符的设备</dd>
+    <dt>合成器</dt><dd>用电子电路或软件生成声音的乐器</dd>
+    <dt>声码器</dt><dd>vocoder，把人声的口型“印”到合成器上的效果</dd>
+    <dt>浩室</dt><dd>house，起源于芝加哥的舞曲，约 120–128 BPM</dd>
+    <dt>酸性浩室</dt><dd>以 TB-303 共振滤波声为特点的浩室</dd>
+    <dt>截止频率</dt><dd>滤波器开始削减声音的频率点</dd>
+    <dt>共振</dt><dd>在截止频率附近形成尖峰，使声音“吱吱”作响</dd>
+    <dt>Techno</dt><dd>起源于底特律、在柏林壮大的机械感舞曲</dd>
+    <dt>对拍</dt><dd>beatmatching，把两首歌的速度和底鼓对齐</dd>
+    <dt>积累</dt><dd>build-up，drop 之前逐渐增加张力的段落</dd>
+    <dt>drop</dt><dd>积累之后所有声音同时落下的高潮</dd>
+    <dt>锐舞</dt><dd>rave，通宵的大型电子乐派对</dd>
+    <dt>丛林 / 鼓打贝斯</dt><dd>约 160–180 BPM 的碎拍舞曲，深沉的低音</dd>
+    <dt>dubstep</dt><dd>140 BPM 半速感、以摇摆低音著称的英国舞曲</dd>
+    <dt>LFO</dt><dd>低频振荡器，用来周期性地控制音量、滤波等参数</dd>
+    <dt>Trance</dt><dd>130–140 BPM，长积累、宽广和弦与旋律的舞曲</dd>
+    <dt>EDM</dt><dd>2010 年代美国对大型电子舞曲的统称</dd>
+    <dt>氛围音乐</dt><dd>ambient，可以专心听也可以忽略的环境式音乐</dd>
+  </dl>
+
+</article>
+
+<footer class="credits">
+  <div class="wrap">
+    <h2>Credits</h2>
+    <dl>
+      <dt>资料</dt><dd>开头场景依据公开报道整理，Eno 的话为转述</dd>
+      <dt>插画</dt><dd>章首插画由 AI 生成</dd>
+      <dt>图解</dt><dd>图 1–8 均为本书原创绘制</dd>
+      <dt>照片</dt><dd>来自维基共享资源（Wikimedia Commons），本书附带缩小后的副本：<br>
+        Roland TB-303 正面：Steve Sims 摄，公有领域<br>
+        具体授权以维基共享资源页面为准</dd>
+      <dt>声音示例</dt><dd>全部由浏览器实时合成，旋律、低音线、鼓型与编曲均为原创，无第三方录音或采样；“303”“909”“声码器”等为合成模仿</dd>
+      <dt>曲目</dt><dd>仅提供推荐与收听链接，本书不包含任何录音；录音与作品版权归原权利人所有</dd>
+      <dt>授权</dt><dd>本章原创文字、图解与合成示例采用 CC BY-NC-SA 4.0，页面代码采用 MIT 许可证；第三方照片按各自授权使用，曲目、名称与商标不在此授权范围内</dd>
+    </dl>
+    <div class="next"><span><a href="../c2-hiphop/index.html" data-nav="c2-hiphop">← C2 · 嘻哈</a></span><span><a href="../d1-alt/index.html" data-nav="d1-alt">D1 · 另类 →</a></span></div>
+  </div>
+</footer>
+
+<button class="stopfab" id="stopAll" type="button">停止声音</button>
+
+<script>
+/* ================= 合成音频引擎 ================= */
+let ac=null,master,verbIn;
+function A(){
+  if(!ac){
+    ac=new (window.AudioContext||window.webkitAudioContext)();
+    const comp=ac.createDynamicsCompressor();comp.threshold.value=-14;comp.ratio.value=4;comp.connect(ac.destination);
+    master=ac.createGain();master.gain.value=.85;master.connect(comp);
+    const cv=ac.createConvolver(),len=ac.sampleRate*1.8,b=ac.createBuffer(2,len,ac.sampleRate);
+    for(let c=0;c<2;c++){const d=b.getChannelData(c);for(let i=0;i<len;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/len,3.2);}
+    cv.buffer=b;const vg=ac.createGain();vg.gain.value=.22;cv.connect(vg).connect(comp);verbIn=cv;
+  }
+  if(ac.state==="suspended")ac.resume();
+  return ac;
+}
+const mf=m=>440*Math.pow(2,(m-69)/12);
+let bus=null,timers=[],srcs=[],loopTimer=null,activeBtn=null;
+function newBus(){
+  stopDemos();A();
+  bus=ac.createGain();bus.gain.value=1;bus.connect(master);
+  const s=ac.createGain();s.gain.value=1;bus.connect(s);s.connect(verbIn);
+  return bus;
+}
+function stopDemos(){
+  timers.forEach(clearTimeout);timers=[];clearTimeout(loopTimer);loopTimer=null;
+  srcs.forEach(s=>{try{s.stop()}catch(e){}});srcs=[];
+  if(bus){const b=bus;b.gain.setTargetAtTime(0,ac.currentTime,.03);setTimeout(()=>b.disconnect(),300);bus=null;}
+  document.querySelectorAll(".bar.now,.strip i.now").forEach(x=>x.classList.remove("now"));
+  if(activeBtn){activeBtn.classList.remove("playing");activeBtn=null;}
+  const f=document.getElementById("stopAll");f&&f.classList.remove("on");
+}
+function later(fn,sec){timers.push(setTimeout(fn,Math.max(0,sec*1000)));}
+function track(n){srcs.push(n);return n;}
+
+/* Karplus-Strong 拨弦 */
+const ksCache={};
+function ksBuf(midi,dur,bright,decay){
+  const key=midi+"|"+dur+"|"+bright+"|"+decay;if(ksCache[key])return ksCache[key];
+  const sr=ac.sampleRate,N=Math.max(2,Math.round(sr/mf(midi))),len=Math.floor(sr*dur);
+  const b=ac.createBuffer(1,len,sr),d=b.getChannelData(0),buf=new Float32Array(N);
+  for(let i=0;i<N;i++)buf[i]=Math.random()*2-1;
+  const smooth=Math.round((1-bright)*5);
+  for(let k=0;k<smooth;k++)for(let i=0;i<N;i++)buf[i]=(buf[i]+buf[(i+1)%N])*.5;
+  let idx=0;
+  for(let i=0;i<len;i++){const nx=(idx+1)%N,v=buf[idx];d[i]=v;buf[idx]=decay*.5*(v+buf[nx]);idx=nx;}
+  const fade=Math.min(len,Math.floor(sr*.03));for(let i=0;i<fade;i++)d[len-1-i]*=i/fade;
+  return ksCache[key]=b;
+}
+let shaperCache={};
+function shaper(amount){
+  if(shaperCache[amount])return shaperCache[amount];
+  const n=1024,c=new Float32Array(n);for(let i=0;i<n;i++){const x=i/(n-1)*2-1;c[i]=Math.tanh(x*amount)/Math.tanh(amount);}
+  return shaperCache[amount]=c;
+}
+/* 乐器：ac 木吉他 / el 电吉他干净 / dr 电吉他过载 / bass 贝斯 */
+const INST={
+  ac:{bright:.62,decay:.9965,dur:1.8,vol:.55},
+  el:{bright:.8,decay:.9985,dur:2.2,vol:.4,drive:1.6,lp:3200},
+  dr:{bright:.85,decay:.999,dur:2.4,vol:.22,drive:7,lp:2600},
+  bass:{bright:.25,decay:.995,dur:1.2,vol:.75,lp:900}
+};
+function pluck(t,midi,inst,o={}){
+  const a=A(),I=INST[inst],s=a.createBufferSource();
+  s.buffer=ksBuf(midi,o.dur||I.dur,I.bright,I.decay);if(o.det&&!o.from)s.playbackRate.value=Math.pow(2,o.det/1200);
+  const g=a.createGain();g.gain.value=(o.vol||1)*I.vol;
+  let node=g;
+  if(o.from){s.playbackRate.setValueAtTime(Math.pow(2,o.from/12),t);s.playbackRate.setValueAtTime(Math.pow(2,o.from/12),t+(o.hold||0));s.playbackRate.linearRampToValueAtTime(1,t+(o.hold||0)+(o.glide||.18));}
+  if(o.vib){const l=a.createOscillator(),lg=a.createGain();l.frequency.value=5.5;lg.gain.value=.008;l.connect(lg).connect(s.playbackRate);l.start(t+(o.vibAt||.4));l.stop(t+(o.dur||I.dur));track(l);}
+  s.connect(g);
+  if(I.drive){const sh=a.createWaveShaper();sh.curve=shaper(I.drive);sh.oversample="2x";node.connect(sh);node=sh;}
+  if(I.lp){const f=a.createBiquadFilter();f.type="lowpass";f.frequency.value=I.lp;node.connect(f);node=f;}
+  if(I.peak){const pk=a.createBiquadFilter();pk.type="peaking";pk.frequency.value=I.peak[0];pk.gain.value=I.peak[1];node.connect(pk);node=pk;}
+  if(o.swell){g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime((o.vol||1)*I.vol,t+o.swell);}
+  if(o.mute){g.gain.setValueAtTime((o.vol||1)*I.vol,t);g.gain.exponentialRampToValueAtTime(.001,t+o.mute);}
+  node.connect(bus);s.start(t);s.stop(t+(o.dur||I.dur));track(s);
+}
+function strum(t,notes,inst,o={}){notes.forEach((m,k)=>pluck(t+k*(o.spread||.014),m,inst,{vol:o.vol||.6,mute:o.mute,dur:o.dur}));}
+/* 口琴 */
+function harp(t,midi,dur,o={}){
+  const a=A(),os=a.createOscillator(),os2=a.createOscillator();os.type="sawtooth";os2.type="square";
+  const f=mf(midi);
+  [os,os2].forEach((x,k)=>{const ff=f*(k?1.002:1);
+    if(o.from){x.frequency.setValueAtTime(ff*Math.pow(2,o.from/12),t);x.frequency.linearRampToValueAtTime(ff,t+(o.glide||.15));}else x.frequency.setValueAtTime(ff,t);});
+  const lfo=a.createOscillator(),lg=a.createGain();lfo.frequency.value=5.2;lg.gain.value=12;lfo.connect(lg);lg.connect(os.detune);lg.connect(os2.detune);
+  const bp=a.createBiquadFilter();bp.type="bandpass";bp.frequency.value=o.amp?1100:1500;bp.Q.value=o.amp?1.6:1.1;
+  const g=a.createGain(),v=(o.vol||1)*(o.amp?.13:.16);
+  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.04);g.gain.setValueAtTime(v,t+dur-.06);g.gain.linearRampToValueAtTime(0,t+dur);
+  const m2=a.createGain();m2.gain.value=.4;
+  os.connect(bp);os2.connect(m2).connect(bp);let node=bp;
+  if(o.amp){const sh=a.createWaveShaper();sh.curve=shaper(4);const lp=a.createBiquadFilter();lp.type="lowpass";lp.frequency.value=2200;bp.connect(sh).connect(lp);node=lp;}
+  node.connect(g).connect(bus);
+  [os,os2,lfo].forEach(x=>{x.start(t);x.stop(t+dur+.05);track(x);});
+}
+/* 人声（元音“啊”） */
+function voice(t,midi,dur,o={}){
+  const a=A(),os=a.createOscillator();os.type="sawtooth";const f=mf(midi);
+  os.frequency.setValueAtTime(f*Math.pow(2,(o.from==null?-1:o.from)/12),t);os.frequency.linearRampToValueAtTime(f,t+(o.glide||.09));
+  if(o.fall){os.frequency.setValueAtTime(f,t+dur*.6);os.frequency.linearRampToValueAtTime(f*Math.pow(2,o.fall/12),t+dur);}
+  const lfo=a.createOscillator(),lg=a.createGain();lfo.frequency.value=5;lg.gain.setValueAtTime(0,t);lg.gain.linearRampToValueAtTime(o.vibDepth||22,t+Math.min(dur,.5));lfo.connect(lg).connect(os.detune);
+  const g=a.createGain(),v=(o.vol||1)*.5;
+  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.06);g.gain.setValueAtTime(v,t+dur-.1);g.gain.linearRampToValueAtTime(0,t+dur);
+  const out=a.createGain();out.gain.value=1;
+  [[o.vowel==="o"?500:750,7,1],[o.vowel==="o"?900:1200,9,.6],[2600,10,.25]].forEach(([fr,q,amt])=>{const bp=a.createBiquadFilter();bp.type="bandpass";bp.frequency.value=fr;bp.Q.value=q;const gg=a.createGain();gg.gain.value=amt*3;os.connect(bp).connect(gg).connect(out);});
+  out.connect(g).connect(bus);
+  [os,lfo].forEach(x=>{x.start(t);x.stop(t+dur+.05);track(x);});
+}
+/* 鼓 */
+let noiseBuf=null;
+function noise(){if(!noiseBuf){const a=A(),len=a.sampleRate;noiseBuf=a.createBuffer(1,len,a.sampleRate);const d=noiseBuf.getChannelData(0);for(let i=0;i<len;i++)d[i]=Math.random()*2-1;}return noiseBuf;}
+function kick(t,v=1){const a=A(),o=a.createOscillator(),g=a.createGain();o.frequency.setValueAtTime(130,t);o.frequency.exponentialRampToValueAtTime(42,t+.12);g.gain.setValueAtTime(.9*v,t);g.gain.exponentialRampToValueAtTime(.001,t+.32);o.connect(g).connect(bus);o.start(t);o.stop(t+.35);track(o);}
+function snare(t,v=1,brush){const a=A(),n=a.createBufferSource();n.buffer=noise();const f=a.createBiquadFilter();f.type=brush?"bandpass":"highpass";f.frequency.value=brush?2500:1200;const g=a.createGain();g.gain.setValueAtTime((brush?.18:.42)*v,t);g.gain.exponentialRampToValueAtTime(.001,t+(brush?.16:.2));n.connect(f).connect(g).connect(bus);n.start(t);n.stop(t+.25);track(n);
+  if(!brush){const o=a.createOscillator(),og=a.createGain();o.frequency.value=190;og.gain.setValueAtTime(.25*v,t);og.gain.exponentialRampToValueAtTime(.001,t+.09);o.connect(og).connect(bus);o.start(t);o.stop(t+.1);track(o);}}
+function hat(t,v=1){const a=A(),n=a.createBufferSource();n.buffer=noise();const f=a.createBiquadFilter();f.type="highpass";f.frequency.value=7500;const g=a.createGain();g.gain.setValueAtTime(.16*v,t);g.gain.exponentialRampToValueAtTime(.001,t+.05);n.connect(f).connect(g).connect(bus);n.start(t);n.stop(t+.07);track(n);}
+function stomp(t){const a=A(),o=a.createOscillator(),g=a.createGain();o.frequency.setValueAtTime(90,t);o.frequency.exponentialRampToValueAtTime(50,t+.08);g.gain.setValueAtTime(.5,t);g.gain.exponentialRampToValueAtTime(.001,t+.18);o.connect(g).connect(bus);o.start(t);o.stop(t+.2);track(o);}
+
+/* ================= 和弦进行与编曲 ================= */
+const PROG={
+  std:{bars:["I","I","I","I","IV","IV","I","I","V","IV","I","I"]},
+  quick:{bars:["I","IV","I","I","IV","IV","I","I","V","IV","I","V"]},
+  minor:{bars:["i","i","i","i","iv","iv","i","i","bVI","V","i","V"]}
+};
+const DEG={I:[0,"dom"],IV:[5,"dom"],V:[7,"dom"],i:[0,"min"],iv:[5,"min"],bVI:[8,"dom"]};
+const SHAPE={dom:[0,4,7,10],min:[0,3,7,10]};
+function chordOf(key,f){const [r,q]=DEG[f];return SHAPE[q].map(x=>key+r+x);}
+function eighth(t,beat,k,swing){return t+Math.floor(k/2)*beat+(k%2?(swing?beat*2/3:beat/2):0);}
+function lightStrip(strip,t0,barLen,n){
+  if(!strip)return;const cells=[...strip.children];const a=A();
+  for(let b=0;b<n;b++)later(()=>{cells.forEach(c=>c.classList.remove("now"));cells[b]&&cells[b].classList.add("now");},t0-a.currentTime+b*barLen);
+  later(()=>cells.forEach(c=>c.classList.remove("now")),t0-a.currentTime+n*barLen);
+}
+/* ================= 摇滚：乐器 ================= */
+INST.ac.peak=[220,5];
+Object.assign(INST,{
+  cr:{bright:.88,decay:.999,dur:2,vol:.24,drive:4.5,lp:3400},
+  fz:{bright:.9,decay:.9993,dur:2.2,vol:.12,drive:45,lp:2400},
+  pk:{bright:.92,decay:.9992,dur:1.8,vol:.15,drive:14,lp:3600},
+  ub:{bright:.3,decay:.993,dur:.9,vol:.9,lp:700},
+  ld:{bright:.88,decay:.9993,dur:2.4,vol:.2,drive:9,lp:3000}
+});
+function crash(t,v=1){const a=A(),n=a.createBufferSource();n.buffer=noise();const f=a.createBiquadFilter();f.type="highpass";f.frequency.value=4500;const g=a.createGain();g.gain.setValueAtTime(.25*v,t);g.gain.exponentialRampToValueAtTime(.001,t+1.3);n.connect(f).connect(g).connect(bus);n.start(t);n.stop(t+1.35);track(n);}
+/* 临时把声音送进一条效果链（哇音、声像） */
+function via(node,fn){const keep=bus;node.connect(keep);bus=node;try{fn();}finally{bus=keep;}}
+/* 倒放：把拨弦样本反过来 */
+function revPluck(t,midi,inst,dur){const a=A(),I=INST[inst],src=ksBuf(midi,dur,I.bright,I.decay),b=a.createBuffer(1,src.length,src.sampleRate),s=src.getChannelData(0),d=b.getChannelData(0);
+  for(let i=0;i<s.length;i++)d[i]=s[s.length-1-i];const fade=Math.floor(a.sampleRate*.01);for(let i=0;i<fade;i++)d[d.length-1-i]*=i/fade;
+  const n=a.createBufferSource();n.buffer=b;const g=a.createGain();g.gain.value=I.vol*1.3;let node=g;n.connect(g);
+  if(I.drive){const sh=a.createWaveShaper();sh.curve=shaper(I.drive);node.connect(sh);node=sh;}if(I.lp){const f=a.createBiquadFilter();f.type="lowpass";f.frequency.value=I.lp;node.connect(f);node=f;}
+  node.connect(bus);n.start(t);n.stop(t+dur);track(n);}
+const bt=b=>60/b;
+const PCN={C:0,D:2,E:4,F:5,G:7,A:9,B:11};
+function chordPcs(name){let i=1,r=PCN[name[0]];if(name[1]==="#"){r++;i++;}else if(name[1]==="b"){r--;i++;}const rest=name.slice(i),m=rest.startsWith("m"),q=rest.includes("7");const p=[r,r+(m?3:4),r+7];if(q)p.push(r+10);return p.map(x=>(x+12)%12);}
+function place(pcs,lo,hi){const o=[];for(let m=lo;m<hi;m++)if(pcs.includes(m%12))o.push(m);return o;}
+function rootNear(name,lo){const p=chordPcs(name)[0];let m=lo;while(m%12!==p)m++;return m;}
+function stripNear(btn){const lab=btn.closest(".lab");return lab?lab.querySelector("[data-strip]"):null;}
+function swing8(t,beat,k,sw){return t+Math.floor(k/2)*beat+(k%2?(sw?beat*2/3:beat/2):0);}
+function rockBeat(tb,beat,o={}){for(let k=0;k<8;k++){hat(tb+k*beat/2,(k%2?.55:.9)*(o.hv||1));}kick(tb,o.kv||1);kick(tb+2*beat,o.kv||1);if(o.push)kick(tb+2.5*beat,.7);snare(tb+beat,o.sv||1);snare(tb+3*beat,o.sv||1);}
+function powerBar(tb,beat,ch,inst="pk",o={}){const r=rootNear(ch,40);for(let k=0;k<8;k++)strum(tb+k*beat/2,[r,r+7,r+12],inst,{vol:o.vol||1,mute:beat*(o.mute||.45),spread:.004});}
+function bass8(tb,beat,ch,o={}){const r=rootNear(ch,28)+(rootNear(ch,28)<31?12:0);for(let k=0;k<8;k++)pluck(tb+k*beat/2,r,"bass",{vol:o.vol||.95,mute:beat*.42});}
+function voiceLine(t,beat,notes,shift=-12,o={}){notes.forEach(([b,m,d])=>voice(t+b*beat,m+shift,d*beat*.95,{from:-1,glide:.08,vibDepth:o.vib||16,vowel:o.vowel||"a",vol:o.vol||.85}));}
+
+/* ================= 硬摇滚：补充 ================= */
+INST.pmu={bright:.85,decay:.999,dur:1.2,vol:.17,drive:14,lp:1500};
+function tom(t,f=120,v=1){const a=A(),o=a.createOscillator(),g=a.createGain();o.frequency.setValueAtTime(f*1.6,t);o.frequency.exponentialRampToValueAtTime(f,t+.08);g.gain.setValueAtTime(.6*v,t);g.gain.exponentialRampToValueAtTime(.001,t+.4);o.connect(g).connect(bus);o.start(t);o.stop(t+.45);track(o);}
+function clap(t,v=1){const a=A();[0,.011,.022].forEach((d,i)=>{const n=a.createBufferSource();n.buffer=noise();const f=a.createBiquadFilter();f.type="bandpass";f.frequency.value=1300;f.Q.value=.9;const g=a.createGain();g.gain.setValueAtTime(.45*v*(i===2?1:.6),t+d);g.gain.exponentialRampToValueAtTime(.001,t+d+(i===2?.14:.02));n.connect(f).connect(g).connect(bus);n.start(t+d);n.stop(t+d+.16);track(n);});}
+function makeIR(sec,gated){const a=A(),len=Math.floor(a.sampleRate*sec),b=a.createBuffer(2,len,a.sampleRate);for(let c=0;c<2;c++){const d=b.getChannelData(c);for(let i=0;i<len;i++){const x=i/len;d[i]=(Math.random()*2-1)*(gated?(x<.85?1:(1-x)/.15):Math.pow(1-x,2.2));}}return b;}
+function addRoom(sec,amt){const a=A(),cv=a.createConvolver();cv.buffer=makeIR(sec,false);const g=a.createGain();g.gain.value=amt;bus.connect(cv).connect(g).connect(master);}
+function gatedChain(){const a=A(),inp=a.createGain(),cv=a.createConvolver();cv.buffer=makeIR(.32,true);const wet=a.createGain();wet.gain.value=.9;inp.connect(cv).connect(wet);const out=a.createGain();inp.connect(out);wet.connect(out);return [inp,out];}
+/* 哈蒙德风琴 */
+function hammond(t,midi,dur,o={}){const a=A(),f=mf(midi),g=a.createGain(),v=(o.vol||1)*.09;
+  [[1,.5],[2,.35],[3,.22],[4,.18],[6,.08],[8,.1]].forEach(([h,am])=>{const x=a.createOscillator();x.type="sine";x.frequency.value=f*h;const xg=a.createGain();xg.gain.value=am;x.connect(xg).connect(g);x.start(t);x.stop(t+dur+.05);track(x);});
+  const p=a.createOscillator();p.type="sine";p.frequency.value=f*3;const pg=a.createGain();pg.gain.setValueAtTime(.35,t);pg.gain.exponentialRampToValueAtTime(.001,t+.25);p.connect(pg).connect(g);p.start(t);p.stop(t+.3);track(p);
+  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.01);g.gain.setValueAtTime(v,t+dur-.03);g.gain.linearRampToValueAtTime(0,t+dur);g.connect(bus);}
+function leslieChain(t,speed){const a=A(),inp=a.createGain(),trem=a.createGain();trem.gain.value=.75;const l1=a.createOscillator(),lg1=a.createGain();l1.frequency.value=speed;lg1.gain.value=.3;l1.connect(lg1).connect(trem.gain);
+  const dl=a.createDelay(.05);dl.delayTime.value=.006;const l2=a.createOscillator(),lg2=a.createGain();l2.frequency.value=speed;lg2.gain.value=.0025;l2.connect(lg2).connect(dl.delayTime);
+  const pan=a.createStereoPanner();const l3=a.createOscillator();l3.frequency.value=speed;const lg3=a.createGain();lg3.gain.value=.6;l3.connect(lg3).connect(pan.pan);
+  inp.connect(dl).connect(trem).connect(pan);[l1,l2,l3].forEach(x=>{x.start(t);x.stop(t+20);track(x);});return [inp,pan];}
+function driveChain(amt){const a=A(),inp=a.createGain();inp.gain.value=2.2;const sh=a.createWaveShaper();sh.curve=shaper(amt);const lp=a.createBiquadFilter();lp.type="lowpass";lp.frequency.value=3200;const out=a.createGain();out.gain.value=.35;inp.connect(sh).connect(lp).connect(out);return [inp,out];}
+function through([inp,out],fn){const keep=bus;out.connect(keep);bus=inp;try{fn();}finally{bus=keep;}}
+
+/* ================= 电子舞曲：合成器与鼓机 ================= */
+function voiceOsc(t,dur,wave,f,o={}){const a=A(),x=a.createOscillator();x.type=wave;if(o.from!=null){x.frequency.setValueAtTime(o.from,t);x.frequency.exponentialRampToValueAtTime(f,t+(o.glide||.06));}else x.frequency.setValueAtTime(f,t);if(o.dt)x.detune.value=o.dt;x.start(t);x.stop(t+dur+.05);track(x);return x;}
+/* 通用减法合成：振荡器 → 低通（可共振、可扫）→ 包络 */
+function sub(t,midi,dur,o={}){const a=A(),f=mf(midi),lp=a.createBiquadFilter();lp.type="lowpass";lp.Q.value=o.q||1;const c0=o.cut||800,c1=o.peak||c0*3;lp.frequency.setValueAtTime(c0,t);lp.frequency.linearRampToValueAtTime(c1,t+(o.fa||.005));lp.frequency.exponentialRampToValueAtTime(Math.max(60,c0),t+(o.fd||.25));
+  (o.waves||[["sawtooth",0]]).forEach(([w,dt])=>voiceOsc(t,dur,w,f,{dt,from:o.from!=null?mf(o.from):null,glide:o.glide}).connect(lp));
+  const g=a.createGain(),v=(o.vol||1)*.06;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+(o.att||.004));g.gain.setValueAtTime(v,t+Math.max(o.att||.004,dur-.03));g.gain.linearRampToValueAtTime(0,t+dur);
+  let n=lp;if(o.drive){const sh=a.createWaveShaper();sh.curve=shaper(o.drive);lp.connect(sh);n=sh;}n.connect(g).connect(o.out||bus);return lp;}
+function supersaw(t,notes,dur,o={}){notes.forEach(m=>sub(t,m,dur,{waves:[["sawtooth",-18],["sawtooth",-7],["sawtooth",0],["sawtooth",7],["sawtooth",18]],cut:o.cut||1800,peak:o.peak||5000,fa:.02,fd:dur,vol:(o.vol||1)*.45,att:o.att||.01,out:o.out}));}
+function strings(t,notes,dur,v=1){notes.forEach(m=>sub(t,m,dur,{waves:[["sawtooth",-8],["sawtooth",8]],cut:1600,peak:2200,fa:.4,fd:dur,vol:.4*v,att:.3}));}
+function piano(t,midi,dur,v=1){const a=A(),f=mf(midi),g=a.createGain();[[1,.6,"triangle"],[2,.25,"sine"],[3,.08,"sine"]].forEach(([h,am,w])=>{const x=a.createOscillator();x.type=w;x.frequency.value=f*h;const xg=a.createGain();xg.gain.value=am;x.connect(xg).connect(g);x.start(t);x.stop(t+dur+.1);track(x);});
+  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.11*v,t+.005);g.gain.exponentialRampToValueAtTime(.03*v,t+.4);g.gain.exponentialRampToValueAtTime(.001,t+dur+.08);g.connect(bus);}
+/* 909 式鼓 */
+function k909(t,v=1){const a=A(),o=a.createOscillator(),g=a.createGain();o.frequency.setValueAtTime(220,t);o.frequency.exponentialRampToValueAtTime(52,t+.07);g.gain.setValueAtTime(.95*v,t);g.gain.exponentialRampToValueAtTime(.001,t+.32);const sh=a.createWaveShaper();sh.curve=shaper(1.6);o.connect(sh).connect(g).connect(bus);o.start(t);o.stop(t+.34);track(o);}
+function oh(t,v=1,len=.22){const a=A(),n=a.createBufferSource();n.buffer=noise();const f=a.createBiquadFilter();f.type="highpass";f.frequency.value=7500;const g=a.createGain();g.gain.setValueAtTime(.14*v,t);g.gain.exponentialRampToValueAtTime(.001,t+len);n.connect(f).connect(g).connect(bus);n.start(t);n.stop(t+len+.01);track(n);}
+function ch(t,v=1){oh(t,v*.8,.04);}
+function rim(t,v=1){const a=A(),o=a.createOscillator();o.frequency.value=1700;const g=a.createGain();g.gain.setValueAtTime(.18*v,t);g.gain.exponentialRampToValueAtTime(.001,t+.03);o.connect(g).connect(bus);o.start(t);o.stop(t+.04);track(o);}
+function riser(t,dur,v=1){const a=A(),n=a.createBufferSource();n.buffer=noise();n.loop=true;const f=a.createBiquadFilter();f.type="bandpass";f.Q.value=3;f.frequency.setValueAtTime(300,t);f.frequency.exponentialRampToValueAtTime(9000,t+dur);const g=a.createGain();g.gain.setValueAtTime(.01,t);g.gain.exponentialRampToValueAtTime(.4*v,t+dur);g.gain.linearRampToValueAtTime(0,t+dur+.02);n.connect(f).connect(g).connect(bus);n.start(t);n.stop(t+dur+.05);track(n);
+  const o=a.createOscillator();o.type="sawtooth";o.frequency.setValueAtTime(110,t);o.frequency.exponentialRampToValueAtTime(1760,t+dur);const og=a.createGain();og.gain.setValueAtTime(.001,t);og.gain.exponentialRampToValueAtTime(.05*v,t+dur);og.gain.linearRampToValueAtTime(0,t+dur+.02);o.connect(og).connect(bus);o.start(t);o.stop(t+dur+.05);track(o);}
+function subBass(t,midi,dur,v=1,o={}){const a=A(),x=a.createOscillator();x.type="sine";x.frequency.setValueAtTime(mf(o.from!=null?o.from:midi),t);if(o.from!=null)x.frequency.exponentialRampToValueAtTime(mf(midi),t+(o.glide||.08));const g=a.createGain();g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.55*v,t+.01);g.gain.setValueAtTime(.55*v,t+dur-.05);g.gain.linearRampToValueAtTime(0,t+dur);x.connect(g).connect(bus);x.start(t);x.stop(t+dur+.02);track(x);}
+function four(tb,beat,o={}){for(let q=0;q<4;q++){k909(tb+q*beat,o.kv||1);oh(tb+q*beat+beat/2,o.ov||.9);if(o.ch)for(let s=0;s<4;s+=2)ch(tb+q*beat+s*beat/4,.5);}if(o.clap!==false){clap(tb+beat,o.cv||.8);clap(tb+3*beat,o.cv||.8);}if(o.crash)crash(tb,o.crash);}
+/* 声码器式机器人声：方波 + 不断变化的共振峰 */
+function robot(t,midi,dur,vow){const a=A(),f=mf(midi),x=a.createOscillator();x.type="square";x.frequency.value=f;const n=a.createBufferSource();n.buffer=noise();const ng=a.createGain();ng.gain.value=.08;n.connect(ng);const out=a.createGain();
+  const F={a:[730,1090,2440],i:[300,2300,3000],o:[500,880,2400],u:[320,800,2240],e:[530,1840,2480]};const fs=F[vow]||F.a;fs.forEach((fr,i)=>{const bp=a.createBiquadFilter();bp.type="bandpass";bp.frequency.value=fr;bp.Q.value=12;const g=a.createGain();g.gain.value=[2.4,1.6,.9][i];x.connect(bp);ng.connect(bp);bp.connect(g).connect(out);});
+  const g=a.createGain();g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.45,t+.02);g.gain.setValueAtTime(.45,t+dur-.04);g.gain.linearRampToValueAtTime(0,t+dur);out.connect(g).connect(bus);[x,n].forEach(z=>{z.start(t);z.stop(t+dur+.02);track(z);});}
+
+const DEMOS={};
+/* 01 迪斯科、音序器、声码器 */
+const DCH=[[45,[60,64,69]],[41,[60,65,69]],[43,[59,62,67]],[40,[59,64,67]]];
+DEMOS.disco=t=>{const beat=bt(120),bar=4*beat;for(let i=0;i<8;i++){const tb=t+i*bar,[r,c]=DCH[i%4];for(let q=0;q<4;q++){kick(tb+q*beat,1);oh(tb+q*beat+beat/2,1);}snare(tb+beat,.8);snare(tb+3*beat,.8);
+    for(let k=0;k<8;k++)pluck(tb+k*beat/2,r-12+(k%2?12:0),"bass",{vol:1,mute:beat*.42});strings(tb,c.map(m=>m+12),bar,1.1);[.5,1.5,2.5,3.5].forEach(x=>strum(tb+x*beat,c,"ac",{vol:.35,mute:beat*.2,spread:.004}));if(i%2)[3,3.5].forEach(x=>strings(tb+x*beat,[c[2]+24],beat*.45,1.4));}
+  return 8*bar+1;};
+DEMOS.seq=t=>{const beat=bt(126),s=beat/4,bar=4*beat,R=[33,33,36,31];for(let i=0;i<8;i++){const tb=t+i*bar,r=R[Math.floor(i/2)%4];for(let k=0;k<16;k++){const m=r+[0,12,7,12][k%4];sub(tb+k*s,m,s*.9,{cut:300,peak:1400+i*250,fd:.12,q:4,vol:1.2,waves:[["sawtooth",0],["square",-6]]});}
+    if(i>=2){for(let q=0;q<4;q++)kick(tb+q*beat,1);oh(tb+beat/2,.6);oh(tb+2.5*beat,.6);snare(tb+beat,.6);snare(tb+3*beat,.6);}
+    if(i>=4)[[0,72,1.5],[2,69,1],[3,67,1]].forEach(([b,m,d])=>sub(tb+b*beat,m+(i%2?-2:0),d*beat,{waves:[["sine",0],["triangle",4]],cut:2200,peak:2600,fd:d*beat,vol:.9,att:.08}));}
+  return 8*bar+1;};
+DEMOS.vocoder=t=>{const beat=bt(110),bar=4*beat,L=[["a",62,1],["o",62,1],["i",65,.5],["o",62,.5],["u",60,1],["e",62,1],["a",62,1],["i",67,1],["o",65,2]];for(let i=0;i<4;i++){const tb=t+i*bar;for(let q=0;q<4;q++)kick(tb+q*beat,.8);snare(tb+beat,.6);snare(tb+3*beat,.6);for(let k=0;k<8;k++)ch(tb+k*beat/2,.8);
+    for(let k=0;k<8;k++)sub(tb+k*beat/2,[38,38,45,38,41,38,45,43][k],beat*.4,{cut:400,peak:1600,fd:.12,q:3,vol:1.1});}
+  let x=0;for(let r=0;r<2;r++)L.forEach(([v,m,d])=>{robot(t+bar*(r*2)+x*beat,m,d*beat*.9,v);x+=d;if(x>=8)x=0;});
+  for(let i=0;i<4;i++)[[0,74,1],[1,72,1],[2,69,2]].forEach(([b,m,d])=>sub(t+i*bar+b*beat,m,d*beat*.95,{waves:[["square",0]],cut:2500,peak:3000,fd:d*beat,vol:.45,att:.01}));
+  return 4*bar+1;};
+/* 02 浩室与 303 */
+DEMOS.house=t=>{const beat=bt(124),bar=4*beat,C=[[45,[60,64,67,71]],[41,[60,64,65,69]],[43,[59,62,65,71]],[45,[60,64,67,71]]];for(let i=0;i<8;i++){const tb=t+i*bar,[r,c]=C[i%4];four(tb,beat,{ch:true,crash:i===0?.6:0});
+    [.75,1.5,2.75,3.5].forEach(x=>c.forEach(m=>piano(tb+x*beat,m,beat*.4,.75)));[0,.75,1.5,2.5,3.25].forEach((x,j)=>sub(tb+x*beat,r-12+(j===3?12:0),beat*.45,{waves:[["square",0],["sine",0]],cut:250,peak:900,fd:.15,vol:1.3}));}
+  return 8*bar+1;};
+const ACID=[[0,33,0],[1,33,1],[2,45,0],[3,33,0],[4,36,1],[5,33,0],[6,43,1],[7,33,0],[8,45,0],[9,33,1],[10,40,0],[11,33,0],[12,46,1],[13,45,0],[14,33,1],[15,38,0]];
+function tb303(t,beat,bars,acid){const s=beat/4;for(let i=0;i<bars;i++){const tb=t+i*4*beat;four(tb,beat,{ch:true,clap:i>=1,crash:i===0?.5:0});
+    const sw=acid?.5+.5*Math.sin(i/bars*Math.PI*2-1.5):0;ACID.forEach(([k,m,slide],j)=>{const acc=j%3===0;sub(tb+k*s,m,s*(slide?1.6:.85),acid?{waves:[["sawtooth",0]],q:14,cut:220+sw*900,peak:(acc?2200:900)+sw*2600,fd:.12,vol:acc?1.35:1,drive:2.5,from:slide&&j?ACID[j-1][1]:null,glide:.06}:{waves:[["sawtooth",0]],q:1,cut:600,peak:900,fd:.12,vol:1.2});});}
+  return bars*4*beat+1;}
+DEMOS.flat303=t=>tb303(t,bt(126),8,false);DEMOS.acid=t=>tb303(t,bt(126),8,true);
+/* 03 Techno */
+DEMOS.detroit=t=>{const beat=bt(130),bar=4*beat,s=beat/4,C=[[57,[69,72,76]],[53,[69,72,77]],[55,[67,71,74]],[52,[67,71,76]]];for(let i=0;i<8;i++){const tb=t+i*bar,[r,c]=C[i%4];for(let q=0;q<4;q++){k909(tb+q*beat,1);oh(tb+q*beat+beat/2,.8);}clap(tb+beat,.7);clap(tb+3*beat,.7);for(let k=0;k<16;k++)ch(tb+k*s,k%4===2?.7:.35);
+    [0,1.5,3].forEach(x=>c.forEach(m=>sub(tb+x*beat,m,beat*1.2,{waves:[["sawtooth",-6],["sawtooth",6]],cut:1600,peak:3200,fd:beat,vol:.55,att:.03})));[0,.75,2,2.75].forEach(x=>sub(tb+x*beat,r-24,beat*.5,{waves:[["square",0]],cut:200,peak:700,fd:.15,vol:1.2}));}
+  return 8*bar+1;};
+DEMOS.berlin=t=>{const beat=bt(132),bar=4*beat,s=beat/4;for(let i=0;i<8;i++){const tb=t+i*bar;for(let q=0;q<4;q++){k909(tb+q*beat,1.2);sub(tb+q*beat+beat*.25,28,beat*.7,{waves:[["sine",0],["triangle",0]],cut:120,peak:240,fd:.4,vol:2,drive:3});oh(tb+q*beat+beat/2,.6);}for(let k=0;k<16;k++)ch(tb+k*s,k%2?.3:.45);if(i>=2)[1,3].forEach(x=>rim(tb+x*beat+s,.8));
+    if(i>=2)[0,3,6,10,13].forEach(k=>sub(tb+k*s,52,s*.8,{waves:[["sawtooth",0]],q:9,cut:300+i*80,peak:900+i*180,fd:.08,vol:.8}));}
+  return 8*bar+1;};
+/* 05 DJ */
+DEMOS.build=(t,btn)=>{const beat=bt(126),bar=4*beat,st=stripNear(btn);lightStrip(st,t,bar,8);const C=[45,41,43,40];
+  for(let i=0;i<2;i++)four(t+i*bar,beat,{ch:true});for(let i=0;i<2;i++)[0,.5,1,1.5,2,2.5,3,3.5].forEach(x=>sub(t+i*bar+x*beat,33,beat*.4,{cut:200,peak:700,fd:.1,vol:1.2,waves:[["square",0]]}));
+  const b0=t+2*bar;riser(b0,4*bar-beat,1);for(let i=0;i<4;i++){const tb=b0+i*bar,n=[4,8,16,32][i];for(let k=0;k<n;k++){if(i===3&&k>=24)continue;snare(tb+k*bar/n,.35+i*.15+k/n*.2);}supersaw(tb,[57,60,64],bar,{cut:500+i*600,peak:900+i*900,vol:.6});}
+  const d=t+6*bar;for(let i=0;i<2;i++){const tb=d+i*bar;four(tb,beat,{ch:true,crash:i===0?1.2:0,kv:1.3});supersaw(tb,[57,60,64,69],bar,{cut:3000,peak:6000,vol:.8});[0,.5,1,1.5,2,2.5,3,3.5].forEach(x=>sub(tb+x*beat,C[i]-12,beat*.45,{cut:300,peak:1200,fd:.1,vol:1.4,waves:[["sawtooth",0]]}));}
+  return 8*bar+1;};
+DEMOS.filter=t=>{const beat=bt(124),bar=4*beat,a=A(),lp=a.createBiquadFilter();lp.type="lowpass";lp.Q.value=6;lp.frequency.setValueAtTime(180,t);lp.frequency.exponentialRampToValueAtTime(16000,t+6*bar);lp.frequency.setValueAtTime(16000,t+7*bar);lp.connect(bus);
+  via(lp,()=>{for(let i=0;i<8;i++){const tb=t+i*bar;four(tb,beat,{ch:true});[.75,1.5,2.75,3.5].forEach(x=>[60,64,67,71].forEach(m=>piano(tb+x*beat,m,beat*.4,.8)));[0,.75,1.5,2.5,3.25].forEach(x=>sub(tb+x*beat,33,beat*.45,{waves:[["square",0]],cut:250,peak:900,fd:.15,vol:1.3}));}});
+  return 8*bar+1;};
+DEMOS.mix=(t,btn)=>{const beat=bt(124),bar=4*beat,a=A(),gA=a.createGain(),gB=a.createGain();gA.connect(bus);gB.connect(bus);const st=stripNear(btn);lightStrip(st,t,bar,8);
+  gA.gain.setValueAtTime(1,t);gA.gain.setValueAtTime(1,t+2*bar);gA.gain.linearRampToValueAtTime(0,t+6*bar);gB.gain.setValueAtTime(0,t);gB.gain.setValueAtTime(0,t+2*bar);gB.gain.linearRampToValueAtTime(1,t+6*bar);
+  via(gA,()=>{for(let i=0;i<6;i++){const tb=t+i*bar;four(tb,beat,{ch:true});[.75,1.5,2.75,3.5].forEach(x=>[60,64,67,71].forEach(m=>piano(tb+x*beat,m,beat*.4,.7)));[0,.75,1.5,2.5,3.25].forEach(x=>sub(tb+x*beat,33,beat*.45,{waves:[["square",0]],cut:250,peak:900,fd:.15,vol:1.2}));}});
+  via(gB,()=>{for(let i=2;i<8;i++){const tb=t+i*bar,s=beat/4;for(let q=0;q<4;q++){k909(tb+q*beat,1);oh(tb+q*beat+beat/2,.6);}[0,3,6,10,13].forEach(k=>sub(tb+k*s,40,s*.8,{waves:[["sawtooth",0]],q:9,cut:500,peak:1800,fd:.08,vol:.9}));[0,1,2,3].forEach(q=>sub(tb+q*beat+beat/2,28,beat*.4,{waves:[["sine",0]],cut:200,peak:300,fd:.3,vol:1.6}));}});
+  return 8*bar+1;};
+/* 06 英国 */
+DEMOS.jungle=t=>{const beat=bt(170),bar=4*beat,s=beat/4,P=[[0,"k"],[2,"s",.5],[4,"s"],[6,"k"],[7,"s",.4],[9,"s",.5],[10,"k"],[12,"s"],[14,"s",.5],[15,"k",.6]],P2=[[0,"k"],[3,"s",.5],[4,"s"],[5,"s",.3],[6,"k"],[8,"k"],[10,"s",.6],[11,"s",.3],[12,"s"],[13,"s",.4],[14,"k"],[15,"s",.6]];
+  for(let i=0;i<8;i++){const tb=t+i*bar;(i%2?P2:P).forEach(([k,w,v=1])=>w==="k"?kick(tb+k*s,v*1.1):snare(tb+k*s,v*1.05));for(let k=0;k<16;k+=2)ch(tb+k*s,.5);if(i%2===0){subBass(tb,[26,26,29,24][i/2%4],bar*.95,1);}
+    if(i>=2&&i%2===0)strings(tb,[[62,65,69],[60,64,67]][i/2%2],2*bar,.8);if(i===0||i===4)crash(tb,.5);}
+  return 8*bar+1;};
+DEMOS.garage=t=>{const beat=bt(132),bar=4*beat,s=beat/4,sw=.18;const pos=k=>k*s+(k%2?s*sw:0);for(let i=0;i<8;i++){const tb=t+i*bar;[0,7,10].forEach(k=>k909(tb+pos(k),k?.8:1.1));[4,12].forEach(k=>{snare(tb+pos(k),.9);clap(tb+pos(k),.6);});[15].forEach(k=>rim(tb+pos(k),1));for(let k=0;k<16;k+=2)ch(tb+pos(k+1),.45);
+    [[0,33,.6],[3,36,.3],[7,33,.3],[10,40,.5],[13,38,.3]].forEach(([k,m,d])=>sub(tb+pos(k),m,beat*d*2,{waves:[["sine",0],["square",0]],cut:180,peak:600,fd:.2,vol:1.5}));
+    if(i>=2)[[2,[64,67,71]],[9,[62,65,69]]].forEach(([k,c])=>c.forEach(m=>piano(tb+pos(k),m,s*1.5,.8)));}
+  return 8*bar+1;};
+DEMOS.dubstep=t=>{const beat=bt(140),bar=4*beat,a=A();for(let i=0;i<8;i++){const tb=t+i*bar;kick(tb,1.2);if(i%2)kick(tb+2.5*beat,.8);snare(tb+2*beat,1.3);clap(tb+2*beat,.6);for(let k=0;k<8;k++)ch(tb+k*beat/2,.45);if(i%4===0)crash(tb,.7);
+    const rate=[1,2,3,4,2,6,1,4][i]/beat*.5,root=[28,28,31,26][i%4],lp=a.createBiquadFilter();lp.type="lowpass";lp.Q.value=9;lp.frequency.value=500;const l=a.createOscillator(),lg=a.createGain();l.frequency.value=rate*2;lg.gain.value=420;l.connect(lg).connect(lp.frequency);l.start(tb);l.stop(tb+bar);track(l);
+    const g=a.createGain();g.gain.value=.11;const sh=a.createWaveShaper();sh.curve=shaper(4);lp.connect(sh).connect(g).connect(bus);[["sawtooth",-10],["sawtooth",10],["square",0]].forEach(([w,dt])=>{const x=voiceOsc(tb,bar*.98,w,mf(root+12),{dt});x.connect(lp);});
+    subBass(tb,root,bar*.98,.8);}
+  return 8*bar+1;};
+/* 07 Trance、drop */
+DEMOS.trance=t=>{const beat=bt(138),bar=4*beat,s=beat/4,C=[[45,[57,60,64]],[41,[57,60,65]],[48,[55,60,64]],[43,[55,59,62]]],ARP=[0,1,2,1,0,2,1,2];
+  for(let i=0;i<8;i++){const tb=t+i*bar,[r,c]=C[i%4];four(tb,beat,{clap:true,cv:.6,crash:i%4===0?.7:0});for(let q=0;q<4;q++)sub(tb+q*beat+beat/2,r-12,beat*.45,{waves:[["sawtooth",0]],cut:300,peak:1100,fd:.1,vol:1.2});
+    supersaw(tb,c.map(m=>m+12),bar,{cut:2200,peak:4800,vol:.55,att:.02});for(let k=0;k<16;k++)sub(tb+k*s,c[ARP[k%8]]+24,s*.85,{waves:[["sawtooth",-5],["sawtooth",5]],cut:1500,peak:5200,fd:.09,vol:.42});
+    if(i>=4)[[0,81,1.5],[1.5,79,.5],[2,76,1],[3,79,1]].forEach(([b,m,d])=>sub(tb+b*beat,m-(i===5?2:i===6?5:0),d*beat*.95,{waves:[["sawtooth",-9],["sawtooth",9],["square",0]],cut:3000,peak:6000,fd:d*beat,vol:.55,att:.01}));}
+  return 8*bar+1;};
+DEMOS.drop=t=>{const beat=bt(128),bar=4*beat;riser(t,4*bar-beat,1.1);for(let i=0;i<4;i++){const tb=t+i*bar,n=[4,8,16,16][i];for(let k=0;k<n;k++){if(i===3&&k>=12)continue;snare(tb+k*bar/n,.35+i*.18);}supersaw(tb,[69,72,76],bar,{cut:500+i*500,peak:800+i*1000,vol:.5});}
+  const d=t+4*bar,a=A();for(let i=0;i<4;i++){const tb=d+i*bar;four(tb,beat,{kv:1.4,cv:1,crash:i===0?1.3:0});const roots=[33,29,36,31];
+    [0,.5,1,1.5,2,2.5,3,3.5].forEach((x,j)=>{const m=roots[i]+12+(j%4===3?12:0);sub(tb+x*beat,m,beat*.42,{waves:[["sawtooth",-14],["sawtooth",14],["square",0]],cut:600,peak:7000,fd:.18,q:4,vol:1.2,drive:3});subBass(tb+x*beat,roots[i],beat*.42,.8);});}
+  return 8*bar+1.2;};
+/* 08 氛围与芯片 */
+DEMOS.ambient=t=>{const beat=bt(72),total=56*beat,L=[[7,[[0,72],[2,76],[4.5,79]]],[9,[[1,67],[5,71]]],[11,[[0,60],[3,64],[7,62]]]];
+  L.forEach(([len,notes])=>{for(let st=0;st<total;st+=len*beat)notes.forEach(([b,m])=>{if(st+b*beat<total)piano(t+st+b*beat,m,4,.7);});});
+  [[0,[48,55,64]],[16,[45,52,60]],[32,[41,48,57]],[44,[43,50,59]]].forEach(([b,c])=>strings(t+b*beat,c,Math.min(16,56-b)*beat,.9));return total+3;};
+DEMOS.chip=t=>{const beat=bt(140),bar=4*beat,s=beat/4,M=[72,76,79,84,79,76,72,76,74,77,81,86,81,77,74,77],B=[48,48,55,55,50,50,57,57];
+  for(let i=0;i<8;i++){const tb=t+i*bar;for(let k=0;k<16;k++){const m=M[(k+i*4)%16]-(i>=4?5:0);sub(tb+k*s,m,s*.8,{waves:[["square",0]],cut:6000,peak:6000,fd:.1,vol:.45});}
+    for(let k=0;k<8;k++)sub(tb+k*beat/2,B[k]-12-(i>=4?5:0),beat*.45,{waves:[["triangle",0]],cut:3000,peak:3000,fd:.1,vol:1.4});
+    for(let q=0;q<4;q++){const a=A(),n=a.createBufferSource();n.buffer=noise();const g=a.createGain(),tt=tb+q*beat,sn=q%2;g.gain.setValueAtTime(sn?.2:.0,tt);g.gain.exponentialRampToValueAtTime(.001,tt+(sn?.12:.02));n.connect(g).connect(bus);n.start(tt);n.stop(tt+.13);track(n);if(!sn)subBass(tt,24,.08,1,{from:48,glide:.06});ch(tt+beat/2,.6);}}
+  return 8*bar+1;};
+
+/* ================= 调度 ================= */
+const GAIN={disco:1.5,seq:1.6,vocoder:1,house:1.1,flat303:1.3,acid:1.25,detroit:1.2,berlin:.95,build:1.1,filter:1,mix:1.3,jungle:.55,garage:.95,dubstep:.5,trance:1.3,drop:.85,ambient:4,chip:2.2};
+const fab=document.getElementById("stopAll");
+function setActive(b){activeBtn=b;b&&b.classList.add("playing");fab.classList.add("on");}
+function clearActive(){if(activeBtn){activeBtn.classList.remove("playing");activeBtn=null;}fab.classList.remove("on");}
+function runDemo(name,btn){newBus();bus.gain.value=GAIN[name]||1;if(["ambient","trance","detroit","jungle","seq"].includes(name))addRoom(2.6,.4);setActive(btn);const t=A().currentTime+.12,d=DEMOS[name](t,btn)||3;later(()=>clearActive(),d+.4);}
+document.querySelectorAll("[data-strip]").forEach(s=>{const n=+s.dataset.strip||12;for(let i=0;i<n;i++)s.appendChild(document.createElement("i"));});
+document.querySelectorAll("[data-demo]").forEach(b=>b.addEventListener("click",()=>{if(b.classList.contains("playing")){stopDemos();return;}runDemo(b.dataset.demo,b);}));
+document.querySelectorAll("[data-stop]").forEach(b=>b.addEventListener("click",stopDemos));
+fab.addEventListener("click",stopDemos);
+
+/* ================= 推荐曲目：霓虹传单 ================= */
+const SONGS=[
+  {side:"A",q:"Donna Summer I Feel Love",title:"I Feel Love",by:"Donna Summer",yr:"1977",style:"迪斯科 · 合成器",
+   txt:"本章开头那首歌。Giorgio Moroder 用 Moog 合成器做出的、像机器一样永不停歇的贝斯线，常被看作电子舞曲的起点之一。",listen:["跟着贝斯线拍桌子，对照 Lab 01 的音序器","人声飘在机器上面"]},
+  {side:"A",q:"Kraftwerk Trans-Europe Express",title:"Trans-Europe Express",by:"Kraftwerk",yr:"1977",style:"德国电子乐",
+   txt:"德国杜塞尔多夫乐队 Kraftwerk 的代表作。像火车车轮一样的节奏和冷静的合成器，影响了 Techno、早期嘻哈和电子流行。",listen:["节奏像什么？","和《I Feel Love》比，“温度”有什么不同？"]},
+  {side:"A",q:"Yellow Magic Orchestra Rydeen",title:"Rydeen",by:"Yellow Magic Orchestra",yr:"1979",style:"日本电子流行",
+   txt:"日本乐队 YMO 的器乐曲，明亮的合成器旋律和电子鼓。它和很多日本游戏音乐听起来是一家人。",listen:["旋律是用什么音色演奏的？","对照 Lab 07 的芯片音乐"]},
+  {side:"A",q:"Frankie Knuckles Your Love",title:"Your Love",by:"Frankie Knuckles",yr:"1987",style:"芝加哥浩室",
+   txt:"浩室“教父”的经典之作。一条不断循环的合成器琶音，加上温暖的人声和四拍底鼓。",listen:["四拍底鼓和反拍的开镲，对照图 2","那条琶音循环了多久？"]},
+  {side:"A",q:"Phuture Acid Tracks",title:"Acid Tracks",by:"Phuture",yr:"1987",style:"酸性浩室",
+   txt:"十多分钟几乎只有鼓机和一台 TB-303。它给“酸性浩室”起了名字。",listen:["303 什么时候变亮、什么时候变闷？对照图 3","对照 Lab 02 的“酸性”"]},
+  {side:"A",q:"Rhythim Is Rhythim Strings of Life",title:"Strings of Life",by:"Rhythim Is Rhythim（Derrick May）",yr:"1987",style:"底特律 Techno",
+   txt:"Derrick May 的作品，钢琴和合成器弦乐充满激情，证明了 Techno 也可以很浪漫。",listen:["弦乐段落的旋律","和 Lab 03 的“底特律”比一比"]},
+  {side:"B",q:"Goldie Inner City Life",title:"Inner City Life",by:"Goldie",yr:"1994",style:"丛林 / 鼓打贝斯",
+   txt:"快速切碎的 breakbeat，深沉的低音，加上温柔的灵魂乐人声。鼓打贝斯从地下走向主流的代表作之一。",listen:["鼓的速度和低音的速度“不一样”","对照 Lab 05 的丛林"]},
+  {side:"B",q:"Daft Punk Around the World",title:"Around the World",by:"Daft Punk",yr:"1997",style:"法国浩室",
+   txt:"法国二人组 Daft Punk 的作品。一句经过处理的人声重复了很多遍，各种乐器像积木一样轮流进出。",listen:["那句人声重复了几次？","贝斯、鼓、键盘各在什么时候进来？"]},
+  {side:"B",q:"Darude Sandstorm",title:"Sandstorm",by:"Darude",yr:"1999",style:"Trance",
+   txt:"芬兰制作人的器乐作品，快速的合成器 riff 和不断的积累，后来成了体育场和网络上无处不在的“背景音乐”。",listen:["积累段怎样推高张力？","和 Lab 06 的 Trance 比一比"]},
+  {side:"B",q:"Burial Archangel",title:"Archangel",by:"Burial",yr:"2007",style:"英国车库 · 后 dubstep",
+   txt:"伦敦制作人 Burial 的作品，摇摆的车库节奏、切碎的人声采样和唱片的沙沙声，像深夜伦敦街头的雨。",listen:["鼓为什么“一步一顿”？对照 Lab 05 的 2-step","人声是完整的句子吗？"]},
+  {side:"B",q:"Skrillex Scary Monsters and Nice Sprites",title:"Scary Monsters and Nice Sprites",by:"Skrillex",yr:"2010",style:"美式 dubstep / EDM",
+   txt:"把英国的 dubstep 变成了更响、更激烈的美国 EDM。积累、一声尖叫，然后是扭曲的低音 drop。",listen:["drop 前的那一拍安静","低音怎样“扭动”？对照图 6"]},
+  {side:"B",q:"Avicii Levels",title:"Levels",by:"Avicii",yr:"2011",style:"EDM · 前卫浩室",
+   txt:"瑞典制作人 Avicii 的代表作，明亮的钢琴式合成器旋律和巨大的 drop，是 2010 年代 EDM 浪潮的标志之一。",listen:["旋律第一次出现时是什么音色？","drop 来的时候你在哪一拍举手？"]}
+];
+const NC=["#FF4FD8","#2FE3FF","#E6FF3A","#FF6A1F","#8C5CFF","#35F29A"];
+const ICON="M8 5v14l11-7z";
+SONGS.forEach((s,i)=>{
+  const el=document.createElement("div");el.className="song";el.style.setProperty("--nc",NC[i%NC.length]);
+  const q=encodeURIComponent(s.q||`${s.title} ${s.by}`);
+  const yt=s.yt?`https://www.youtube.com/watch?v=${s.yt}`:`https://www.youtube.com/results?search_query=${q}`;
+  el.innerHTML=`<div class="meta"><span class="yr">${s.yr}</span><span class="title">${s.title}</span><span class="by">${s.by}</span><div class="pmeta"><span class="style">${s.style}</span></div></div>
+  <p>${s.txt}</p><ul class="listen">${s.listen.map(x=>`<li>${x}</li>`).join("")}</ul>
+  <div class="listen-links"><a class="main" href="${yt}" target="_blank" rel="noopener">${s.yt?"YouTube 官方音源":"YouTube 搜索"}</a>
+  <a href="https://music.163.com/#/search/m/?s=${q}&type=1" target="_blank" rel="noopener">网易云</a>
+  <a href="https://y.qq.com/n/ryqq/search?w=${q}" target="_blank" rel="noopener">QQ音乐</a></div>
+  <a class="playlink" href="${yt}" target="_blank" rel="noopener" aria-label="在 YouTube 收听 ${s.title}"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="${ICON}"/></svg></a>`;
+  document.getElementById(s.side==="A"?"songsA":"songsB").appendChild(el);
+});
+
+/* ================= 原创图解 ================= */
+const NS="http://www.w3.org/2000/svg";
+function S(p,tag,a,txt){const e=document.createElementNS(NS,tag);for(const k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;p.appendChild(e);return e;}
+const TB="font-family:var(--font-body);font-size:14px;font-weight:900";
+const FILL=c=>`fill:var(--${c})`;
+function pill(g,x,y,w,t,c){S(g,"rect",{x:x-w/2,y:y-16,width:w,height:32,rx:4,style:c?FILL(c):"",class:c?"":"sv-card"});if(!c)S(g,"rect",{x:x-w/2,y:y-16,width:w,height:32,rx:4,class:"sv-l"});S(g,"text",{x,y:y+5,"text-anchor":"middle",class:c?"sv-on":"sv-t",style:"font-size:12.5px;font-weight:900"},t);}
+/* 图 1 家谱 */
+(()=>{const g=document.getElementById("tree-fig");if(!g)return;const N={disco:[70,90,"迪斯科"],kw:[70,250,"德国电子乐"],house:[210,90,"芝加哥浩室","red"],techno:[210,250,"底特律 Techno","red"],acid:[350,50,"酸性浩室"],berlin:[350,300,"柏林 Techno"],rave:[350,150,"英国锐舞"],hh:[350,215,"嘻哈 breakbeat（C2）"],
+  jungle:[510,110,"丛林 / 鼓打贝斯"],garage:[510,170,"英国车库"],dub:[510,230,"dubstep"],trance:[510,50,"Trance"],edm:[618,140,"EDM"]};
+  const E=[["disco","house"],["kw","techno"],["kw","house"],["disco","techno"],["house","acid"],["techno","berlin"],["acid","rave"],["rave","jungle"],["hh","jungle"],["rave","garage"],["garage","dub"],["techno","trance"],["house","trance"],["trance","edm"],["dub","edm"],["house","edm"]];
+  E.forEach(([a,b])=>{const [x1,y1]=N[a],[x2,y2]=N[b];const sx=x1+56,ex=x2-56,mx=(sx+ex)/2;S(g,"path",{d:`M ${sx} ${y1} C ${mx} ${y1}, ${mx} ${y2}, ${ex} ${y2}`,class:"sv-l","stroke-width":1.3,fill:"none",opacity:.7});});
+  Object.entries(N).forEach(([k,[x,y,t,c]])=>pill(g,x,y,k==="edm"?96:t.length>7?136:112,t,c||null));
+  [["1970s",70],["1980s",210],["1990s",430],["2010s",630]].forEach(([t,x])=>S(g,"text",{x,y:345,"text-anchor":"middle",class:"sv-m",style:"font-family:var(--font-lcd);font-size:11px"},t));
+})();
+/* 图 2 鼓型 */
+(()=>{const g=document.getElementById("beat-fig");if(!g)return;const x0=180,cw=29,all=[...Array(16).keys()];
+  const B=[["迪斯科（真鼓）",{开镲:[2,6,10,14],军鼓:[4,12],底鼓:[0,4,8,12]}],["浩室（鼓机）",{踩镲:all.filter(k=>k%2===0),开镲:[2,6,10,14],拍手:[4,12],底鼓:[0,4,8,12]}]];
+  B.forEach(([n,L],b)=>{const y=18+b*118;S(g,"text",{x:20,y:y+20,class:"sv-t",style:TB},n);Object.entries(L).forEach(([lane,hits],li)=>{const yy=y+li*24;S(g,"text",{x:x0-8,y:yy+14,"text-anchor":"end",class:"sv-ts"},lane);
+    all.forEach(k=>{const on=hits.includes(k);S(g,"rect",{x:x0+k*cw,y:yy,width:cw-4,height:18,rx:2,style:on?FILL(lane==="底鼓"?"red":lane==="开镲"?"denim":"ink"):"",class:on?"":"sv-card"});if(!on)S(g,"rect",{x:x0+k*cw,y:yy,width:cw-4,height:18,rx:2,class:"sv-lline"});});});});
+})();
+/* 图 3 滤波 */
+(()=>{const g=document.getElementById("filter-fig");if(!g)return;const x0=70,W=560,base=220;S(g,"line",{x1:x0,y1:base,x2:x0+W,y2:base,class:"sv-l"});S(g,"line",{x1:x0,y1:base,x2:x0,y2:30,class:"sv-l"});
+  S(g,"text",{x:x0+W,y:base+20,"text-anchor":"end",class:"sv-ts"},"频率 →");S(g,"text",{x:x0+6,y:40,class:"sv-ts"},"音量 ↑");
+  [[.3,"ink",.35],[.55,"red",1],[.8,"denim",.5]].forEach(([fc,c,op],i)=>{let d="";for(let x=0;x<=W;x+=4){const r=x/W,dist=(r-fc)/.05,peak=Math.exp(-dist*dist)*110,y=r<fc?base-100-peak:base-Math.max(0,100*Math.exp(-(r-fc)*14))-peak;d+=(x?" L ":"M ")+`${x0+x} ${y.toFixed(1)}`;}S(g,"path",{d,style:`stroke:var(--${c});fill:none`,"stroke-width":i===1?3:1.8,opacity:op});});
+  S(g,"text",{x:x0+.55*W+28,y:46,class:"sv-r",style:"font-size:13px;font-weight:900"},"← 共振峰");
+  S(g,"path",{d:`M ${x0+.3*W} 250 L ${x0+.8*W} 250`,class:"sv-l","stroke-width":1.6});S(g,"text",{x:x0+.55*W,y:266,"text-anchor":"middle",class:"sv-ts"},"转动 CUTOFF：峰左右移动");
+})();
+/* 图 4 能量 */
+(()=>{const g=document.getElementById("energy-fig");if(!g)return;const x0=40,W=600,base=210,P=[[0,.3],[.12,.32],[.14,.35],[.3,.8],[.31,.05],[.32,1],[.5,1],[.52,.25],[.62,.3],[.76,.85],[.77,.05],[.78,1],[.92,.95],[1,.3]];
+  let d=`M ${x0} ${base}`;P.forEach(([x,y])=>d+=` L ${x0+x*W} ${base-y*160}`);d+=` L ${x0+W} ${base} Z`;S(g,"path",{d,style:FILL("red"),opacity:.2});let l="";P.forEach(([x,y],i)=>l+=(i?" L ":"M ")+`${x0+x*W} ${base-y*160}`);S(g,"path",{d:l,style:"stroke:var(--red);fill:none","stroke-width":2.6});
+  S(g,"line",{x1:x0,y1:base,x2:x0+W,y2:base,class:"sv-l"});[["前奏",.06],["积累",.22],["DROP",.41],["间歇",.57],["积累",.69],["DROP",.85],["尾奏",.96]].forEach(([t,x])=>S(g,"text",{x:x0+x*W,y:base+20,"text-anchor":"middle",class:t==="DROP"?"sv-r":"sv-ts",style:t==="DROP"?"font-weight:900;font-size:12px":""},t));
+  [.31,.77].forEach(x=>S(g,"text",{x:x0+x*W,y:base-12,"text-anchor":"middle",class:"sv-m",style:"font-size:10.5px"},"静"));
+})();
+/* 图 5 混音 */
+(()=>{const g=document.getElementById("mix-fig");if(!g)return;const x0=60,W=580;S(g,"rect",{x:x0,y:30,width:W*.7,height:40,rx:4,style:FILL("red"),opacity:.85});S(g,"text",{x:x0+10,y:55,class:"sv-on",style:"font-weight:900;font-size:13px"},"歌曲 A");
+  S(g,"rect",{x:x0+W*.35,y:84,width:W*.65,height:40,rx:4,style:FILL("denim"),opacity:.85});S(g,"text",{x:x0+W*.35+10,y:109,class:"sv-on",style:"font-weight:900;font-size:13px"},"歌曲 B");
+  S(g,"path",{d:`M ${x0+W*.35} 140 L ${x0+W*.7} 190`,style:"stroke:var(--red)","stroke-width":2.4});S(g,"path",{d:`M ${x0+W*.35} 190 L ${x0+W*.7} 140`,style:"stroke:var(--denim)","stroke-width":2.4});
+  S(g,"text",{x:x0+W*.525,y:210,"text-anchor":"middle",class:"sv-ts"},"交叉渐变：16 小节");for(let k=0;k<=32;k++)S(g,"line",{x1:x0+k*W/32,y1:220,x2:x0+k*W/32,y2:k%4?226:230,class:"sv-l"});
+})();
+/* 图 6 摇摆低音 */
+(()=>{const g=document.getElementById("wobble-fig");if(!g)return;const x0=110,W=520;S(g,"text",{x:20,y:66,class:"sv-t",style:TB},"LFO");S(g,"text",{x:20,y:176,class:"sv-t",style:TB},"低音亮度");
+  [1,2,3].forEach((r,ri)=>{const seg=W/3,xs=x0+ri*seg;let d="",e="";for(let x=0;x<=seg;x+=3){const ph=x/seg*4*r*Math.PI*.5;d+=(x?" L ":"M ")+`${xs+x} ${(64-Math.sin(ph*2)*26).toFixed(1)}`;const v=.5+.5*Math.sin(ph*2);e+=(x?" L ":"M ")+`${xs+x} ${(210-v*70).toFixed(1)}`;}
+    S(g,"path",{d,style:"stroke:var(--denim);fill:none","stroke-width":2.2});S(g,"path",{d:e+` L ${xs+seg} 210 L ${xs} 210 Z`,style:FILL("red"),opacity:.25});S(g,"path",{d:e,style:"stroke:var(--red);fill:none","stroke-width":2});
+    S(g,"text",{x:xs+seg/2,y:240,"text-anchor":"middle",class:"sv-ts"},`每拍 ${r} 次`);if(ri)S(g,"line",{x1:xs,y1:30,x2:xs,y2:220,class:"sv-lline"});});
+  S(g,"path",{d:`M 300 100 L 300 128`,class:"sv-l","stroke-width":1.4});S(g,"text",{x:308,y:120,class:"sv-m",style:"font-size:11px"},"控制");
+})();
+/* 图 7 速度地图 */
+(()=>{const g=document.getElementById("bpm-fig");if(!g)return;const X=b=>150+(b-60)*3.4;const R=[["浩室",118,128,"red"],["Techno",125,140,"ink"],["Trance",130,140,"denim"],["Dubstep（听起来半速）",138,142,"mustard"],["丛林 / 鼓打贝斯",160,180,"red"],["硬核",160,200,"ink"]];
+  [60,80,100,120,140,160,180,200].forEach(b=>{S(g,"line",{x1:X(b),y1:16,x2:X(b),y2:262,class:"sv-lline"});S(g,"text",{x:X(b),y:282,"text-anchor":"middle",class:"sv-m",style:"font-family:var(--font-lcd);font-size:11px"},String(b));});
+  R.forEach(([n,a,b,c],i)=>{const y=24+i*40;S(g,"text",{x:140,y:y+17,"text-anchor":"end",class:"sv-t",style:"font-size:12.5px;font-weight:700"},n);S(g,"rect",{x:X(a),y,width:Math.max(10,X(b)-X(a)),height:24,rx:3,style:FILL(c)});if(i===3){S(g,"rect",{x:X(69),y,width:X(71)-X(69),height:24,rx:3,style:FILL(c),opacity:.35});S(g,"text",{x:X(72)+6,y:y+17,class:"sv-m",style:"font-size:11px"},"← 感觉上");}});
+  S(g,"text",{x:660,y:302,"text-anchor":"end",class:"sv-ts"},"BPM");
+})();
+/* 图 8 循环 */
+(()=>{const g=document.getElementById("loops-fig");if(!g)return;const x0=110,W=540,T=40;[[7,"red"],[9,"denim"],[11,"mustard"]].forEach(([len,c],i)=>{const y=40+i*60;S(g,"text",{x:20,y:y+18,class:"sv-t",style:TB},`${len} 秒循环`);
+  for(let st=0;st<T;st+=len){const x=x0+st/T*W,w=Math.min(len,T-st)/T*W;S(g,"rect",{x:x+1,y,width:w-2,height:26,rx:3,style:FILL(c),opacity:.7});}});
+  S(g,"text",{x:x0,y:232,class:"sv-ts"},"前 40 秒：三条循环的起点几乎从不对齐");})();
+/* 外部照片 */
+document.querySelectorAll(".photo img").forEach(img=>{
+  const fail=()=>{const d=document.createElement("div");d.className="photo-fallback";d.innerHTML=`照片待放入：${img.getAttribute("src")}<br><a href="https://commons.wikimedia.org/wiki/File:${img.dataset.file}" target="_blank" rel="noopener">在维基共享资源查看这张照片</a>`;img.replaceWith(d);};
+  if(img.complete&&img.naturalWidth===0)fail();else img.addEventListener("error",fail);
+});
+
+</script>
+<script id="nav-guard">(()=>{document.querySelectorAll(".photo img, figure img").forEach(i=>{const hide=()=>{const f=i.closest("figure")||i.closest(".photo");if(f)f.style.display="none";};if(i.complete&&i.naturalWidth===0&&i.getAttribute("src"))hide();else i.addEventListener("error",hide);});})();</script>
+</body>
+</html>

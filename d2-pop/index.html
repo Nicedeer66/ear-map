@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>D2 当代流行 · 耳朵的地图</title>
+<!--share-->
+<meta name="description" content="流行音乐不是一种声音，而是一门手艺和一个行业：它把布鲁斯、迪斯科、嘻哈、电子乐、拉丁节奏通通吸进来，在电脑里拼成三分钟，然后在十五秒内抓住你。这一章拆开一首当代流行歌，看看它是怎么做出来的。">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="耳朵的地图">
+<meta property="og:title" content="D2 当代流行 · 耳朵的地图">
+<meta property="og:description" content="流行音乐不是一种声音，而是一门手艺和一个行业：它把布鲁斯、迪斯科、嘻哈、电子乐、拉丁节奏通通吸进来，在电脑里拼成三分钟，然后在十五秒内抓住你。这一章拆开一首当代流行歌，看看它是怎么做出来的。">
+<meta property="og:image" content="https://earmap.liangdeer.com/d2-pop/img/d2-pop.jpg">
+<meta property="og:url" content="https://earmap.liangdeer.com/d2-pop/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<!--/share-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@700;900&family=Unbounded:wght@300;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@700;900&family=Unbounded:wght@300;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
+<style>
+/* 全书骨架固定；本章皮肤：当代流行 = 流媒体 App、歌单、手机屏幕和演唱会的荧光。粉、紫、青的渐变 */
+:root{
+  --paper:#F6F4FB; --paper-2:#ECE8F5; --ink:#1C1830; --ink-2:#5E5874;
+  --red:#E0307A; --denim:#5B4BDB; --mustard:#0FA9BD; --soft:#FBE3EF;
+  --line:rgba(28,24,48,.12); --card:#FFFFFF;
+  --font-display:"Noto Serif SC","Songti SC",serif;
+  --font-body:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --font-wood:"Unbounded","Noto Sans SC",sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0F0C1A; --paper-2:#181427; --ink:#EEEAF8; --ink-2:#A49EBC;
+    --red:#FF5FA2; --denim:#9C8CFF; --mustard:#46D9EA; --soft:#2A1A33;
+    --line:rgba(238,234,248,.13); --card:#1A1629; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0F0C1A; --paper-2:#181427; --ink:#EEEAF8; --ink-2:#A49EBC;
+  --red:#FF5FA2; --denim:#9C8CFF; --mustard:#46D9EA; --soft:#2A1A33;
+  --line:rgba(238,234,248,.13); --card:#1A1629; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.9;padding-bottom:40px}
+a{color:var(--red)}
+:focus-visible{outline:3px solid var(--denim);outline-offset:2px}
+.wrap{max-width:700px;margin:0 auto;padding:0 20px}
+.wide{max-width:1040px;margin:0 auto;padding:0 20px}
+
+.albumbar{border-bottom:1px solid var(--line);font-family:var(--font-mono);font-size:12.5px;background:var(--paper)}
+.albumbar .wide{display:flex;gap:16px;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+.albumbar .book{color:var(--ink-2);letter-spacing:.04em}
+.tracks{display:flex;gap:6px;flex-wrap:wrap}
+.tracks span{padding:3px 9px;border:1px solid var(--line);border-radius:99px;color:var(--ink-2)}
+.tracks span.on{background:var(--red);border-color:var(--red);color:var(--paper)}
+.tracks span.soon{opacity:.55}
+
+/* 章首：粉紫青的渐变网格，颜色固定 */
+.hero{color:#fff;background:#2A1B66;background-image:radial-gradient(circle at 12% 20%,#FF4F9A 0,rgba(255,79,154,0) 42%),radial-gradient(circle at 85% 15%,#3BD8F0 0,rgba(59,216,240,0) 40%),radial-gradient(circle at 60% 95%,#8A5CFF 0,rgba(138,92,255,0) 50%),linear-gradient(135deg,#3A1F8C,#1B1450)}
+.opener{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:40px;align-items:center;padding-top:52px;padding-bottom:56px}
+.code{font-family:var(--font-wood);font-size:12px;letter-spacing:.18em;display:inline-block;padding:6px 14px;border-radius:999px;background:rgba(255,255,255,.16);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.35)}
+.pop{font-family:var(--font-body);font-weight:900;font-size:clamp(88px,14vw,140px);line-height:1;margin:18px 0 0;letter-spacing:.04em;background:linear-gradient(180deg,#FFFFFF 30%,#FFD1E6 70%,#B9F3FF);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 6px 24px rgba(255,79,154,.55))}
+.sub{font-family:var(--font-wood);font-size:30px;font-weight:700;margin:8px 0 16px;color:#fff;letter-spacing:.02em}
+.lede{font-size:18px;margin:0;max-width:30em;color:#F2EEFF}
+.meta-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;font-size:13px;font-weight:700}
+.meta-row span{padding:5px 12px;border-radius:999px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3)}
+figure{margin:0}
+.art{width:100%;aspect-ratio:4/3;display:block;border-radius:28px;background:#120B2E;box-shadow:0 24px 60px rgba(10,0,40,.55),0 0 0 1px rgba(255,255,255,.25)}
+.opener figcaption{font-size:12px;color:#E6E0FF;margin-top:12px}
+
+.mapstrip{display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:14px 0 6px;font-size:13px}
+.mapstrip b{font-family:var(--font-mono);font-weight:500;font-size:12px;color:var(--ink-2);margin-right:4px}
+.mapstrip span{padding:3px 10px;border-radius:99px;border:1px dashed var(--line);color:var(--ink-2)}
+.mapstrip span.here{border:1px solid var(--red);background:var(--red);font-weight:700;color:var(--paper)}
+
+.toc{border-top:3px double var(--ink);border-bottom:3px double var(--ink);padding:16px 4px;margin:32px 0;font-size:14.5px}
+.toc b{font-family:var(--font-wood);font-size:16px;color:var(--red);font-weight:400;letter-spacing:.04em}
+.toc ol{margin:8px 0 0;padding-left:1.4em;columns:2;column-gap:28px}
+.toc li{break-inside:avoid;margin-bottom:2px}
+.toc a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--ink-2)}
+.toc a:hover{color:var(--red)}
+
+article h2{font-family:var(--font-display);font-weight:900;font-size:30px;line-height:1.35;margin:80px 0 16px;text-wrap:balance;scroll-margin-top:20px}
+article h2 .n{font-family:var(--font-wood);font-size:15px;font-weight:400;color:var(--red);display:block;margin-bottom:6px;letter-spacing:.06em}
+article h2 .n::before{content:"★ "}
+article h3{font-family:var(--font-display);font-size:20px;font-weight:900;margin:36px 0 8px;text-wrap:balance}
+article p{margin:0 0 18px}
+.mark{background:linear-gradient(transparent 60%,var(--soft) 60%);color:inherit}
+.scene{font-family:var(--font-display);font-weight:600;font-size:18.5px;line-height:2;border-left:3px solid var(--red);padding-left:20px;margin:40px 0}
+.scene p{margin:0 0 12px}
+ul.clean,ol.clean{padding-left:1.3em;margin:0 0 18px}
+ul.clean li,ol.clean li{margin-bottom:8px}
+.k{background:var(--soft);padding:0 5px;border-radius:3px}
+
+.ask{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:start;background:var(--card);border:1px solid var(--line);border-left:5px solid var(--denim);padding:16px 18px;margin:28px 0;border-radius:4px}
+.ask .who{font-family:var(--font-mono);font-size:12px;background:var(--denim);color:var(--paper);padding:2px 10px;margin-top:3px;white-space:nowrap;border-radius:3px}
+.ask p{margin:0}
+.ask p.q{font-weight:700}
+
+.lab{background:var(--card);border:1px solid var(--line);border-top:6px solid var(--denim);padding:20px;margin:28px 0;border-radius:4px;box-shadow:0 1px 0 var(--line)}
+.lab .head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.lab .head strong{font-size:16px}
+.lab .head .tag{font-family:var(--font-wood);font-size:14px;color:var(--red);letter-spacing:.04em}
+.lab .head small{color:var(--ink-2);font-size:13px}
+.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:14px}
+button{font:inherit;font-size:14px;line-height:1.4;border:1px solid var(--ink);background:transparent;color:var(--ink);padding:6px 14px;cursor:pointer;border-radius:99px}
+button.primary{background:var(--denim);border-color:var(--denim);color:var(--paper)}
+button:hover{background:var(--soft);color:var(--ink)}
+button.playing{background:var(--red);border-color:var(--red);color:var(--paper)}
+.controls label{font-size:13px;color:var(--ink-2);display:flex;gap:8px;align-items:center}
+.note{font-size:13.5px;color:var(--ink-2);margin:10px 0 0;line-height:1.75}
+.cols3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:6px}
+.cols2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:6px}
+.cols4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:6px}
+.opt{border:1px solid var(--line);padding:12px;background:var(--paper);border-radius:4px}
+.opt b{display:block;font-size:15px}
+.opt p{font-size:13.5px;color:var(--ink-2);margin:4px 0 10px;line-height:1.7}
+.strip{display:grid;grid-template-columns:repeat(var(--n,12),minmax(0,1fr));gap:4px;margin-top:12px}
+.strip i{display:block;height:8px;background:var(--line);border-radius:2px}
+.strip i.now{background:var(--red)}
+
+.fig{margin:34px 0}
+.fig svg{width:100%;height:auto;display:block}
+.fig figcaption,.photo figcaption{font-family:var(--font-mono);font-size:12px;color:var(--ink-2);margin-top:8px;line-height:1.6}
+.fig .frame{background:var(--card);border:1px solid var(--line);padding:16px;border-radius:4px}
+.photo{margin:34px 0}
+.photo img{width:100%;display:block;filter:sepia(.35) contrast(1.04);border:1px solid var(--line);border-radius:4px}
+.photo .cap b{color:var(--ink);font-family:var(--font-body);font-size:13.5px;font-weight:700;display:block;margin-bottom:2px}
+.photo-fallback{border:1px dashed var(--ink-2);padding:28px 18px;text-align:center;font-size:13.5px;color:var(--ink-2);background:var(--paper-2);line-height:1.7;border-radius:4px}
+.photo-fallback a{font-family:var(--font-mono);font-size:12.5px}
+.sv-ink{fill:var(--ink)}.sv-paper{fill:var(--paper)}.sv-p2{fill:var(--paper-2)}.sv-card{fill:var(--card)}
+.sv-red{fill:var(--red)}.sv-denim{fill:var(--denim)}.sv-must{fill:var(--mustard)}.sv-soft{fill:var(--soft)}
+.sv-l{stroke:var(--ink);fill:none}.sv-lr{stroke:var(--red);fill:none}.sv-ld{stroke:var(--denim);fill:none}.sv-lline{stroke:var(--line);fill:none}
+.sv-t{fill:var(--ink);font-family:var(--font-body);font-size:13px}
+.sv-tb{fill:var(--ink);font-family:var(--font-display);font-size:15px;font-weight:900}
+.sv-ts{fill:var(--ink-2);font-family:var(--font-body);font-size:11.5px}
+.sv-m{fill:var(--ink-2);font-family:var(--font-mono);font-size:11px}
+.sv-on{fill:var(--paper);font-family:var(--font-body);font-size:12.5px;font-weight:700}
+.sv-onm{fill:var(--paper);font-family:var(--font-mono);font-size:12px}
+.sv-r{fill:var(--red);font-family:var(--font-body);font-size:12px}
+.sv-d{fill:var(--denim);font-family:var(--font-body);font-size:12px}
+.sv-wood{fill:var(--ink);font-family:var(--font-wood);font-size:18px}
+
+table.cmp{width:100%;border-collapse:collapse;font-size:14.5px;margin:18px 0;line-height:1.65}
+table.cmp th,table.cmp td{border-bottom:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+table.cmp th{font-family:var(--font-display);font-weight:900;border-bottom:3px double var(--ink)}
+table.cmp td:first-child{font-weight:700;width:6.5em}
+.tablewrap{overflow-x:auto}
+
+.timeline{list-style:none;padding:0;margin:20px 0;border-left:2px solid var(--ink)}
+.timeline li{position:relative;padding:0 0 20px 22px}
+.timeline li::before{content:"★";position:absolute;left:-9px;top:2px;font-size:15px;color:var(--red);background:var(--paper);line-height:1.2}
+.timeline .yr{font-family:var(--font-mono);font-size:13px;color:var(--red)}
+.timeline b{display:block;font-size:17px}
+.timeline p{margin:4px 0 0;font-size:15.5px}
+
+.side{font-family:var(--font-mono);font-size:12px;color:var(--ink-2);letter-spacing:.06em;border-bottom:3px double var(--ink);padding-bottom:6px;margin:30px 0 4px;display:flex;justify-content:space-between;gap:10px}
+.song{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}
+.playlink{display:grid;place-items:center;width:44px;height:44px;background:var(--denim);color:var(--paper);border-radius:50%}
+.playlink:hover{background:var(--red)}
+.song .meta{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}
+.song .title{font-family:var(--font-display);font-weight:900;font-size:17px}
+.song .by{color:var(--ink-2);font-size:14px}
+.song .yr{font-family:var(--font-mono);font-size:12px;color:var(--red)}
+.song .style{font-family:var(--font-mono);font-size:11.5px;border:1px solid var(--line);border-radius:99px;padding:0 8px;color:var(--ink-2)}
+.song p{margin:6px 0 8px;font-size:15px;line-height:1.75}
+.song .listen{font-size:14.5px;margin:0 0 8px;padding-left:1.2em}
+.song .listen li{margin-bottom:4px}
+.listen-links{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:6px}
+.listen-links a{font-family:var(--font-mono);font-size:12px;border:1px solid var(--line);border-radius:99px;padding:3px 10px;text-decoration:none;color:var(--ink);background:var(--card)}
+.listen-links a.main{background:var(--denim);border-color:var(--denim);color:var(--paper)}
+.listen-links a:hover{border-color:var(--red);color:var(--red)}
+.listen-links a.main:hover{background:var(--red);color:#FAF5EA}
+
+.mine{border:1px dashed var(--ink-2);padding:16px 18px;margin:28px 0;color:var(--ink-2);border-radius:4px}
+.mine .lbl{font-family:var(--font-wood);font-size:14px;color:var(--red)}
+dl.gloss{display:grid;grid-template-columns:minmax(0,8.5em) minmax(0,1fr);gap:10px 18px;font-size:15px;line-height:1.7;margin:16px 0}
+dl.gloss dt{font-weight:900;font-family:var(--font-display)}
+dl.gloss dd{margin:0;color:var(--ink-2)}
+
+.credits{background:#2B2621;color:#EEE5D3;margin-top:72px;padding:40px 0 48px;border-top:6px double #D7A13E}
+.credits h2{font-family:var(--font-wood);font-weight:400;font-size:30px;margin:0 0 16px;color:#E4B65A}
+.credits dl{display:grid;grid-template-columns:minmax(0,9em) minmax(0,1fr);gap:8px 16px;margin:0;font-size:14px;line-height:1.75}
+.credits dt{font-family:var(--font-mono);font-size:12px;opacity:.7;padding-top:3px}
+.credits dd{margin:0}
+.credits a{color:#E4B65A}
+.next{display:flex;justify-content:space-between;gap:12px;margin-top:28px;font-family:var(--font-mono);font-size:13px;opacity:.85;flex-wrap:wrap}
+.stopfab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:10;display:none;background:var(--red);border-color:var(--red);color:#FAF5EA}
+.stopfab.on{display:inline-block}
+
+@media (max-width:760px){
+  .opener{grid-template-columns:1fr;gap:24px;padding-top:28px}
+  .cols3,.cols2,.cols4{grid-template-columns:1fr}
+  .toc ol{columns:1}
+  .credits dl,dl.gloss{grid-template-columns:1fr}
+  dl.gloss dd{margin-bottom:6px}
+}
+
+/* ================= C2 正文：流媒体 App、歌单、手机屏幕 ================= */
+:root:not(#x){--grad:linear-gradient(90deg,#FF4F9A,#8A5CFF 55%,#2FC6E0);--glass:rgba(255,255,255,.72);--blob1:rgba(255,79,154,.10);--blob2:rgba(47,198,224,.10);--shadow:0 14px 36px rgba(60,30,140,.12)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]):not(#x){--glass:rgba(30,24,52,.72);--blob1:rgba(255,79,154,.10);--blob2:rgba(47,198,224,.08);--shadow:0 14px 36px rgba(0,0,0,.45)}}
+body{background-image:radial-gradient(circle at 0% 30%,var(--blob1),rgba(0,0,0,0) 35%),radial-gradient(circle at 100% 60%,var(--blob2),rgba(0,0,0,0) 35%),radial-gradient(circle at 10% 90%,var(--blob1),rgba(0,0,0,0) 30%);background-attachment:fixed}
+.albumbar{background:var(--paper);backdrop-filter:blur(10px)}
+.tracks span{border-radius:999px}.tracks span.on{background:var(--grad);border-color:transparent;color:#fff}
+.mapstrip span{border-radius:999px}.mapstrip .here{background:var(--grad);border-color:transparent;color:#fff}
+/* 小节标题：正在播放 + 进度条 */
+article h2{font-weight:900;font-size:32px;letter-spacing:.02em;margin:96px 0 26px;padding-bottom:18px;position:relative}
+article h2 .n{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-wood);font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--grad);padding:5px 12px;border-radius:999px;margin-bottom:10px}
+article h2 .n::before{content:"♪"}
+article h2{background:linear-gradient(90deg,#FF4F9A,#8A5CFF) 0 100%/var(--pos,38%) 4px no-repeat,linear-gradient(var(--line),var(--line)) 0 100%/100% 4px no-repeat}
+article h2::after{content:"";position:absolute;left:var(--pos,38%);bottom:-4px;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:#fff;box-shadow:0 0 0 3px #8A5CFF,0 2px 6px rgba(0,0,0,.25)}
+article h3{font-weight:900}
+.mark{background:linear-gradient(90deg,rgba(255,79,154,.22),rgba(138,92,255,.22));border-radius:6px;padding:0 4px;color:inherit;font-weight:700}
+/* 开场：手机锁屏 */
+.scene{position:relative;max-width:420px;margin:30px auto;border:0;border-radius:44px;padding:70px 20px 40px;background:linear-gradient(160deg,#3A1F8C,#141038 60%,#0B0A1C);color:#fff;box-shadow:0 0 0 10px #0B0A12,0 0 0 11px #3A3550,0 30px 60px rgba(20,10,60,.35);font-family:var(--font-body)}
+.scene::before{content:"1998";position:absolute;top:22px;left:0;right:0;text-align:center;font-family:var(--font-wood);font-size:42px;font-weight:300;letter-spacing:.04em;color:#fff;opacity:.95}
+.scene::after{content:"";position:absolute;bottom:12px;left:50%;width:120px;height:5px;margin-left:-60px;border-radius:5px;background:rgba(255,255,255,.6)}
+.scene p{background:rgba(255,255,255,.14);backdrop-filter:blur(8px);border-radius:20px;padding:12px 16px;font-size:15px;line-height:1.75;margin:12px 0;font-weight:400}
+.scene p:first-child{background:none;padding:0 6px;text-align:center;font-size:13px;opacity:.85;margin-top:16px}
+/* 目录：歌单 */
+.toc{border:0;border-radius:24px;padding:24px 22px;background:var(--card);box-shadow:var(--shadow)}
+.toc b{font-family:var(--font-body);font-size:22px;font-weight:900;display:flex;align-items:center;gap:12px}
+.toc b::before{content:"";width:52px;height:52px;border-radius:14px;background:var(--grad);flex:none;box-shadow:0 6px 14px rgba(138,92,255,.35)}
+.toc ol{counter-reset:t;list-style:none;padding:0;columns:1;margin-top:14px}
+.toc li{counter-increment:t;display:flex;align-items:center;gap:14px;padding:7px 8px;border-radius:12px}
+.toc li:hover{background:var(--paper-2)}
+.toc li::before{content:counter(t);width:22px;text-align:right;color:var(--ink-2);font-size:13px;font-variant-numeric:tabular-nums}
+.toc a{color:var(--ink);border:0;font-weight:500}
+/* 实验框：App 卡片 */
+.lab{position:relative;border:1px solid transparent;border-radius:28px;padding:22px 22px 20px;background:linear-gradient(var(--card),var(--card)) padding-box,var(--grad) border-box;box-shadow:var(--shadow)}
+.lab .head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.lab .head .tag{font-family:var(--font-wood);font-size:11px;font-weight:700;letter-spacing:.14em;color:#fff;background:var(--grad);padding:5px 10px;border-radius:999px}
+.lab .head strong{font-weight:900;font-size:17px}
+.lab .head::after{content:"";margin-left:auto;width:34px;height:16px;background:linear-gradient(var(--red),var(--red)) 0 100%/4px 60% no-repeat,linear-gradient(var(--denim),var(--denim)) 7px 100%/4px 100% no-repeat,linear-gradient(var(--mustard),var(--mustard)) 14px 100%/4px 40% no-repeat,linear-gradient(var(--red),var(--red)) 21px 100%/4px 80% no-repeat,linear-gradient(var(--denim),var(--denim)) 28px 100%/4px 55% no-repeat}
+.opt{background:var(--paper);border:0;border-radius:18px}
+button{border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-weight:700;box-shadow:0 2px 8px rgba(60,30,140,.08)}
+button:hover{border-color:var(--denim);color:var(--denim)}
+button.primary{background:var(--grad);border-color:transparent;color:#fff}
+button.primary:hover{color:#fff;filter:brightness(1.08)}
+button.playing{background:var(--grad);border-color:transparent;color:#fff;box-shadow:0 0 0 4px rgba(255,79,154,.25),0 0 22px rgba(138,92,255,.6)}
+.strip i{border-radius:999px}.strip i.now{background:var(--red)}
+/* 图解：圆角卡片，顶边渐变 */
+.fig .frame{border:0;border-radius:24px;padding:26px 22px;background:var(--card);box-shadow:var(--shadow);position:relative;overflow:hidden}
+.fig .frame::before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:var(--grad)}
+.photo{border-radius:24px;overflow:hidden;background:var(--card);box-shadow:var(--shadow);padding:0}.photo img{border:0;border-radius:0}.photo .cap{padding:12px 18px 16px}
+/* 曲目：流媒体歌单 */
+#songsA,#songsB{background:var(--card);border-radius:24px;box-shadow:var(--shadow);padding:6px 18px}
+.side{border:0;margin:40px 0 12px;font-weight:900;font-size:18px;display:flex;align-items:center;gap:10px}
+.side span:first-child::before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--grad);margin-right:10px;vertical-align:middle}
+.song{position:relative;display:grid;grid-template-columns:64px minmax(0,1fr);column-gap:16px;border:0;border-bottom:1px solid var(--line);border-radius:0;background:none;padding:18px 0;margin:0}
+.song:last-child{border-bottom:0}
+.song>*{grid-column:2}
+.song .cover{grid-column:1;grid-row:1/span 2;width:64px;height:64px;border-radius:14px;background:linear-gradient(135deg,hsl(var(--h) 85% 62%),hsl(calc(var(--h) + 60) 80% 52%));display:flex;align-items:flex-end;justify-content:flex-start;padding:6px 8px;color:#fff;font-family:var(--font-wood);font-weight:700;font-size:13px;box-shadow:0 6px 14px rgba(60,30,140,.18)}
+.song .meta{display:block;padding-right:44px}
+.song .title{display:block;font-weight:900;font-size:17px;line-height:1.35;white-space:normal}
+.song .by{display:block;font-size:14px;color:var(--ink-2)}
+.song .pmeta{display:flex;gap:8px;margin-top:4px;align-items:center}
+.song .yr{font-family:var(--font-wood);font-size:11.5px;color:var(--denim);font-weight:700}
+.song .style{font-size:11.5px;padding:1px 9px;border-radius:999px;background:var(--paper-2);color:var(--ink-2)}
+.song p{font-size:14.2px;margin:8px 0 6px}.song .listen{font-size:13.5px;padding-left:18px;color:var(--ink-2)}
+.playlink{position:absolute;top:18px;right:0;width:38px;height:38px;border-radius:50%;background:var(--grad);color:#fff;box-shadow:0 4px 12px rgba(138,92,255,.35)}
+.listen-links a{border-radius:999px}.listen-links a.main{background:var(--grad);border-color:transparent;color:#fff}
+/* 术语表：话题标签 */
+dl.gloss dt{justify-self:start;align-self:start;font-weight:700;font-size:13.5px;color:var(--red);background:var(--soft);padding:3px 12px;border-radius:999px}
+dl.gloss dt::before{content:"#";opacity:.6;margin-right:2px}
+.mine{border:0;border-radius:22px;background:linear-gradient(var(--card),var(--card)) padding-box,var(--grad) border-box;border:2px solid transparent}
+.mine .lbl{font-weight:900;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.credits{background:linear-gradient(135deg,#1B1450,#0B0A1C)}.credits h2{font-family:var(--font-wood);font-weight:700;background:linear-gradient(90deg,#FF7AB5,#B9A6FF,#7FE6F5);-webkit-background-clip:text;background-clip:text;color:transparent}.credits a{color:#FF9CC6}
+@media (max-width:760px){.opener{grid-template-columns:1fr}}
+
+.song .title{font-family:var(--font-body)}.song .listen{margin:4px 0 8px}.song .listen-links{margin-top:6px}
+/*nav-unify*/.albumbar a{color:inherit;text-decoration:none}.albumbar a.book:hover{text-decoration:underline}.tracks span a{color:inherit;text-decoration:none;display:block}.tracks span:not(.on):hover{opacity:.72}.next a{color:inherit;text-decoration:none;border-bottom:1px solid currentColor}.next a:hover{opacity:.7}</style>
+<link rel="stylesheet" href="../cover-preview.css">
+</head>
+<body>
+
+<header class="albumbar">
+  <div class="wide">
+    <a class="book" href="../index.html" data-nav="toc">耳朵的地图 · 第二张唱片 · SIDE D 今天 · 目录</a>
+    <nav class="tracks" aria-label="本面曲目">
+      <span><a href="../d1-alt/index.html" data-nav="d1-alt">D1 另类</a></span>
+      <span class="on"><a aria-current="page">D2 当代流行</a></span>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+<section class="wide opener">
+  <div>
+    <div class="code">SIDE D · TRACK 02</div>
+    <div class="pop">流行</div>
+    <p class="sub">Pop, now</p>
+    <p class="lede">流行音乐不是一种声音，而是一门手艺和一个行业：它把布鲁斯、迪斯科、嘻哈、电子乐、拉丁节奏通通吸进来，在电脑里拼成三分钟，然后在十五秒内抓住你。这一章拆开一首当代流行歌，看看它是怎么做出来的。</p>
+    <div class="meta-row"><span>阅读约 50 分钟</span><span>可听示例 21 个</span><span>插图 9 幅</span><span>推荐曲目 12 首</span></div>
+  </div>
+  <figure>
+    <img class="art" src="img/d2-pop.jpg" width="1600" height="1200" alt="夜间体育场的手机灯光如星海，远处舞台亮起粉、紫和青色光束" style="height:auto">
+    <figcaption>章首插画 · 夜间体育场的手机灯光如星海，远处舞台亮起粉、紫和青色光束</figcaption>
+    <button class="cover-preview" type="button" data-demo="hook-on">
+      <span class="preview-play"><span aria-hidden="true">▶</span> 试听 · 当代流行</span>
+      <span class="preview-stop"><span aria-hidden="true">■</span> 停止</span>
+    </button>
+  </figure>
+</section>
+</div>
+
+<div class="wide">
+  <div class="mapstrip" aria-label="地图定位">
+    <b>你在这里 →</b>
+    <span>布鲁斯</span><span>摇滚</span><span>硬摇滚</span><span>朋克</span><span>金属</span><span>另类</span><span class="here">当代流行</span>
+  </div>
+</div>
+
+<article class="wrap">
+
+  <div class="scene">
+    <p>斯德哥尔摩 · 录音室</p>
+    <p>瑞典斯德哥尔摩有一间叫 Cheiron 的录音室。一位二十多岁的瑞典词曲作者在这里写了一首歌，原本想给美国的 R&amp;B 女子组合 TLC，对方没有要。</p>
+    <p>这首歌后来交给了一个十六岁的美国女孩。1998 年秋天，单曲发行；第二年初，它登上了美国单曲榜第一名。歌叫《…Baby One More Time》，女孩叫 Britney Spears，写歌的人叫 Max Martin。</p>
+    <p>此后二十多年里，Max Martin 作为词曲作者写出了二十多首美国榜首单曲。大多数听众从没见过他的样子。</p>
+  </div>
+
+  <p>前面的章节里，我们听的大多是“乐队”：几个人组在一起，写自己的歌，在台上弹自己的乐器。当代流行音乐常常不是这样。一首热门歌背后，可能有一个词曲作者团队、一个或几个制作人、一位人声制作、一位混音师，最后才是你看到的那位歌手。</p>
+  <p>这不意味着流行歌“假”。它更像一部电影：有导演、编剧、摄影和演员，每个环节都有很高的手艺。这一章就当一回“幕后”：拆它的结构、和弦、制作、节奏，然后去看全世界和华语世界的流行，最后看看手机和短视频怎样改变了一首歌的样子。</p>
+
+  <nav class="toc" aria-label="本章目录">
+    <b>本章歌单</b>
+    <ol>
+      <li><a href="#what">流行是什么</a></li>
+      <li><a href="#hook">钩子与结构</a></li>
+      <li><a href="#chords">四个和弦就够了</a></li>
+      <li><a href="#production">歌是“做”出来的</a></li>
+      <li><a href="#beats">节奏的地图：迪斯科、trap、雷鬼动</a></li>
+      <li><a href="#global">全世界的流行</a></li>
+      <li><a href="#chinese">华语流行</a></li>
+      <li><a href="#stream">流媒体与短视频</a></li>
+      <li><a href="#listen">听：本章十二首曲目</a></li>
+      <li><a href="#practice">练 · 术语表</a></li>
+    </ol>
+  </nav>
+
+  <!-- 01 -->
+  <h2 id="what"><span class="n">01 · what</span>流行是什么</h2>
+  <p>“流行音乐”（pop music）的字面意思就是“受欢迎的音乐”。所以它和前面的类型不一样，它不是靠某种声音定义的，而是靠<span class="mark">“在某个时代，最多的人在听什么”</span>来定义的。1960 年代的流行是披头士，1970 年代末是迪斯科，1980 年代是 MTV 上的 Michael Jackson 和 Madonna，2010 年代是电子舞曲和嘻哈。</p>
+  <p>这一章说的“当代流行”，大致指 1980 年代以后、特别是进入数字时代以后的流行音乐。它有几个共同点：</p>
+  <ul class="clean">
+    <li><b>什么都吸收</b>：流行像一块海绵，哪种声音火了，它就把哪种声音吸进来：迪斯科、嘻哈、电子舞曲、拉丁、韩国、非洲……</li>
+    <li><b>以歌和歌手为中心</b>：观众记住的是旋律和歌手，而不是乐队里的吉他手</li>
+    <li><b>精细分工</b>：写节奏和伴奏的人、写旋律和歌词的人、唱的人、做混音的人，往往不是同一个人</li>
+    <li><b>在电脑里完成</b>：大多数声音不是在房间里一起演奏出来的，而是在电脑里一轨一轨拼起来的</li>
+    <li><b>为“抓住你”而设计</b>：每一秒都在想办法让你别切歌</li>
+  </ul>
+
+  <figure class="fig">
+    <div class="frame"><svg viewBox="0 0 680 300" role="img" aria-label="流程图：一首流行歌的生产线，从伴奏制作、写旋律和歌词，到录人声、修音编辑、混音、母带处理，最后发行到流媒体和短视频平台"><g id="pipe-fig"></g></svg></div>
+    <figcaption>图 1 · 一首流行歌的“生产线”（大大简化）。不同的歌、不同的团队顺序会不一样，有时一个人包办好几个环节。</figcaption>
+  </figure>
+
+  <p>图里的“写旋律和歌词”有一个行业里的专门叫法：<b>topline</b>。先由制作人做好一段伴奏（beat 或 track），再请擅长写旋律的词曲作者在上面“写一条线”，这种“伴奏先行”的写法今天非常普遍。和民歌那章的“一个人一把吉他写一首歌”比，几乎是倒过来的。</p>
+
+  <!-- 02 -->
+  <h2 id="hook"><span class="n">02 · hook</span>钩子与结构</h2>
+  <p>流行音乐最重要的概念是<b>钩子</b>（hook）：一首歌里最抓耳、最让人记住的那一小段。它可以是一句旋律、一句歌词（常常就是歌名）、一个节奏，甚至只是一个特别的声音。好的钩子听一遍就会在脑子里转一整天。</p>
+  <p>当代流行歌的结构大致是这样的：</p>
+  <ul class="clean">
+    <li><b>前奏</b>（intro）：越来越短，有时干脆没有</li>
+    <li><b>主歌</b>（verse）：讲故事，旋律相对平</li>
+    <li><b>导歌</b>（pre-chorus）：一段“助跑”，和弦和旋律慢慢往上推，制造期待</li>
+    <li><b>副歌</b>（chorus）：钩子所在的地方，最高、最满、最好记</li>
+    <li><b>后副歌</b>（post-chorus）：副歌之后再来一个短钩子，常常只是几个音节或一段切碎的人声</li>
+    <li><b>桥段</b>（bridge）：在最后一次副歌前换个方向，让耳朵休息一下</li>
+  </ul>
+
+  <figure class="fig">
+    <div class="frame"><svg viewBox="0 0 680 230" role="img" aria-label="结构图：一首典型当代流行歌的段落，横向排列：前奏、主歌、导歌、副歌、后副歌、主歌、导歌、副歌、后副歌、桥段、副歌、结尾，副歌用最亮的颜色，并标出每段的“能量”高低"><g id="form-fig"></g></svg></div>
+    <figcaption>图 2 · 一首典型当代流行歌的段落和“能量”起伏。色块越高，能量越大；红色是钩子出现的地方。</figcaption>
+  </figure>
+
+  <div class="lab">
+    <div class="head"><span class="tag">LAB 01</span><strong>一首浓缩的流行歌</strong><small>原创，C 大调，约 35 秒</small></div>
+    <div class="controls" style="margin-top:0"><button class="primary" type="button" data-demo="form">播放</button><button type="button" data-stop>停止</button></div>
+    <div class="strip" data-strip="6" aria-hidden="true"></div>
+    <p class="note">按图 2 的顺序浓缩成一段：主歌、导歌、副歌、后副歌、桥段，再来一次副歌。上面的六个格子依次亮起：主歌、导歌、副歌、后副歌、桥段、副歌。注意导歌怎样“往上推”，以及后副歌那个只有一个音节的小钩子。</p>
+  </div>
+
+  <div class="lab">
+    <div class="head"><span class="tag">LAB 02</span><strong>有钩子和没钩子</strong><small>原创，同样的和弦，同样的节奏</small></div>
+    <div class="cols2">
+      <div class="opt"><b>没有钩子</b><p>旋律四处游走，每一句都不一样。</p><button type="button" data-demo="hook-off">播放</button></div>
+      <div class="opt"><b>有钩子</b><p>一个短小的动机反复出现，最后一次稍微变化。</p><button class="primary" type="button" data-demo="hook-on">播放</button></div>
+    </div>
+    <p class="note">听完以后试着哼一下：哪一个你能哼出来？“重复，加一点点变化”，是写钩子最基本的办法。</p>
+  </div>
+
+  <!-- 03 -->
+  <h2 id="chords"><span class="n">03 · chords</span>四个和弦就够了</h2>
+  <p>布鲁斯那章说过，十二小节布鲁斯只用三个和弦。当代流行更“省”：大量热门歌整首歌只循环<b>四个和弦</b>。最常见的一组是 I – V – vi – IV，在 C 大调里就是 C – G – Am – F。2009 年，澳大利亚的喜剧乐队 Axis of Awesome 用这四个和弦一口气串唱了几十首热门歌，让很多人第一次意识到这件事。</p>
+  <p>这四个和弦还可以从不同的位置开始循环：从 vi 开始（Am – F – C – G）听起来就更忧伤一些。<span class="mark">和弦一样，旋律、节奏和音色不同，就是不同的歌</span>，这正是流行歌的写法：和弦是地基，钩子才是房子。</p>
+
+  <figure class="fig">
+    <div class="frame"><svg viewBox="0 0 680 280" role="img" aria-label="和弦循环图：C、G、Am、F 四个和弦排成一个环，箭头首尾相连；左边标从 C 开始听起来明亮，右边标从 Am 开始听起来忧伤"><g id="loop-fig"></g></svg></div>
+    <figcaption>图 3 · 四和弦循环。同一个环，从大和弦（C）进入听起来明亮，从小和弦（Am）进入听起来忧伤。</figcaption>
+  </figure>
+
+  <div class="lab">
+    <div class="head"><span class="tag">LAB 03</span><strong>同四个和弦，三首不同的歌</strong><small>原创，C – G – Am – F 循环</small></div>
+    <div class="cols3">
+      <div class="opt"><b>舞曲</b><p>快速、明亮，四拍底鼓。</p><button type="button" data-demo="axis-a">播放</button></div>
+      <div class="opt"><b>抒情</b><p>慢速钢琴，长音旋律。</p><button type="button" data-demo="axis-b">播放</button></div>
+      <div class="opt"><b>从 Am 开始</b><p>Am – F – C – G：忧伤的版本。</p><button class="primary" type="button" data-demo="axis-c">播放</button></div>
+    </div>
+  </div>
+
+  <h3>卡农进行：华语抒情歌的老朋友</h3>
+  <p>巴洛克那章讲过帕赫贝尔的《D 大调卡农》。它的八个和弦 I – V – vi – iii – IV – I – IV – V 后来被称为<b>卡农进行</b>，特点是低音一步一步往下走，像下楼梯。这组和弦在华语抒情歌里出现得非常多，很多人觉得“很熟悉”，往往就是因为它。日本流行音乐里也有一组特别常用的和弦，叫“王道进行”（IV – V – iii – vi）。</p>
+
+  <figure class="fig">
+    <div class="frame"><svg viewBox="0 0 680 270" role="img" aria-label="卡农进行的低音线：八个和弦 C、G、Am、Em、F、C、F、G 依次排开，下面画出低音 C、B、A、G、F、E、F、G 一级一级往下走又回升的阶梯"><g id="canon-fig"></g></svg></div>
+    <figcaption>图 4 · 卡农进行（C 大调）。上面是和弦，下面是常见的低音走法：一级一级往下，最后两步再往上。</figcaption>
+  </figure>
+
+  <div class="lab">
+    <div class="head"><span class="tag">LAB 04</span><strong>卡农进行</strong><small>原创，C 大调，钢琴与弦乐</small></div>
+    <div class="controls" style="margin-top:0"><button class="primary" type="button" data-demo="canon">播放</button><button type="button" data-stop>停止</button></div>
+    <p class="note">注意钢琴的左手：每个和弦换一次低音，一步一步往下走。上面的旋律是原创的，你可能会觉得“好像在哪儿听过”，这就是卡农进行的魔力。</p>
+  </div>
+
+  <!-- 04 -->
+  <h2 id="production"><span class="n">04 · production</span>歌是“做”出来的</h2>
+  <p>今天的流行歌几乎都是在<b>数字音频工作站</b>（DAW）里完成的：一台电脑，一个软件，几十甚至上百条音轨。鼓可能是采样，贝斯可能是合成器，人声可能是同一句唱了十遍再拼出最好的片段。<span class="mark">“制作人”在流行音乐里的地位，常常和歌手一样重要</span>。这里介绍三件最有代表性的“制作工具”。</p>
+
+  <h3>Auto-Tune：从修音器到乐器</h3>
+  <p>Auto-Tune 是一款自动修正人声音高的软件，1997 年由美国工程师 Andy Hildebrand 推出。他原本在石油行业用信号处理分析地震波数据。它的本意是悄悄地把唱偏的音拉回来；但如果把“修正速度”调到最快，音和音之间的滑动就消失了，人声会像机器人一样一格一格地跳。1998 年 Cher 的《Believe》第一次让这种声音成为热门单曲的卖点，后来的 R&amp;B 和嘻哈歌手又把它变成了一种标志性音色。</p>
+
+  <figure class="fig">
+    <div class="frame"><svg viewBox="0 0 680 270" role="img" aria-label="音高曲线对比：上面是自然人声，音高在目标音附近弯曲、颤动、滑进滑出；下面是开到最快的 Auto-Tune，音高变成一级一级的台阶"><g id="tune-fig"></g></svg></div>
+    <figcaption>图 5 · 同一句旋律的音高曲线。虚线是目标音高；上面是自然的人声，下面是“修正速度”调到最快的效果。</figcaption>
+  </figure>
+
+  <div class="lab">
+    <div class="head"><span class="tag">LAB 05</span><strong>三件制作工具</strong><small>原创，合成人声与电子乐</small></div>
+    <div class="cols2">
+      <div class="opt"><b>自然人声</b><p>滑进滑出，带颤音。</p><button type="button" data-demo="tune-off">播放</button></div>
+      <div class="opt"><b>Auto-Tune 开到最快</b><p>音高一格一格地跳。</p><button class="primary" type="button" data-demo="tune-on">播放</button></div>
+      <div class="opt"><b>没有侧链</b><p>和弦长音一直铺着。</p><button type="button" data-demo="sc-off">播放</button></div>
+      <div class="opt"><b>侧链压缩</b><p>每次底鼓一响，和弦就“让路”，整段在呼吸。</p><button class="primary" type="button" data-demo="sc-on">播放</button></div>
+    </div>
+    <div class="controls"><button type="button" data-demo="808">808 低音：长长的、会滑动的底鼓</button></div>
+  </div>
+
+  <h3>侧链压缩：会呼吸的音乐</h3>
+  <p>在电子舞曲和流行里，经常听到整首歌像在“一吸一呼”：每次底鼓一响，别的声音就突然变小，然后再慢慢涨回来。这是<b>侧链压缩</b>（sidechain compression）：让底鼓去“控制”别的音轨的音量。它本来是为了让底鼓更清楚，后来法国浩室（French house）等电子乐把这种“泵动感”夸张成了一种风格。</p>
+
+  <figure class="fig">
+    <div class="frame"><svg viewBox="0 0 680 230" role="img" aria-label="侧链示意：上面一行是每拍一次的底鼓；下面是和弦的音量曲线，每次底鼓响起时音量骤降，然后逐渐回升，形成锯齿状"><g id="sc-fig"></g></svg></div>
+    <figcaption>图 6 · 侧链压缩：底鼓每响一次，和弦的音量就被“压下去”再弹回来。</figcaption>
+  </figure>
+
+  <h3>808：一台“失败”的鼓机</h3>
+  <p>Roland TR-808 是日本罗兰公司 1980 年推出的鼓机。它的鼓声是用电路合成的，一点也不像真鼓，当时卖得并不好，很快停产。但二手价格便宜，被早期嘻哈和电子乐手大量使用。它的底鼓可以拉得很长、很低，后来人们干脆把这种又长又低、还能像贝斯一样弹出音高和滑音的声音直接叫作“808”。今天的嘻哈和流行，几乎离不开它。</p>
+
+  <figure class="photo">
+    <img src="img/tr-808.jpg" alt="一台 Roland TR-808 鼓机，黑色面板上有一排红、橙、黄、白色的按键和许多旋钮" data-file="TR-808_-_MIM,_Phoenix_(2019-08-30_14.59.26_by_Bryan_Pocius)_(cropped).jpg">
+    <figcaption class="cap"><b>Roland TR-808</b>美国凤凰城乐器博物馆陈列 · Bryan Pocius 摄 · 授权以维基共享资源页面为准。下面那排彩色按键就是十六个格子的“音序器”，图 7 的鼓谱格子就是从这里来的</figcaption>
+  </figure>
+
+  <!-- 05 -->
+  <h2 id="beats"><span class="n">05 · beats</span>节奏的地图：迪斯科、trap、雷鬼动</h2>
+  <p>当代流行的“节奏”大多不是自己发明的，而是从某一种舞曲或嘻哈里借来的。认出这几种节奏，就能听出一首流行歌的“血统”。</p>
+  <ul class="clean">
+    <li><b>四拍底鼓</b>（four-on-the-floor）：每一拍都有一下底鼓，“咚、咚、咚、咚”。来自 1970 年代的迪斯科，后来是浩室和电子舞曲的基础。它让人想跳舞</li>
+    <li><b>Trap</b>：来自美国南方亚特兰大的嘻哈。速度快但感觉“半速”，军鼓只在第三拍；踩镲会突然打出一串极快的连音（hi-hat roll）；低音交给长长的 808</li>
+    <li><b>雷鬼动</b>（reggaeton）的 dembow 节奏：来自牙买加的舞厅雷鬼（dancehall）和波多黎各，“咚——嚓—咚嚓”，3 + 3 + 2 的切分。2017 年的《Despacito》让它席卷全球</li>
+  </ul>
+
+  <figure class="fig">
+    <div class="frame"><svg viewBox="0 0 680 380" role="img" aria-label="三种节奏型的格子图：四拍底鼓、trap、雷鬼动 dembow；每种用三行格子表示踩镲、军鼓或拍手、底鼓或 808"><g id="beat-fig"></g></svg></div>
+    <figcaption>图 7 · 三种节奏型，一小节十六格。trap 的踩镲格子里有更小的格子，表示那一下被分得更碎。</figcaption>
+  </figure>
+
+  <div class="lab">
+    <div class="head"><span class="tag">LAB 06</span><strong>三种节奏</strong><small>原创，同一组和弦，换三种节奏</small></div>
+    <div class="cols3">
+      <div class="opt"><b>四拍底鼓</b><p>迪斯科、浩室、电子流行。</p><button type="button" data-demo="b-disco">播放</button></div>
+      <div class="opt"><b>Trap</b><p>半速的军鼓、碎碎的踩镲、滑动的 808。</p><button class="primary" type="button" data-demo="b-trap">播放</button></div>
+      <div class="opt"><b>雷鬼动</b><p>“咚——嚓—咚嚓”的 dembow。</p><button type="button" data-demo="b-dembow">播放</button></div>
+    </div>
+  </div>
+
+  <!-- 06 -->
+  <h2 id="global"><span class="n">06 · global</span>全世界的流行</h2>
+  <p>很长时间里，“全球流行”几乎等于“英语流行”。进入 YouTube 和流媒体时代后，这件事变了。</p>
+  <ul class="clean">
+    <li><b>韩国流行（K-pop）</b>：大经纪公司从少年时期开始选拔和训练“练习生”，几年后以组合出道，唱、跳、造型、视频和粉丝运营都经过精心设计。2012 年 PSY 的《江南 Style》成为第一个播放量突破十亿次的 YouTube 视频；2020 年 BTS 的《Dynamite》成为第一首登上美国单曲榜第一的全韩国人组合的歌。K-pop 歌曲有一个很有辨识度的习惯：一首歌里常常突然换一种风格，从电子舞曲跳到抒情再跳到说唱</li>
+    <li><b>拉丁流行</b>：2017 年，波多黎各歌手 Luis Fonsi 和 Daddy Yankee 的西班牙语歌《Despacito》在美国单曲榜连续 16 周第一，追平了当时的纪录。此后，西班牙语歌曲成了全球流媒体榜单的常客</li>
+    <li><b>非洲节奏</b>（Afrobeats）：来自尼日利亚、加纳的流行音乐，轻快的切分节奏和温暖的和声，2010 年代后期起进入欧美主流</li>
+    <li><b>日本 city pop</b>：1980 年代的日本都市流行，四十年后因为 YouTube 的推荐算法在全世界重新走红。这说明算法不只推新歌，也会“挖出”旧歌</li>
+  </ul>
+
+  <div class="lab">
+    <div class="head"><span class="tag">LAB 07</span><strong>一首歌里换三次风格</strong><small>原创，K-pop 式的“段落切换”</small></div>
+    <div class="controls" style="margin-top:0"><button class="primary" type="button" data-demo="kpop">播放</button><button type="button" data-stop>停止</button></div>
+    <div class="strip" data-strip="3" aria-hidden="true"></div>
+    <p class="note">先是带四拍底鼓的电子舞曲段落，然后突然切到一段 trap 节奏的“说唱段”，最后进入一段只有鼓和贝斯的“舞蹈间奏”（dance break）。三个格子标出三个段落。</p>
+  </div>
+
+  <!-- 07 -->
+  <h2 id="chinese"><span class="n">07 · chinese</span>华语流行</h2>
+  <p>华语流行音乐有自己的一条长线，大致可以这样梳理：</p>
+  <ul class="clean">
+    <li><b>1970–80 年代 · 邓丽君</b>：台湾歌手邓丽君甜美、轻柔的唱法风靡整个华语世界。1980 年代初，她的歌通过磁带传进中国大陆，当时流传着“白天听老邓，晚上听小邓”的说法</li>
+    <li><b>1980 年代 · 校园民歌与罗大佑</b>：台湾的“校园民歌”运动之后，罗大佑把社会观察写进流行歌，让流行歌不只谈情说爱</li>
+    <li><b>1990 年代 · 香港“四大天王”</b>：张学友、刘德华、黎明、郭富城代表了粤语流行的巅峰，香港的唱片工业影响了整个亚洲</li>
+    <li><b>2000 年代 · 周杰伦与“中国风”</b>：周杰伦 2000 年发行首张专辑，把 R&amp;B、嘻哈和中国五声音阶、古典意象混在一起。2003 年和作词人方文山合作的《东风破》常被看作“中国风”流行歌的标志</li>
+    <li><b>2000 年代中后期 · 选秀与网络</b>：电视选秀节目和网络歌曲让“谁能成为歌手”这件事变得前所未有地开放</li>
+    <li><b>2020 年代 · 短视频</b>：一首歌能不能火，越来越取决于它的某十五秒能不能在短视频平台上被反复使用</li>
+  </ul>
+
+  <figure class="fig">
+    <div class="frame"><svg viewBox="0 0 680 250" role="img" aria-label="华语流行时间线：1970 年代邓丽君，1980 年代罗大佑，1990 年代香港四大天王，2000 年代周杰伦与中国风，2000 年代中后期选秀与网络，2020 年代短视频，同时标出传播媒介从磁带、CD、MP3、流媒体到短视频的变化"><g id="cn-fig"></g></svg></div>
+    <figcaption>图 8 · 华语流行的一条时间线。下面一行是当时主要的传播媒介。</figcaption>
+  </figure>
+
+  <div class="lab">
+    <div class="head"><span class="tag">LAB 08</span><strong>“中国风”</strong><small>原创，五声音阶旋律 + R&amp;B 节奏</small></div>
+    <div class="controls" style="margin-top:0"><button class="primary" type="button" data-demo="cnstyle">播放</button><button type="button" data-stop>停止</button></div>
+    <p class="note">底下是 R&amp;B 式的慢节奏鼓、钢琴和贝斯，上面是一条只用五声音阶（宫商角徵羽）的原创旋律，用一个类似古筝的拨弦音色弹出，并加了一些滑音。这种“西方的节奏 + 东方的旋律”，就是中国风流行歌最基本的配方。</p>
+  </div>
+
+  <!-- 08 -->
+  <h2 id="stream"><span class="n">08 · stream</span>流媒体与短视频</h2>
+  <p>在唱片时代，你花钱买了一张专辑，会从头听到尾。流媒体时代，跳过一首歌不花一分钱。这改变了歌曲本身。</p>
+  <p>2017 年，美国俄亥俄州立大学的音乐理论博士生 Hubert Léveillé Gauvin 发表了一项研究：他统计了 1986 年到 2015 年每年美国排行榜前十名的歌，发现歌手开口之前的前奏，平均从 1980 年代中期的二十多秒缩短到了 2015 年的 5 秒左右；歌曲也变得更快，歌名更早出现在歌词里。他认为这是一种“注意力经济”：如果不能马上抓住听众，听众就会切歌。</p>
+
+  <figure class="fig">
+    <div class="frame"><svg viewBox="0 0 680 220" role="img" aria-label="条形图：1986 年美国热门歌曲的前奏平均约 23 秒，2015 年约 5 秒"><g id="intro-fig"></g></svg></div>
+    <figcaption>图 9 · 前奏平均长度，根据 Léveillé Gauvin（2017）研究的报道数据绘制。研究只统计了每年最热门的十首歌，不代表所有音乐。</figcaption>
+  </figure>
+
+  <p>短视频平台又把这个趋势推进了一步：一首歌最重要的可能不是整首，而是某十五秒，适合跳舞、对口型或配一个梗。一些老歌因此突然翻红；歌手和唱片公司也会专门发行<b>加速版</b>（sped up）：把整首歌加快、音调升高，听起来更轻快、更“上头”。</p>
+
+  <div class="lab">
+    <div class="head"><span class="tag">LAB 09</span><strong>注意力经济</strong><small>原创，同一首小曲的不同版本</small></div>
+    <div class="cols2">
+      <div class="opt"><b>1980 年代式</b><p>先是一段长长的前奏，十几秒后歌手才开口。</p><button type="button" data-demo="intro-80s">播放</button></div>
+      <div class="opt"><b>今天式</b><p>第一秒就是人声和钩子。</p><button class="primary" type="button" data-demo="intro-now">播放</button></div>
+      <div class="opt"><b>原速</b><p>正常速度的副歌。</p><button type="button" data-demo="speed-orig">播放</button></div>
+      <div class="opt"><b>加速版</b><p>同一段，快了约 20%，音调也一起变高。</p><button class="primary" type="button" data-demo="speed-up">播放</button></div>
+    </div>
+  </div>
+
+  <p>这些变化有人欢迎，有人担心。但流行音乐一直是这样：<span class="mark">它总是最先适应新的媒介</span>。唱片决定了一首歌大约三分钟（一面 78 转唱片只能装下这么多），MTV 让视频和形象变得和声音一样重要，流媒体和短视频则在重新决定一首歌的长度和开头。</p>
+
+  <!-- 09 -->
+  <h2 id="listen"><span class="n">09 · listen</span>听：本章十二首曲目</h2>
+  <p>按时间排成一份歌单。A 面从邓丽君到“中国风”，B 面是 YouTube 和流媒体时代的全球热门。每首都提供 YouTube、网易云和 QQ 音乐的搜索链接。</p>
+  <div class="side"><span>SIDE A · 1977–2003 · 唱片与 MTV</span><span>先听这六首</span></div>
+  <div id="songsA"></div>
+  <div class="side"><span>SIDE B · 2012–2020 · 流媒体</span><span>再听这六首</span></div>
+  <div id="songsB"></div>
+
+  <!-- 10 -->
+  <h2 id="practice"><span class="n">10 · practice</span>练 · 术语表</h2>
+  <h3>练习 1：画结构图</h3>
+  <p>选《…Baby One More Time》或《Blinding Lights》，边听边写下段落：前奏、主歌、导歌、副歌……再和图 2 比较。</p>
+  <h3>练习 2：找钩子</h3>
+  <p>听《bad guy》，你觉得它最抓耳的钩子是一句旋律、一句歌词，还是一个声音？</p>
+  <h3>练习 3：听出 Auto-Tune</h3>
+  <p>听《Believe》的主歌，找到人声“一格一格跳”的地方。对照 Lab 05。</p>
+  <h3>练习 4：认节奏</h3>
+  <p>分别听《Blinding Lights》《Despacito》和任意一首 trap 风格的歌，对照图 7，判断它们各用了哪种节奏。</p>
+  <h3>练习 5：数前奏</h3>
+  <p>听《月亮代表我的心》和《光年之外》，各数一数：从开始到人声出现，用了多少秒？</p>
+
+  <div class="mine">
+    <div class="lbl">我的听感 · 待写</div>
+    这里留给你：走完从布鲁斯到当代流行这一圈，你觉得今天的流行歌里还能听出哪些“祖先”？在你手机的歌单里，哪一首最能代表“流行”？
+  </div>
+
+  <h3 id="gloss">术语表</h3>
+  <dl class="gloss">
+    <dt>流行音乐</dt><dd>在某个时代最多人听的音乐，不由某一种声音定义</dd>
+    <dt>制作人</dt><dd>负责一首歌整体声音、编曲和录制过程的人</dd>
+    <dt>topline</dt><dd>在已有伴奏上写的主旋律和歌词</dd>
+    <dt>钩子</dt><dd>hook，一首歌里最抓耳、最好记的部分</dd>
+    <dt>导歌</dt><dd>pre-chorus，主歌和副歌之间的“助跑”段</dd>
+    <dt>后副歌</dt><dd>post-chorus，副歌之后的短钩子</dd>
+    <dt>四和弦</dt><dd>I – V – vi – IV 及其轮换，大量流行歌的和弦循环</dd>
+    <dt>卡农进行</dt><dd>来自帕赫贝尔《卡农》的八和弦进行，低音逐级下行</dd>
+    <dt>王道进行</dt><dd>日本流行音乐常用的 IV – V – iii – vi 和弦进行</dd>
+    <dt>DAW</dt><dd>数字音频工作站，用电脑录音、编辑、混音的软件</dd>
+    <dt>Auto-Tune</dt><dd>自动修正音高的软件，极端设置下产生机器人般的人声</dd>
+    <dt>侧链压缩</dt><dd>让底鼓控制其他音轨音量、产生“呼吸”感的技术</dd>
+    <dt>808</dt><dd>罗兰 TR-808 鼓机，也指它那种长而低、有音高的底鼓</dd>
+    <dt>四拍底鼓</dt><dd>每拍一下底鼓的舞曲节奏</dd>
+    <dt>trap</dt><dd>来自美国南方嘻哈的节奏风格：半速军鼓、碎踩镲、808</dd>
+    <dt>雷鬼动</dt><dd>reggaeton，以 dembow 节奏为基础的拉丁流行</dd>
+    <dt>练习生</dt><dd>K-pop 经纪公司培养的待出道艺人</dd>
+    <dt>中国风</dt><dd>结合五声音阶、古典意象与 R&amp;B、嘻哈的华语流行</dd>
+    <dt>注意力经济</dt><dd>注意力稀缺时，作品必须尽快抓住受众的现象</dd>
+    <dt>加速版</dt><dd>sped up，整首歌加快并升调的版本</dd>
+  </dl>
+
+</article>
+
+<footer class="credits">
+  <div class="wrap">
+    <h2>Credits</h2>
+    <dl>
+      <dt>资料</dt><dd>开头场景依据公开报道整理</dd>
+      <dt>插画</dt><dd>章首插画由 AI 生成</dd>
+      <dt>图解</dt><dd>图 1–8 为本书原创绘制；图 9 根据 Hubert Léveillé Gauvin（2017，<i>Musicae Scientiae</i>）研究的公开报道数据绘制</dd>
+      <dt>照片</dt><dd>来自维基共享资源（Wikimedia Commons），本书附带缩小后的副本：<br>
+        Roland TR-808（凤凰城乐器博物馆）：Bryan Pocius 摄<br>
+        具体授权以维基共享资源页面为准</dd>
+      <dt>声音示例</dt><dd>全部由浏览器实时合成，旋律、和弦编排与节奏均为原创；四和弦与卡农进行属于通用和声手法；“Auto-Tune”“808”等为效果模仿，无第三方录音或软件</dd>
+      <dt>曲目</dt><dd>仅提供推荐与收听链接，本书不包含任何录音；录音与作品版权归原权利人所有</dd>
+      <dt>授权</dt><dd>本章原创文字、图解与合成示例采用 CC BY-NC-SA 4.0，页面代码采用 MIT 许可证；第三方照片按各自授权使用，曲目、名称与商标不在此授权范围内</dd>
+    </dl>
+    <div class="next"><span><a href="../d1-alt/index.html" data-nav="d1-alt">← D1 · 另类</a></span><span><a href="../index.html" data-nav="toc">回到目录 →</a></span></div>
+  </div>
+</footer>
+
+<button class="stopfab" id="stopAll" type="button">停止声音</button>
+
+<script>
+/* ================= 合成音频引擎 ================= */
+let ac=null,master,verbIn;
+function A(){
+  if(!ac){
+    ac=new (window.AudioContext||window.webkitAudioContext)();
+    const comp=ac.createDynamicsCompressor();comp.threshold.value=-14;comp.ratio.value=4;comp.connect(ac.destination);
+    master=ac.createGain();master.gain.value=.85;master.connect(comp);
+    const cv=ac.createConvolver(),len=ac.sampleRate*1.8,b=ac.createBuffer(2,len,ac.sampleRate);
+    for(let c=0;c<2;c++){const d=b.getChannelData(c);for(let i=0;i<len;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/len,3.2);}
+    cv.buffer=b;const vg=ac.createGain();vg.gain.value=.22;cv.connect(vg).connect(comp);verbIn=cv;
+  }
+  if(ac.state==="suspended")ac.resume();
+  return ac;
+}
+const mf=m=>440*Math.pow(2,(m-69)/12);
+let bus=null,timers=[],srcs=[],loopTimer=null,activeBtn=null;
+function newBus(){
+  stopDemos();A();
+  bus=ac.createGain();bus.gain.value=1;bus.connect(master);
+  const s=ac.createGain();s.gain.value=1;bus.connect(s);s.connect(verbIn);
+  return bus;
+}
+function stopDemos(){
+  timers.forEach(clearTimeout);timers=[];clearTimeout(loopTimer);loopTimer=null;
+  srcs.forEach(s=>{try{s.stop()}catch(e){}});srcs=[];
+  if(bus){const b=bus;b.gain.setTargetAtTime(0,ac.currentTime,.03);setTimeout(()=>b.disconnect(),300);bus=null;}
+  document.querySelectorAll(".bar.now,.strip i.now").forEach(x=>x.classList.remove("now"));
+  if(activeBtn){activeBtn.classList.remove("playing");activeBtn=null;}
+  const f=document.getElementById("stopAll");f&&f.classList.remove("on");
+}
+function later(fn,sec){timers.push(setTimeout(fn,Math.max(0,sec*1000)));}
+function track(n){srcs.push(n);return n;}
+
+/* Karplus-Strong 拨弦 */
+const ksCache={};
+function ksBuf(midi,dur,bright,decay){
+  const key=midi+"|"+dur+"|"+bright+"|"+decay;if(ksCache[key])return ksCache[key];
+  const sr=ac.sampleRate,N=Math.max(2,Math.round(sr/mf(midi))),len=Math.floor(sr*dur);
+  const b=ac.createBuffer(1,len,sr),d=b.getChannelData(0),buf=new Float32Array(N);
+  for(let i=0;i<N;i++)buf[i]=Math.random()*2-1;
+  const smooth=Math.round((1-bright)*5);
+  for(let k=0;k<smooth;k++)for(let i=0;i<N;i++)buf[i]=(buf[i]+buf[(i+1)%N])*.5;
+  let idx=0;
+  for(let i=0;i<len;i++){const nx=(idx+1)%N,v=buf[idx];d[i]=v;buf[idx]=decay*.5*(v+buf[nx]);idx=nx;}
+  const fade=Math.min(len,Math.floor(sr*.03));for(let i=0;i<fade;i++)d[len-1-i]*=i/fade;
+  return ksCache[key]=b;
+}
+let shaperCache={};
+function shaper(amount){
+  if(shaperCache[amount])return shaperCache[amount];
+  const n=1024,c=new Float32Array(n);for(let i=0;i<n;i++){const x=i/(n-1)*2-1;c[i]=Math.tanh(x*amount)/Math.tanh(amount);}
+  return shaperCache[amount]=c;
+}
+/* 乐器：ac 木吉他 / el 电吉他干净 / dr 电吉他过载 / bass 贝斯 */
+const INST={
+  ac:{bright:.62,decay:.9965,dur:1.8,vol:.55},
+  el:{bright:.8,decay:.9985,dur:2.2,vol:.4,drive:1.6,lp:3200},
+  dr:{bright:.85,decay:.999,dur:2.4,vol:.22,drive:7,lp:2600},
+  bass:{bright:.25,decay:.995,dur:1.2,vol:.75,lp:900}
+};
+function pluck(t,midi,inst,o={}){
+  const a=A(),I=INST[inst],s=a.createBufferSource();
+  s.buffer=ksBuf(midi,o.dur||I.dur,I.bright,I.decay);if(o.det&&!o.from)s.playbackRate.value=Math.pow(2,o.det/1200);
+  const g=a.createGain();g.gain.value=(o.vol||1)*I.vol;
+  let node=g;
+  if(o.from){s.playbackRate.setValueAtTime(Math.pow(2,o.from/12),t);s.playbackRate.setValueAtTime(Math.pow(2,o.from/12),t+(o.hold||0));s.playbackRate.linearRampToValueAtTime(1,t+(o.hold||0)+(o.glide||.18));}
+  if(o.vib){const l=a.createOscillator(),lg=a.createGain();l.frequency.value=5.5;lg.gain.value=.008;l.connect(lg).connect(s.playbackRate);l.start(t+(o.vibAt||.4));l.stop(t+(o.dur||I.dur));track(l);}
+  s.connect(g);
+  if(I.drive){const sh=a.createWaveShaper();sh.curve=shaper(I.drive);sh.oversample="2x";node.connect(sh);node=sh;}
+  if(I.lp){const f=a.createBiquadFilter();f.type="lowpass";f.frequency.value=I.lp;node.connect(f);node=f;}
+  if(I.peak){const pk=a.createBiquadFilter();pk.type="peaking";pk.frequency.value=I.peak[0];pk.gain.value=I.peak[1];node.connect(pk);node=pk;}
+  if(o.swell){g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime((o.vol||1)*I.vol,t+o.swell);}
+  if(o.mute){g.gain.setValueAtTime((o.vol||1)*I.vol,t);g.gain.exponentialRampToValueAtTime(.001,t+o.mute);}
+  node.connect(bus);s.start(t);s.stop(t+(o.dur||I.dur));track(s);
+}
+function strum(t,notes,inst,o={}){notes.forEach((m,k)=>pluck(t+k*(o.spread||.014),m,inst,{vol:o.vol||.6,mute:o.mute,dur:o.dur}));}
+/* 口琴 */
+function harp(t,midi,dur,o={}){
+  const a=A(),os=a.createOscillator(),os2=a.createOscillator();os.type="sawtooth";os2.type="square";
+  const f=mf(midi);
+  [os,os2].forEach((x,k)=>{const ff=f*(k?1.002:1);
+    if(o.from){x.frequency.setValueAtTime(ff*Math.pow(2,o.from/12),t);x.frequency.linearRampToValueAtTime(ff,t+(o.glide||.15));}else x.frequency.setValueAtTime(ff,t);});
+  const lfo=a.createOscillator(),lg=a.createGain();lfo.frequency.value=5.2;lg.gain.value=12;lfo.connect(lg);lg.connect(os.detune);lg.connect(os2.detune);
+  const bp=a.createBiquadFilter();bp.type="bandpass";bp.frequency.value=o.amp?1100:1500;bp.Q.value=o.amp?1.6:1.1;
+  const g=a.createGain(),v=(o.vol||1)*(o.amp?.13:.16);
+  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.04);g.gain.setValueAtTime(v,t+dur-.06);g.gain.linearRampToValueAtTime(0,t+dur);
+  const m2=a.createGain();m2.gain.value=.4;
+  os.connect(bp);os2.connect(m2).connect(bp);let node=bp;
+  if(o.amp){const sh=a.createWaveShaper();sh.curve=shaper(4);const lp=a.createBiquadFilter();lp.type="lowpass";lp.frequency.value=2200;bp.connect(sh).connect(lp);node=lp;}
+  node.connect(g).connect(bus);
+  [os,os2,lfo].forEach(x=>{x.start(t);x.stop(t+dur+.05);track(x);});
+}
+/* 人声（元音“啊”） */
+function voice(t,midi,dur,o={}){
+  const a=A(),os=a.createOscillator();os.type="sawtooth";const f=mf(midi);
+  os.frequency.setValueAtTime(f*Math.pow(2,(o.from==null?-1:o.from)/12),t);os.frequency.linearRampToValueAtTime(f,t+(o.glide||.09));
+  if(o.fall){os.frequency.setValueAtTime(f,t+dur*.6);os.frequency.linearRampToValueAtTime(f*Math.pow(2,o.fall/12),t+dur);}
+  const lfo=a.createOscillator(),lg=a.createGain();lfo.frequency.value=5;lg.gain.setValueAtTime(0,t);lg.gain.linearRampToValueAtTime(o.vibDepth||22,t+Math.min(dur,.5));lfo.connect(lg).connect(os.detune);
+  const g=a.createGain(),v=(o.vol||1)*.5;
+  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.06);g.gain.setValueAtTime(v,t+dur-.1);g.gain.linearRampToValueAtTime(0,t+dur);
+  const out=a.createGain();out.gain.value=1;
+  [[o.vowel==="o"?500:750,7,1],[o.vowel==="o"?900:1200,9,.6],[2600,10,.25]].forEach(([fr,q,amt])=>{const bp=a.createBiquadFilter();bp.type="bandpass";bp.frequency.value=fr;bp.Q.value=q;const gg=a.createGain();gg.gain.value=amt*3;os.connect(bp).connect(gg).connect(out);});
+  out.connect(g).connect(bus);
+  [os,lfo].forEach(x=>{x.start(t);x.stop(t+dur+.05);track(x);});
+}
+/* 鼓 */
+let noiseBuf=null;
+function noise(){if(!noiseBuf){const a=A(),len=a.sampleRate;noiseBuf=a.createBuffer(1,len,a.sampleRate);const d=noiseBuf.getChannelData(0);for(let i=0;i<len;i++)d[i]=Math.random()*2-1;}return noiseBuf;}
+function kick(t,v=1){const a=A(),o=a.createOscillator(),g=a.createGain();o.frequency.setValueAtTime(130,t);o.frequency.exponentialRampToValueAtTime(42,t+.12);g.gain.setValueAtTime(.9*v,t);g.gain.exponentialRampToValueAtTime(.001,t+.32);o.connect(g).connect(bus);o.start(t);o.stop(t+.35);track(o);}
+function snare(t,v=1,brush){const a=A(),n=a.createBufferSource();n.buffer=noise();const f=a.createBiquadFilter();f.type=brush?"bandpass":"highpass";f.frequency.value=brush?2500:1200;const g=a.createGain();g.gain.setValueAtTime((brush?.18:.42)*v,t);g.gain.exponentialRampToValueAtTime(.001,t+(brush?.16:.2));n.connect(f).connect(g).connect(bus);n.start(t);n.stop(t+.25);track(n);
+  if(!brush){const o=a.createOscillator(),og=a.createGain();o.frequency.value=190;og.gain.setValueAtTime(.25*v,t);og.gain.exponentialRampToValueAtTime(.001,t+.09);o.connect(og).connect(bus);o.start(t);o.stop(t+.1);track(o);}}
+function hat(t,v=1){const a=A(),n=a.createBufferSource();n.buffer=noise();const f=a.createBiquadFilter();f.type="highpass";f.frequency.value=7500;const g=a.createGain();g.gain.setValueAtTime(.16*v,t);g.gain.exponentialRampToValueAtTime(.001,t+.05);n.connect(f).connect(g).connect(bus);n.start(t);n.stop(t+.07);track(n);}
+function stomp(t){const a=A(),o=a.createOscillator(),g=a.createGain();o.frequency.setValueAtTime(90,t);o.frequency.exponentialRampToValueAtTime(50,t+.08);g.gain.setValueAtTime(.5,t);g.gain.exponentialRampToValueAtTime(.001,t+.18);o.connect(g).connect(bus);o.start(t);o.stop(t+.2);track(o);}
+
+/* ================= 和弦进行与编曲 ================= */
+const PROG={
+  std:{bars:["I","I","I","I","IV","IV","I","I","V","IV","I","I"]},
+  quick:{bars:["I","IV","I","I","IV","IV","I","I","V","IV","I","V"]},
+  minor:{bars:["i","i","i","i","iv","iv","i","i","bVI","V","i","V"]}
+};
+const DEG={I:[0,"dom"],IV:[5,"dom"],V:[7,"dom"],i:[0,"min"],iv:[5,"min"],bVI:[8,"dom"]};
+const SHAPE={dom:[0,4,7,10],min:[0,3,7,10]};
+function chordOf(key,f){const [r,q]=DEG[f];return SHAPE[q].map(x=>key+r+x);}
+function eighth(t,beat,k,swing){return t+Math.floor(k/2)*beat+(k%2?(swing?beat*2/3:beat/2):0);}
+function lightStrip(strip,t0,barLen,n){
+  if(!strip)return;const cells=[...strip.children];const a=A();
+  for(let b=0;b<n;b++)later(()=>{cells.forEach(c=>c.classList.remove("now"));cells[b]&&cells[b].classList.add("now");},t0-a.currentTime+b*barLen);
+  later(()=>cells.forEach(c=>c.classList.remove("now")),t0-a.currentTime+n*barLen);
+}
+/* ================= 摇滚：乐器 ================= */
+INST.ac.peak=[220,5];
+Object.assign(INST,{
+  cr:{bright:.88,decay:.999,dur:2,vol:.24,drive:4.5,lp:3400},
+  fz:{bright:.9,decay:.9993,dur:2.2,vol:.12,drive:45,lp:2400},
+  pk:{bright:.92,decay:.9992,dur:1.8,vol:.15,drive:14,lp:3600},
+  ub:{bright:.3,decay:.993,dur:.9,vol:.9,lp:700},
+  ld:{bright:.88,decay:.9993,dur:2.4,vol:.2,drive:9,lp:3000}
+});
+function crash(t,v=1){const a=A(),n=a.createBufferSource();n.buffer=noise();const f=a.createBiquadFilter();f.type="highpass";f.frequency.value=4500;const g=a.createGain();g.gain.setValueAtTime(.25*v,t);g.gain.exponentialRampToValueAtTime(.001,t+1.3);n.connect(f).connect(g).connect(bus);n.start(t);n.stop(t+1.35);track(n);}
+/* 临时把声音送进一条效果链（哇音、声像） */
+function via(node,fn){const keep=bus;node.connect(keep);bus=node;try{fn();}finally{bus=keep;}}
+/* 倒放：把拨弦样本反过来 */
+function revPluck(t,midi,inst,dur){const a=A(),I=INST[inst],src=ksBuf(midi,dur,I.bright,I.decay),b=a.createBuffer(1,src.length,src.sampleRate),s=src.getChannelData(0),d=b.getChannelData(0);
+  for(let i=0;i<s.length;i++)d[i]=s[s.length-1-i];const fade=Math.floor(a.sampleRate*.01);for(let i=0;i<fade;i++)d[d.length-1-i]*=i/fade;
+  const n=a.createBufferSource();n.buffer=b;const g=a.createGain();g.gain.value=I.vol*1.3;let node=g;n.connect(g);
+  if(I.drive){const sh=a.createWaveShaper();sh.curve=shaper(I.drive);node.connect(sh);node=sh;}if(I.lp){const f=a.createBiquadFilter();f.type="lowpass";f.frequency.value=I.lp;node.connect(f);node=f;}
+  node.connect(bus);n.start(t);n.stop(t+dur);track(n);}
+const bt=b=>60/b;
+const PCN={C:0,D:2,E:4,F:5,G:7,A:9,B:11};
+function chordPcs(name){let i=1,r=PCN[name[0]];if(name[1]==="#"){r++;i++;}else if(name[1]==="b"){r--;i++;}const rest=name.slice(i),m=rest.startsWith("m"),q=rest.includes("7");const p=[r,r+(m?3:4),r+7];if(q)p.push(r+10);return p.map(x=>(x+12)%12);}
+function place(pcs,lo,hi){const o=[];for(let m=lo;m<hi;m++)if(pcs.includes(m%12))o.push(m);return o;}
+function rootNear(name,lo){const p=chordPcs(name)[0];let m=lo;while(m%12!==p)m++;return m;}
+function stripNear(btn){const lab=btn.closest(".lab");return lab?lab.querySelector("[data-strip]"):null;}
+function swing8(t,beat,k,sw){return t+Math.floor(k/2)*beat+(k%2?(sw?beat*2/3:beat/2):0);}
+function rockBeat(tb,beat,o={}){for(let k=0;k<8;k++){hat(tb+k*beat/2,(k%2?.55:.9)*(o.hv||1));}kick(tb,o.kv||1);kick(tb+2*beat,o.kv||1);if(o.push)kick(tb+2.5*beat,.7);snare(tb+beat,o.sv||1);snare(tb+3*beat,o.sv||1);}
+function powerBar(tb,beat,ch,inst="pk",o={}){const r=rootNear(ch,40);for(let k=0;k<8;k++)strum(tb+k*beat/2,[r,r+7,r+12],inst,{vol:o.vol||1,mute:beat*(o.mute||.45),spread:.004});}
+function bass8(tb,beat,ch,o={}){const r=rootNear(ch,28)+(rootNear(ch,28)<31?12:0);for(let k=0;k<8;k++)pluck(tb+k*beat/2,r,"bass",{vol:o.vol||.95,mute:beat*.42});}
+function voiceLine(t,beat,notes,shift=-12,o={}){notes.forEach(([b,m,d])=>voice(t+b*beat,m+shift,d*beat*.95,{from:-1,glide:.08,vibDepth:o.vib||16,vowel:o.vowel||"a",vol:o.vol||.85}));}
+
+/* ================= 硬摇滚：补充 ================= */
+INST.pmu={bright:.85,decay:.999,dur:1.2,vol:.17,drive:14,lp:1500};
+function tom(t,f=120,v=1){const a=A(),o=a.createOscillator(),g=a.createGain();o.frequency.setValueAtTime(f*1.6,t);o.frequency.exponentialRampToValueAtTime(f,t+.08);g.gain.setValueAtTime(.6*v,t);g.gain.exponentialRampToValueAtTime(.001,t+.4);o.connect(g).connect(bus);o.start(t);o.stop(t+.45);track(o);}
+function clap(t,v=1){const a=A();[0,.011,.022].forEach((d,i)=>{const n=a.createBufferSource();n.buffer=noise();const f=a.createBiquadFilter();f.type="bandpass";f.frequency.value=1300;f.Q.value=.9;const g=a.createGain();g.gain.setValueAtTime(.45*v*(i===2?1:.6),t+d);g.gain.exponentialRampToValueAtTime(.001,t+d+(i===2?.14:.02));n.connect(f).connect(g).connect(bus);n.start(t+d);n.stop(t+d+.16);track(n);});}
+function makeIR(sec,gated){const a=A(),len=Math.floor(a.sampleRate*sec),b=a.createBuffer(2,len,a.sampleRate);for(let c=0;c<2;c++){const d=b.getChannelData(c);for(let i=0;i<len;i++){const x=i/len;d[i]=(Math.random()*2-1)*(gated?(x<.85?1:(1-x)/.15):Math.pow(1-x,2.2));}}return b;}
+function addRoom(sec,amt){const a=A(),cv=a.createConvolver();cv.buffer=makeIR(sec,false);const g=a.createGain();g.gain.value=amt;bus.connect(cv).connect(g).connect(master);}
+function gatedChain(){const a=A(),inp=a.createGain(),cv=a.createConvolver();cv.buffer=makeIR(.32,true);const wet=a.createGain();wet.gain.value=.9;inp.connect(cv).connect(wet);const out=a.createGain();inp.connect(out);wet.connect(out);return [inp,out];}
+/* 哈蒙德风琴 */
+function hammond(t,midi,dur,o={}){const a=A(),f=mf(midi),g=a.createGain(),v=(o.vol||1)*.09;
+  [[1,.5],[2,.35],[3,.22],[4,.18],[6,.08],[8,.1]].forEach(([h,am])=>{const x=a.createOscillator();x.type="sine";x.frequency.value=f*h;const xg=a.createGain();xg.gain.value=am;x.connect(xg).connect(g);x.start(t);x.stop(t+dur+.05);track(x);});
+  const p=a.createOscillator();p.type="sine";p.frequency.value=f*3;const pg=a.createGain();pg.gain.setValueAtTime(.35,t);pg.gain.exponentialRampToValueAtTime(.001,t+.25);p.connect(pg).connect(g);p.start(t);p.stop(t+.3);track(p);
+  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.01);g.gain.setValueAtTime(v,t+dur-.03);g.gain.linearRampToValueAtTime(0,t+dur);g.connect(bus);}
+function leslieChain(t,speed){const a=A(),inp=a.createGain(),trem=a.createGain();trem.gain.value=.75;const l1=a.createOscillator(),lg1=a.createGain();l1.frequency.value=speed;lg1.gain.value=.3;l1.connect(lg1).connect(trem.gain);
+  const dl=a.createDelay(.05);dl.delayTime.value=.006;const l2=a.createOscillator(),lg2=a.createGain();l2.frequency.value=speed;lg2.gain.value=.0025;l2.connect(lg2).connect(dl.delayTime);
+  const pan=a.createStereoPanner();const l3=a.createOscillator();l3.frequency.value=speed;const lg3=a.createGain();lg3.gain.value=.6;l3.connect(lg3).connect(pan.pan);
+  inp.connect(dl).connect(trem).connect(pan);[l1,l2,l3].forEach(x=>{x.start(t);x.stop(t+20);track(x);});return [inp,pan];}
+function driveChain(amt){const a=A(),inp=a.createGain();inp.gain.value=2.2;const sh=a.createWaveShaper();sh.curve=shaper(amt);const lp=a.createBiquadFilter();lp.type="lowpass";lp.frequency.value=3200;const out=a.createGain();out.gain.value=.35;inp.connect(sh).connect(lp).connect(out);return [inp,out];}
+function through([inp,out],fn){const keep=bus;out.connect(keep);bus=inp;try{fn();}finally{bus=keep;}}
+
+/* ================= 当代流行：乐器与效果 ================= */
+Object.assign(INST,{
+  cl:{bright:.72,decay:.9988,dur:2.4,vol:.32,lp:4200},
+  zh:{bright:.95,decay:.9986,dur:2.2,vol:.3,lp:7000,peak:[2400,5]},
+  sb:{bright:.4,decay:.997,dur:1,vol:.7,lp:900}
+});
+function synth(t,midi,dur,o={}){const a=A(),f=mf(midi),g=a.createGain(),v=(o.vol||1)*.05,lp=a.createBiquadFilter();lp.type="lowpass";lp.Q.value=o.q||2;lp.frequency.setValueAtTime(o.cut||900,t);lp.frequency.linearRampToValueAtTime(o.open||2600,t+(o.att||.08));lp.frequency.exponentialRampToValueAtTime(o.cut||900,t+Math.max(.2,dur));
+  (o.waves||[["sawtooth",-8],["sawtooth",8]]).forEach(([w,dt])=>{const x=a.createOscillator();x.type=w;x.frequency.value=f;x.detune.value=dt;x.connect(lp);x.start(t);x.stop(t+dur+.06);track(x);});
+  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+(o.att||.01));g.gain.setValueAtTime(v,t+Math.max(o.att||.01,dur-.05));g.gain.linearRampToValueAtTime(0,t+dur);lp.connect(g).connect(o.out||bus);}
+function pad(t,notes,dur,o={}){notes.forEach(m=>synth(t,m,dur,{vol:(o.vol||1)*.55,cut:o.cut||700,open:o.open||1600,att:o.att||.35,out:o.out}));}
+function stab(t,notes,len,v=1){notes.forEach(m=>synth(t,m,len,{vol:.75*v,cut:600,open:4200,att:.005,q:3}));}
+function piano(t,midi,dur,v=1){const a=A(),f=mf(midi),g=a.createGain();[[1,.6,"triangle"],[2,.25,"sine"],[3,.08,"sine"]].forEach(([h,am,w])=>{const x=a.createOscillator();x.type=w;x.frequency.value=f*h;const xg=a.createGain();xg.gain.value=am;x.connect(xg).connect(g);x.start(t);x.stop(t+dur+.1);track(x);});
+  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.12*v,t+.005);g.gain.exponentialRampToValueAtTime(.03*v,t+.4);g.gain.exponentialRampToValueAtTime(.001,t+dur+.08);g.connect(bus);}
+function epiano(t,midi,dur,v=1){const a=A(),f=mf(midi),g=a.createGain(),x=a.createOscillator();x.type="sine";x.frequency.value=f;const m=a.createOscillator();m.frequency.value=f*2;const mg=a.createGain();mg.gain.setValueAtTime(f*1.1,t);mg.gain.exponentialRampToValueAtTime(f*.08,t+.5);m.connect(mg).connect(x.frequency);x.connect(g);[x,m].forEach(o=>{o.start(t);o.stop(t+dur+.1);track(o);});
+  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.12*v,t+.006);g.gain.exponentialRampToValueAtTime(.001,t+dur+.08);g.connect(bus);}
+function strings(t,notes,dur,v=1){const a=A();notes.forEach(m=>[-7,0,7].forEach(dt=>{const o=a.createOscillator();o.type="sawtooth";o.frequency.value=mf(m);o.detune.value=dt;const lp=a.createBiquadFilter();lp.type="lowpass";lp.frequency.value=2000;const g=a.createGain(),vv=.012*v;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(vv,t+.4);g.gain.setValueAtTime(vv,t+dur-.3);g.gain.linearRampToValueAtTime(0,t+dur);o.connect(lp).connect(g).connect(bus);o.start(t);o.stop(t+dur+.05);track(o);}));}
+/* 808：长、低、可以滑音 */
+function b808(t,midi,dur,o={}){const a=A(),f=mf(midi),x=a.createOscillator();x.type="sine";if(o.from!=null){x.frequency.setValueAtTime(mf(o.from),t);x.frequency.exponentialRampToValueAtTime(f,t+(o.glide||.12));}else{x.frequency.setValueAtTime(f*2.4,t);x.frequency.exponentialRampToValueAtTime(f,t+.03);}
+  const g=a.createGain(),v=(o.vol||1)*.7;g.gain.setValueAtTime(v,t);g.gain.setValueAtTime(v*.9,t+Math.max(.05,dur-.12));g.gain.exponentialRampToValueAtTime(.001,t+dur);const sh=a.createWaveShaper();sh.curve=shaper(2.4);x.connect(sh).connect(g).connect(bus);x.start(t);x.stop(t+dur+.02);track(x);}
+function popKick(t,v=1){kick(t,v*1.1);}
+function four(tb,beat,o={}){for(let q=0;q<4;q++){popKick(tb+q*beat,o.kv||1);hat(tb+q*beat+beat/2,(o.hv||1)*.9);if(o.out){}}clap(tb+beat,o.cv||.9);clap(tb+3*beat,o.cv||.9);if(o.crash)crash(tb,o.crash);}
+function popBeat(tb,beat,o={}){for(let k=0;k<8;k++)hat(tb+k*beat/2,(k%2?.45:.75)*(o.hv||1));popKick(tb,o.kv||1);popKick(tb+1.5*beat,(o.kv||1)*.7);popKick(tb+2*beat,o.kv||1);clap(tb+beat,o.cv||.8);snare(tb+beat,.5);clap(tb+3*beat,o.cv||.8);snare(tb+3*beat,.5);if(o.crash)crash(tb,o.crash);}
+function trapBar(tb,beat,o={}){const s=beat/4;for(let k=0;k<16;k++){if(k===6||k===14){for(let r=0;r<3;r++)hat(tb+k*s+r*s/1.5*1,.5);}else if(k%2===0)hat(tb+k*s,.7);}if(o.roll)for(let r=0;r<8;r++)hat(tb+12*s+r*s/2,.35+r*.06);clap(tb+2*beat,1.1);snare(tb+2*beat,.5);if(o.crash)crash(tb,o.crash);}
+function dembow(tb,beat,o={}){const s=beat/4;[0,4,8,12].forEach(k=>popKick(tb+k*s,.9));[3,6,11,14].forEach(k=>{snare(tb+k*s,.7);clap(tb+k*s,.4);});for(let k=0;k<16;k+=2)hat(tb+k*s,.55);if(o.crash)crash(tb,o.crash);}
+function vline(t,beat,notes,o={}){notes.forEach(([b,m,d])=>voice(t+b*beat,m+(o.tr||0),d*beat*.94,{vowel:o.vowel||"a",vol:o.vol||.7,vibDepth:o.vib||14,from:o.from==null?-.6:o.from,glide:.07}));}
+function bars(t,beat,arr){return arr.map((x,i)=>[t+i*4*beat,x]);}
+const C=[[48,[60,64,67]],[43,[59,62,67]],[45,[57,60,64]],[41,[57,60,65]]];
+const AMC=[[45,[57,60,64]],[41,[57,60,65]],[48,[60,64,67]],[43,[59,62,67]]];
+function markCells(btn,times){const st=stripNear(btn);if(!st)return;const cells=[...st.children],a=A();times.forEach((tt,i)=>later(()=>{cells.forEach(c=>c.classList.remove("now"));cells[i]&&cells[i].classList.add("now");},tt-a.currentTime));}
+
+const DEMOS={};
+/* 01 浓缩的一首歌 */
+const VER=[[[0,64,.5],[.5,64,.5],[1,67,1],[2,64,.5],[2.5,62,1.5]],[[0,62,.5],[.5,62,.5],[1,64,1],[2,62,.5],[2.5,59,1.5]],[[0,60,.5],[.5,60,.5],[1,64,1],[2,67,.5],[2.5,65,1.5]],[[0,64,1],[1,62,1],[2,60,2]]];
+const PRE=[[[0,64,.5],[.5,65,.5],[1,67,.5],[1.5,69,.5],[2,67,1],[3,69,1]],[[0,69,.5],[.5,71,.5],[1,72,1],[2,71,1],[3,74,1]]];
+const CHO=[[[0,72,.5],[.5,72,.5],[1,76,1],[2,74,.5],[2.5,72,1.5]],[[0,71,.5],[.5,71,.5],[1,74,1],[2,72,.5],[2.5,71,1.5]],[[0,72,.5],[.5,72,.5],[1,76,1],[2,79,.5],[2.5,77,1.5]],[[0,76,1],[1,74,1],[2,72,2]]];
+const POST=[[0,79,.25],[.5,79,.25],[.75,76,.25],[1.5,79,.25],[2,74,.5],[3,72,.5]];
+function sing(tb,beat,bar,o={}){vline(tb,beat,bar,o);}
+function chorusBar(tb,beat,i,o={}){const [r,ch]=C[i%4];four(tb,beat,{crash:i===0&&o.crash?.8:0});[.5,1.5,2.5,3.5].forEach(x=>stab(tb+x*beat,ch,beat*.35,.8));for(let k=0;k<8;k++)pluck(tb+k*beat/2,r-12+(k%2?12:0),"sb",{vol:1,mute:beat*.4});pad(tb,ch.map(x=>x+12),4*beat,{vol:.6});}
+DEMOS.form=(t,btn)=>{const beat=bt(112);let x=t;const marks=[];
+  marks.push(x);for(let i=0;i<4;i++){const tb=x+i*4*beat,[r,ch]=C[i];ch.forEach(m=>piano(tb,m,beat*3.6,.8));piano(tb,r,beat*3.6,.9);popKick(tb,.8);for(let q=0;q<4;q++)hat(tb+q*beat+beat/2,.4);sing(tb,beat,VER[i],{tr:0});}x+=16*beat;
+  marks.push(x);[[45,[57,60,64]],[41,[57,60,65]]].forEach(([r,ch],i)=>{const tb=x+i*4*beat;pad(tb,ch.map(m=>m+12),4*beat,{vol:.7,open:1000+i*1500});pluck(tb,r-12,"sb",{vol:1,dur:4*beat});for(let k=0;k<(i?16:8);k++)snare(tb+k*beat/(i?4:2),.25+k*(i?.03:.04));popKick(tb,.8);popKick(tb+2*beat,.8);sing(tb,beat,PRE[i]);});x+=8*beat;
+  marks.push(x);for(let i=0;i<4;i++){chorusBar(x+i*4*beat,beat,i,{crash:1});sing(x+i*4*beat,beat,CHO[i],{vol:.8});}x+=16*beat;
+  marks.push(x);for(let i=0;i<2;i++){chorusBar(x+i*4*beat,beat,i);vline(x+i*4*beat,beat,POST,{vowel:"o",vol:.75,from:0,vib:0});}x+=8*beat;
+  marks.push(x);[[45,[57,60,64]],[43,[59,62,67]]].forEach(([r,ch],i)=>{const tb=x+i*4*beat;pad(tb,ch,4*beat,{vol:.8,cut:400,open:800});piano(tb,r,beat*3.6,.7);sing(tb,beat,i?[[0,71,2],[2,67,2]]:[[0,69,2],[2,72,2]],{vol:.6});});for(let k=0;k<8;k++)popKick(x+4*beat+k*beat/2,.3+k*.08);x+=8*beat;
+  marks.push(x);for(let i=0;i<4;i++){chorusBar(x+i*4*beat,beat,i,{crash:1});sing(x+i*4*beat,beat,CHO[i],{vol:.8});}x+=16*beat;
+  [60,64,67,72].forEach(m=>piano(x,m,2.4));pad(x,[60,64,67,72],2.4);crash(x);popKick(x);voice(x,72,2.2,{vol:.75,vibDepth:20});
+  markCells(btn,marks);later(()=>{const st=stripNear(btn);st&&[...st.children].forEach(c=>c.classList.remove("now"));},x-A().currentTime+.5);return x-t+2.6;};
+/* 02 钩子 */
+const HOOK_OFF=[[[0,64,1],[1,67,.5],[1.5,71,.5],[2,74,1],[3,72,1]],[[0,71,.5],[.5,67,1],[1.5,62,.5],[2,65,1.5],[3.5,67,.5]],[[0,72,1.5],[1.5,76,.5],[2,69,.5],[2.5,64,1.5]],[[0,65,.5],[.5,69,.5],[1,77,1],[2,74,.5],[2.5,72,1.5]],
+  [[0,79,1],[1,76,.5],[1.5,74,1],[2.5,71,1.5]],[[0,62,.5],[.5,64,.5],[1,71,1],[2,67,2]],[[0,64,1],[1,72,1],[2,76,.5],[2.5,69,1.5]],[[0,65,1],[1,64,1],[2,60,2]]];
+const M=[[0,76,.5],[.5,74,.5],[1,72,1],[2.5,74,.5],[3,72,1]];
+const HOOK_ON=[M,M,M,[[0,72,1],[1,71,1],[2,72,2]],M,M,M,[[0,76,.5],[.5,77,.5],[1,79,2.5]]];
+function hookDemo(t,lines){const beat=bt(110);lines.forEach((ln,i)=>{const tb=t+i*4*beat,[r,ch]=C[i%4];popBeat(tb,beat,{crash:i===0?.6:0});ch.forEach(m=>epiano(tb,m,beat*1.8,.7));ch.forEach(m=>epiano(tb+2*beat,m,beat*1.8,.6));for(let k=0;k<4;k++)pluck(tb+k*beat,r-12,"sb",{vol:1,mute:beat*.9});vline(tb,beat,ln,{vol:.8});});
+  const e=t+32*beat;[60,64,67].forEach(m=>epiano(e,m,2));pluck(e,36,"sb",{vol:1,dur:2});return 32*beat+2.2;}
+DEMOS["hook-off"]=t=>hookDemo(t,HOOK_OFF);DEMOS["hook-on"]=t=>hookDemo(t,HOOK_ON);
+/* 03 四和弦 */
+DEMOS["axis-a"]=t=>{const beat=bt(124),L=[[0,79,.5],[.5,76,.5],[1,72,.5],[1.5,76,.5],[2,79,.75],[2.75,81,.25],[3,79,1]];
+  for(let i=0;i<8;i++){const tb=t+i*4*beat,[r,ch]=C[i%4];four(tb,beat,{crash:i%4===0?.6:0});[.5,1.5,2.5,3.5].forEach(x=>stab(tb+x*beat,ch.map(m=>m+12),beat*.3,.9));[.5,1.5,2.5,3.5].forEach(x=>pluck(tb+x*beat,r-12,"sb",{vol:1.1,mute:beat*.4}));
+    if(i>=4)L.forEach(([b,m,d])=>synth(tb+b*beat,m-(i%4===1?2:i%4===3?3:0),d*beat*.9,{vol:.55,cut:1500,open:5000,waves:[["square",0],["sawtooth",6]]}));}
+  const e=t+32*beat;stab(e,[60,64,67,72],1.6);popKick(e);crash(e);return 32*beat+2;};
+DEMOS["axis-b"]=t=>{const beat=bt(70),L=[[[0,76,2],[2,74,1],[3,72,1]],[[0,74,3],[3,71,1]],[[0,72,2],[2,76,1],[3,79,1]],[[0,77,2],[2,76,1],[3,74,1]]];
+  for(let i=0;i<4;i++){const tb=t+i*4*beat,[r,ch]=C[i];[0,1,2,3,2,1,2,3].forEach((j,k)=>piano(tb+k*beat/2,[r+12,...ch][j],beat*.9,.7));piano(tb,r,beat*3.8,.9);strings(tb,ch,4*beat+.05,.9);vline(tb,beat,L[i],{vol:.75,vib:22});}
+  const e=t+16*beat;[48,60,64,67,72].forEach(m=>piano(e,m,3));strings(e,[60,64,67],3);voice(e,72,2.8,{vol:.7,vibDepth:22});return 16*beat+3.2;};
+DEMOS["axis-c"]=t=>{const beat=bt(92),L=[[[0,72,.5],[.5,72,.5],[1,71,.5],[1.5,69,1.5],[3,64,1]],[[0,65,.5],[.5,69,.5],[1,72,1],[2,69,2]],[[0,67,.5],[.5,67,.5],[1,72,1],[2,76,1],[3,74,1]],[[0,74,1],[1,71,1],[2,67,2]]];
+  for(let i=0;i<8;i++){const tb=t+i*4*beat,[r,ch]=AMC[i%4];ch.forEach(m=>epiano(tb,m+12,beat*3.6,.6));b808(tb,r-12,beat*1.4,{vol:.9});b808(tb+2.5*beat,r-12,beat*1.2,{vol:.8});trapBar(tb,beat,{roll:i%4===3,crash:i===0?.5:0});popKick(tb,.6);popKick(tb+2.5*beat,.5);if(i>=2)vline(tb,beat,L[i%4],{vol:.75,vib:16});}
+  const e=t+32*beat;[57,60,64].forEach(m=>epiano(e,m+12,2.4));b808(e,33,2);return 32*beat+2.6;};
+/* 04 卡农 */
+const CAN=[[48,[60,64,67],[76,74]],[47,[59,62,67],[74,71]],[45,[57,60,64],[72,76]],[43,[59,64,67],[74,71]],[41,[57,60,65],[72,69]],[40,[55,60,64],[67,72]],[41,[57,60,65],[69,72]],[43,[59,62,67],[74,71]]];
+const CAN2=[[79,77],[74,79],[76,72],[71,74],[69,72],[76,79],[77,76],[74,74]];
+DEMOS.canon=t=>{const beat=bt(80);for(let p=0;p<2;p++)CAN.forEach(([b,ch,mel],i)=>{const tb=t+(p*8+i)*2*beat;piano(tb,b,beat*1.9,1);piano(tb+beat,b+12,beat*.9,.6);ch.forEach(m=>piano(tb+.5*beat,m,beat*1.4,.55));strings(tb,ch,2*beat+.05,p?1.1:.7);
+    const mm=p?CAN2[i]:mel;piano(tb,mm[0]+(p?0:0),beat*.95,1.05);piano(tb+beat,mm[1],beat*.95,.95);});
+  const e=t+32*beat;[36,48,60,64,67,72].forEach(m=>piano(e,m,3));strings(e,[60,64,67],3);return 32*beat+3.2;};
+/* 05 Auto-Tune、侧链、808 */
+const TUNE=[[0,67,1],[1,69,.5],[1.5,72,1.5],[3,71,1],[4,69,.5],[4.5,67,1.5],[6,64,1],[7,67,1],[8,69,1],[9,72,.5],[9.5,74,1.5],[11,72,1],[12,71,.5],[12.5,69,.5],[13,67,3]];
+function vox(t,beat,segs,tuned,vol=.75){const a=A(),os=a.createOscillator();os.type="sawtooth";const end=t+segs.reduce((m,[b,,d])=>Math.max(m,b+d),0)*beat;
+  segs.forEach(([b,m,d],i)=>{const tt=t+b*beat,f=mf(m);if(tuned){os.frequency.setValueAtTime(f,tt);}else{const prev=i?mf(segs[i-1][1]):f*.94;os.frequency.setValueAtTime(prev,tt);os.frequency.linearRampToValueAtTime(f*Math.pow(2,(Math.random()-.5)*.25/12),tt+.13);os.frequency.linearRampToValueAtTime(f*Math.pow(2,(Math.random()-.5)*.15/12),tt+d*beat*.9);}});
+  const g=a.createGain();g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(vol*.5,t+.06);
+  segs.forEach(([b,,d],i)=>{const tt=t+b*beat;if(i){g.gain.setValueAtTime(vol*.5,tt-.03);g.gain.linearRampToValueAtTime(vol*.38,tt);g.gain.linearRampToValueAtTime(vol*.5,tt+.04);}});g.gain.setValueAtTime(vol*.5,end-.12);g.gain.linearRampToValueAtTime(0,end);
+  if(!tuned){const l=a.createOscillator(),lg=a.createGain();l.frequency.value=5.3;lg.gain.value=24;l.connect(lg).connect(os.detune);l.start(t);l.stop(end);track(l);}
+  const out=a.createGain();[[750,7,1],[1200,9,.6],[2600,10,.3]].forEach(([fr,q,amt])=>{const bp=a.createBiquadFilter();bp.type="bandpass";bp.frequency.value=fr;bp.Q.value=q;const gg=a.createGain();gg.gain.value=amt*3;os.connect(bp).connect(gg).connect(out);});
+  out.connect(g).connect(bus);os.start(t);os.stop(end+.05);track(os);}
+function tuneDemo(t,tuned){const beat=bt(96);for(let i=0;i<4;i++){const tb=t+i*4*beat,[r,ch]=C[i];pad(tb,ch.map(m=>m+12),4*beat,{vol:.6});b808(tb,r-12,beat*1.8,{vol:.7});b808(tb+2*beat,r-12,beat*1.5,{vol:.6});for(let k=0;k<8;k++)hat(tb+k*beat/2,.45);popKick(tb,.7);clap(tb+2*beat,.8);}
+  vox(t,beat,TUNE,tuned);return 16*beat+1.5;}
+DEMOS["tune-off"]=t=>tuneDemo(t,false);DEMOS["tune-on"]=t=>tuneDemo(t,true);
+function scDemo(t,on){const beat=bt(124),a=A(),duck=a.createGain();duck.connect(bus);const n=8;
+  for(let i=0;i<n;i++){const tb=t+i*4*beat,[r,ch]=C[i%4];pad(tb,ch.concat(ch.map(m=>m+12)),4*beat+.02,{vol:1.4,cut:1400,open:2600,att:.05,out:duck});for(let q=0;q<4;q++){const tt=tb+q*beat;popKick(tt,1);if(on){duck.gain.setValueAtTime(1,tt-.005);duck.gain.linearRampToValueAtTime(.08,tt+.01);duck.gain.linearRampToValueAtTime(1,tt+beat*.85);}hat(tt+beat/2,.7);}clap(tb+beat,.7);clap(tb+3*beat,.7);pluck(tb,r-12,"sb",{vol:1,dur:4*beat});}
+  return n*4*beat+1;}
+DEMOS["sc-off"]=t=>scDemo(t,false);DEMOS["sc-on"]=t=>scDemo(t,true);
+DEMOS["808"]=t=>{b808(t,33,2.2,{vol:1});b808(t+2.6,33,1.6,{vol:1,from:45,glide:.25});const beat=bt(140),t0=t+4.8,P=[[0,33,1.5],[1.5,33,.5],[2,40,1,33],[3,31,1]],Q=[[0,33,.75],[.75,33,.75],[1.5,36,1,33],[2.5,38,.5],[3,31,1,38]];
+  for(let i=0;i<4;i++){const tb=t0+i*4*beat;(i%2?Q:P).forEach(([b,m,d,fr])=>b808(tb+b*beat,m,d*beat*.98,{vol:1,from:fr,glide:.1}));trapBar(tb,beat,{roll:i===3});popKick(tb,.5);}return 4.8+16*beat+1.2;};
+/* 06 三种节奏 */
+function grooveDemo(t,kind){const tempo={disco:120,trap:140,dembow:95}[kind],beat=bt(tempo),n=kind==="trap"?4:8;
+  for(let i=0;i<n;i++){const tb=t+i*4*beat,[r,ch]=AMC[i%4];
+    if(kind==="disco"){four(tb,beat,{crash:i%4===0?.6:0});for(let k=0;k<8;k++)pluck(tb+k*beat/2,r-12+(k%2?12:0),"sb",{vol:1,mute:beat*.4});[0,1.5,2.5,3.5].forEach(x=>stab(tb+x*beat,ch.map(m=>m+12),beat*.35,.8));}
+    if(kind==="trap"){trapBar(tb,beat,{roll:i%2===1,crash:i===0?.5:0});popKick(tb,.6);popKick(tb+1.75*beat,.5);b808(tb,r-12,beat*1.5,{vol:1});b808(tb+1.75*beat,r-12,beat*.7,{vol:.9});b808(tb+2.5*beat,r-5,beat*1.4,{vol:.9,from:r-12,glide:.12});pad(tb,ch.map(m=>m+12),4*beat,{vol:.55,cut:500,open:1200});}
+    if(kind==="dembow"){dembow(tb,beat,{crash:i%4===0?.5:0});[0,.75,1.5,2,2.75,3.5].forEach(x=>stab(tb+x*beat,ch.map(m=>m+12),beat*.25,.6));pluck(tb,r-12,"sb",{vol:1,mute:beat*.7});pluck(tb+.75*beat,r-12,"sb",{vol:.8,mute:beat*.6});pluck(tb+2*beat,r-12,"sb",{vol:1,mute:beat*.7});pluck(tb+2.75*beat,r-12,"sb",{vol:.8,mute:beat*.6});}}
+  return n*4*beat+1;}
+DEMOS["b-disco"]=t=>grooveDemo(t,"disco");DEMOS["b-trap"]=t=>grooveDemo(t,"trap");DEMOS["b-dembow"]=t=>grooveDemo(t,"dembow");
+/* 07 K-pop 段落切换 */
+DEMOS.kpop=(t,btn)=>{const beat=bt(120),st=stripNear(btn);lightStrip(st,t,16*beat,3);
+  for(let i=0;i<4;i++){const tb=t+i*4*beat,[r,ch]=AMC[i];four(tb,beat,{crash:i===0?.8:0});[.5,1.5,2.5,3.5].forEach(x=>stab(tb+x*beat,ch.map(m=>m+12),beat*.3,.9));for(let k=0;k<8;k++)pluck(tb+k*beat/2,r-12+(k%2?12:0),"sb",{vol:1,mute:beat*.4});vline(tb,beat,[[0,76,.5],[.5,76,.5],[1,79,1],[2,76,.5],[2.5,74,1.5]].map(([b,m,d])=>[b,m-(i===1?1:i===2?0:2),d]),{vol:.75});}
+  const t2=t+16*beat;for(let i=0;i<4;i++){const tb=t2+i*4*beat,[r]=AMC[i];trapBar(tb,beat,{roll:i%2===1,crash:i===0?.8:0});popKick(tb,.7);b808(tb,r-12,beat*1.6,{vol:1});b808(tb+2.5*beat,r-12,beat*1.2,{vol:.9});
+    for(let k=0;k<16;k++)if(k%4!==3)voice(tb+k*beat/4,64+(k%8===6?2:0),beat*.2,{vowel:k%2?"o":"a",vol:.5,vibDepth:0,from:0,glide:.01});}
+  const t3=t2+16*beat,BL=[0,0,12,0,10,0,7,5];for(let i=0;i<4;i++){const tb=t3+i*4*beat;for(let q=0;q<4;q++)popKick(tb+q*beat,1.2);clap(tb+beat,1.1);clap(tb+3*beat,1.1);snare(tb+beat,.8);snare(tb+3*beat,.8);for(let k=0;k<16;k++)hat(tb+k*beat/4,k%4===2?.8:.35);if(i%2===0)crash(tb,.7);
+    BL.forEach((iv,k)=>synth(tb+k*beat/2,33+iv,beat*.42,{vol:1.6,cut:300,open:2200,att:.005,q:6,waves:[["sawtooth",0],["square",-5]]}));}
+  const e=t3+16*beat;stab(e,[57,60,64,69],1.5);popKick(e,1.2);crash(e);return 48*beat+2;};
+/* 08 中国风 */
+const ZH=[[[0,76,1,-2],[1,74,.5],[1.5,72,.5],[2,74,1.5],[3.5,76,.5]],[[0,79,1.5],[1.5,76,.5],[2,74,1],[3,72,1]],[[0,69,1,-2],[1,72,.5],[1.5,74,.5],[2,76,1],[3,74,1]],[[0,72,1],[1,69,.5],[1.5,67,.5],[2,69,2,-2]],
+  [[0,72,.5],[.5,74,.5],[1,76,1],[2,79,1],[3,81,1]],[[0,79,1.5,-2],[1.5,76,.5],[2,74,1],[3,76,1]],[[0,74,1],[1,72,1],[2,69,1],[3,67,1]],[[0,69,1],[1,72,1],[2,72,2,-2]]];
+const ZHC=[[48,[64,67,71,74]],[45,[60,64,67,72]],[41,[57,60,64,69]],[43,[59,62,65,69]]];
+DEMOS.cnstyle=t=>{const beat=bt(78);[60,62,64,67,69,72,74,76,79,81,84].forEach((m,i)=>pluck(t+i*.045,m,"zh",{vol:.8,dur:1.6}));const t0=t+1.2;
+  for(let i=0;i<8;i++){const tb=t0+i*4*beat,[r,ch]=ZHC[i%4];ch.forEach(m=>epiano(tb,m,beat*1.8,.6));ch.forEach(m=>epiano(tb+2.5*beat,m,beat*1.3,.5));pluck(tb,r-12,"sb",{vol:1,mute:beat*1.4});pluck(tb+1.75*beat,r-12,"sb",{vol:.8,mute:beat*.6});pluck(tb+2.5*beat,r-12,"sb",{vol:.9,mute:beat*1.2});
+    popKick(tb,.9);popKick(tb+1.75*beat,.6);popKick(tb+2.5*beat,.7);snare(tb+beat,.7);clap(tb+beat,.5);snare(tb+3*beat,.7);clap(tb+3*beat,.5);for(let k=0;k<8;k++)hat(swing8(tb,beat,k,true),k%2?.35:.6);
+    ZH[i].forEach(([b,m,d,fr])=>{pluck(tb+b*beat,m,"zh",{vol:1.2,dur:Math.max(.8,d*beat+.4),from:fr,hold:.04,glide:.16,vib:d>=1.5});});}
+  const e=t0+32*beat;[48,60,64,67,72].forEach(m=>epiano(e,m,2.6));pluck(e,72,"zh",{vol:1.2,dur:2.6,vib:true});return 1.2+32*beat+2.8;};
+/* 09 前奏与加速版 */
+function hookChorus(t,tempo,tr,n=4){const beat=bt(tempo);for(let i=0;i<n;i++){const tb=t+i*4*beat,[r,ch]=C[i%4];four(tb,beat,{crash:i===0?.6:0});[.5,1.5,2.5,3.5].forEach(x=>stab(tb+x*beat,ch.map(m=>m+12+tr),beat*.3,.8));for(let k=0;k<8;k++)pluck(tb+k*beat/2,r-12+tr+(k%2?12:0),"sb",{vol:1,mute:beat*.4});vline(tb,beat,CHO[i%4],{vol:.8,tr});}return n*4*beat;}
+DEMOS["intro-80s"]=t=>{const beat=bt(104);for(let i=0;i<8;i++){const tb=t+i*4*beat,[r,ch]=C[i%4];pad(tb,ch.map(m=>m+12),4*beat,{vol:2,cut:600,open:1400+i*200,att:.6});if(i>=2){for(let k=0;k<8;k++)pluck(tb+k*beat/2,r-12,"sb",{vol:.9,mute:beat*.4});}if(i>=4){popKick(tb);popKick(tb+2*beat);through(gatedChain(),()=>{snare(tb+beat,1.2);snare(tb+3*beat,1.2);});for(let k=0;k<8;k++)hat(tb+k*beat/2,.5);}if(i===4)crash(tb,.7);
+    if(i>=2&&i<6)[[0,79,1],[1,76,1],[2,74,2]].forEach(([b,m,d])=>synth(tb+b*beat,m-(i%2?3:0),d*beat*.9,{vol:.45,cut:1500,open:3500,waves:[["square",0],["sawtooth",6]]}));}
+  const t1=t+32*beat;return 32*beat+hookChorus(t1,104,0,2)+1;};
+DEMOS["intro-now"]=t=>hookChorus(t,104,0,4)+1;
+DEMOS["speed-orig"]=t=>hookChorus(t,104,0,4)+1;
+DEMOS["speed-up"]=t=>hookChorus(t,125,3,4)+1;
+
+/* ================= 调度 ================= */
+const GAIN={form:1.4,"hook-off":1,"hook-on":1,"axis-a":1.6,"axis-b":.95,"axis-c":.5,canon:4,"tune-off":.43,"tune-on":.43,"sc-off":1.1,"sc-on":1.1,"808":.35,"b-disco":1.8,"b-trap":.4,"b-dembow":2,kpop:.75,cnstyle:1.8,"intro-80s":1,"intro-now":1,"speed-orig":1,"speed-up":.8};
+const fab=document.getElementById("stopAll");
+function setActive(b){activeBtn=b;b&&b.classList.add("playing");fab.classList.add("on");}
+function clearActive(){if(activeBtn){activeBtn.classList.remove("playing");activeBtn=null;}fab.classList.remove("on");}
+function runDemo(name,btn){newBus();bus.gain.value=GAIN[name]||1;if(["axis-b","canon","cnstyle","form","tune-off","tune-on","intro-80s"].includes(name))addRoom(2.2,.35);setActive(btn);const t=A().currentTime+.12,d=DEMOS[name](t,btn)||3;later(()=>clearActive(),d+.4);}
+document.querySelectorAll("[data-strip]").forEach(s=>{const n=+s.dataset.strip||12;for(let i=0;i<n;i++)s.appendChild(document.createElement("i"));});
+document.querySelectorAll("[data-demo]").forEach(b=>b.addEventListener("click",()=>{if(b.classList.contains("playing")){stopDemos();return;}runDemo(b.dataset.demo,b);}));
+document.querySelectorAll("[data-stop]").forEach(b=>b.addEventListener("click",stopDemos));
+fab.addEventListener("click",stopDemos);
+/* 小节标题的“播放进度” */
+(()=>{const hs=[...document.querySelectorAll("article h2")];hs.forEach((h,i)=>h.style.setProperty("--pos",`${Math.round((i+1)/hs.length*100)}%`));})();
+
+/* ================= 推荐曲目：歌单 ================= */
+const SONGS=[
+  {side:"A",q:"邓丽君 月亮代表我的心",title:"月亮代表我的心",by:"邓丽君",yr:"1977",style:"华语流行",
+   txt:"这首歌最早由陈芬兰在 1973 年演唱，1977 年邓丽君的版本让它传遍整个华语世界。轻、柔、几乎不用力的唱法，是邓丽君的标志。",
+   listen:["数一数前奏多长，对照图 9","嗓音的“气声”和轻柔的颤音"]},
+  {side:"A",q:"Michael Jackson Billie Jean",title:"Billie Jean",by:"Michael Jackson",yr:"1983",style:"流行 · 放克",
+   txt:"专辑《Thriller》中的单曲。贝斯线和鼓点几乎从头到尾不变，整首歌的张力靠人声和编曲一层层叠出来。它的 MV 也是 MTV 早期最重要的视频之一。",
+   listen:["贝斯线就是钩子之一","鼓的节奏几乎不变，什么在变？"]},
+  {side:"A",q:"Madonna Like a Prayer",title:"Like a Prayer",by:"Madonna",yr:"1989",style:"流行 · 福音",
+   txt:"把教堂合唱团式的福音和声和舞曲节奏放在一起。Madonna 是 1980 年代最懂得用形象和视频制造话题的流行歌手。",
+   listen:["合唱团什么时候进来？","安静的开头和满的副歌"]},
+  {side:"A",q:"Britney Spears Baby One More Time",title:"…Baby One More Time",by:"Britney Spears",yr:"1998",style:"青少年流行",
+   txt:"本章开头那首歌，由 Max Martin 在斯德哥尔摩写成。开头三个钢琴音就是一个钩子。",
+   listen:["对照图 2，画出它的结构","开头的钢琴音和之后的钩子"]},
+  {side:"A",q:"Cher Believe",title:"Believe",by:"Cher",yr:"1998",style:"流行 · 舞曲",
+   txt:"第一首把极端设置的 Auto-Tune 当作卖点的热门单曲。四拍底鼓，是标准的电子舞曲流行。",
+   listen:["主歌里人声“一格一格跳”的地方，对照 Lab 05","节奏是哪一种？对照图 7"]},
+  {side:"A",q:"周杰伦 东风破",title:"东风破",by:"周杰伦",yr:"2003",style:"华语流行 · 中国风",
+   txt:"方文山作词，周杰伦作曲。R&amp;B 的节奏和编曲，加上五声音阶的旋律和二胡、琵琶的音色，常被看作“中国风”的代表作。",
+   listen:["旋律用了几个音？对照 Lab 08","哪些声音是“西方”的，哪些是“东方”的？"]},
+  {side:"B",q:"PSY Gangnam Style",title:"江南 Style",by:"PSY",yr:"2012",style:"K-pop · 电子舞曲",
+   txt:"第一个播放量突破十亿次的 YouTube 视频。大多数听众听不懂韩语，却记住了它的舞蹈和那句钩子。",
+   listen:["四拍底鼓和“掉落”段","钩子是一句歌词、一个声音，还是一个舞蹈动作？"]},
+  {side:"B",q:"邓紫棋 光年之外",title:"光年之外",by:"G.E.M. 邓紫棋",yr:"2016",style:"华语流行",
+   txt:"为电影《太空旅客》中文版写的主题曲。抒情的主歌和爆发力很强的副歌，是 2010 年代华语流行抒情歌的典型写法。",
+   listen:["主歌、导歌、副歌的“能量”变化，对照图 2","鼓什么时候进来？"]},
+  {side:"B",q:"Luis Fonsi Despacito Daddy Yankee",title:"Despacito",by:"Luis Fonsi ft. Daddy Yankee",yr:"2017",style:"拉丁流行 · 雷鬼动",
+   txt:"西班牙语歌曲，在美国单曲榜连续 16 周第一。前半段是吉他伴奏的拉丁流行，进入副歌后变成雷鬼动的节奏。",
+   listen:["找到 dembow 节奏，对照 Lab 06","前奏的吉他和后面的节奏有什么不同？"]},
+  {side:"B",q:"Billie Eilish bad guy",title:"bad guy",by:"Billie Eilish",yr:"2019",style:"流行 · 卧室流行",
+   txt:"由 Billie Eilish 和哥哥 Finneas 在家里的卧室录音室完成。低语般的人声、极简的低音和鼓，结尾突然换成另一种速度和风格。",
+   listen:["人声为什么这么“近”？","结尾的风格切换，对照 Lab 07"]},
+  {side:"B",q:"The Weeknd Blinding Lights",title:"Blinding Lights",by:"The Weeknd",yr:"2019",style:"合成器流行",
+   txt:"1980 年代式的合成器和鼓机，配上当代的制作。2021 年被美国 Billboard 评为其单曲榜史上成绩最好的歌曲。",
+   listen:["这些合成器声音像哪个年代？对照 Lab 09 的“1980 年代式”","节奏是四拍底鼓吗？"]},
+  {side:"B",q:"BTS Dynamite",title:"Dynamite",by:"BTS",yr:"2020",style:"K-pop · 迪斯科流行",
+   txt:"BTS 第一首全英文单曲，也是第一首登上美国单曲榜第一的全韩国人组合的歌。复古的迪斯科编曲和明亮的铜管。",
+   listen:["迪斯科的四拍底鼓和八度跳动的贝斯","后副歌的小钩子在哪里？"]}
+];
+const ICON="M8 5v14l11-7z";
+SONGS.forEach((s,i)=>{
+  const el=document.createElement("div");el.className="song";
+  const q=encodeURIComponent(s.q||`${s.title} ${s.by}`);
+  const yt=s.yt?`https://www.youtube.com/watch?v=${s.yt}`:`https://www.youtube.com/results?search_query=${q}`;
+  el.innerHTML=`<div class="cover" style="--h:${(i*37+300)%360}" aria-hidden="true">${String(i+1).padStart(2,"0")}</div><div class="meta"><span class="title">${s.title}</span><span class="by">${s.by}</span><div class="pmeta"><span class="yr">${s.yr}</span><span class="style">${s.style}</span></div></div>
+  <p>${s.txt}</p><ul class="listen">${s.listen.map(x=>`<li>${x}</li>`).join("")}</ul>
+  <div class="listen-links"><a class="main" href="${yt}" target="_blank" rel="noopener">${s.yt?"YouTube 官方音源":"YouTube 搜索"}</a>
+  <a href="https://music.163.com/#/search/m/?s=${q}&type=1" target="_blank" rel="noopener">网易云</a>
+  <a href="https://y.qq.com/n/ryqq/search?w=${q}" target="_blank" rel="noopener">QQ音乐</a></div>
+  <a class="playlink" href="${yt}" target="_blank" rel="noopener" aria-label="在 YouTube 收听 ${s.title}"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="${ICON}"/></svg></a>`;
+  document.getElementById(s.side==="A"?"songsA":"songsB").appendChild(el);
+});
+
+/* ================= 原创图解 ================= */
+const NS="http://www.w3.org/2000/svg";
+function S(p,tag,a,txt){const e=document.createElementNS(NS,tag);for(const k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;p.appendChild(e);return e;}
+const TB="font-family:var(--font-body);font-size:14px;font-weight:900";
+const FILL=c=>`fill:var(--${c})`;
+function arrow(g,x1,y1,x2,y2,cls="sv-l"){S(g,"line",{x1,y1,x2,y2,class:cls,"stroke-width":1.8});const a=Math.atan2(y2-y1,x2-x1),l=8;S(g,"path",{d:`M ${x2-l*Math.cos(a-.45)} ${y2-l*Math.sin(a-.45)} L ${x2} ${y2} L ${x2-l*Math.cos(a+.45)} ${y2-l*Math.sin(a+.45)}`,class:cls,"stroke-width":1.8,fill:"none"});}
+/* 图 1 生产线 */
+(()=>{const g=document.getElementById("pipe-fig");if(!g)return;const B=[["伴奏","beat / track","制作人",0],["topline","旋律与歌词","词曲作者",0],["录人声","一句唱很多遍","歌手",1],["修音与编辑","Auto-Tune、拼接","人声制作",0],["混音","平衡几十条音轨","混音师",0],["母带","最终的响度与质感","母带工程师",0],["发行","流媒体 · 短视频","听众",1]];
+  const W=136,H=64,pos=[[30,50],[196,50],[362,50],[528,50],[528,190],[362,190],[196,190]];
+  B.forEach(([a,b,who,hot],i)=>{const [x,y]=pos[i];S(g,"rect",{x,y,width:W-14,height:H,rx:16,style:hot?FILL("red"):"",class:hot?"":"sv-card"});if(!hot)S(g,"rect",{x,y,width:W-14,height:H,rx:16,class:"sv-l"});
+    S(g,"text",{x:x+(W-14)/2,y:y+28,"text-anchor":"middle",class:hot?"sv-on":"sv-t",style:"font-size:14px;font-weight:900"},a);S(g,"text",{x:x+(W-14)/2,y:y+48,"text-anchor":"middle",class:hot?"sv-on":"sv-m",style:"font-size:11px"},b);
+    S(g,"text",{x:x+(W-14)/2,y:y-10,"text-anchor":"middle",class:"sv-r",style:"font-size:11.5px;font-weight:700"},who);});
+  for(let i=0;i<3;i++)arrow(g,pos[i][0]+W-12,82,pos[i+1][0]-4,82,"sv-l");arrow(g,589,116,589,174,"sv-l");for(let i=4;i<6;i++)arrow(g,pos[i][0]-2,222,pos[i+1][0]+W-12,222,"sv-l");
+  S(g,"text",{x:30,y:290,class:"sv-ts"},"红色：歌手和听众，是大多数人唯一看得到的两端");
+})();
+/* 图 2 结构 */
+(()=>{const g=document.getElementById("form-fig");if(!g)return;const F=[["前奏",2,.3],["主歌",8,.35],["导歌",4,.6],["副歌",8,.95,1],["后副歌",4,.8,1],["主歌",8,.45],["导歌",4,.65],["副歌",8,1,1],["后副歌",4,.85,1],["桥段",8,.4],["副歌",8,1,1],["结尾",4,.3]];
+  const x0=40,W=600,tot=F.reduce((s,f)=>s+f[1],0),base=170;let x=x0;
+  F.forEach(([n,b,e,hook])=>{const w=b/tot*W,h=e*130;S(g,"rect",{x:x+1,y:base-h,width:w-2,height:h,rx:6,style:FILL(hook?"red":n==="导歌"?"denim":"ink"),opacity:hook?.95:n==="导歌"?.8:.22});
+    S(g,"text",{x:x+w/2,y:base+18,"text-anchor":"middle",class:"sv-t",style:`font-size:${w<30?10:11.5}px;font-weight:700`},n);x+=w;});
+  S(g,"line",{x1:x0,y1:base,x2:x0+W,y2:base,class:"sv-l"});S(g,"text",{x:x0,y:base+44,class:"sv-ts"},"宽度 = 小节数　高度 = 能量");S(g,"text",{x:x0,y:24,class:"sv-m"},"能量 ↑");
+})();
+/* 图 3 四和弦循环 */
+(()=>{const g=document.getElementById("loop-fig");if(!g)return;const cx=340,cy=140,R=86,N=[["C","I",-90,"ink"],["G","V",0,"ink"],["Am","vi",90,"red"],["F","IV",180,"ink"]];
+  S(g,"circle",{cx,cy,r:R,class:"sv-lline","stroke-width":2,fill:"none"});
+  N.forEach(([n,rn,deg,c],i)=>{const a=deg*Math.PI/180,x=cx+R*Math.cos(a),y=cy+R*Math.sin(a);const a2=(deg+90)*Math.PI/180;
+    const mid=(deg+45)*Math.PI/180;arrow(g,cx+R*Math.cos(mid-.18)+0,cy+R*Math.sin(mid-.18),cx+R*Math.cos(mid+.18),cy+R*Math.sin(mid+.18),"sv-lr");
+    S(g,"circle",{cx:x,cy:y,r:30,style:FILL(c==="red"?"red":"ink")});S(g,"text",{x,y:y+2,"text-anchor":"middle",class:"sv-on",style:"font-size:17px;font-weight:900"},n);S(g,"text",{x,y:y+18,"text-anchor":"middle",class:"sv-on",style:"font-size:10.5px;opacity:.85"},rn);});
+  S(g,"text",{x:cx,y:cy+5,"text-anchor":"middle",class:"sv-ts"},"循环");
+  S(g,"text",{x:40,y:60,class:"sv-t",style:TB},"从 C 进入");S(g,"text",{x:40,y:82,class:"sv-m"},"C – G – Am – F");S(g,"text",{x:40,y:102,class:"sv-m"},"明亮、向上");
+  S(g,"text",{x:480,y:200,class:"sv-r",style:TB},"从 Am 进入");S(g,"text",{x:480,y:222,class:"sv-m"},"Am – F – C – G");S(g,"text",{x:480,y:242,class:"sv-m"},"忧伤、内省");
+})();
+/* 图 4 卡农低音 */
+(()=>{const g=document.getElementById("canon-fig");if(!g)return;const CH=["C","G/B","Am","Em/G","F","C/E","F","G"],BN=["C","B","A","G","F","E","F","G"],BV=[7,6,5,4,3,2,3,4],x0=60,w=72;
+  CH.forEach((c,i)=>{const x=x0+i*w;S(g,"rect",{x:x+4,y:20,width:w-8,height:40,rx:12,class:"sv-ink"});S(g,"text",{x:x+w/2,y:46,"text-anchor":"middle",class:"sv-on",style:"font-size:14px;font-weight:900"},c);});
+  let d="";BN.forEach((n,i)=>{const x=x0+i*w+w/2,y=230-BV[i]*20;d+=(i?" L ":"M ")+`${x} ${y}`;});S(g,"path",{d,class:"sv-lr","stroke-width":2.4,fill:"none"});
+  BN.forEach((n,i)=>{const x=x0+i*w+w/2,y=230-BV[i]*20;S(g,"line",{x1:x,y1:62,x2:x,y2:y-12,class:"sv-lline"});S(g,"circle",{cx:x,cy:y,r:12,style:FILL("red")});S(g,"text",{x,y:y+4.5,"text-anchor":"middle",class:"sv-on",style:"font-size:12px;font-weight:900"},n);});
+  S(g,"text",{x:x0,y:258,class:"sv-ts"},"低音：C B A G F E 一级一级往下，然后 F G 往上，回到开头");
+})();
+/* 图 5 音高曲线 */
+(()=>{const g=document.getElementById("tune-fig");if(!g)return;const segs=[[0,67,1],[1,69,.5],[1.5,72,1.5],[3,71,1],[4,69,.5],[4.5,67,1.5],[6,64,2]],x0=140,W=500,tb=8,yOf=(m,base)=>base-(m-64)*7;
+  [["自然人声",80,0],["Auto-Tune 开到最快",200,1]].forEach(([n,base,tuned])=>{S(g,"text",{x:20,y:base-30,class:"sv-t",style:TB},n);
+    segs.forEach(([b,m,d])=>{const x1=x0+b/tb*W,x2=x0+(b+d)/tb*W,y=yOf(m,base);S(g,"line",{x1,y1:y,x2,y2:y,style:"stroke:var(--ink-2)",opacity:.55,"stroke-width":1.2,"stroke-dasharray":"4 3"});});
+    let p="";segs.forEach(([b,m,d],i)=>{const x1=x0+b/tb*W,x2=x0+(b+d)/tb*W,y=yOf(m,base),py=i?yOf(segs[i-1][1],base):y+8;
+      if(tuned){p+=(i?` L ${x1} ${py} L ${x1} ${y}`:`M ${x1} ${y}`)+` L ${x2} ${y}`;}
+      else{p+=(i?` L ${x1} ${py+2}`:`M ${x1} ${py}`)+` Q ${x1+8} ${y+3} ${x1+16} ${y}`;for(let x=x1+16;x<x2;x+=4)p+=` L ${x} ${(y+Math.sin((x-x1)/6)*2.2*Math.min(1,(x-x1)/40)).toFixed(1)}`;}});
+    S(g,"path",{d:p,class:tuned?"sv-lr":"sv-l","stroke-width":2.6,fill:"none"});});
+})();
+/* 图 6 侧链 */
+(()=>{const g=document.getElementById("sc-fig");if(!g)return;const x0=110,W=520,n=8;
+  S(g,"text",{x:20,y:46,class:"sv-t",style:TB},"底鼓");S(g,"text",{x:20,y:150,class:"sv-t",style:TB},"和弦音量");
+  for(let i=0;i<n;i++){const x=x0+i*W/n;S(g,"rect",{x:x,y:28,width:14,height:28,rx:4,style:FILL("ink")});}
+  let d=`M ${x0} 110`;for(let i=0;i<n;i++){const x=x0+i*W/n,nx=x0+(i+1)*W/n;d+=` L ${x} 110 L ${x+3} 178 Q ${x+(nx-x)*.35} 112 ${nx} 110`;}
+  S(g,"path",{d:d+` L ${x0+W} 190 L ${x0} 190 Z`,style:FILL("red"),opacity:.15});S(g,"path",{d,class:"sv-lr","stroke-width":2.4,fill:"none"});
+  S(g,"line",{x1:x0,y1:190,x2:x0+W,y2:190,class:"sv-l"});S(g,"text",{x:x0,y:212,class:"sv-ts"},"底鼓一响，和弦被压下去，然后“吸一口气”涨回来");
+})();
+/* 图 7 三种节奏 */
+(()=>{const g=document.getElementById("beat-fig");if(!g)return;const x0=170,cw=28,lh=18,all=[...Array(16).keys()];
+  const B=[["四拍底鼓","迪斯科 · 浩室",{踩镲:[2,6,10,14],拍手:[4,12],底鼓:[0,4,8,12]},[]],["Trap","嘻哈 · 半速感",{踩镲:[0,2,4,6,8,10,12,14],拍手:[8],"808 低音":[0,3,10]},[6,14]],["雷鬼动","dembow · 3+3+2",{踩镲:[0,2,4,6,8,10,12,14],军鼓:[3,6,11,14],底鼓:[0,4,8,12]},[]]];
+  B.forEach(([n,sub,L,rolls],b)=>{const y=16+b*122;S(g,"text",{x:20,y:y+20,class:"sv-t",style:TB},n);S(g,"text",{x:20,y:y+40,class:"sv-m"},sub);
+    Object.entries(L).forEach(([lane,hits],li)=>{const yy=y+li*(lh+6);S(g,"text",{x:x0-8,y:yy+13,"text-anchor":"end",class:"sv-ts"},lane);
+      all.forEach(k=>{const on=hits.includes(k),roll=li===0&&rolls.includes(k);if(roll){for(let r=0;r<3;r++)S(g,"rect",{x:x0+k*cw+r*8,y:yy,width:6.5,height:lh,rx:2,style:FILL("red")});return;}
+        S(g,"rect",{x:x0+k*cw,y:yy,width:cw-4,height:lh,rx:5,style:on?FILL(li===2?"red":"denim"):"",class:on?"":"sv-card"});if(!on)S(g,"rect",{x:x0+k*cw,y:yy,width:cw-4,height:lh,rx:5,class:"sv-lline"});});});});
+})();
+/* 图 8 华语时间线 */
+(()=>{const g=document.getElementById("cn-fig");if(!g)return;const X=y=>60+(y-1972)*11.3;
+  S(g,"line",{x1:50,y1:120,x2:650,y2:120,class:"sv-l","stroke-width":2});
+  const E=[[1977,"邓丽君",-1],[1984,"罗大佑",1],[1992,"四大天王",-1],[2003,"周杰伦 · 中国风",1],[2005,"选秀 · 网络歌曲",-1],[2020,"短视频",-1]];
+  E.forEach(([y,t,s],i)=>{const x=X(y);S(g,"circle",{cx:x,cy:120,r:8,style:FILL(i===3?"red":"denim")});S(g,"line",{x1:x,y1:120+s*10,x2:x,y2:120+s*34,class:"sv-lline"});S(g,"text",{x,y:120+s*44+(s>0?6:0),"text-anchor":"middle",class:"sv-t",style:"font-size:13px;font-weight:900"},t);S(g,"text",{x,y:120+s*60+(s>0?6:0),"text-anchor":"middle",class:"sv-m",style:"font-size:11px"},`${y} 年前后`);});
+  const M=[[1972,1995,"磁带"],[1995,2005,"CD"],[2005,2012,"MP3 · 网络"],[2012,2019,"流媒体"],[2019,2025,"短视频"]];
+  M.forEach(([a,b,t],i)=>{S(g,"rect",{x:X(a)+1,y:212,width:X(b)-X(a)-2,height:26,rx:13,style:FILL(["ink","denim","mustard","denim","red"][i]),opacity:.85});S(g,"text",{x:(X(a)+X(b))/2,y:229,"text-anchor":"middle",class:"sv-on",style:"font-size:11.5px;font-weight:700"},t);});
+  S(g,"text",{x:50,y:205,class:"sv-ts"},"主要媒介（大致）");
+})();
+/* 图 9 前奏长度 */
+(()=>{const g=document.getElementById("intro-fig");if(!g)return;const x0=120,sc=20;
+  [["1986",23,"约 23 秒"],["2015",5,"约 5 秒"]].forEach(([y,v,t],i)=>{const yy=40+i*76;S(g,"text",{x:20,y:yy+26,class:"sv-t",style:"font-family:var(--font-wood);font-size:20px;font-weight:700"},y);S(g,"rect",{x:x0,y:yy,width:v*sc,height:40,rx:20,style:FILL(i?"red":"denim")});S(g,"text",{x:x0+v*sc+12,y:yy+26,class:"sv-t",style:"font-size:15px;font-weight:900"},t);});
+  S(g,"text",{x:x0,y:206,class:"sv-ts"},"歌手开口前的器乐前奏，美国年度前十热门歌曲的平均值");
+})();
+/* 外部照片 */
+document.querySelectorAll(".photo img").forEach(img=>{
+  const fail=()=>{const d=document.createElement("div");d.className="photo-fallback";d.innerHTML=`照片待放入：${img.getAttribute("src")}<br><a href="https://commons.wikimedia.org/wiki/File:${img.dataset.file}" target="_blank" rel="noopener">在维基共享资源查看这张照片</a>`;img.replaceWith(d);};
+  if(img.complete&&img.naturalWidth===0)fail();else img.addEventListener("error",fail);
+});
+
+</script>
+<script id="nav-guard">(()=>{document.querySelectorAll(".photo img, figure img").forEach(i=>{const hide=()=>{const f=i.closest("figure")||i.closest(".photo");if(f)f.style.display="none";};if(i.complete&&i.naturalWidth===0&&i.getAttribute("src"))hide();else i.addEventListener("error",hide);});})();</script>
+</body>
+</html>

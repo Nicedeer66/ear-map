@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>耳朵的地图 · 目录</title>
+<!--share-->
+<meta name="description" content="耳朵的地图：一本可以边读边听的音乐入门书。十四章，从布鲁斯到当代流行，配浏览器里直接播放的示例、图解和推荐歌单。">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="耳朵的地图">
+<meta property="og:title" content="耳朵的地图 · 目录">
+<meta property="og:description" content="耳朵的地图：一本可以边读边听的音乐入门书。十四章，从布鲁斯到当代流行，配浏览器里直接播放的示例、图解和推荐歌单。">
+<meta property="og:image" content="https://earmap.liangdeer.com/toc/img/cover.jpg">
+<meta property="og:url" content="https://earmap.liangdeer.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<!--/share-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@700;900&family=DM+Serif+Display&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@700;900&family=DM+Serif+Display&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
+<style>/*__CSS__*/</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wide"><span><b>EAR MAP</b> · 耳朵的地图 · 音乐风格入门</span><span>双唱片 · 14 章 · 边读边听</span></div></div>
+
+<header class="wide cover">
+  <div class="cover-copy">
+    <div class="kicker">A DOUBLE ALBUM IN 14 TRACKS</div>
+    <h1>耳朵的地图</h1>
+    <p class="en">A Map for Your Ears</p>
+    <p class="intro">一本可以边读边听的音乐入门书。不用识谱，不用会乐器。每一章讲一种音乐从哪里来、为什么听起来是这样，配上可以在浏览器里直接播放的示例、手绘图解和一份推荐歌单。</p>
+    <div class="cta">
+      <a class="btn" id="startLink" href="intro/index.html">从 Intro 开始</a>
+      <a class="track-entry" href="#tracks">看曲目单</a>
+    </div>
+    <div class="totals" id="totals"></div>
+  </div>
+  <div class="sleeve"><div class="disc" aria-hidden="true"></div><img src="toc/img/cover.jpg" width="1600" height="1600" alt="耳朵形状的复古等高线地图，标有十三个音乐流派和一个北向箭头"><svg id="cover-labels" class="cover-labels" viewBox="0 0 760 760" aria-hidden="true"></svg></div>
+</header>
+
+<main class="wrap">
+  <section class="lead">
+    <h2><small>LINER NOTES</small>这是一本什么书</h2>
+    <p>我们每天都在听音乐，却很少有人告诉我们：一首歌里正在发生什么，它为什么会让你想跳、想哭、想跟着喊。这本书想做一件简单的事：<b>让你听出更多东西</b>。</p>
+    <p>它按一张<b>双唱片</b>来编排。第一张唱片讲“根源”和“摇滚家族”，第二张讲“律动”和“今天”。每一章都可以单独读，但按顺序读，你会看到它们是怎样一条接一条长出来的：布鲁斯长出了摇滚、灵魂乐和爵士，灵魂乐长出了嘻哈和迪斯科，迪斯科长出了电子舞曲，最后它们一起流进了你手机里的当代流行。</p>
+    <p>书里所有的声音示例都是浏览器<b>当场合成</b>的，旋律和编配是原创的；真正的录音只给链接，你可以去 YouTube、网易云或 QQ 音乐收听。</p>
+  </section>
+
+  <section id="tracks">
+    <h2><small>TRACKLIST</small>曲目单</h2>
+    <div id="tracklist"></div>
+  </section>
+
+  <section>
+    <h2><small>THE MAP</small>一张地图</h2>
+    <p>每一条线都是“影响”：前面的音乐被后面的人听见、学会、改掉。点地图上的地名可以直接去那一章。</p>
+    <figure class="fig">
+      <div class="frame"><svg viewBox="0 0 680 400" role="img" aria-label="全书地图：怎么听为起点，四个区域分别是根源、摇滚家族、律动和今天；各章之间用线连接表示影响"><g id="map-fig"></g></svg></div>
+      <figcaption>线比书里讲到的少很多，真实的地图要乱得多。</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2><small>ROUTES</small>几种读法</h2>
+    <p>当然可以从头读到尾。如果你更想跟着兴趣走，这里有几条路线：</p>
+    <div class="routes" id="routes"></div>
+  </section>
+
+  <section>
+    <h2><small>CREDITS</small>关于这本书</h2>
+    <dl class="about">
+      <dt>声音</dt><dd>全部由浏览器用 Web Audio 实时合成，无第三方录音或采样；少数旋律为公有领域的传统歌曲，各章均有注明</dd>
+      <dt>图解</dt><dd>全部为本书原创，由页面里的代码绘制</dd>
+      <dt>插画</dt><dd>目录封面与 14 章的章首插画均由 AI 生成</dd>
+      <dt>照片</dt><dd>部分章节使用维基共享资源（Wikimedia Commons）的照片，按各自授权使用，作者与授权详见各章末尾</dd>
+      <dt>曲目</dt><dd>推荐曲目只提供收听链接，本书不包含任何录音；录音与作品的版权归原权利人所有</dd>
+      <dt>授权</dt><dd>原创文字、图解与合成示例采用 CC BY-NC-SA 4.0，页面代码采用 MIT 许可证；第三方图片、曲目、名称与商标不在此授权范围内</dd>
+    </dl>
+  </section>
+</main>
+
+<footer><div class="wide"><b>耳朵的地图</b><span>原创文字、图解与合成示例 CC BY-NC-SA 4.0 · 代码 MIT</span></div></footer>
+
+<script>
+/*__JS__*/
+</script>
+</body>
+</html>

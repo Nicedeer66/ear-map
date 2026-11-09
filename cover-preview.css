@@ -1,0 +1,31 @@
+/* 流派章节的章首试听 */
+button.cover-preview {
+  margin-top: 8px;
+  min-height: 36px;
+  padding: 5px 10px;
+  border: 1px solid var(--preview-line, currentColor);
+  border-radius: 4px;
+  background: var(--preview-bg, transparent);
+  color: var(--preview-ink, inherit);
+  font-family: var(--font-lcd, var(--font-mono, monospace));
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: none;
+}
+button.cover-preview:hover,
+button.cover-preview:focus-visible,
+button.cover-preview.playing {
+  border-color: var(--preview-active, currentColor);
+  color: var(--preview-active, inherit);
+}
+button.cover-preview:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+.cover-preview .preview-stop,
+.cover-preview.playing .preview-play {
+  display: none;
+}
+.cover-preview.playing .preview-stop {
+  display: inline;
+}

@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A3 巴洛克 · 耳朵的地图</title>
+<!--share-->
+<meta name="description" content="1600 到 1750 年的欧洲音乐。它离你听的流行歌好像很远，可“一条低音线、一串和弦、上面一段旋律”这个结构，就是那时候被发明出来的。你在婚礼上听过的《卡农》，也来自这里。">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="耳朵的地图">
+<meta property="og:title" content="A3 巴洛克 · 耳朵的地图">
+<meta property="og:description" content="1600 到 1750 年的欧洲音乐。它离你听的流行歌好像很远，可“一条低音线、一串和弦、上面一段旋律”这个结构，就是那时候被发明出来的。你在婚礼上听过的《卡农》，也来自这里。">
+<meta property="og:image" content="https://earmap.liangdeer.com/a3-baroque/img/a3-baroque.jpg">
+<meta property="og:url" content="https://earmap.liangdeer.com/a3-baroque/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<!--/share-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@600;900&family=IM+Fell+English:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@600;900&family=IM+Fell+English:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
+<style>
+/* 全书骨架固定；本章皮肤：巴洛克 = 18 世纪刻版乐谱的扉页：象牙纸、铜版黑、朱红题字、一点金。正文保持安静，标题用衬线体 */
+:root{
+  --paper:#F5F0E4; --paper-2:#EAE2CF; --ink:#1E1A16; --ink-2:#5E554B;
+  --red:#8E1F2B; --denim:#6E5422; --mustard:#B08A3E; --soft:#EFE3BF;
+  --line:rgba(30,26,22,.2); --card:#FBF8F0;
+  --font-display:"Noto Serif SC","Songti SC",serif;
+  --font-body:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --font-wood:"IM Fell English","Noto Serif SC",serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#15120F; --paper-2:#1F1B17; --ink:#EDE5D2; --ink-2:#B2A893;
+    --red:#E3828A; --denim:#D9B565; --mustard:#D9B565; --soft:#3A3020;
+    --line:rgba(237,229,210,.18); --card:#1E1A16; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#15120F; --paper-2:#1F1B17; --ink:#EDE5D2; --ink-2:#B2A893;
+  --red:#E3828A; --denim:#D9B565; --mustard:#D9B565; --soft:#3A3020;
+  --line:rgba(237,229,210,.18); --card:#1E1A16; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.9;padding-bottom:40px}
+a{color:var(--red)}
+:focus-visible{outline:3px solid var(--denim);outline-offset:2px}
+.wrap{max-width:700px;margin:0 auto;padding:0 20px}
+.wide{max-width:1040px;margin:0 auto;padding:0 20px}
+
+.albumbar{border-bottom:1px solid var(--line);font-family:var(--font-mono);font-size:12.5px;background:var(--paper)}
+.albumbar .wide{display:flex;gap:16px;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+.albumbar .book{color:var(--ink-2);letter-spacing:.04em}
+.tracks{display:flex;gap:6px;flex-wrap:wrap}
+.tracks span{padding:3px 9px;border:1px solid var(--line);border-radius:99px;color:var(--ink-2)}
+.tracks span.on{background:var(--red);border-color:var(--red);color:var(--paper)}
+.tracks span.soon{opacity:.55}
+
+/* 章首：刻版乐谱扉页，颜色固定 */
+.hero{background:#F5F0E4;color:#1E1A16;border-bottom:1px solid rgba(30,26,22,.25)}
+.opener{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:40px;align-items:center;padding-top:44px;padding-bottom:44px}
+.code{font-family:var(--font-mono);font-size:13px;letter-spacing:.08em;color:#5E554B}
+.titlepage{border:3px double #1E1A16;padding:22px 26px 20px;margin:16px 0 14px;text-align:center;position:relative;background:#FBF8F0}
+.titlepage::before{content:"";position:absolute;inset:6px;border:1px solid rgba(30,26,22,.35);pointer-events:none}
+.titlepage .orn{font-family:var(--font-wood);font-size:22px;color:#8E1F2B;letter-spacing:.5em}
+.titlepage h1{font-family:var(--font-display);font-weight:900;font-size:clamp(54px,9vw,90px);line-height:1.1;margin:6px 0 2px;color:#8E1F2B;letter-spacing:.12em}
+.titlepage .latin{font-family:var(--font-wood);font-size:22px;letter-spacing:.12em;color:#1E1A16}
+.titlepage .latin i{color:#8E1F2B}
+.titlepage .rule{height:1px;background:#1E1A16;margin:10px 24%}
+.sub{font-family:var(--font-wood);font-style:italic;font-size:22px;margin:8px 0 14px;text-align:center}
+.lede{font-size:18px;margin:0;max-width:30em;color:#1E1A16}
+.meta-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:18px;font-family:var(--font-mono);font-size:12px;color:#5E554B}
+figure{margin:0}
+.art{width:100%;aspect-ratio:4/5;display:block;border:3px double #1E1A16;background:#F5F0E4}
+.opener figcaption{font-family:var(--font-mono);font-size:12px;color:#5E554B;margin-top:10px}
+
+.mapstrip{display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:14px 0 6px;font-size:13px}
+.mapstrip b{font-family:var(--font-mono);font-weight:500;font-size:12px;color:var(--ink-2);margin-right:4px}
+.mapstrip span{padding:3px 10px;border-radius:99px;border:1px dashed var(--line);color:var(--ink-2)}
+.mapstrip span.here{border:1px solid var(--red);background:var(--red);font-weight:700;color:var(--paper)}
+
+.toc{border-top:3px double var(--ink);border-bottom:3px double var(--ink);padding:16px 4px;margin:32px 0;font-size:14.5px}
+.toc b{font-family:var(--font-wood);font-size:16px;color:var(--red);font-weight:400;letter-spacing:.04em}
+.toc ol{margin:8px 0 0;padding-left:1.4em;columns:2;column-gap:28px}
+.toc li{break-inside:avoid;margin-bottom:2px}
+.toc a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--ink-2)}
+.toc a:hover{color:var(--red)}
+
+article h2{font-family:var(--font-display);font-weight:900;font-size:30px;line-height:1.35;margin:80px 0 16px;text-wrap:balance;scroll-margin-top:20px}
+article h2 .n{font-family:var(--font-wood);font-size:15px;font-weight:400;color:var(--red);display:block;margin-bottom:6px;letter-spacing:.06em}
+article h2 .n::before{content:"❦ "}
+article h3{font-family:var(--font-display);font-size:20px;font-weight:900;margin:36px 0 8px;text-wrap:balance}
+article p{margin:0 0 18px}
+.mark{background:linear-gradient(transparent 60%,var(--soft) 60%);color:inherit}
+.scene{font-family:var(--font-display);font-weight:600;font-size:18.5px;line-height:2;border-left:3px solid var(--red);padding-left:20px;margin:40px 0}
+.scene p{margin:0 0 12px}
+ul.clean,ol.clean{padding-left:1.3em;margin:0 0 18px}
+ul.clean li,ol.clean li{margin-bottom:8px}
+.k{background:var(--soft);padding:0 5px;border-radius:3px}
+
+.ask{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:start;background:var(--card);border:1px solid var(--line);border-left:5px solid var(--denim);padding:16px 18px;margin:28px 0;border-radius:4px}
+.ask .who{font-family:var(--font-mono);font-size:12px;background:var(--denim);color:var(--paper);padding:2px 10px;margin-top:3px;white-space:nowrap;border-radius:3px}
+.ask p{margin:0}
+.ask p.q{font-weight:700}
+
+.lab{background:var(--card);border:1px solid var(--line);border-top:3px double var(--ink);padding:20px;margin:28px 0;border-radius:4px;box-shadow:0 1px 0 var(--line)}
+.lab .head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.lab .head strong{font-size:16px}
+.lab .head .tag{font-family:var(--font-wood);font-size:14px;color:var(--red);letter-spacing:.04em}
+.lab .head small{color:var(--ink-2);font-size:13px}
+.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:14px}
+button{font:inherit;font-size:14px;line-height:1.4;border:1px solid var(--ink);background:transparent;color:var(--ink);padding:6px 14px;cursor:pointer;border-radius:2px}
+button.primary{background:var(--denim);border-color:var(--denim);color:var(--paper)}
+button:hover{background:var(--soft);color:var(--ink)}
+button.playing{background:var(--red);border-color:var(--red);color:var(--paper)}
+.controls label{font-size:13px;color:var(--ink-2);display:flex;gap:8px;align-items:center}
+.note{font-size:13.5px;color:var(--ink-2);margin:10px 0 0;line-height:1.75}
+.cols3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:6px}
+.cols2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:6px}
+.cols4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:6px}
+.opt{border:1px solid var(--line);padding:12px;background:var(--paper);border-radius:4px}
+.opt b{display:block;font-size:15px}
+.opt p{font-size:13.5px;color:var(--ink-2);margin:4px 0 10px;line-height:1.7}
+.strip{display:grid;grid-template-columns:repeat(var(--n,12),minmax(0,1fr));gap:4px;margin-top:12px}
+.strip i{display:block;height:8px;background:var(--line);border-radius:2px}
+.strip i.now{background:var(--red)}
+
+.fig{margin:34px 0}
+.fig svg{width:100%;height:auto;display:block}
+.fig figcaption,.photo figcaption{font-family:var(--font-mono);font-size:12px;color:var(--ink-2);margin-top:8px;line-height:1.6}
+.fig .frame{background:var(--card);border:1px solid var(--line);padding:16px;border-radius:4px}
+.photo{margin:34px 0}
+.photo img{width:100%;display:block;filter:sepia(.35) contrast(1.04);border:1px solid var(--line);border-radius:4px}
+.photo .cap b{color:var(--ink);font-family:var(--font-body);font-size:13.5px;font-weight:700;display:block;margin-bottom:2px}
+.photo-fallback{border:1px dashed var(--ink-2);padding:28px 18px;text-align:center;font-size:13.5px;color:var(--ink-2);background:var(--paper-2);line-height:1.7;border-radius:4px}
+.photo-fallback a{font-family:var(--font-mono);font-size:12.5px}
+.sv-ink{fill:var(--ink)}.sv-paper{fill:var(--paper)}.sv-p2{fill:var(--paper-2)}.sv-card{fill:var(--card)}
+.sv-red{fill:var(--red)}.sv-denim{fill:var(--denim)}.sv-must{fill:var(--mustard)}.sv-soft{fill:var(--soft)}
+.sv-l{stroke:var(--ink);fill:none}.sv-lr{stroke:var(--red);fill:none}.sv-ld{stroke:var(--denim);fill:none}.sv-lline{stroke:var(--line);fill:none}
+.sv-t{fill:var(--ink);font-family:var(--font-body);font-size:13px}
+.sv-tb{fill:var(--ink);font-family:var(--font-display);font-size:15px;font-weight:900}
+.sv-ts{fill:var(--ink-2);font-family:var(--font-body);font-size:11.5px}
+.sv-m{fill:var(--ink-2);font-family:var(--font-mono);font-size:11px}
+.sv-on{fill:var(--paper);font-family:var(--font-body);font-size:12.5px;font-weight:700}
+.sv-onm{fill:var(--paper);font-family:var(--font-mono);font-size:12px}
+.sv-r{fill:var(--red);font-family:var(--font-body);font-size:12px}
+.sv-d{fill:var(--denim);font-family:var(--font-body);font-size:12px}
+.sv-wood{fill:var(--ink);font-family:var(--font-wood);font-size:18px}
+
+table.cmp{width:100%;border-collapse:collapse;font-size:14.5px;margin:18px 0;line-height:1.65}
+table.cmp th,table.cmp td{border-bottom:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+table.cmp th{font-family:var(--font-display);font-weight:900;border-bottom:3px double var(--ink)}
+table.cmp td:first-child{font-weight:700;width:6.5em}
+.tablewrap{overflow-x:auto}
+
+.timeline{list-style:none;padding:0;margin:20px 0;border-left:2px solid var(--ink)}
+.timeline li{position:relative;padding:0 0 20px 22px}
+.timeline li::before{content:"❦";position:absolute;left:-9px;top:2px;font-size:15px;color:var(--red);background:var(--paper);line-height:1.2}
+.timeline .yr{font-family:var(--font-mono);font-size:13px;color:var(--red)}
+.timeline b{display:block;font-size:17px}
+.timeline p{margin:4px 0 0;font-size:15.5px}
+
+.side{font-family:var(--font-mono);font-size:12px;color:var(--ink-2);letter-spacing:.06em;border-bottom:3px double var(--ink);padding-bottom:6px;margin:30px 0 4px;display:flex;justify-content:space-between;gap:10px}
+.song{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}
+.playlink{display:grid;place-items:center;width:44px;height:44px;background:var(--red);color:var(--paper);border-radius:2px}
+.playlink:hover{background:var(--red)}
+.song .meta{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}
+.song .title{font-family:var(--font-display);font-weight:900;font-size:17px}
+.song .by{color:var(--ink-2);font-size:14px}
+.song .yr{font-family:var(--font-mono);font-size:12px;color:var(--red)}
+.song .style{font-family:var(--font-mono);font-size:11.5px;border:1px solid var(--line);border-radius:99px;padding:0 8px;color:var(--ink-2)}
+.song p{margin:6px 0 8px;font-size:15px;line-height:1.75}
+.song .listen{font-size:14.5px;margin:0 0 8px;padding-left:1.2em}
+.song .listen li{margin-bottom:4px}
+.listen-links{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:6px}
+.listen-links a{font-family:var(--font-mono);font-size:12px;border:1px solid var(--line);border-radius:99px;padding:3px 10px;text-decoration:none;color:var(--ink);background:var(--card)}
+.listen-links a.main{background:var(--red);border-color:var(--red);color:var(--paper)}
+.listen-links a:hover{border-color:var(--red);color:var(--red)}
+.listen-links a.main:hover{background:var(--red);color:#FAF5EA}
+
+.mine{border:1px dashed var(--ink-2);padding:16px 18px;margin:28px 0;color:var(--ink-2);border-radius:4px}
+.mine .lbl{font-family:var(--font-wood);font-size:14px;color:var(--red)}
+dl.gloss{display:grid;grid-template-columns:minmax(0,8.5em) minmax(0,1fr);gap:10px 18px;font-size:15px;line-height:1.7;margin:16px 0}
+dl.gloss dt{font-weight:900;font-family:var(--font-display)}
+.photo img{filter:sepia(.15) contrast(1.02)}
+.drop::first-letter{font-family:var(--font-display);font-weight:900;color:var(--red);float:left;font-size:3.1em;line-height:1;margin:.08em .12em 0 0}
+dl.gloss dd{margin:0;color:var(--ink-2)}
+
+.credits{background:#1E1A16;color:#EDE5D2;margin-top:72px;padding:40px 0 48px;border-top:6px double #B08A3E}
+.credits h2{font-family:var(--font-wood);font-weight:400;font-style:italic;font-size:32px;margin:0 0 16px;color:#D9B565}
+.credits dl{display:grid;grid-template-columns:minmax(0,9em) minmax(0,1fr);gap:8px 16px;margin:0;font-size:14px;line-height:1.75}
+.credits dt{font-family:var(--font-mono);font-size:12px;opacity:.7;padding-top:3px}
+.credits dd{margin:0}
+.credits a{color:#D9B565}
+.next{display:flex;justify-content:space-between;gap:12px;margin-top:28px;font-family:var(--font-mono);font-size:13px;opacity:.85;flex-wrap:wrap}
+.stopfab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:10;display:none;background:var(--red);border-color:var(--red);color:#FAF5EA}
+.stopfab.on{display:inline-block}
+
+@media (max-width:760px){
+  .opener{grid-template-columns:1fr;gap:24px;padding-top:28px}
+  .cols3,.cols2,.cols4{grid-template-columns:1fr}
+  .toc ol{columns:1}
+  .credits dl,dl.gloss{grid-template-columns:1fr}
+  dl.gloss dd{margin-bottom:6px}
+}
+
+/* ================= A3 正文皮肤 v2：刻版乐谱与书页 ================= */
+:root:not(#x){--gold:#A8843A;--goldL:#D9B565;--rule:#1E1A16}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]):not(#x){--gold:#D9B565;--goldL:#F0D58F;--rule:#EDE5D2}}
+body{background-image:radial-gradient(circle at 12% 18%,rgba(150,110,50,.06),rgba(0,0,0,0) 30%),radial-gradient(circle at 88% 62%,rgba(150,110,50,.05),rgba(0,0,0,0) 28%),radial-gradient(circle at 30% 85%,rgba(150,110,50,.05),rgba(0,0,0,0) 25%)}
+/* 书页：正文栏两侧的版心线 */
+article.wrap{position:relative;max-width:760px;padding:10px 50px 40px;margin-top:20px;border-left:1px solid var(--line);border-right:1px solid var(--line);box-shadow:-6px 0 0 -5px var(--line),6px 0 0 -5px var(--line)}
+article p{text-align:justify;text-justify:inter-ideograph}
+
+/* 小节标题：居中、罗马数字、花饰线 */
+article h2{text-align:center;margin:96px 0 30px;font-size:30px;letter-spacing:.08em}
+article h2 .n{font-family:var(--font-wood);font-style:italic;font-size:20px;letter-spacing:.06em;color:var(--red);margin-bottom:8px}
+article h2 .n::before{content:""}
+article h2::after{content:"❦";display:block;margin:14px auto 0;width:280px;max-width:80%;font-size:18px;color:var(--gold);line-height:1;
+  background:linear-gradient(var(--rule),var(--rule)) left center/42% 1px no-repeat,linear-gradient(var(--rule),var(--rule)) right center/42% 1px no-repeat}
+/* 首字下沉 */
+article h2+p::first-letter,article h2+.ask+p::first-letter{font-family:var(--font-display);font-weight:900;color:var(--red);float:left;font-size:3.3em;line-height:1;margin:.08em .14em 0 0;padding:.06em .1em;border:1px solid var(--gold);background:var(--soft)}
+article h3{text-align:center;font-size:18px;letter-spacing:.12em;margin:44px 0 14px;font-weight:600}
+article h3::before,article h3::after{content:" — ";color:var(--gold);font-weight:400}
+.mark{background:none;font-style:normal;border-bottom:1px solid var(--red);box-shadow:inset 0 -3px 0 rgba(142,31,43,.08)}
+
+/* 开场：题记 */
+.scene{border:0;text-align:center;font-family:var(--font-display);font-style:normal;padding:34px 30px 30px;margin:44px 0;position:relative;
+  background:linear-gradient(var(--rule),var(--rule)) top/100% 1px no-repeat,linear-gradient(var(--rule),var(--rule)) 0 4px/100% 1px no-repeat,linear-gradient(var(--rule),var(--rule)) bottom/100% 1px no-repeat,linear-gradient(var(--rule),var(--rule)) 0 calc(100% - 4px)/100% 1px no-repeat}
+.scene::before{content:"✠";position:absolute;top:-14px;left:50%;margin-left:-16px;width:32px;text-align:center;background:var(--paper);color:var(--red);font-size:20px}
+.scene p:first-child{font-family:var(--font-wood);font-style:italic;color:var(--red);font-size:17px}
+
+/* 目录：旧书目录，罗马数字与引线 */
+.toc{border:0;padding:20px 10px;margin:44px 0}
+.toc b{display:block;text-align:center;font-family:var(--font-wood);font-style:italic;font-size:24px;color:var(--ink);letter-spacing:.1em;margin-bottom:10px}
+.toc b::before{content:"INDEX · "}
+.toc ol{columns:1;counter-reset:t;list-style:none;padding:0;max-width:480px;margin:0 auto}
+.toc li{counter-increment:t;display:flex;align-items:baseline;gap:8px;margin:0;padding:3px 0}
+.toc li a{order:1;border:0;white-space:nowrap}
+.toc li::after{content:"";order:2;flex:1;border-bottom:1px dotted var(--ink-2);transform:translateY(-4px)}
+.toc li::before{content:counter(t,upper-roman);order:3;font-family:var(--font-wood);font-style:italic;color:var(--red);min-width:2.6em;text-align:right}
+
+/* 实验框：谱表 */
+.lab{border:3px double var(--rule);border-radius:0;box-shadow:none;padding:0 22px 22px;background:var(--card);position:relative}
+.lab::before,.lab::after{content:"❧";position:absolute;bottom:4px;font-size:14px;color:var(--gold)}
+.lab::before{left:8px;transform:scaleX(-1)}.lab::after{right:8px}
+.lab .head{margin:0 -22px 16px;padding:24px 22px 18px 74px;position:relative;
+  background:repeating-linear-gradient(180deg,rgba(0,0,0,0) 0 7px,var(--rule) 7px 8px) center 18px/100% 41px no-repeat;opacity:1}
+.lab .head::before{content:"𝄞";position:absolute;left:18px;top:2px;font-size:52px;line-height:1;color:var(--ink);font-family:"Noto Music","Bravura","Segoe UI Symbol",serif}
+.lab .head>*{background:var(--card);padding:0 6px;position:relative}
+.lab .head .tag{font-family:var(--font-wood);font-style:italic;font-size:20px;color:var(--red)}
+.lab .head strong{font-family:var(--font-display);font-size:17px}
+.opt{border:1px solid var(--line);border-radius:0;background:var(--paper);position:relative}
+.opt::before{content:"";position:absolute;inset:3px;border:1px solid var(--line);pointer-events:none}
+
+/* 按钮：小型大写的铜版字 / 朱红火漆 */
+button{font-family:var(--font-display);letter-spacing:.12em;border:1px solid var(--rule);border-radius:0;background:transparent;padding:6px 16px;box-shadow:2px 2px 0 var(--line)}
+button:hover{background:var(--soft);color:var(--ink)}
+button.primary{background:var(--red);border-color:var(--gold);color:#FBF8F0;box-shadow:0 0 0 2px var(--card),0 0 0 3px var(--gold)}
+button.playing{background:var(--rule);color:var(--paper);border-color:var(--rule)}
+button.playing::after{content:" ♪";animation:bq 1s infinite steps(2)}
+@keyframes bq{50%{opacity:.2}}
+.strip i{height:4px;border-radius:0;background:var(--line)}.strip i.now{background:var(--red)}
+
+/* 图解：铜版画的双线框 */
+.fig .frame{border:1px solid var(--rule);border-radius:0;padding:20px;box-shadow:0 0 0 4px var(--card),0 0 0 5px var(--rule);margin:6px}
+.fig figcaption,.photo figcaption{font-family:var(--font-display);font-style:normal;font-size:12.5px;text-align:center}
+
+/* 图片：镀金画框 + 铜牌 */
+.photo{padding:18px;background:var(--card);border:14px solid transparent;border-image:linear-gradient(135deg,#7A5A20,#E6C77A 25%,#8C6A28 50%,#F0D58F 75%,#7A5A20) 1;box-shadow:0 10px 24px rgba(0,0,0,.18);margin:44px 10px}
+.photo img{border:0;border-radius:0;filter:sepia(.1) contrast(1.02)}
+.photo .cap{margin:16px auto 0;max-width:420px;padding:8px 14px;background:linear-gradient(180deg,#E9D49A,#BE9A4C);color:#2A1E0C;border-radius:2px;box-shadow:inset 0 1px 0 rgba(255,255,255,.5)}
+.photo .cap b{color:#2A1E0C}
+.photo-fallback{border-radius:0}
+
+/* 宽屏：图注变成页边旁注 */
+@media (min-width:1200px){
+  .fig{position:relative}
+  .fig figcaption{position:absolute;left:-250px;top:6px;width:200px;text-align:right;font-style:italic;font-size:12.5px;line-height:1.7;margin:0;border-right:1px solid var(--gold);padding-right:12px}
+  .lab .note{position:relative}
+}
+
+/* 曲目：音乐会节目单 */
+.side{justify-content:center;flex-direction:column;align-items:center;gap:2px;border:0;margin:44px 0 10px;font-family:var(--font-wood);font-style:italic;font-size:16px;color:var(--ink);letter-spacing:.12em}
+.side::before{content:"❦";color:var(--gold)}
+.side span:last-child{display:none}
+.song{grid-template-columns:54px minmax(0,1fr) 40px;border-bottom:1px solid var(--line);padding:20px 0}
+.pnum{font-family:var(--font-wood);font-style:italic;font-size:22px;color:var(--red);text-align:center;padding-top:0;border-right:1px solid var(--gold);margin-right:14px;line-height:1.2}
+.song .meta{display:flex;align-items:baseline;gap:8px}
+.song .title{font-family:var(--font-display);font-size:18px}
+.song .by{font-style:italic;font-family:var(--font-display);color:var(--ink-2)}
+.song .meta::after{content:"";flex:1;border-bottom:1px dotted var(--ink-2);transform:translateY(-4px);min-width:20px;order:4}
+.song .yr{order:5;font-family:var(--font-wood);font-style:italic;font-size:15px;color:var(--red)}
+.song .style{order:6;border:0;padding:0;font-style:italic}
+.playlink{width:36px;height:36px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#B73A46,#8E1F2B 60%,#5E1019);color:#F5E6C8;box-shadow:0 0 0 2px #C9A050;align-self:start}
+.listen-links a{border-radius:0;background:transparent;font-family:var(--font-display)}
+.listen-links a.main{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* 留白与术语表 */
+.mine{border:0;border-left:2px solid var(--red);font-style:italic;font-family:var(--font-display);background:linear-gradient(90deg,var(--soft),rgba(0,0,0,0))}
+.mine .lbl{font-family:var(--font-wood);font-style:italic;font-size:16px}.mine .lbl::before{content:"Notæ · "}
+dl.gloss{display:block;columns:2;column-gap:36px;column-rule:1px solid var(--line)}
+dl.gloss dt{break-after:avoid;font-family:var(--font-display);color:var(--red);font-size:15px;margin-top:10px}
+dl.gloss dd{break-before:avoid;break-inside:avoid;margin:2px 0 0;padding-left:1em;text-indent:-1em;font-size:14px}
+dl.gloss dd::before{content:"— ";color:var(--gold)}
+#gloss::before,#gloss::after{content:""}
+
+@media (max-width:760px){article.wrap{padding:10px 20px;border:0;box-shadow:none}dl.gloss{columns:1}.song .meta::after{display:none}.photo{margin:30px 0}}
+button.primary{color:var(--paper)}
+/*nav-unify*/.albumbar a{color:inherit;text-decoration:none}.albumbar a.book:hover{text-decoration:underline}.tracks span a{color:inherit;text-decoration:none;display:block}.tracks span:not(.on):hover{opacity:.72}.next a{color:inherit;text-decoration:none;border-bottom:1px solid currentColor}.next a:hover{opacity:.7}</style>
+<link rel="stylesheet" href="../cover-preview.css">
+</head>
+<body>
+
+<header class="albumbar">
+  <div class="wide">
+    <a class="book" href="../index.html" data-nav="toc">耳朵的地图 · 第一张唱片 · SIDE A 根源 · 目录</a>
+    <nav class="tracks" aria-label="本面曲目">
+      <span><a href="../intro/index.html" data-nav="intro">Intro 怎么听</a></span>
+      <span><a href="../a1-blues/index.html" data-nav="a1-blues">A1 布鲁斯</a></span>
+      <span><a href="../a2-folk/index.html" data-nav="a2-folk">A2 民歌与乡村</a></span>
+      <span class="on"><a aria-current="page">A3 巴洛克</a></span>
+      <span><a href="../a4-jazz/index.html" data-nav="a4-jazz">A4 爵士</a></span>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+<section class="wide opener">
+  <div>
+    <div class="code">SIDE A · TRACK 03 · 根之下</div>
+    <div class="titlepage">
+      <div class="orn" aria-hidden="true">❦ ❦ ❦</div>
+      <h1>巴洛克</h1>
+      <div class="rule"></div>
+      <div class="latin">MUSICA <i>BAROCCA</i></div><div class="latin" style="font-size:16px">MDC – MDCCL</div>
+    </div>
+    <p class="sub">a bass line, a chord, and a voice above it</p>
+    <p class="lede">1600 到 1750 年的欧洲音乐。它离你听的流行歌好像很远，可“一条低音线、一串和弦、上面一段旋律”这个结构，就是那时候被发明出来的。你在婚礼上听过的《卡农》，也来自这里。</p>
+    <div class="meta-row"><span>阅读约 50 分钟</span><span>可听示例 30 个</span><span>插图 13 幅</span><span>推荐曲目 12 首</span></div>
+  </div>
+  <figure>
+    <img class="art" src="img/a3-baroque.jpg" width="1280" height="1600" alt="铜版画风格的卷叶椭圆饰框，中间是一颗不规则的珍珠" style="height:auto">
+    <figcaption>章首插画 · 铜版画风格的卷叶椭圆饰框，中间是一颗不规则的珍珠</figcaption>
+    <button class="cover-preview" type="button" data-demo="cont-full">
+      <span class="preview-play"><span aria-hidden="true">▶</span> 试听 · 巴洛克</span>
+      <span class="preview-stop"><span aria-hidden="true">■</span> 停止</span>
+    </button>
+  </figure>
+</section>
+</div>
+
+<div class="wide">
+  <div class="mapstrip" aria-label="地图定位">
+    <b>你在这里 →</b>
+    <span class="here">巴洛克</span><span>古典</span><span>浪漫</span><span>布鲁斯与福音</span><span>民歌与乡村</span><span>摇滚</span><span>朋克</span><span>当代流行</span>
+  </div>
+</div>
+
+<article class="wrap">
+
+  <div class="scene">
+    <p>1748 年，德国莱比锡。一位画家给一个六十多岁、有点发福的男人画肖像。</p>
+    <p>男人穿着假发和深色外套，手里没有拿乐器，而是拿着一小张乐谱。那上面只写了几行音符，却是一道谜题：同一段旋律，几个声部错开时间一起唱，要怎么排才能刚好和谐？</p>
+    <p>这个男人叫约翰·塞巴斯蒂安·巴赫。他手里的那种曲子叫“卡农”。两年后他去世，此后几十年里几乎被人遗忘。再后来，他成了很多人心目中最伟大的作曲家。</p>
+  </div>
+
+  <div class="ask">
+    <span class="who">我问</span>
+    <p class="q">继续讲巴洛克</p>
+  </div>
+
+  <p class="drop">那时候我们已经聊过布鲁斯、嘻哈和民谣，突然跳到三四百年前的欧洲，好像是换了一个频道。但这一章想说的是：<span class="mark">巴洛克不只是“古典音乐”里的一个时期，它是今天几乎所有流行音乐的“底层结构”的发明者</span>。</p>
+  <ul class="clean">
+    <li><b>低音线 + 和弦 + 旋律</b>：巴洛克乐队里有一组专门负责“低音和和弦”的人，叫“通奏低音”。这就是今天贝斯、吉他、键盘组成的节奏组的祖先</li>
+    <li><b>循环</b>：一条低音线反复几十遍，上面不断变化，叫“固定低音”。这就是今天的 loop</li>
+    <li><b>和弦进行</b>：《卡农》那八个和弦，被无数流行歌拿去用过</li>
+    <li><b>大调和小调</b>：今天我们说一首歌“明亮”或“忧伤”，这套大小调体系就是在巴洛克时期定型的</li>
+  </ul>
+  <p>所以布鲁斯是流行音乐的一条根，民歌是另一条根，而巴洛克更像是这两条根底下的“土壤”：它决定了“和弦”这件事本身是怎么运作的。</p>
+
+  <nav class="toc" aria-label="本章目录">
+    <b>本章曲目单</b>
+    <ol>
+      <li><a href="#what">一颗不规则的珍珠</a></li>
+      <li><a href="#continuo">通奏低音：最早的节奏组</a></li>
+      <li><a href="#ground">固定低音与《卡农》</a></li>
+      <li><a href="#instruments">乐器：羽管键琴与小提琴</a></li>
+      <li><a href="#counterpoint">对位：轮唱与赋格</a></li>
+      <li><a href="#affect">装饰与律动</a></li>
+      <li><a href="#opera">歌剧：说着唱和唱着唱</a></li>
+      <li><a href="#concerto">协奏曲与维瓦尔第</a></li>
+      <li><a href="#masters">巴赫与亨德尔</a></li>
+      <li><a href="#china">同一时间的紫禁城</a></li>
+      <li><a href="#today">巴洛克在今天</a></li>
+      <li><a href="#listen">听：本章十二首曲目</a></li>
+      <li><a href="#practice">练 · 术语表</a></li>
+    </ol>
+  </nav>
+
+  <!-- 01 -->
+  <h2 id="what"><span class="n">I · baroque</span>一颗不规则的珍珠</h2>
+  <p>“巴洛克”这个词一般认为来自葡萄牙语 barroco，意思是“形状不规则的珍珠”。它最初是个贬义词，用来嘲笑 17 世纪那些过分华丽、繁复、弯弯曲曲的建筑和艺术。那个时代的音乐家并不知道自己是“巴洛克音乐家”，这个标签是后来的人贴上去的。</p>
+  <p>音乐史一般把 1600 年到 1750 年叫作巴洛克时期。两个年份都有象征意义：1600 年前后，意大利出现了最早的歌剧；1750 年，巴赫去世。</p>
+
+  <figure class="fig">
+    <div class="frame"><svg viewBox="0 0 680 250" role="img" aria-label="时间轴：文艺复兴、巴洛克 1600 到 1750、古典、浪漫；下方对照中国的明朝末年、清朝顺治、康熙、雍正、乾隆"><g id="tl-fig"></g></svg></div>
+    <figcaption>图 1 · 欧洲音乐的几个时期，对照同一时间的中国。</figcaption>
+  </figure>
+
+  <p>放到中国的时间线上看会更直观：巴洛克开始的时候，中国还是明朝万历年间；巴赫最活跃的那几十年，正是康熙、雍正和乾隆初年。本章后面会讲到，当时的紫禁城里真的有人在弹羽管键琴。</p>
+
+  <h3>从“几条线”到“一条线加和弦”</h3>
+  <p>巴洛克之前的文艺复兴音乐，主要是几条地位平等的旋律交织在一起（想象四个人各唱各的，但合在一起很和谐）。巴洛克带来的最大变化是：<span class="mark">音乐开始有了“主次”</span>。最上面一条旋律最重要，最下面一条低音线是地基，中间用和弦填满。这种“旋律在上、低音在下、和弦在中间”的结构，就是你今天听到的几乎每一首流行歌的结构。</p>
+
+  <!-- 02 -->
+  <h2 id="continuo"><span class="n">II · basso continuo</span>通奏低音：最早的节奏组</h2>
+  <p>巴洛克乐队里几乎一定有一组人，从头到尾不停地演奏，叫“通奏低音”（basso continuo，意思是“持续不断的低音”）。它通常由两种乐器组成：</p>
+  <ul class="clean">
+    <li><b>一件低音乐器</b>：大提琴、低音维奥尔琴或巴松管，演奏写好的低音线</li>
+    <li><b>一件和弦乐器</b>：羽管键琴、管风琴或鲁特琴，在低音上面即兴弹出和弦</li>
+  </ul>
+  <p>有意思的是“即兴”这两个字。作曲家通常只写出低音线，再在低音下面标几个小数字，告诉键盘手“这里该弹什么和弦”，具体怎么弹、弹多密、加不加装饰，由键盘手自己决定。这叫“数字低音”（figured bass）。</p>
+
+  <figure class="fig">
+    <div class="frame"><svg viewBox="0 0 680 270" role="img" aria-label="数字低音和现代和弦谱的对比：上面一行是低音音符 D、C♯、B、A、G、F♯、G、A、D，下面标着数字 6 和 7；最下面一行是现代和弦名 D、A/C♯、Bm、F♯m/A、G、D/F♯、G、A7、D"><g id="fig-bass"></g></svg></div>
+    <figcaption>图 2 · 数字低音和今天的和弦谱是同一个思路：只给骨架，细节由乐手即兴。</figcaption>
+  </figure>
+
+  <p>如果你看过爵士乐手或者伴奏乐队的谱子，会发现它们几乎一模一样：只有一行和弦名，具体怎么弹全看乐手。<span class="mark">通奏低音的键盘手，就是三百年前的伴奏乐手</span>。今天乐队里的贝斯手加键盘手（或节奏吉他手），干的是同一件事。</p>
+
+  <div class="lab">
+    <div class="head"><span class="tag">LAB I</span><strong>一层一层搭起来</strong><small>原创，D 大调</small></div>
+    <div class="cols3">
+      <div class="opt"><b>只有低音</b><p>大提琴拉出一条一步一步往下走的低音线。</p><button type="button" data-demo="cont-bass">播放</button></div>
+      <div class="opt"><b>+ 羽管键琴</b><p>键盘手按数字低音即兴弹出和弦。</p><button type="button" data-demo="cont-harp">播放</button></div>
+      <div class="opt"><b>+ 小提琴旋律</b><p>旋律放在最上面，结构完整了。</p><button class="primary" type="button" data-demo="cont-full">播放</button></div>
+    </div>
+    <p class="note">第三个和你今天听到的任何一首“贝斯 + 键盘 + 主唱”的歌，结构是一样的。</p>
+  </div>
+
+  <!-- 03 -->
+  <h2 id="ground"><span class="n">III · ground bass</span>固定低音与《卡农》</h2>
+  <p>如果通奏低音是节奏组，那么“固定低音”（ground bass）就是循环（loop）。作曲家写一条很短的低音线，让它一遍又一遍地重复，上面的旋律和和声却不断变化。听众一边被低音的重复“催眠”，一边期待上面又会出现什么新东西。</p>
+  <p>这和今天的嘻哈、电子音乐几乎是同一个思路：一个 loop 不停地转，说唱歌手或合成器在上面变化。</p>
+
+  <h3>帕赫贝尔的《卡农》</h3>
+  <p>最有名的固定低音，就是德国作曲家约翰·帕赫贝尔（Johann Pachelbel，1653–1706）的《D 大调卡农》。它的低音只有八个音，从头到尾重复了二十多遍：</p>
+
+  <figure class="fig">
+    <div class="frame"><svg viewBox="0 0 680 320" role="img" aria-label="《卡农》的八个低音排成一个圆圈：D、A、B、F♯、G、D、G、A，每个音旁边标着对应的和弦，箭头表示循环"><g id="canon-fig"></g></svg></div>
+    <figcaption>图 3 · 《卡农》的低音循环。八个音，八个和弦，转一圈再回到起点。</figcaption>
+  </figure>
+
+  <p>“卡农”（canon）本来是一种作曲技法，意思是“规则”：同一段旋律，几个声部错开时间先后进入，像轮唱。在帕赫贝尔的《卡农》里，三把小提琴演奏完全相同的旋律，每一把比前一把晚两小节进来，而它们下面始终是那八个低音。</p>
+  <p>这首曲子写成后在很长时间里默默无闻，直到 20 世纪才被重新发现。1968 年一张法国室内乐团的录音让它突然流行起来，此后成了婚礼、广告和电影里最常出现的古典音乐之一，在中文世界也常被直接叫作“卡农”。</p>
+
+  <div class="lab">
+    <div class="head"><span class="tag">LAB II</span><strong>《卡农》是怎么叠起来的</strong><small>帕赫贝尔原曲的开头（公有领域），D 大调</small></div>
+    <div class="cols2">
+      <div class="opt"><b>1. 只有低音</b><p>大提琴和羽管键琴，八个音一圈。</p><button type="button" data-demo="canon-bass">播放</button></div>
+      <div class="opt"><b>2. + 和弦</b><p>在低音上搭出八个和弦。</p><button type="button" data-demo="canon-chords">播放</button></div>
+      <div class="opt"><b>3. + 第一把小提琴</b><p>旋律一步一步往下走。</p><button type="button" data-demo="canon-1">播放</button></div>
+      <div class="opt"><b>4. 三把小提琴错开进入</b><p>同一段旋律，每把晚两小节。这就是“卡农”。</p><button class="primary" type="button" data-demo="canon-3">播放</button></div>
+    </div>
+    <div class="strip" data-strip="10" style="--n:10"></div>
+    <div class="controls"><button type="button" data-stop>停止</button></div>
+  </div>
+
+  <h3>哀歌低音：一步一步往下沉</h3>
+  <p>巴洛克作曲家还发现，<span class="mark">一条半音一步一步往下走的低音，会让人感到悲伤和无可挽回</span>。这种低音后来有个专门的名字，叫“哀歌低音”（lament bass）。最有名的例子，是英国作曲家亨利·珀塞尔（Henry Purcell）的歌剧《狄朵与埃涅阿斯》里，女王狄朵临死前唱的那首咏叹调。</p>
+  <p>这个手法一直活到今天。很多摇滚和流行歌的开头，都有一条半音下行的低音或和弦，比如 Led Zeppelin《Stairway to Heaven》的前奏。</p>
+
+  <div class="lab">
+    <div class="head"><span class="tag">LAB III</span><strong>普通下行 vs 半音下行</strong><small>按珀塞尔的思路写的原创片段，G 小调</small></div>
+    <div class="cols2">
+      <div class="opt"><b>普通下行</b><p>G – F – E♭ – D，一步一个全音。</p><button type="button" data-demo="plain-desc">播放</button></div>
+      <div class="opt"><b>半音下行（哀歌低音）</b><p>G – F♯ – F – E – E♭ – D，每一步只走半音。</p><button class="primary" type="button" data-demo="lament">播放</button></div>
+    </div>
+    <p class="note">第二个多了几个“台阶”，每一步都只往下挪一点点，像一个人慢慢走下楼梯，不愿意走到底。</p>
+  </div>
+
+  <!-- 04 -->
+  <h2 id="instruments"><span class="n">IV · instruments</span>乐器：羽管键琴与小提琴</h2>
+  <h3>羽管键琴：会“拨”的键盘</h3>
+  <p>巴洛克时期还没有钢琴（钢琴在 1700 年前后才被发明，到 18 世纪末才普及）。最重要的键盘乐器是羽管键琴（harpsichord）。它的原理和钢琴完全不同：钢琴是用小锤“敲”弦，羽管键琴是用一个小拨子（最早用鸟的羽毛管做）“拨”弦。所以它的声音更像吉他或竖琴，清脆、明亮、带一点金属感。</p>
+
+  <figure class="photo">
+    <img src="img/harpsichord.jpg" alt="一台装饰华丽的双层键盘羽管键琴，琴盖内侧有彩绘" data-file="ClavecinRuckersTaskin.jpg">
+    <figcaption class="cap"><b>Ruckers 家族制作、后经 Taskin 改造的羽管键琴</b>CC BY-SA 3.0 · 来源：维基共享资源</figcaption>
+  </figure>
+
+  <p>拨弦带来一个重要的限制：<span class="mark">羽管键琴的音量几乎不受按键力度影响</span>。你轻按、重按，声音一样大。所以巴洛克音乐的强弱变化，往往不是“慢慢变强”，而是“台阶式”的：一段大声（所有乐器一起），一段小声（只留几件乐器，或换到另一层键盘），像回声一样。这叫“阶梯式力度”（terraced dynamics）。</p>
+
+  <figure class="fig">
+    <div class="frame"><svg viewBox="0 0 680 240" role="img" aria-label="两张音量随时间变化的图：上面是巴洛克的阶梯式力度，像台阶一样突然变强变弱；下面是后来的渐强渐弱，是平滑的斜坡"><g id="dyn-fig"></g></svg></div>
+    <figcaption>图 4 · 阶梯式力度和渐强。</figcaption>
+  </figure>
+
+  <div class="lab">
+    <div class="head"><span class="tag">LAB IV</span><strong>能不能变强？</strong><small>同一段音阶，从轻到重</small></div>
+    <div class="cols3">
+      <div class="opt"><b>羽管键琴</b><p>每个音“按得越来越重”，但音量不变。</p><button type="button" data-demo="dyn-harpsi">播放</button></div>
+      <div class="opt"><b>（后来的）钢琴</b><p>同样越按越重，声音真的越来越大。</p><button type="button" data-demo="dyn-piano">播放</button></div>
+      <div class="opt"><b>阶梯式力度</b><p>全体齐奏，然后只剩羽管键琴“回声”。</p><button class="primary" type="button" data-demo="terrace">播放</button></div>
+    </div>
+  </div>
+
+  <h3>其他几件主角</h3>
+  <ul class="clean">
+    <li><b>小提琴家族</b>：小提琴、中提琴、大提琴在巴洛克时期成为乐队的核心。意大利克雷莫纳的斯特拉迪瓦里（Antonio Stradivari，1644–1737）做的琴，至今仍是世界上最昂贵的乐器之一。那时的琴弦用羊肠做，揉弦用得很少，声音比今天更干净、更“直”</li>
+    <li><b>管风琴</b>：教堂里最大的乐器，用管子发声，可以无限延长一个音。通过拉出不同的“音栓”，组合出不同的音色</li>
+    <li><b>竖笛</b>：今天小学音乐课上的竖笛，在巴洛克时期是正经的独奏乐器</li>
+    <li><b>自然小号</b>：没有按键，只能靠嘴唇吹出有限的几个音，声音嘹亮，常用于庆典和宗教音乐</li>
+  </ul>
+
+  <div class="lab">
+    <div class="head"><span class="tag">LAB V</span><strong>巴洛克乐器一件一件听</strong><small>全部为浏览器合成，旋律原创</small></div>
+    <div class="cols3">
+      <div class="opt"><b>羽管键琴</b><p>拨弦，清脆，带一点金属感。</p><button type="button" data-demo="i-harpsi">播放</button></div>
+      <div class="opt"><b>管风琴</b><p>音可以一直延续，越加音栓越宏大。</p><button type="button" data-demo="i-organ">播放</button></div>
+      <div class="opt"><b>小提琴</b><p>巴洛克拉法：几乎不揉弦。</p><button type="button" data-demo="i-violin">播放</button></div>
+      <div class="opt"><b>大提琴</b><p>通奏低音的主力。</p><button type="button" data-demo="i-cello">播放</button></div>
+      <div class="opt"><b>竖笛</b><p>柔和，带一点气声。</p><button type="button" data-demo="i-recorder">播放</button></div>
+      <div class="opt"><b>自然小号</b><p>庆典的声音。</p><button type="button" data-demo="i-trumpet">播放</button></div>
+    </div>
+  </div>
+
+  <!-- 05 -->
+  <h2 id="counterpoint"><span class="n">V · counterpoint</span>对位：轮唱与赋格</h2>
+  <p>虽然巴洛克发展出了“旋律在上、和弦在下”的结构，但它并没有放弃更古老的技艺：让几条独立的旋律同时走，彼此配合又各自完整。这叫“对位”（counterpoint）。</p>
+
+  <h3>你早就会的对位：《两只老虎》</h3>
+  <p>你小时候大概唱过《两只老虎》的轮唱：一组人先唱，第二组晚两小节从头开始唱同一首歌，第三组再晚两小节。几个声部唱的是同一段旋律，合在一起却很和谐。这就是最简单的卡农。《两只老虎》的旋律原本来自一首 18 世纪的法国童谣《雅克兄弟》（Frère Jacques）。</p>
+
+  <div class="lab">
+    <div class="head"><span class="tag">LAB VI</span><strong>《两只老虎》轮唱</strong><small>传统旋律（公有领域），竖笛、小提琴、大提琴</small></div>
+    <div class="controls" style="margin-top:0"><button type="button" data-demo="round1">一个声部</button><button class="primary" type="button" data-demo="round3">三个声部轮唱</button><button type="button" data-stop>停止</button></div>
+  </div>
+
+  <h3>赋格：对位的最高形式</h3>
+  <p>赋格（fugue）可以理解为“规则更复杂的轮唱”。它有一个短小、有特点的主题（叫“主题”或“主唱”），先由一个声部单独奏出；然后第二个声部进来，把主题移到另一个调上（通常高五度）再奏一遍，这叫“答题”；与此同时，第一个声部继续往下走，奏出一条和主题配合的新旋律，叫“对题”。第三个、第四个声部也依次进来。所有声部都进来之后，作曲家开始自由地拆解、组合、变化这个主题。</p>
+
+  <figure class="fig">
+    <div class="frame"><svg viewBox="0 0 680 230" role="img" aria-label="赋格呈示部示意图：三个声部从上到下排列，第一个声部先奏主题，然后奏对题；第二个声部晚两小节进入奏答题；第三个声部再晚两小节进入奏主题"><g id="fugue-fig"></g></svg></div>
+    <figcaption>图 5 · 一首三声部赋格的开头（呈示部）。</figcaption>
+  </figure>
+
+  <div class="lab">
+    <div class="head"><span class="tag">LAB VII</span><strong>一首小赋格的开头</strong><small>原创主题，D 小调，羽管键琴</small></div>
+    <div class="controls" style="margin-top:0"><button type="button" data-demo="subject">只听主题</button><button class="primary" type="button" data-demo="fugue">三个声部依次进入</button><button type="button" data-stop>停止</button></div>
+    <p class="note">先听熟主题（开头那个向上跳五度的音），再听完整版本：每当这个“跳”出现，就是一个新声部进来了。</p>
+  </div>
+  <p>巴赫是赋格的大师。他的《平均律钢琴曲集》里有 48 首赋格，晚年的《赋格的艺术》把一个主题变出了十几种赋格和卡农。对很多音乐家来说，巴赫的赋格就像数学里的定理：严格的规则之内，有无穷的美。</p>
+
+  <!-- 06 -->
+  <h2 id="affect"><span class="n">VI · ornament & motion</span>装饰与律动</h2>
+  <h3>装饰音：三百年前的转音</h3>
+  <p>巴洛克乐谱上写的旋律，往往只是“骨架”。演奏者和歌手被期待在上面即兴加上各种装饰：颤音（在两个相邻的音之间快速来回）、波音（快速碰一下旁边的音再回来）、倚音（先唱一个不属于和弦的音，再“落”到正确的音上）。</p>
+  <p>这和今天 R&amp;B 歌手的“转音”是一样的：同一段旋律，每个歌手唱出来都不一样，装饰就是个人风格。巴洛克时期的观众去听歌剧，很大程度上就是去听明星歌手怎么即兴装饰。</p>
+
+  <figure class="fig">
+    <div class="frame"><svg viewBox="0 0 680 230" role="img" aria-label="装饰音示意：上面是一条平直的旋律线；下面同一条旋律加上颤音、波音和倚音之后，音高线出现了快速的锯齿和小弯钩"><g id="orn-fig"></g></svg></div>
+    <figcaption>图 6 · 同一段旋律，加装饰前后的音高变化。</figcaption>
+  </figure>
+
+  <div class="lab">
+    <div class="head"><span class="tag">LAB VIII</span><strong>加装饰</strong><small>原创旋律，G 大调，小提琴 + 羽管键琴</small></div>
+    <div class="cols2">
+      <div class="opt"><b>乐谱上写的</b><p>只有骨架。</p><button type="button" data-demo="orn-plain">播放</button></div>
+      <div class="opt"><b>演奏者加了装饰</b><p>颤音、波音、倚音和几个经过音。</p><button class="primary" type="button" data-demo="orn-fancy">播放</button></div>
+    </div>
+  </div>
+
+  <h3>马达般的律动</h3>
+  <p>很多巴洛克快板有一个特点：从头到尾一刻不停的十六分音符，像一台马达在转。音乐史上管这叫“马达节奏”（motor rhythm）。听维瓦尔第或巴赫的快板，你会发现它们和今天的电子舞曲有一种奇妙的相似：持续、均匀、推着你往前走。</p>
+
+  <div class="lab">
+    <div class="head"><span class="tag">LAB IX</span><strong>马达节奏</strong><small>原创，A 小调，弦乐 + 羽管键琴</small></div>
+    <div class="controls" style="margin-top:0"><button class="primary" type="button" data-demo="motor">播放</button><button type="button" data-stop>停止</button></div>
+  </div>
+
+  <!-- 07 -->
+  <h2 id="opera"><span class="n">VII · opera</span>歌剧：说着唱和唱着唱</h2>
+  <p>1600 年前后，意大利佛罗伦萨的一群文人和音乐家想复原古希腊戏剧，他们相信古希腊悲剧是“唱”出来的。复原没有成功，却发明了一种全新的艺术：歌剧。1607 年，蒙特威尔第（Claudio Monteverdi）的《奥菲欧》在曼托瓦首演，通常被看作第一部真正成熟的歌剧。</p>
+
+  <h3>宣叙调和咏叹调</h3>
+  <p>歌剧要讲故事，又要唱得好听，于是发展出两种唱法：</p>
+  <ul class="clean">
+    <li><b>宣叙调</b>（recitative）：像说话一样唱，节奏跟着语言走，伴奏只有通奏低音偶尔垫几个和弦。用来推进剧情、交代对话</li>
+    <li><b>咏叹调</b>（aria）：真正的“歌”，旋律优美，常常重复，用来表达人物此刻的情感。剧情在这里停下来，让角色尽情抒发</li>
+  </ul>
+
+  <div class="ask">
+    <span class="who">我问</span>
+    <p class="q">汉密尔顿也是rap吗</p>
+  </div>
+  <p>这两个问题其实连在一起。音乐剧《汉密尔顿》用说唱来交代大量的历史和对话，用抒情的歌来表达人物的情感。这和巴洛克歌剧的分工几乎一模一样：<span class="mark">说唱在这部剧里扮演的，正是三百年前宣叙调的角色</span>。它们都是“说着唱”，都让语言的节奏决定音乐的节奏。</p>
+
+  <div class="lab">
+    <div class="head"><span class="tag">LAB X</span><strong>宣叙调 vs 咏叹调</strong><small>合成人声，原创</small></div>
+    <div class="cols2">
+      <div class="opt"><b>宣叙调</b><p>同一个音上快速“说”，羽管键琴偶尔垫一个和弦。</p><button type="button" data-demo="recit">播放</button></div>
+      <div class="opt"><b>咏叹调</b><p>旋律展开，长音、揉音，弦乐跟着。</p><button class="primary" type="button" data-demo="aria">播放</button></div>
+    </div>
+  </div>
+
+  <p>巴洛克歌剧有很多今天看来奇特的地方。最有名的明星是“阉伶歌手”（castrato）：童年时被阉割以保留高音的男歌手，声音兼有男性的力量和孩童的音域，比如 18 世纪的 Farinelli。这一残酷的做法在 19 世纪后逐渐消失，今天的巴洛克歌剧通常由女歌手或“假声男高音”来唱这些角色。</p>
+  <p>亨德尔后来在伦敦写了大量意大利歌剧，市场不景气之后，又转向用英语写清唱剧（oratorio）：像歌剧一样有独唱和合唱，讲宗教故事，但没有布景和表演。其中最有名的是 1742 年在都柏林首演的《弥赛亚》。据说在伦敦演出时，国王听到《哈利路亚》合唱时站了起来，从此观众听到这一段都会起立。这个故事是否属实已经无法考证，但起立的传统一直保留到今天。</p>
+
+  <!-- 08 -->
+  <h2 id="concerto"><span class="n">VIII · concerto</span>协奏曲与维瓦尔第</h2>
+  <p>巴洛克时期还发明了另一种重要的形式：协奏曲（concerto）。它的核心是“对话”：一件或几件独奏乐器，和整个乐队轮流说话，有时争论，有时合作。</p>
+  <h3>回归段：乐队的“副歌”</h3>
+  <p>巴洛克协奏曲的快乐章，常用一种叫“回归段形式”（ritornello form）的结构：乐队全体先奏出一段主题（回归段），然后独奏乐器出来炫技；乐队再奏回归段（常常换了调）；独奏再出来……最后乐队在原调里完整地奏一遍回归段结束。</p>
+  <p>你可以把回归段理解成一首歌的副歌，独奏段就是主歌：<span class="mark">副歌每次回来，你都知道“我们回家了”</span>。</p>
+
+  <figure class="fig">
+    <div class="frame"><svg viewBox="0 0 680 210" role="img" aria-label="回归段形式示意图：乐队全奏 G 大调、独奏、乐队全奏 D 大调、独奏、乐队全奏 G 大调，交替排列"><g id="rit-fig"></g></svg></div>
+    <figcaption>图 7 · 回归段形式：乐队和独奏轮流说话，乐队每次回来都带着同一段主题。</figcaption>
+  </figure>
+
+  <div class="lab">
+    <div class="head"><span class="tag">LAB XI</span><strong>乐队与独奏</strong><small>原创，G 大调</small></div>
+    <div class="controls" style="margin-top:0"><button class="primary" type="button" data-demo="ritornello">播放完整一段</button><button type="button" data-stop>停止</button></div>
+    <div class="strip" data-strip="5" style="--n:5"></div>
+    <p class="note">下面的进度条对应图 7 的五段。注意第三段：主题回来了，但换了一个调，听起来“熟悉又有点不一样”。</p>
+  </div>
+
+  <h3>红发神父和《四季》</h3>
+  <p>安东尼奥·维瓦尔第（Antonio Vivaldi，1678–1741）是威尼斯人，因为一头红发，被叫作“红发神父”。他是神父，却几乎一辈子都在做音乐：在威尼斯一所收养孤女的慈善院当音乐老师，把那里的女孩们训练成了全欧洲闻名的乐团。他一生写了几百首协奏曲。</p>
+  <p>他最有名的作品是 1725 年出版的四首小提琴协奏曲《四季》。每一首都配了一首十四行诗，描写春夏秋冬的场景：鸟叫、雷雨、猎人、冰面上滑倒的人……音乐把这些场景“画”了出来。这是最早、也最有名的“标题音乐”之一：音乐不只是音乐，还在讲一个具体的画面。</p>
+  <p>维瓦尔第晚年失去了人气，死在维也纳时很贫穷，他的音乐也被遗忘了近两百年，直到 20 世纪才重新被发现。</p>
+
+  <!-- 09 -->
+  <h2 id="masters"><span class="n">IX · bach & handel</span>巴赫与亨德尔</h2>
+  <p>1685 年，德国出生了两个后来最重要的巴洛克作曲家：巴赫和亨德尔。他们出生的地方相距不远，一生都没有见过面，却走了完全相反的路。</p>
+
+  <figure class="fig">
+    <div class="frame"><svg viewBox="0 0 680 270" role="img" aria-label="生平时间条：维瓦尔第 1678 到 1741，巴赫 1685 到 1750，亨德尔 1685 到 1759，帕赫贝尔 1653 到 1706，下面对照康熙皇帝在位 1661 到 1722"><g id="life-fig"></g></svg></div>
+    <figcaption>图 8 · 几位作曲家的生卒年，和康熙皇帝在位的时间对照。</figcaption>
+  </figure>
+
+  <h3>巴赫：教堂里的工匠</h3>
+  <figure class="photo">
+    <img src="img/bach-1748.jpg" alt="巴赫的肖像，戴白色假发，手里拿着一张写着卡农的小乐谱" data-file="Johann_Sebastian_Bach.jpg">
+    <figcaption class="cap"><b>巴赫肖像，1748 年</b>Elias Gottlob Haussmann 绘 · 公有领域 · 来源：维基共享资源。他手里拿的就是本章开头说的那首六声部卡农。</figcaption>
+  </figure>
+  <p>巴赫一辈子几乎没离开过德国中部。他出身于音乐世家，做过管风琴师、宫廷乐长，1723 年起在莱比锡的圣托马斯教堂当音乐总监，一直到去世。他的工作很“打工人”：每周日要为礼拜准备一首新的康塔塔（一种有独唱、合唱和乐队的宗教作品），还要教合唱团的男孩们唱歌、上拉丁语课。他有二十个孩子，其中几个后来也成了著名作曲家。</p>
+  <p>在世时，巴赫主要被当作一个了不起的管风琴演奏家，而不是伟大的作曲家，他的风格甚至被年轻一代认为过时了。他去世后几十年里，作品很少被演出。1829 年，20 岁的门德尔松在柏林重新上演了他的《马太受难曲》，才掀起了“巴赫复兴”。</p>
+
+  <h3>平均律：让 24 个调都能用</h3>
+  <p>巴赫最重要的键盘作品之一是《平均律钢琴曲集》（第一卷完成于 1722 年）。它有一个看起来很朴素的目标：在全部 24 个大小调里，各写一首前奏曲和一首赋格。</p>
+  <p>为什么这是件大事？因为当时键盘乐器的调音方式，让有些调很好听，另一些调却刺耳得没法用。巴赫支持的“良好调律”（well-tempered），是一种让所有调都能用的调音方法。今天钢琴使用的“十二平均律”，就是在这条路上走到底的结果：<span class="mark">把一个八度平均分成十二个半音，牺牲一点点纯度，换来随便换调的自由</span>。没有它，就没有后来流行音乐里随便转调、随便移调的方便。</p>
+
+  <figure class="photo">
+    <img src="img/wtc-title-1722.jpg" alt="巴赫手写的《平均律钢琴曲集》第一卷扉页，棕色墨水写的花体德文" data-file="Bach-wtc1-title-ms.jpg">
+    <figcaption class="cap"><b>《平均律钢琴曲集》第一卷扉页，巴赫手稿，1722 年</b>柏林国立图书馆藏 · 公有领域 · 来源：维基共享资源</figcaption>
+  </figure>
+
+  <h3>亨德尔：国际明星</h3>
+  <figure class="photo">
+    <img src="img/handel.jpg" alt="亨德尔的肖像，戴着假发，穿着深色外套" data-file="George_Frideric_Handel_by_Balthasar_Denner.jpg">
+    <figcaption class="cap"><b>亨德尔肖像，约 1726–1728 年</b>一般认为由 Balthasar Denner 绘 · 公有领域 · 来源：维基共享资源</figcaption>
+  </figure>
+  <p>亨德尔则是一个国际化的音乐企业家。他年轻时去意大利学歌剧，后来定居伦敦，入了英国籍，开歌剧公司、卖票、和明星歌手谈合同，大起大落。他为英国国王写过《水上音乐》（1717 年在泰晤士河的船上演出），也写了《弥赛亚》。</p>
+  <p>两人的晚年有一个奇特的巧合：他们都因为眼疾，找过同一个英国眼科医生 John Taylor 做手术，手术都失败了。巴赫在手术后不久去世，亨德尔则失明度过了晚年。</p>
+
+  <!-- 10 -->
+  <h2 id="china"><span class="n">X · beijing</span>同一时间的紫禁城</h2>
+  <p>巴洛克音乐在它自己的时代，就已经传到了中国。</p>
+  <p>17 世纪末，葡萄牙耶稣会士徐日昇（Tomás Pereira）来到北京，他擅长音乐，在宫中演奏和讲授西洋乐理。康熙皇帝对西洋音乐很感兴趣，学过一些键盘乐器的弹法。徐日昇编写的介绍西洋乐理的书《律吕纂要》，是最早用中文写成的西方乐理著作之一。</p>
+  <p>1711 年，意大利神父、音乐家德理格（Teodorico Pedrini）来到北京，在宫中教皇子们音乐，还参与编纂了乐理书《律吕正义》的续编。他写的十二首小提琴奏鸣曲，就是标准的巴洛克风格：小提琴旋律加通奏低音。手稿至今保存在北京。</p>
+  <p>换句话说，<span class="mark">就在巴赫在莱比锡写赋格的同一时间，紫禁城里有人在弹羽管键琴、拉巴洛克风格的小提琴奏鸣曲</span>。不过这些音乐基本只在宫廷里流传，没有走到民间。</p>
+
+  <!-- 11 -->
+  <h2 id="today"><span class="n">XI · today</span>巴洛克在今天</h2>
+  <p>巴洛克留下的东西，有的明着在流行音乐里，有的藏在底层结构里。</p>
+  <ul class="clean">
+    <li><b>“卡农和弦进行”</b>：D – A – Bm – F♯m – G – D – G – A 这串和弦，被大量流行歌直接或间接地用过。Maroon 5 2019 年的《Memories》就是明确以《卡农》为基础写的；朋克那章提到，很多人也觉得 Green Day 的《Basket Case》和它很像</li>
+    <li><b>巴洛克流行（baroque pop）</b>：1960 年代，The Beatles 的《Penny Lane》里有一段巴洛克风格的短笛小号（piccolo trumpet）独奏（据说是受巴赫《勃兰登堡协奏曲》启发）；Procol Harum 1967 年的《A Whiter Shade of Pale》那段管风琴，明显带着巴赫的影子</li>
+    <li><b>新古典金属</b>：1980 年代，Yngwie Malmsteen 等吉他手把巴洛克的快速音阶、琶音和小调和声搬到了失真电吉他上（下一章“金属”还会讲到）</li>
+    <li><b>《Canon Rock》</b>：2005 年，台湾吉他手 JerryC 把《卡农》改编成摇滚电吉他版，被网友翻弹后在 YouTube 上疯传，成了早期网络视频时代最有名的现象之一</li>
+  </ul>
+
+  <div class="lab">
+    <div class="head"><span class="tag">LAB XII</span><strong>同一串卡农和弦，三个时代</strong><small>和弦进行来自帕赫贝尔，编曲原创</small></div>
+    <div class="cols3">
+      <div class="opt"><b>1700 · 巴洛克</b><p>弦乐、羽管键琴、大提琴。</p><button type="button" data-demo="canon-chords">播放</button></div>
+      <div class="opt"><b>今天 · 流行抒情</b><p>钢琴、贝斯、鼓，上面一段原创旋律。</p><button type="button" data-demo="canon-pop">播放</button></div>
+      <div class="opt"><b>2005 · 摇滚</b><p>失真吉他强力和弦，加上卡农的第一段旋律。</p><button class="primary" type="button" data-demo="canon-rock">播放</button></div>
+    </div>
+  </div>
+
+  <!-- 12 -->
+  <h2 id="listen"><span class="n">XII · listen</span>听：本章十二首曲目</h2>
+  <p>巴洛克作品本身都是公有领域，但录音有版权，所以这里只提供搜索链接。同一首曲子有几十上百个录音版本，搜索结果里任选一个评价好的即可。</p>
+  <div class="side"><span>SIDE A · 1607–1725 · 歌剧、卡农与协奏曲</span><span>先听这六首</span></div>
+  <div id="songsA"></div>
+  <div class="side"><span>SIDE B · 巴赫、亨德尔与它们的后代</span><span>再听这六首</span></div>
+  <div id="songsB"></div>
+
+  <!-- 13 -->
+  <h2 id="practice"><span class="n">XIII · practice</span>练 · 术语表</h2>
+  <h3>练习 1：数《卡农》的低音</h3>
+  <p>听《卡农》，只盯着最低的声音，跟着它在心里数“1 到 8”。数到 8 就回到 1。整首曲子你能数几圈？上面的小提琴变了多少次花样？</p>
+  <h3>练习 2：找回归段</h3>
+  <p>听《四季》“春”的第一乐章。开头那段全体齐奏的主题，后面出现了几次？每次出现之间，独奏小提琴在“画”什么（鸟叫？流水？雷声？）。</p>
+  <h3>练习 3：听赋格的入口</h3>
+  <p>听巴赫的任意一首赋格（比如《平均律》第一卷第二首 C 小调赋格），先把开头的主题哼熟，然后每当你听到这个主题出现，就举一下手。它出现在高声部还是低声部？</p>
+  <h3>练习 4：在流行歌里找巴洛克</h3>
+  <p>听《A Whiter Shade of Pale》，再听巴赫的《G 弦上的咏叹调》。管风琴那条一步一步往下走的低音，像不像？</p>
+
+  <div class="mine">
+    <div class="lbl">我的听感 · 待写</div>
+    这里留给你：第一次有意识地听《卡农》，和以前在婚礼或广告里“路过”它，感觉有什么不同？巴赫和维瓦尔第，你更喜欢哪一个？
+  </div>
+
+  <h3 id="gloss">术语表</h3>
+  <dl class="gloss">
+    <dt>巴洛克</dt><dd>约 1600–1750 年的欧洲音乐时期，名字来自“不规则的珍珠”</dd>
+    <dt>通奏低音</dt><dd>由一件低音乐器和一件和弦乐器组成、贯穿全曲的伴奏组，相当于今天的节奏组</dd>
+    <dt>数字低音</dt><dd>只写低音和表示和弦的小数字，由键盘手即兴弹出和弦的记谱法</dd>
+    <dt>固定低音</dt><dd>不断重复的短低音线，上面的声部不断变化，相当于今天的 loop</dd>
+    <dt>卡农</dt><dd>同一段旋律由几个声部错开时间先后进入的写法，轮唱是最简单的卡农</dd>
+    <dt>哀歌低音</dt><dd>半音逐级下行的低音，常用来表达悲伤</dd>
+    <dt>羽管键琴</dt><dd>用拨子拨弦的键盘乐器，音量几乎不随力度变化</dd>
+    <dt>阶梯式力度</dt><dd>强弱突然切换而不是渐变，像台阶一样</dd>
+    <dt>对位</dt><dd>几条独立的旋律同时进行、彼此配合的写作技术</dd>
+    <dt>赋格</dt><dd>一个主题在各声部依次进入并展开的复杂对位形式</dd>
+    <dt>主题 / 答题 / 对题</dt><dd>赋格里的首次陈述、在另一个调上的回应，以及与它们配合的新旋律</dd>
+    <dt>装饰音</dt><dd>颤音、波音、倚音等，在旋律骨架上即兴添加的修饰</dd>
+    <dt>马达节奏</dt><dd>持续不断的均匀快速音符，推动音乐前进</dd>
+    <dt>宣叙调</dt><dd>像说话一样唱的段落，用来推进剧情</dd>
+    <dt>咏叹调</dt><dd>旋律性强、表达情感的独唱段落</dd>
+    <dt>清唱剧</dt><dd>有独唱、合唱和乐队，但没有布景表演的大型作品，如《弥赛亚》</dd>
+    <dt>协奏曲</dt><dd>独奏乐器与乐队对话的作品</dd>
+    <dt>回归段形式</dt><dd>乐队主题（回归段）与独奏段落交替出现的结构</dd>
+    <dt>标题音乐</dt><dd>描绘具体场景或故事的器乐作品，如《四季》</dd>
+    <dt>平均律</dt><dd>把八度平均分成十二个半音的调音方法，让所有调都能使用</dd>
+  </dl>
+
+</article>
+
+<footer class="credits">
+  <div class="wrap">
+    <h2>Credits</h2>
+    <dl>
+      <dt>插画</dt><dd>章首插画由 AI 生成</dd>
+      <dt>图解</dt><dd>图 1–8（时间轴、数字低音、卡农低音、力度、赋格、装饰音、回归段、生卒年）均为本书原创绘制</dd>
+      <dt>图片</dt><dd>来自维基共享资源（Wikimedia Commons），本书附带缩小后的副本：<br>
+        Ruckers–Taskin 羽管键琴：CC BY-SA 3.0；<br>
+        巴赫肖像（1748）：Elias Gottlob Haussmann 绘，公有领域；<br>
+        《平均律钢琴曲集》第一卷扉页手稿（1722）：公有领域；<br>
+        亨德尔肖像（约 1726–1728）：一般认为由 Balthasar Denner 绘，公有领域<br>
+        具体授权以维基共享资源页面为准</dd>
+      <dt>声音示例</dt><dd>全部由浏览器实时合成。《卡农》开头与《两只老虎》（Frère Jacques）的旋律为公有领域作品；其余旋律、编曲为原创，无第三方录音</dd>
+      <dt>曲目</dt><dd>仅提供推荐与收听链接，本书不包含任何录音；录音版权归原权利人所有</dd>
+      <dt>授权</dt><dd>本章原创文字、图解与合成示例采用 CC BY-NC-SA 4.0，页面代码采用 MIT 许可证；第三方图片按各自授权使用（CC BY-SA 图片的改动部分同样按 CC BY-SA 提供），曲目、名称与商标不在此授权范围内</dd>
+    </dl>
+    <div class="next"><span><a href="../a2-folk/index.html" data-nav="a2-folk">← A2 · 民歌与乡村</a></span><span><a href="../a4-jazz/index.html" data-nav="a4-jazz">A4 · 爵士 →</a></span></div>
+  </div>
+</footer>
+
+<button class="stopfab" id="stopAll" type="button">停止声音</button>
+
+<script>
+/* ================= 合成音频引擎 ================= */
+let ac=null,master,verbIn;
+function A(){
+  if(!ac){
+    ac=new (window.AudioContext||window.webkitAudioContext)();
+    const comp=ac.createDynamicsCompressor();comp.threshold.value=-14;comp.ratio.value=4;comp.connect(ac.destination);
+    master=ac.createGain();master.gain.value=.85;master.connect(comp);
+    const cv=ac.createConvolver(),len=ac.sampleRate*1.8,b=ac.createBuffer(2,len,ac.sampleRate);
+    for(let c=0;c<2;c++){const d=b.getChannelData(c);for(let i=0;i<len;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/len,3.2);}
+    cv.buffer=b;const vg=ac.createGain();vg.gain.value=.22;cv.connect(vg).connect(comp);verbIn=cv;
+  }
+  if(ac.state==="suspended")ac.resume();
+  return ac;
+}
+const mf=m=>440*Math.pow(2,(m-69)/12);
+let bus=null,timers=[],srcs=[],loopTimer=null,activeBtn=null;
+function newBus(){
+  stopDemos();A();
+  bus=ac.createGain();bus.gain.value=1;bus.connect(master);
+  const s=ac.createGain();s.gain.value=1;bus.connect(s);s.connect(verbIn);
+  return bus;
+}
+function stopDemos(){
+  timers.forEach(clearTimeout);timers=[];clearTimeout(loopTimer);loopTimer=null;
+  srcs.forEach(s=>{try{s.stop()}catch(e){}});srcs=[];
+  if(bus){const b=bus;b.gain.setTargetAtTime(0,ac.currentTime,.03);setTimeout(()=>b.disconnect(),300);bus=null;}
+  document.querySelectorAll(".bar.now,.strip i.now").forEach(x=>x.classList.remove("now"));
+  if(activeBtn){activeBtn.classList.remove("playing");activeBtn=null;}
+  const f=document.getElementById("stopAll");f&&f.classList.remove("on");
+}
+function later(fn,sec){timers.push(setTimeout(fn,Math.max(0,sec*1000)));}
+function track(n){srcs.push(n);return n;}
+
+/* Karplus-Strong 拨弦 */
+const ksCache={};
+function ksBuf(midi,dur,bright,decay){
+  const key=midi+"|"+dur+"|"+bright+"|"+decay;if(ksCache[key])return ksCache[key];
+  const sr=ac.sampleRate,N=Math.max(2,Math.round(sr/mf(midi))),len=Math.floor(sr*dur);
+  const b=ac.createBuffer(1,len,sr),d=b.getChannelData(0),buf=new Float32Array(N);
+  for(let i=0;i<N;i++)buf[i]=Math.random()*2-1;
+  const smooth=Math.round((1-bright)*5);
+  for(let k=0;k<smooth;k++)for(let i=0;i<N;i++)buf[i]=(buf[i]+buf[(i+1)%N])*.5;
+  let idx=0;
+  for(let i=0;i<len;i++){const nx=(idx+1)%N,v=buf[idx];d[i]=v;buf[idx]=decay*.5*(v+buf[nx]);idx=nx;}
+  const fade=Math.min(len,Math.floor(sr*.03));for(let i=0;i<fade;i++)d[len-1-i]*=i/fade;
+  return ksCache[key]=b;
+}
+let shaperCache={};
+function shaper(amount){
+  if(shaperCache[amount])return shaperCache[amount];
+  const n=1024,c=new Float32Array(n);for(let i=0;i<n;i++){const x=i/(n-1)*2-1;c[i]=Math.tanh(x*amount)/Math.tanh(amount);}
+  return shaperCache[amount]=c;
+}
+/* 乐器：ac 木吉他 / el 电吉他干净 / dr 电吉他过载 / bass 贝斯 */
+const INST={
+  ac:{bright:.62,decay:.9965,dur:1.8,vol:.55},
+  el:{bright:.8,decay:.9985,dur:2.2,vol:.4,drive:1.6,lp:3200},
+  dr:{bright:.85,decay:.999,dur:2.4,vol:.22,drive:7,lp:2600},
+  bass:{bright:.25,decay:.995,dur:1.2,vol:.75,lp:900}
+};
+function pluck(t,midi,inst,o={}){
+  const a=A(),I=INST[inst],s=a.createBufferSource();
+  s.buffer=ksBuf(midi,o.dur||I.dur,I.bright,I.decay);if(o.det&&!o.from)s.playbackRate.value=Math.pow(2,o.det/1200);
+  const g=a.createGain();g.gain.value=(o.vol||1)*I.vol;
+  let node=g;
+  if(o.from){s.playbackRate.setValueAtTime(Math.pow(2,o.from/12),t);s.playbackRate.setValueAtTime(Math.pow(2,o.from/12),t+(o.hold||0));s.playbackRate.linearRampToValueAtTime(1,t+(o.hold||0)+(o.glide||.18));}
+  if(o.vib){const l=a.createOscillator(),lg=a.createGain();l.frequency.value=5.5;lg.gain.value=.008;l.connect(lg).connect(s.playbackRate);l.start(t+(o.vibAt||.4));l.stop(t+(o.dur||I.dur));track(l);}
+  s.connect(g);
+  if(I.drive){const sh=a.createWaveShaper();sh.curve=shaper(I.drive);sh.oversample="2x";node.connect(sh);node=sh;}
+  if(I.lp){const f=a.createBiquadFilter();f.type="lowpass";f.frequency.value=I.lp;node.connect(f);node=f;}
+  if(I.peak){const pk=a.createBiquadFilter();pk.type="peaking";pk.frequency.value=I.peak[0];pk.gain.value=I.peak[1];node.connect(pk);node=pk;}
+  if(o.swell){g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime((o.vol||1)*I.vol,t+o.swell);}
+  if(o.mute){g.gain.setValueAtTime((o.vol||1)*I.vol,t);g.gain.exponentialRampToValueAtTime(.001,t+o.mute);}
+  node.connect(bus);s.start(t);s.stop(t+(o.dur||I.dur));track(s);
+}
+function strum(t,notes,inst,o={}){notes.forEach((m,k)=>pluck(t+k*(o.spread||.014),m,inst,{vol:o.vol||.6,mute:o.mute,dur:o.dur}));}
+/* 口琴 */
+function harp(t,midi,dur,o={}){
+  const a=A(),os=a.createOscillator(),os2=a.createOscillator();os.type="sawtooth";os2.type="square";
+  const f=mf(midi);
+  [os,os2].forEach((x,k)=>{const ff=f*(k?1.002:1);
+    if(o.from){x.frequency.setValueAtTime(ff*Math.pow(2,o.from/12),t);x.frequency.linearRampToValueAtTime(ff,t+(o.glide||.15));}else x.frequency.setValueAtTime(ff,t);});
+  const lfo=a.createOscillator(),lg=a.createGain();lfo.frequency.value=5.2;lg.gain.value=12;lfo.connect(lg);lg.connect(os.detune);lg.connect(os2.detune);
+  const bp=a.createBiquadFilter();bp.type="bandpass";bp.frequency.value=o.amp?1100:1500;bp.Q.value=o.amp?1.6:1.1;
+  const g=a.createGain(),v=(o.vol||1)*(o.amp?.13:.16);
+  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.04);g.gain.setValueAtTime(v,t+dur-.06);g.gain.linearRampToValueAtTime(0,t+dur);
+  const m2=a.createGain();m2.gain.value=.4;
+  os.connect(bp);os2.connect(m2).connect(bp);let node=bp;
+  if(o.amp){const sh=a.createWaveShaper();sh.curve=shaper(4);const lp=a.createBiquadFilter();lp.type="lowpass";lp.frequency.value=2200;bp.connect(sh).connect(lp);node=lp;}
+  node.connect(g).connect(bus);
+  [os,os2,lfo].forEach(x=>{x.start(t);x.stop(t+dur+.05);track(x);});
+}
+/* 人声（元音“啊”） */
+function voice(t,midi,dur,o={}){
+  const a=A(),os=a.createOscillator();os.type="sawtooth";const f=mf(midi);
+  os.frequency.setValueAtTime(f*Math.pow(2,(o.from==null?-1:o.from)/12),t);os.frequency.linearRampToValueAtTime(f,t+(o.glide||.09));
+  if(o.fall){os.frequency.setValueAtTime(f,t+dur*.6);os.frequency.linearRampToValueAtTime(f*Math.pow(2,o.fall/12),t+dur);}
+  const lfo=a.createOscillator(),lg=a.createGain();lfo.frequency.value=5;lg.gain.setValueAtTime(0,t);lg.gain.linearRampToValueAtTime(o.vibDepth||22,t+Math.min(dur,.5));lfo.connect(lg).connect(os.detune);
+  const g=a.createGain(),v=(o.vol||1)*.5;
+  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.06);g.gain.setValueAtTime(v,t+dur-.1);g.gain.linearRampToValueAtTime(0,t+dur);
+  const out=a.createGain();out.gain.value=1;
+  [[o.vowel==="o"?500:750,7,1],[o.vowel==="o"?900:1200,9,.6],[2600,10,.25]].forEach(([fr,q,amt])=>{const bp=a.createBiquadFilter();bp.type="bandpass";bp.frequency.value=fr;bp.Q.value=q;const gg=a.createGain();gg.gain.value=amt*3;os.connect(bp).connect(gg).connect(out);});
+  out.connect(g).connect(bus);
+  [os,lfo].forEach(x=>{x.start(t);x.stop(t+dur+.05);track(x);});
+}
+/* 鼓 */
+let noiseBuf=null;
+function noise(){if(!noiseBuf){const a=A(),len=a.sampleRate;noiseBuf=a.createBuffer(1,len,a.sampleRate);const d=noiseBuf.getChannelData(0);for(let i=0;i<len;i++)d[i]=Math.random()*2-1;}return noiseBuf;}
+function kick(t,v=1){const a=A(),o=a.createOscillator(),g=a.createGain();o.frequency.setValueAtTime(130,t);o.frequency.exponentialRampToValueAtTime(42,t+.12);g.gain.setValueAtTime(.9*v,t);g.gain.exponentialRampToValueAtTime(.001,t+.32);o.connect(g).connect(bus);o.start(t);o.stop(t+.35);track(o);}
+function snare(t,v=1,brush){const a=A(),n=a.createBufferSource();n.buffer=noise();const f=a.createBiquadFilter();f.type=brush?"bandpass":"highpass";f.frequency.value=brush?2500:1200;const g=a.createGain();g.gain.setValueAtTime((brush?.18:.42)*v,t);g.gain.exponentialRampToValueAtTime(.001,t+(brush?.16:.2));n.connect(f).connect(g).connect(bus);n.start(t);n.stop(t+.25);track(n);
+  if(!brush){const o=a.createOscillator(),og=a.createGain();o.frequency.value=190;og.gain.setValueAtTime(.25*v,t);og.gain.exponentialRampToValueAtTime(.001,t+.09);o.connect(og).connect(bus);o.start(t);o.stop(t+.1);track(o);}}
+function hat(t,v=1){const a=A(),n=a.createBufferSource();n.buffer=noise();const f=a.createBiquadFilter();f.type="highpass";f.frequency.value=7500;const g=a.createGain();g.gain.setValueAtTime(.16*v,t);g.gain.exponentialRampToValueAtTime(.001,t+.05);n.connect(f).connect(g).connect(bus);n.start(t);n.stop(t+.07);track(n);}
+function stomp(t){const a=A(),o=a.createOscillator(),g=a.createGain();o.frequency.setValueAtTime(90,t);o.frequency.exponentialRampToValueAtTime(50,t+.08);g.gain.setValueAtTime(.5,t);g.gain.exponentialRampToValueAtTime(.001,t+.18);o.connect(g).connect(bus);o.start(t);o.stop(t+.2);track(o);}
+
+/* ================= 和弦进行与编曲 ================= */
+const PROG={
+  std:{bars:["I","I","I","I","IV","IV","I","I","V","IV","I","I"]},
+  quick:{bars:["I","IV","I","I","IV","IV","I","I","V","IV","I","V"]},
+  minor:{bars:["i","i","i","i","iv","iv","i","i","bVI","V","i","V"]}
+};
+const DEG={I:[0,"dom"],IV:[5,"dom"],V:[7,"dom"],i:[0,"min"],iv:[5,"min"],bVI:[8,"dom"]};
+const SHAPE={dom:[0,4,7,10],min:[0,3,7,10]};
+function chordOf(key,f){const [r,q]=DEG[f];return SHAPE[q].map(x=>key+r+x);}
+function eighth(t,beat,k,swing){return t+Math.floor(k/2)*beat+(k%2?(swing?beat*2/3:beat/2):0);}
+function lightStrip(strip,t0,barLen,n){
+  if(!strip)return;const cells=[...strip.children];const a=A();
+  for(let b=0;b<n;b++)later(()=>{cells.forEach(c=>c.classList.remove("now"));cells[b]&&cells[b].classList.add("now");},t0-a.currentTime+b*barLen);
+  later(()=>cells.forEach(c=>c.classList.remove("now")),t0-a.currentTime+n*barLen);
+}
+/* ================= 巴洛克：乐器 ================= */
+Object.assign(INST,{
+  hp:{bright:.995,decay:.9966,dur:1.8,vol:.24,peak:[2800,4]},
+  hp4:{bright:.998,decay:.995,dur:1.1,vol:.11,peak:[4000,3]},
+  pk:{bright:.92,decay:.9992,dur:1.8,vol:.16,drive:14,lp:3600}
+});
+INST.ac.peak=[220,5];
+function hpsi(t,m,o={}){pluck(t,m,"hp",{vol:o.vol||1,dur:o.dur});pluck(t+.003,m+12,"hp4",{vol:o.vol||1,dur:o.dur?Math.min(o.dur,1.1):undefined});}
+function hchord(t,notes,o={}){notes.forEach((m,k)=>hpsi(t+k*(o.spread==null?.028:o.spread),m,{vol:(o.vol||.75)}));}
+/* 拉弦乐器：o.ens 多把齐奏，o.vib 揉弦深度（巴洛克默认很小） */
+function bow(t,midi,dur,o={}){
+  const a=A(),f=mf(midi),n=o.ens?3:2,oscs=[];
+  for(let k=0;k<n;k++){const x=a.createOscillator();x.type="sawtooth";const ff=f*(1+(k-(n-1)/2)*(o.ens?.004:.0025));
+    if(o.from){x.frequency.setValueAtTime(ff*Math.pow(2,o.from/12),t);x.frequency.linearRampToValueAtTime(ff,t+(o.glide||.08));}else x.frequency.setValueAtTime(ff,t);oscs.push(x);}
+  const lfo=a.createOscillator(),lg=a.createGain();lfo.frequency.value=5.6;lg.gain.setValueAtTime(0,t);lg.gain.setValueAtTime(0,t+Math.min(.25,dur*.5));lg.gain.linearRampToValueAtTime(o.vib==null?5:o.vib,t+Math.min(.6,dur));lfo.connect(lg);oscs.forEach(x=>lg.connect(x.detune));
+  const low=midi<57,hp=a.createBiquadFilter();hp.type="highpass";hp.frequency.value=low?60:180;
+  const p1=a.createBiquadFilter();p1.type="peaking";p1.frequency.value=low?260:560;p1.Q.value=1.1;p1.gain.value=5;
+  const p2=a.createBiquadFilter();p2.type="peaking";p2.frequency.value=low?1500:2800;p2.Q.value=1.2;p2.gain.value=low?3:5;
+  const lp=a.createBiquadFilter();lp.type="lowpass";lp.frequency.value=o.lp||(low?2600:5200);
+  const g=a.createGain(),v=(o.vol||1)*(o.ens?.05:.075)*(low?1.6:1),at=o.att||.06;
+  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v*1.15,t+at);g.gain.linearRampToValueAtTime(v,t+at+.08);g.gain.setValueAtTime(v,t+Math.max(at+.09,dur-.08));g.gain.linearRampToValueAtTime(0,t+dur);
+  oscs.forEach(x=>x.connect(hp));hp.connect(p1).connect(p2).connect(lp).connect(g).connect(bus);
+  [...oscs,lfo].forEach(x=>{x.start(t);x.stop(t+dur+.05);track(x);});
+}
+function piano(t,midi,dur,vel=.6){
+  const a=A(),f=mf(midi),g=a.createGain(),lp=a.createBiquadFilter();lp.type="lowpass";lp.frequency.value=700+vel*4200;
+  [[f,"triangle",1],[f*2,"sine",.28],[f*3,"sine",.1],[f*1.002,"sine",.5]].forEach(([fr,ty,am])=>{const o=a.createOscillator(),og=a.createGain();o.type=ty;o.frequency.value=fr;og.gain.value=am;o.connect(og).connect(lp);o.start(t);o.stop(t+dur+.1);track(o);});
+  const v=.04+vel*.26,dec=Math.min(dur,1.2+(72-Math.min(midi,72))*.03);
+  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.005);g.gain.exponentialRampToValueAtTime(v*.25,t+dec*.4);g.gain.exponentialRampToValueAtTime(.0008,t+dur);
+  lp.connect(g).connect(bus);
+}
+function organ(t,midi,dur,o={}){
+  const a=A(),f=mf(midi),g=a.createGain(),stops=o.stops||[[1,.5],[2,.3]],v=(o.vol||1)*.11;
+  stops.forEach(([h,am])=>{const x=a.createOscillator();x.type="sine";x.frequency.value=f*h;const xg=a.createGain();xg.gain.value=am;x.connect(xg).connect(g);x.start(t);x.stop(t+dur+.1);track(x);});
+  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.04);g.gain.setValueAtTime(v,t+dur-.06);g.gain.linearRampToValueAtTime(0,t+dur);g.connect(bus);
+  const n=a.createBufferSource();n.buffer=noise();const bp=a.createBiquadFilter();bp.type="bandpass";bp.frequency.value=Math.min(6000,f*4);bp.Q.value=4;const ng=a.createGain();ng.gain.setValueAtTime(.05*(o.vol||1),t);ng.gain.exponentialRampToValueAtTime(.001,t+.06);n.connect(bp).connect(ng).connect(bus);n.start(t);n.stop(t+.08);track(n);
+}
+function recorder(t,midi,dur,o={}){
+  const a=A(),f=mf(midi),x=a.createOscillator(),x2=a.createOscillator();x.type="sine";x2.type="triangle";x.frequency.value=f;x2.frequency.value=f;
+  const lfo=a.createOscillator(),lg=a.createGain();lfo.frequency.value=5;lg.gain.setValueAtTime(0,t);lg.gain.linearRampToValueAtTime(dur>.6?9:0,t+Math.min(.5,dur));lfo.connect(lg);lg.connect(x.detune);lg.connect(x2.detune);
+  const g=a.createGain(),v=(o.vol||1)*.12;const m2=a.createGain();m2.gain.value=.18;
+  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.035);g.gain.setValueAtTime(v,t+dur-.05);g.gain.linearRampToValueAtTime(0,t+dur);
+  x.connect(g);x2.connect(m2).connect(g);
+  const n=a.createBufferSource();n.buffer=noise();n.loop=true;const bp=a.createBiquadFilter();bp.type="bandpass";bp.frequency.value=f*2;bp.Q.value=2;const ng=a.createGain();ng.gain.value=.012*(o.vol||1);n.connect(bp).connect(ng).connect(g);
+  g.connect(bus);[x,x2,lfo].forEach(z=>{z.start(t);z.stop(t+dur+.05);track(z);});n.start(t);n.stop(t+dur+.05);track(n);
+}
+function trumpet(t,midi,dur,o={}){
+  const a=A(),f=mf(midi),x=a.createOscillator();x.type="sawtooth";x.frequency.setValueAtTime(f*.985,t);x.frequency.linearRampToValueAtTime(f,t+.04);
+  const lp=a.createBiquadFilter();lp.type="lowpass";lp.Q.value=2;lp.frequency.setValueAtTime(500,t);lp.frequency.linearRampToValueAtTime(3600,t+.05);lp.frequency.linearRampToValueAtTime(2600,t+.25);
+  const pk=a.createBiquadFilter();pk.type="peaking";pk.frequency.value=1300;pk.gain.value=6;
+  const g=a.createGain(),v=(o.vol||1)*.12;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.03);g.gain.setValueAtTime(v*.85,t+Math.max(.05,dur-.06));g.gain.linearRampToValueAtTime(0,t+dur);
+  x.connect(lp).connect(pk).connect(g).connect(bus);x.start(t);x.stop(t+dur+.05);track(x);
+}
+function crash(t,v=1){const a=A(),n=a.createBufferSource();n.buffer=noise();const f=a.createBiquadFilter();f.type="highpass";f.frequency.value=4500;const g=a.createGain();g.gain.setValueAtTime(.25*v,t);g.gain.exponentialRampToValueAtTime(.001,t+1.3);n.connect(f).connect(g).connect(bus);n.start(t);n.stop(t+1.35);track(n);}
+
+/* ================= 和弦工具 ================= */
+const PCN={C:0,D:2,E:4,F:5,G:7,A:9,B:11};
+function chordPcs(name){let i=1,r=PCN[name[0]];if(name[1]==="#"){r++;i++;}else if(name[1]==="b"){r--;i++;}const rest=name.slice(i),m=rest.startsWith("m"),q=rest.includes("7");
+  const pcs=[r,r+(m?3:4),r+7];if(q)pcs.push(r+10);return pcs.map(x=>(x+12)%12);}
+function place(pcs,lo,hi){const out=[];for(let m=lo;m<hi;m++)if(pcs.includes(m%12))out.push(m);return out;}
+function rootNear(name,lo){const p=chordPcs(name)[0];let m=lo;while(m%12!==p)m++;return m;}
+const bt=b=>60/b;
+function stripNear(btn){const lab=btn.closest(".lab");return lab?lab.querySelector("[data-strip]"):null;}
+
+/* ================= 示例 ================= */
+const DEMOS={};
+/* 通奏低音 */
+const CB_N=[50,49,47,45,43,42,43,45],CB_C=["D","A","Bm","F#m","G","D","G","A7"];
+const CONT_MEL=[[0,78,1],[1,76,1],[2,74,1],[3,73,1],[4,71,.5],[4.5,73,.5],[5,74,1],[6,71,.5],[6.5,73,.5],[7,76,1]];
+function contDemo(t,layer){const beat=bt(76);
+  for(let p=0;p<2;p++){const tp=t+p*8*beat;
+    CB_N.forEach((m,i)=>{const tb=tp+i*beat;bow(tb,m,beat*.92,{vol:1.1,att:.04,vib:0});
+      if(layer>=2){hpsi(tb,m-12,{vol:.7});hchord(tb+.02,place(chordPcs(CB_C[i]),62,75).slice(0,3),{vol:.6});}});
+    if(layer>=3)CONT_MEL.forEach(([b,m,d])=>bow(tp+b*beat,m,d*beat*.96,{vol:1,vib:4,att:.04}));}
+  const end=t+16*beat;bow(end,38,beat*3,{vol:1.1,vib:0});if(layer>=2){hpsi(end,38,{vol:.8});hchord(end+.02,[62,66,69,74],{vol:.65,spread:.05});}if(layer>=3)bow(end,74,beat*3,{vol:1,vib:6});
+  return 19*beat+.6;}
+DEMOS["cont-bass"]=t=>contDemo(t,1);DEMOS["cont-harp"]=t=>contDemo(t,2);DEMOS["cont-full"]=t=>contDemo(t,3);
+/* 卡农（帕赫贝尔，公有领域） */
+const CN_B=[50,45,47,42,43,38,43,45],CN_C=["D","A","Bm","F#m","G","D","G","A"];
+const CN_V1=[78,76,74,73,71,69,71,73],CN_V2=[74,73,71,69,67,66,67,64];
+function canonBass(tc,beat,chords){CN_B.forEach((m,i)=>{const tb=tc+i*beat;bow(tb,m,beat*.95,{vol:1.1,vib:0,att:.05});hpsi(tb,m,{vol:.55});
+  if(chords){hchord(tb+.03,place(chordPcs(CN_C[i]),62,75).slice(0,3),{vol:.5,spread:.04});bow(tb,place(chordPcs(CN_C[i]),57,69)[1],beat*.98,{ens:1,vol:.5,vib:2,att:.15});}});}
+function canonVoice(tc,beat,line,o={}){line.forEach((m,i)=>bow(tc+i*beat,m,beat*.98,{vol:o.vol||1,vib:6,att:.07}));}
+DEMOS["canon-bass"]=(t,btn)=>{const beat=bt(66),cyc=8*beat;for(let c=0;c<2;c++)canonBass(t+c*cyc,beat,false);return 2*cyc+.8;};
+DEMOS["canon-chords"]=(t,btn)=>{const beat=bt(66),cyc=8*beat;for(let c=0;c<2;c++)canonBass(t+c*cyc,beat,true);hchord(t+2*cyc,[62,66,69,74],{vol:.6,spread:.05});bow(t+2*cyc,38,2.4,{vol:1,vib:0});return 2*cyc+2.6;};
+DEMOS["canon-1"]=(t,btn)=>{const beat=bt(66),cyc=8*beat;canonBass(t,beat,true);for(let c=1;c<3;c++){canonBass(t+c*cyc,beat,true);canonVoice(t+c*cyc,beat,c===1?CN_V1:CN_V2);}
+  bow(t+3*cyc,38,2.4,{vol:1,vib:0});hchord(t+3*cyc,[62,66,69,74],{vol:.6});bow(t+3*cyc,74,2.4,{vol:1,vib:8});return 3*cyc+2.6;};
+DEMOS["canon-3"]=(t,btn)=>{const beat=bt(72),cyc=8*beat,N=5;for(let c=0;c<N;c++)canonBass(t+c*cyc,beat,true);
+  const seq=c=>c%2===0?CN_V1:CN_V2;
+  for(let v=0;v<3;v++)for(let c=v+1;c<N;c++)canonVoice(t+c*cyc,beat,seq(c-v-1),{vol:[1,.85,.75][v]});
+  lightStrip(stripNear(btn),t,4*beat,10);const end=t+N*cyc;bow(end,38,3,{vol:1,vib:0});hchord(end,[62,66,69,74],{vol:.6,spread:.06});[78,74,69].forEach(m=>bow(end,m,3,{vol:.8,vib:8}));return N*cyc+3.2;};
+/* 哀歌低音 */
+function groundDemo(t,bass,chords){const beat=bt(60);let x=t;
+  bass.forEach((m,i)=>{const d=2*beat;bow(x,m,d*.97,{vol:1.2,vib:0,att:.08});hpsi(x,m-12,{vol:.5});const up=place(chordPcs(chords[i]),62,75).slice(0,3);hchord(x+.03,up,{vol:.45,spread:.06});up.forEach(n=>bow(x,n,d*.98,{ens:1,vol:.55,vib:3,att:.2}));x+=d;});
+  return x-t+.8;}
+DEMOS.lament=t=>groundDemo(t,[55,54,53,52,51,50,46,48,50,43],["Gm","D","Dm","C","Cm","D","Bb","Cm","D","Gm"]);
+DEMOS["plain-desc"]=t=>groundDemo(t,[55,53,51,50,46,48,50,43],["Gm","F","Cm","D","Bb","Cm","D","Gm"]);
+/* 力度 */
+const SCALE_D=[62,64,66,67,69,71,73,74];
+DEMOS["dyn-harpsi"]=t=>{SCALE_D.forEach((m,i)=>hpsi(t+i*.42,m,{vol:1}));hchord(t+8*.42,[62,66,69,74],{vol:1});return 5.4;};
+DEMOS["dyn-piano"]=t=>{SCALE_D.forEach((m,i)=>piano(t+i*.42,m,1.2,.08+i*.13));[62,66,69,74].forEach((m,k)=>piano(t+8*.42+k*.01,m,2.2,1));return 5.8;};
+const TER=[[0,79,1],[1,78,.5],[1.5,76,.5],[2,74,1],[3,71,1],[4,72,1],[5,76,1],[6,74,2]],TER_C=["G","G","G","G","C","C","D","D"];
+DEMOS.terrace=t=>{const beat=bt(96);
+  for(let r=0;r<2;r++){const tl=t+r*16*beat,te=tl+8*beat;
+    TER.forEach(([b,m,d])=>{bow(tl+b*beat,m,d*beat*.95,{ens:1,vol:1.2,vib:3});hpsi(te+b*beat,m,{vol:1});});
+    for(let b=0;b<8;b++){const ch=TER_C[b],r0=rootNear(ch,43);bow(tl+b*beat,r0,beat*.92,{vol:1.2,vib:0});hchord(tl+b*beat+.02,place(chordPcs(ch),55,67),{vol:.55,spread:.02});bow(tl+b*beat,place(chordPcs(ch),62,72)[0],beat*.95,{ens:1,vol:.5,vib:0});
+      if(b%2===0)hpsi(te+b*beat,r0,{vol:.7});}}
+  const end=t+32*beat;hchord(end,[55,59,62,67],{vol:.8});return 32*beat+1.6;};
+/* 乐器 */
+DEMOS["i-harpsi"]=t=>{const s=bt(100)/4;let k=0;["D","G","A7","D"].forEach((ch,i)=>{const tn=place(chordPcs(ch),62,80).slice(0,4),pat=[tn[0],tn[1],tn[2],tn[3]||tn[0]+12,tn[2],tn[1]];for(let r=0;r<16;r++)hpsi(t+(i*16+r)*s,pat[r%pat.length],{vol:.95});hpsi(t+i*16*s,rootNear(ch,38),{vol:.8});});hchord(t+64*s,[50,62,66,69,74],{vol:.9,spread:.05});return 64*s+1.8;};
+DEMOS["i-organ"]=t=>{const d=1.6,regs=[[[1,.5],[2,.25]],[[1,.45],[2,.3],[4,.2]],[[1,.4],[2,.32],[3,.14],[4,.22],[6,.08],[8,.1]]];
+  ["D","G","A","D"].forEach((ch,i)=>{const st=regs[Math.min(2,i)];place(chordPcs(ch),57,70).slice(0,3).forEach(m=>organ(t+i*d,m,d*.98,{stops:st}));organ(t+i*d,rootNear(ch,38),d*.98,{stops:[[1,.6],[2,.3]],vol:1.2});});
+  [50,57,62,66].forEach(m=>organ(t+4*d,m,2.4,{stops:regs[2]}));organ(t+4*d,38,2.4,{stops:[[1,.6],[2,.3]],vol:1.2});return 4*d+2.6;};
+DEMOS["i-violin"]=t=>{const e=bt(112)/2;[74,76,78,79,81,79,78,76,78,74,71,74,79,78,76,74,73,76,74].forEach((m,i)=>bow(t+i*e,m,e*(i===18?4:.95),{vol:1,vib:i===18?7:0,att:.025}));return 23*e+.6;};
+DEMOS["i-cello"]=t=>{const b=bt(80);[50,52,54,55,57,55,54,52,50,49,47,45,43,45,38].forEach((m,i)=>bow(t+i*b*.5,m,b*(i===14?3:.48),{vol:1.2,vib:i===14?5:0,att:.03}));return 7*b+3*b+.4;};
+DEMOS["i-recorder"]=t=>{const b=bt(84);[[0,79,1],[1,81,.5],[1.5,79,.5],[2,78,1],[3,76,1],[4,74,1.5],[5.5,76,.5],[6,78,2],[8,79,1],[9,76,1],[10,74,2]].forEach(([s,m,d])=>recorder(t+s*b,m,d*b*.95));hchord(t,[55,59,62],{vol:.4});hchord(t+4*b,[50,54,57],{vol:.4});hchord(t+8*b,[55,59,62],{vol:.4});return 12*b+.5;};
+DEMOS["i-trumpet"]=t=>{const b=bt(100);[[0,69,.5],[.5,74,.5],[1,78,1],[2,74,.5],[2.5,78,.5],[3,81,2],[5,78,.5],[5.5,81,.5],[6,74,2]].forEach(([s,m,d])=>trumpet(t+s*b,m,d*b*.92));[[0,"D"],[3,"D"],[5,"A"],[6,"D"]].forEach(([s,ch])=>{hchord(t+s*b,place(chordPcs(ch),57,69),{vol:.55});bow(t+s*b,rootNear(ch,38),b*.9,{vol:1,vib:0});});return 8*b+.6;};
+/* 两只老虎（Frère Jacques，公有领域） */
+const RND=[[[0,72,1],[1,74,1],[2,76,1],[3,72,1]],[[0,72,1],[1,74,1],[2,76,1],[3,72,1]],[[0,76,1],[1,77,1],[2,79,2]],[[0,76,1],[1,77,1],[2,79,2]],[[0,79,.5],[.5,81,.5],[1,79,.5],[1.5,77,.5],[2,76,1],[3,72,1]],[[0,79,.5],[.5,81,.5],[1,79,.5],[1.5,77,.5],[2,76,1],[3,72,1]],[[0,72,1],[1,67,1],[2,72,2]],[[0,72,1],[1,67,1],[2,72,2]]];
+function roundDemo(t,n){const beat=bt(116),ins=[(x,m,d)=>recorder(x,m,d,{vol:1.1}),(x,m,d)=>bow(x,m-12,d,{vol:.9,vib:3,att:.04}),(x,m,d)=>bow(x,m-24,d,{vol:1,vib:0,att:.04})];
+  for(let v=0;v<n;v++)RND.forEach((bar,i)=>bar.forEach(([b,m,d])=>ins[v](t+((v*2+i)*4+b)*beat,m,d*beat*.92)));
+  const bars=8+2*(n-1);for(let i=0;i<bars;i++)hchord(t+i*4*beat,[48,55,64],{vol:.35,spread:.05});return bars*4*beat+.6;}
+DEMOS.round1=t=>roundDemo(t,1);DEMOS.round3=t=>roundDemo(t,3);
+/* 赋格（原创主题） */
+const SUBJ=[[0,62,1],[1,69,1],[2,65,.5],[2.5,64,.5],[3,62,.5],[3.5,61,.5],[4,62,1],[5,64,.5],[5.5,65,.5],[6,67,.5],[6.5,65,.5],[7,64,.5],[7.5,62,.5]];
+const CS=[[0,77,1],[1,79,1],[2,76,1],[3,77,1],[4,76,1],[5,74,1],[6,77,1],[7,76,.5],[7.5,73,.5]];
+function line(t,beat,notes,shift,vol){notes.forEach(([b,m,d])=>hpsi(t+b*beat,m+shift,{vol:vol||1,dur:Math.max(.5,d*beat+.4)}));}
+DEMOS.subject=t=>{const beat=bt(96);line(t,beat,SUBJ,0,1.1);hpsi(t+8*beat,62,{vol:1});return 9*beat+.8;};
+DEMOS.fugue=t=>{const beat=bt(96);
+  line(t,beat,SUBJ,0,1);                                   // 声部二：主题
+  line(t+8*beat,beat,SUBJ,7,1);                            // 声部一：答题（高五度）
+  line(t+8*beat,beat,CS,-7,.9);                            // 声部二：对题
+  line(t+16*beat,beat,SUBJ,-12,1.1);                       // 声部三：主题（低八度）
+  line(t+16*beat,beat,CS,-5,.85);                          // 声部一：对题（移位）
+  line(t+16*beat,beat,[[0,70,2],[2,69,2],[4,67,2],[6,65,1],[7,64,1]],0,.8);
+  const c=t+24*beat;line(c,beat,[[0,73,1],[1,76,1],[2,74,2]],0,1);line(c,beat,[[0,69,2],[2,65,2]],0,.9);line(c,beat,[[0,45,1],[1,45,1],[2,38,2]],0,1.1);hpsi(c+2*beat,50,{vol:.9});
+  return 28*beat+1.4;};
+/* 装饰音 */
+const ORN_C=["G","G","G","D","G","D","G","G"];
+function ornBack(t,beat){ORN_C.forEach((ch,i)=>{hpsi(t+i*beat,rootNear(ch,43),{vol:.7});hchord(t+i*beat+.02,place(chordPcs(ch),55,67),{vol:.4,spread:.02});});hpsi(t+8*beat,43,{vol:.7});}
+DEMOS["orn-plain"]=t=>{const beat=bt(72);ornBack(t,beat);[[0,74,1],[1,72,1],[2,71,1],[3,69,1],[4,71,2],[6,67,2]].forEach(([b,m,d])=>bow(t+b*beat,m,d*beat*.95,{vol:1,vib:0,att:.04}));return 8*beat+.8;};
+const ORN_F=[[0,76,.5],[.5,74,.5],[1,72,.12],[1.12,71,.12],[1.24,72,.76],[2,71,.5],[2.5,72,.25],[2.75,71,.25],[3,69,1],[4,72,.125],[4.125,71,.125],[4.25,72,.125],[4.375,71,.125],[4.5,72,.125],[4.625,71,.125],[4.75,72,.125],[4.875,71,.125],[5,69,.5],[5.5,71,.5],[6,67,2]];
+DEMOS["orn-fancy"]=t=>{const beat=bt(72);ornBack(t,beat);ORN_F.forEach(([b,m,d])=>bow(t+b*beat,m,d*beat*.97,{vol:1,vib:d>1?6:0,att:.02}));return 8*beat+.8;};
+/* 马达节奏 */
+DEMOS.motor=t=>{const beat=bt(120),s=beat/4,CH=["Am","Dm","G","C","F","Dm","E","Am"];
+  CH.forEach((ch,i)=>{const tb=t+i*4*beat,tn=place(chordPcs(ch),69,82).slice(0,3),pat=[tn[0],tn[1],tn[2],tn[1]];
+    for(let r=0;r<16;r++)bow(tb+r*s,pat[r%4]+(r>=8&&r%4===2?12:0),s*.9,{vol:.75,vib:0,att:.012});
+    for(let k=0;k<8;k++)bow(tb+k*beat/2,rootNear(ch,40)+(k%2?12:0),beat*.42,{vol:1,vib:0,att:.02});
+    for(let k=0;k<4;k++)hchord(tb+k*beat,place(chordPcs(ch),57,69).slice(0,3),{vol:.5,spread:.01});});
+  const end=t+32*beat;[57,64,69,72].forEach(m=>bow(end,m,1.4,{vol:.9,vib:4}));bow(end,45,1.4,{vol:1.1});hchord(end,[57,64,69,72],{vol:.7});return 32*beat+1.6;};
+/* 宣叙调与咏叹调 */
+DEMOS.recit=t=>{const R=[[0,72,.16],[.17,72,.16],[.34,72,.16],[.51,72,.32],[.85,74,.18],[1.05,72,.16],[1.23,71,.4],[1.9,71,.16],[2.07,71,.16],[2.24,72,.16],[2.41,74,.32],[2.75,74,.16],[2.93,76,.4],[3.6,74,.16],[3.77,74,.16],[3.94,72,.2],[4.16,71,.3],[4.5,69,.5],[5.05,67,.7]];
+  R.forEach(([s,m,d])=>voice(t+s,m,d,{from:0,glide:.03,vibDepth:0,vowel:"a",vol:.9}));
+  hchord(t,[55,59,62],{vol:.7});bow(t,43,1.8,{vol:.9,vib:0});hchord(t+1.85,[54,57,60,62],{vol:.7});bow(t+1.85,50,1.7,{vol:.9,vib:0});hchord(t+4.45,[54,57,60],{vol:.7});bow(t+4.45,50,.55,{vol:.9,vib:0});hchord(t+5.05,[55,59,62],{vol:.7});bow(t+5.05,43,1,{vol:.9,vib:0});return 6.4;};
+const ARIA=[[0,67,2],[2,70,1],[3,74,2],[5,72,1],[6,75,2],[8,72,1],[9,74,1.5],[10.5,72,.5],[11,69,1],[12,70,2],[14,67,1],[15,66,2],[17,69,1],[18,67,3]],ARIA_C=["Gm","Gm","Cm","D","Gm","D","Gm"];
+DEMOS.aria=t=>{const beat=bt(63);ARIA.forEach(([b,m,d],i)=>voice(t+b*beat,m,d*beat*.97,{from:-1,glide:.12,vibDepth:30,vowel:i%3===2?"o":"a",vol:.95}));
+  ARIA_C.forEach((ch,i)=>{const tb=t+i*3*beat,up=place(chordPcs(ch),55,67).slice(0,3);bow(tb,rootNear(ch,43),3*beat*.97,{vol:1,vib:2});hchord(tb,up,{vol:.4,spread:.05});up.forEach(m=>bow(tb,m,3*beat*.98,{ens:1,vol:.4,vib:3,att:.25}));});
+  return 21*beat+.8;};
+/* 回归段 */
+const RIT=[79,78,79,74,71,74,67,71,72,76,74,72,71,69,67,66];
+const RIT_C=["G","G","G","G","C","D","G","G"];
+function tutti(t,beat,shift){RIT.forEach((m,k)=>bow(t+k*beat/2,m+shift,beat*.46,{ens:1,vol:1.3,vib:0,att:.02}));
+  for(let q=0;q<8;q++){const ch=shiftChord(RIT_C[q],shift),r=rootNear(ch,40);bow(t+q*beat,r,beat*.9,{vol:1.2,vib:0});bow(t+q*beat+beat/2,r+12,beat*.4,{vol:.8,vib:0});hchord(t+q*beat+.02,place(chordPcs(ch),57,69).slice(0,3),{vol:.6,spread:.015});}}
+const NOTE_NAMES=["C","C#","D","Eb","E","F","F#","G","Ab","A","Bb","B"];
+function shiftChord(ch,s){const p=chordPcs(ch)[0],m=ch.replace(/^[A-G][#b]?/,"");return NOTE_NAMES[(p+s+120)%12]+m;}
+function solo(t,beat,chords){const s=beat/4;chords.forEach((ch,i)=>{const tb=t+i*2*beat,tn=place(chordPcs(ch),74,88).slice(0,3),pat=[tn[0],tn[1],tn[2],tn[1]+(i%2?0:0)];
+  for(let r=0;r<8;r++)bow(tb+r*s,pat[r%4]+(r===4?(tn[2]+12-pat[0]>12?0:0):0),s*.92,{vol:.95,vib:0,att:.015});
+  bow(tb,rootNear(ch,40),beat*1.8,{vol:.8,vib:0});hchord(tb,place(chordPcs(ch),57,69).slice(0,3),{vol:.45});});}
+DEMOS.ritornello=(t,btn)=>{const beat=bt(116),seg=8*beat;
+  tutti(t,beat,0);solo(t+seg,beat,["G","Em","A","A7"]);tutti(t+2*seg,beat,-5);solo(t+3*seg,beat,["D","Bm","D7","D7"]);tutti(t+4*seg,beat,0);
+  lightStrip(stripNear(btn),t,seg,5);const end=t+5*seg;bow(end,67,1.6,{ens:1,vol:1.2,vib:4});bow(end,43,1.6,{vol:1.2});hchord(end,[55,59,62,67],{vol:.8});return 5*seg+1.8;};
+/* 卡农和弦的三个时代 */
+const POP_MEL=[[0,78,1.5],[1.5,76,.5],[2,76,1],[3,73,1],[4,74,1.5],[5.5,73,.5],[6,73,2],[8,71,1],[9,74,1],[10,78,1],[11,74,1],[12,79,1.5],[13.5,78,.5],[14,76,2]];
+DEMOS["canon-pop"]=t=>{const beat=bt(80),cyc=16*beat;
+  for(let c=0;c<2;c++){const tc=t+c*cyc;CN_C.forEach((ch,i)=>{const tb=tc+i*2*beat,up=place(chordPcs(ch),57,70).slice(0,3),r=rootNear(ch,38);
+    piano(tb,r,2*beat,.5);piano(tb,r+12,2*beat,.35);up.forEach((m,k)=>{piano(tb+beat*.5,m,beat*1.4,.32);piano(tb+beat*1.5,m,beat*.6,.25);});
+    pluck(tb,r,"bass",{vol:.9,dur:2*beat});
+    if(c===1){kick(tb,.8);snare(tb+beat,.5);for(let k=0;k<4;k++)hat(tb+k*beat/2,.5);}});
+    POP_MEL.forEach(([b,m,d])=>voice(tc+b*beat,m-12,d*beat*.95,{from:-1,glide:.1,vibDepth:16,vowel:"a",vol:.85}));}
+  piano(t+2*cyc,38,2.5,.6);[62,66,69,74].forEach(m=>piano(t+2*cyc,m,2.5,.5));return 2*cyc+2.6;};
+DEMOS["canon-rock"]=t=>{const beat=bt(120),cyc=16*beat,PR=[50,45,47,42,43,50,43,45];crash(t);
+  for(let c=0;c<2;c++){const tc=t+c*cyc;PR.forEach((r,i)=>{const tb=tc+i*2*beat;
+    for(let k=0;k<4;k++)strum(tb+k*beat/2,[r,r+7,r+12],"pk",{vol:1,mute:beat*.45,spread:.004});
+    for(let k=0;k<4;k++){pluck(tb+k*beat/2,r-12,"bass",{vol:.9,mute:beat*.45});hat(tb+k*beat/2,.8);}
+    kick(tb);snare(tb+beat,1);kick(tb+beat*1.5,.7);
+    const mel=c===0?CN_V1:CN_V2;pluck(tb,mel[i]+12,"dr",{vol:1.2,from:i%2?-1:0,glide:.12,vib:1,vibAt:.4,dur:2*beat+.4});});}
+  const end=t+2*cyc;crash(end,1.2);kick(end);strum(end,[50,57,62],"pk",{vol:1.2,dur:2});pluck(end,86,"dr",{vol:1.2,vib:1,dur:2.2});return 2*cyc+2.2;};
+
+/* ================= 调度 ================= */
+const fab=document.getElementById("stopAll");
+function setActive(b){activeBtn=b;b&&b.classList.add("playing");fab.classList.add("on");}
+function clearActive(){if(activeBtn){activeBtn.classList.remove("playing");activeBtn=null;}fab.classList.remove("on");}
+function runDemo(name,btn){newBus();setActive(btn);const t=A().currentTime+.12,d=DEMOS[name](t,btn)||3;later(()=>clearActive(),d+.4);}
+document.querySelectorAll("[data-strip]").forEach(s=>{const n=+s.dataset.strip||12;for(let i=0;i<n;i++)s.appendChild(document.createElement("i"));});
+document.querySelectorAll("[data-demo]").forEach(b=>b.addEventListener("click",()=>{if(b.classList.contains("playing")){stopDemos();return;}runDemo(b.dataset.demo,b);}));
+document.querySelectorAll("[data-stop]").forEach(b=>b.addEventListener("click",stopDemos));
+fab.addEventListener("click",stopDemos);
+
+/* ================= 推荐曲目 ================= */
+const SONGS=[
+  {side:"A",q:"Monteverdi L'Orfeo Toccata",title:"《奥菲欧》序曲（Toccata）",by:"蒙特威尔第",yr:"1607",style:"早期歌剧",
+   txt:"第一部成熟歌剧的开场。一段号角般的音乐重复三遍，据说是用来提醒观众：演出要开始了。",
+   listen:["几乎只有一个和弦，靠小号和鼓的节奏撑起来","对比后面的作品：巴洛克刚开始时，和声还很简单"]},
+  {side:"A",q:"Purcell Dido's Lament When I am laid in earth",title:"When I am laid in earth（狄朵的哀歌）",by:"珀塞尔",yr:"约 1689",style:"歌剧 · 哀歌低音",
+   txt:"歌剧《狄朵与埃涅阿斯》里女王临死前的咏叹调。下面那条半音下行的低音从头到尾重复，上面的歌声越来越悲伤。",
+   listen:["先只听低音：数一数它重复了几次","对照实验 III 的“哀歌低音”"]},
+  {side:"A",q:"Pachelbel Canon in D",title:"D 大调卡农",by:"帕赫贝尔",yr:"约 1680–1706",style:"卡农 · 固定低音",
+   txt:"本章的主角之一。八个低音，三把小提琴，二十多次变奏。注意它的原版速度通常比婚礼上的慢。",
+   listen:["跟着低音数 1 到 8","找到第二、第三把小提琴进来的时刻"]},
+  {side:"A",q:"Vivaldi Four Seasons Spring Allegro",title:"《四季》·“春” 第一乐章",by:"维瓦尔第",yr:"1725",style:"协奏曲 · 标题音乐",
+   txt:"乐队奏出春天的主题，独奏小提琴模仿鸟叫、流水和雷雨。最容易上手的回归段形式例子。",
+   listen:["开头的主题一共回来了几次？","独奏小提琴什么时候在学鸟叫？"]},
+  {side:"A",q:"Bach Brandenburg Concerto No. 3 Allegro",title:"《勃兰登堡协奏曲》第三号 第一乐章",by:"巴赫",yr:"1721",style:"协奏曲",
+   txt:"只有弦乐和通奏低音，三组小提琴、三组中提琴、三组大提琴彼此传球，马达节奏一刻不停。",
+   listen:["听那种持续不断的推进感，对照实验 IX","各声部像在接力传同一个动机"]},
+  {side:"A",q:"Bach Toccata and Fugue in D minor BWV 565",title:"D 小调托卡塔与赋格",by:"传为巴赫",yr:"18 世纪初",style:"管风琴",
+   txt:"恐怖片里常用的那段管风琴开头。值得一提的是，学者们至今对它是不是巴赫写的还有争论。",
+   listen:["开头的托卡塔像即兴，后面的赋格才是严格的对位","注意管风琴可以把一个音无限延长"]},
+  {side:"B",q:"Bach Cello Suite No. 1 Prelude",title:"无伴奏大提琴组曲第一号 · 前奏曲",by:"巴赫",yr:"约 1720",style:"独奏",
+   txt:"只有一把大提琴，却能同时听出低音、和声和旋律：靠的是快速的分解和弦。",
+   listen:["一把琴，怎么让你“听见”和弦？","对比实验 I：一个人同时扮演了通奏低音和旋律"]},
+  {side:"B",q:"Bach Air on the G String Orchestral Suite No. 3",title:"G 弦上的咏叹调",by:"巴赫",yr:"约 1730",style:"管弦乐组曲",
+   txt:"原本是《第三号管弦乐组曲》里的慢乐章。低音一步一步往下走，上面的旋律长长地延展。",
+   listen:["低音像在走路，一拍一步","练习 4 会把它和一首 1967 年的流行歌对比"]},
+  {side:"B",q:"Bach Goldberg Variations Aria Glenn Gould",title:"哥德堡变奏曲 · 咏叹调",by:"巴赫",yr:"1741",style:"键盘变奏曲",
+   txt:"一段咏叹调加三十个变奏，所有变奏都建立在同一个低音和和声框架上。加拿大钢琴家 Glenn Gould 1955 年的录音让它家喻户晓。",
+   listen:["可以搜羽管键琴版和钢琴版对比，对照实验 IV","这又是一个“固定低音”的大型版本"]},
+  {side:"B",q:"Handel Messiah Hallelujah Chorus",title:"《弥赛亚》· 哈利路亚",by:"亨德尔",yr:"1742",style:"清唱剧",
+   txt:"本章讲过的“起立”传统就来自这一段。合唱在齐唱和对位之间来回切换。",
+   listen:["“哈利路亚”这个词被重复了多少次？","注意小号和定音鼓在最后进来"]},
+  {side:"B",q:"Procol Harum A Whiter Shade of Pale",title:"A Whiter Shade of Pale",by:"Procol Harum",yr:"1967",style:"巴洛克流行",
+   txt:"那段管风琴前奏带着明显的巴赫味道，下行的低音线和《G 弦上的咏叹调》很像。",
+   listen:["先听管风琴的低音，再回去听《G 弦上的咏叹调》","一首摇滚歌里藏着的通奏低音"]},
+  {side:"B",q:"JerryC Canon Rock",title:"Canon Rock",by:"JerryC",yr:"2005",style:"摇滚改编",
+   txt:"台湾吉他手 JerryC 的摇滚版《卡农》。网友翻弹的视频在 YouTube 早期疯传，让很多年轻人第一次知道了这串和弦。",
+   listen:["和弦进行和帕赫贝尔一模一样","对照实验 XII 的“摇滚”版本"]}
+];
+const ICON="M8 5v14l11-7z";
+const ROM=["I","II","III","IV","V","VI"];let numA=0,numB=0;
+SONGS.forEach(s=>{
+  const el=document.createElement("div");el.className="song";const no=ROM[s.side==="A"?numA++:numB++];
+  const q=encodeURIComponent(s.q||`${s.title} ${s.by}`);
+  const yt=s.yt?`https://www.youtube.com/watch?v=${s.yt}`:`https://www.youtube.com/results?search_query=${q}`;
+  el.innerHTML=`<div class="pnum">${no}</div>
+  <div><div class="meta"><span class="title">${s.title}</span><span class="by">${s.by}</span><span class="yr">${s.yr}</span><span class="style">${s.style}</span></div>
+  <p>${s.txt}</p><ul class="listen">${s.listen.map(x=>`<li>${x}</li>`).join("")}</ul>
+  <div class="listen-links"><a class="main" href="${yt}" target="_blank" rel="noopener">${s.yt?"YouTube 官方音源":"YouTube 搜索"}</a>
+  <a href="https://music.163.com/#/search/m/?s=${q}&type=1" target="_blank" rel="noopener">网易云</a>
+  <a href="https://y.qq.com/n/ryqq/search?w=${q}" target="_blank" rel="noopener">QQ音乐</a></div></div>
+  <a class="playlink" href="${yt}" target="_blank" rel="noopener" aria-label="在 YouTube 收听 ${s.title}"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="${ICON}"/></svg></a>`;
+  document.getElementById(s.side==="A"?"songsA":"songsB").appendChild(el);
+});
+
+/* ================= 原创图解 ================= */
+const NS="http://www.w3.org/2000/svg";
+function S(p,tag,a,txt){const e=document.createElementNS(NS,tag);for(const k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;p.appendChild(e);return e;}
+/* 图 1 时间轴 */
+(()=>{const g=document.getElementById("tl-fig");if(!g)return;const x=y=>40+(y-1500)/400*600;
+  S(g,"line",{x1:40,y1:120,x2:640,y2:120,class:"sv-l","stroke-width":1.5});
+  for(let y=1500;y<=1900;y+=50){S(g,"line",{x1:x(y),y1:116,x2:x(y),y2:124,class:"sv-l","stroke-width":1});S(g,"text",{x:x(y),y:140,"text-anchor":"middle",class:"sv-m"},String(y));}
+  [[1500,1600,"文艺复兴","sv-card"],[1600,1750,"巴洛克","sv-red"],[1750,1820,"古典","sv-card"],[1820,1900,"浪漫","sv-card"]].forEach(([a,b,t,c])=>{S(g,"rect",{x:x(a),y:62,width:x(b)-x(a)-2,height:44,class:c});if(c!=="sv-red")S(g,"rect",{x:x(a),y:62,width:x(b)-x(a)-2,height:44,class:"sv-l","stroke-width":1});
+    S(g,"text",{x:(x(a)+x(b))/2,y:89,"text-anchor":"middle",class:c==="sv-red"?"sv-on":"sv-t",style:c==="sv-red"?"font-size:15px":""},t);});
+  [[1607,"《奥菲欧》"],[1685,"巴赫、亨德尔出生"],[1750,"巴赫去世"]].forEach(([y,t],i)=>{S(g,"line",{x1:x(y),y1:30+i*0,x2:x(y),y2:62,class:"sv-lr","stroke-width":1.5});S(g,"text",{x:x(y)+4,y:28+(i%2)*14,class:"sv-r"},y+" "+t);});
+  [[1500,1644,"明"],[1644,1661,"顺治"],[1661,1722,"康熙"],[1722,1735,"雍正"],[1735,1796,"乾隆"],[1796,1900,"嘉庆 · 道光 · 咸丰 · 同治 · 光绪"]].forEach(([a,b,t],i)=>{const c=t==="康熙"?"sv-must":"sv-soft";S(g,"rect",{x:x(a),y:160,width:x(b)-x(a)-2,height:34,class:c});
+    S(g,"text",{x:(x(a)+x(b))/2,y:182,"text-anchor":"middle",class:"sv-t",style:"font-size:"+(x(b)-x(a)<40?"10px":"12.5px")},t);});
+  S(g,"text",{x:40,y:218,class:"sv-ts"},"中国");S(g,"text",{x:40,y:56,class:"sv-ts"},"欧洲音乐");
+})();
+/* 图 2 数字低音 */
+(()=>{const g=document.getElementById("fig-bass");if(!g)return;
+  const L="CDEFGAB",bottom=110,gap=14,x0=110,cw=58;
+  for(let i=0;i<5;i++)S(g,"line",{x1:40,y1:bottom-i*gap,x2:640,y2:bottom-i*gap,class:"sv-l","stroke-width":1});
+  S(g,"text",{x:48,y:bottom-gap*2.6,class:"sv-tb",style:"font-size:34px;font-family:serif"},"𝄢");
+  const notes=[["D",3,0,""],["C",3,1,"6"],["B",2,0,""],["A",2,0,"6"],["G",2,0,""],["F",2,1,"6"],["G",2,0,""],["A",2,0,"7"],["D",2,0,""]];
+  const chords=["D","A/C♯","Bm","F♯m/A","G","D/F♯","G","A7","D"];
+  notes.forEach(([l,o,sh,fig],i)=>{const step=(o*7+L.indexOf(l))-(2*7+4),y=bottom-step*gap/2,x=x0+i*cw;
+    if(y>bottom+gap/2)for(let ly=bottom+gap;ly<=y+1;ly+=gap)S(g,"line",{x1:x-14,y1:ly,x2:x+14,y2:ly,class:"sv-l","stroke-width":1});
+    S(g,"ellipse",{cx:x,cy:y,rx:8,ry:6,class:"sv-ink",transform:`rotate(-20 ${x} ${y})`});S(g,"line",{x1:x+7,y1:y,x2:x+7,y2:y-38,class:"sv-l","stroke-width":1.4});
+    if(sh)S(g,"text",{x:x-24,y:y+5,class:"sv-tb",style:"font-size:16px"},"♯");
+    if(fig)S(g,"text",{x,y:168,"text-anchor":"middle",class:"sv-r",style:"font-size:16px;font-family:var(--font-mono)"},fig);
+    S(g,"text",{x,y:228,"text-anchor":"middle",class:"sv-t",style:"font-weight:700"},chords[i]);});
+  S(g,"text",{x:20,y:172,class:"sv-ts"},"数字低音");S(g,"text",{x:20,y:232,class:"sv-ts"},"今天的写法");
+  S(g,"line",{x1:20,y1:196,x2:660,y2:196,class:"sv-lline","stroke-width":1,"stroke-dasharray":"4 4"});
+  S(g,"text",{x:340,y:258,"text-anchor":"middle",class:"sv-ts"},"“6”的意思：低音上面弹第一转位和弦；“7”：加上七音。没写数字就弹原位三和弦。");
+})();
+/* 图 3 卡农低音循环 */
+(()=>{const g=document.getElementById("canon-fig");if(!g)return;const cx=340,cy=160,R=98;
+  S(g,"circle",{cx,cy,r:R,class:"sv-lline","stroke-width":2});
+  const nm=["D","A","B","F♯","G","D","G","A"];
+  CN_C.forEach((ch,i)=>{const a=-Math.PI/2+i*Math.PI/4,x=cx+R*Math.cos(a),y=cy+R*Math.sin(a);
+    S(g,"circle",{cx:x,cy:y,r:24,class:i===0?"sv-red":"sv-card"});if(i)S(g,"circle",{cx:x,cy:y,r:24,class:"sv-l","stroke-width":1.5});
+    S(g,"text",{x,y:y+6,"text-anchor":"middle",class:i===0?"sv-on":"sv-tb",style:"font-size:17px"},nm[i]);
+    const lx=cx+(R+40)*Math.cos(a)*1.25,ly=cy+(R+40)*Math.sin(a);S(g,"text",{x:lx,y:ly+4,"text-anchor":"middle",class:"sv-r"},ch.replace("#","♯"));
+    S(g,"text",{x:cx+(R-40)*Math.cos(a),y:cy+(R-40)*Math.sin(a)+4,"text-anchor":"middle",class:"sv-m"},String(i+1));});
+  S(g,"text",{x:cx,y:cy-6,"text-anchor":"middle",class:"sv-tb"},"八个低音");S(g,"text",{x:cx,y:cy+16,"text-anchor":"middle",class:"sv-ts"},"转一圈 · 再转一圈");
+  S(g,"text",{x:20,y:300,class:"sv-ts"},"黑字：低音　红字：上面对应的和弦");
+})();
+/* 图 4 力度 */
+(()=>{const g=document.getElementById("dyn-fig");if(!g)return;
+  const panel=(y0,title,pts)=>{S(g,"text",{x:20,y:y0+14,class:"sv-tb"},title);S(g,"line",{x1:180,y1:y0+80,x2:650,y2:y0+80,class:"sv-l","stroke-width":1});S(g,"line",{x1:180,y1:y0,x2:180,y2:y0+80,class:"sv-l","stroke-width":1});
+    S(g,"text",{x:170,y:y0+12,"text-anchor":"end",class:"sv-m"},"强");S(g,"text",{x:170,y:y0+78,"text-anchor":"end",class:"sv-m"},"弱");
+    S(g,"path",{d:pts.map((p,i)=>(i?"L":"M")+(180+p[0]*470)+" "+(y0+80-p[1]*72)).join(" "),class:"sv-lr","stroke-width":3,"stroke-linejoin":"round"});};
+  panel(20,"阶梯式（巴洛克）",[[0,.85],[.25,.85],[.25,.35],[.5,.35],[.5,.85],[.75,.85],[.75,.35],[1,.35]]);
+  panel(130,"渐强渐弱（后来）",[[0,.2],[.45,.9],[.6,.9],[1,.15]]);
+  S(g,"text",{x:190,y:32,class:"sv-ts"},"全体齐奏");S(g,"text",{x:300,y:96,class:"sv-ts"},"只剩羽管键琴（回声）");
+})();
+/* 图 5 赋格 */
+(()=>{const g=document.getElementById("fugue-fig");if(!g)return;const x0=110,w=170;
+  const rows=[["声部一（高）",[[1,"答题 · A 小调","sv-red"],[2,"对题","sv-soft"]]],["声部二（中）",[[0,"主题 · D 小调","sv-red"],[1,"对题","sv-soft"],[2,"自由声部","sv-card"]]],["声部三（低）",[[2,"主题 · D 小调","sv-red"]]]];
+  rows.forEach(([n,cells],r)=>{const y=24+r*56;S(g,"text",{x:20,y:y+26,class:"sv-t"},n);
+    cells.forEach(([c,t,cl])=>{const x=x0+c*w;S(g,"rect",{x,y,width:w-8,height:38,class:cl});if(cl!=="sv-red")S(g,"rect",{x,y,width:w-8,height:38,class:"sv-l","stroke-width":1});S(g,"text",{x:x+(w-8)/2,y:y+24,"text-anchor":"middle",class:cl==="sv-red"?"sv-on":"sv-t"},t);});});
+  [0,1,2].forEach(c=>S(g,"text",{x:x0+c*w,y:208,class:"sv-m"},`第 ${c*2+1}–${c*2+2} 小节`));
+})();
+/* 图 6 装饰音 */
+(()=>{const g=document.getElementById("orn-fig");if(!g)return;
+  const plot=(y0,notes,title,cls)=>{S(g,"text",{x:20,y:y0+40,class:"sv-tb"},title);let d="";notes.forEach(([b,m,dd],i)=>{const x1=140+b*62,x2=140+(b+dd)*62,y=y0+70-(m-66)*5;d+=(i?" L ":"M ")+x1+" "+y+" L "+x2+" "+y;});S(g,"path",{d,class:cls,"stroke-width":3,"stroke-linejoin":"round"});};
+  plot(10,[[0,74,1],[1,72,1],[2,71,1],[3,69,1],[4,71,2],[6,67,2]],"乐谱上","sv-ld");
+  plot(120,ORN_F,"演奏时","sv-lr");
+  S(g,"text",{x:140+0*62,y:120,class:"sv-ts"},"倚音");S(g,"text",{x:140+1*62,y:132,class:"sv-ts"},"波音");S(g,"text",{x:140+4*62,y:126,class:"sv-ts"},"颤音");
+})();
+/* 图 7 回归段 */
+(()=>{const g=document.getElementById("rit-fig");if(!g)return;
+  [["乐队","G 大调","T"],["独奏","→ 转调","S"],["乐队","D 大调","T"],["独奏","→ 回来","S"],["乐队","G 大调","T"]].forEach(([a,b,k],i)=>{const x=20+i*130,y=k==="T"?40:90;
+    S(g,"rect",{x,y,width:120,height:60,class:k==="T"?"sv-red":"sv-card"});if(k!=="T")S(g,"rect",{x,y,width:120,height:60,class:"sv-l","stroke-width":1.5});
+    S(g,"text",{x:x+60,y:y+26,"text-anchor":"middle",class:k==="T"?"sv-on":"sv-tb",style:k==="T"?"font-size:15px":""},a);S(g,"text",{x:x+60,y:y+46,"text-anchor":"middle",class:k==="T"?"sv-on":"sv-ts",style:k==="T"?"font-weight:400;font-size:12px":""},b);});
+  S(g,"text",{x:20,y:180,class:"sv-ts"},"红色：回归段（同一段主题，像副歌）　白色：独奏段（像主歌，自由发挥）");
+})();
+/* 图 8 生卒年 */
+(()=>{const g=document.getElementById("life-fig");if(!g)return;const x=y=>150+(y-1650)/120*490;
+  for(let y=1650;y<=1770;y+=20){S(g,"line",{x1:x(y),y1:20,x2:x(y),y2:220,class:"sv-lline","stroke-width":1});S(g,"text",{x:x(y),y:240,"text-anchor":"middle",class:"sv-m"},String(y));}
+  [["帕赫贝尔",1653,1706,"sv-card"],["维瓦尔第",1678,1741,"sv-card"],["巴赫",1685,1750,"sv-red"],["亨德尔",1685,1759,"sv-card"],["康熙在位",1661,1722,"sv-must"]].forEach(([n,a,b,c],i)=>{const y=30+i*38+(i===4?10:0);
+    S(g,"text",{x:20,y:y+18,class:"sv-t",style:"font-weight:700"},n);S(g,"rect",{x:x(a),y,width:x(b)-x(a),height:26,class:c});if(c==="sv-card")S(g,"rect",{x:x(a),y,width:x(b)-x(a),height:26,class:"sv-l","stroke-width":1});
+    S(g,"text",{x:x(a)+6,y:y+18,class:c==="sv-red"?"sv-on":"sv-m",style:c==="sv-red"?"font-weight:400;font-size:11px;font-family:var(--font-mono)":""},a+"–"+b);});
+  S(g,"line",{x1:x(1711),y1:20,x2:x(1711),y2:220,class:"sv-lr","stroke-width":1.5,"stroke-dasharray":"4 3"});S(g,"text",{x:x(1711)+4,y:212,class:"sv-r"},"1711 德理格到北京");
+})();
+/* 外部图片 */
+document.querySelectorAll(".photo img").forEach(img=>{
+  const fail=()=>{const d=document.createElement("div");d.className="photo-fallback";d.innerHTML=`图片待放入：${img.getAttribute("src")}<br><a href="https://commons.wikimedia.org/wiki/File:${img.dataset.file}" target="_blank" rel="noopener">在维基共享资源查看这张图片</a>`;img.replaceWith(d);};
+  if(img.complete&&img.naturalWidth===0)fail();else img.addEventListener("error",fail);
+});
+
+</script>
+<script id="nav-guard">(()=>{document.querySelectorAll(".photo img, figure img").forEach(i=>{const hide=()=>{const f=i.closest("figure")||i.closest(".photo");if(f)f.style.display="none";};if(i.complete&&i.naturalWidth===0&&i.getAttribute("src"))hide();else i.addEventListener("error",hide);});})();</script>
+</body>
+</html>

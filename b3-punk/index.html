@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B3 朋克 · 耳朵的地图</title>
+<!--share-->
+<meta name="description" content="三个和弦，两分钟，谁都能玩。它把摇滚从体育场拉回了地下室，然后告诉每一个年轻人：你不需要谁的允许，现在就可以开始。">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="耳朵的地图">
+<meta property="og:title" content="B3 朋克 · 耳朵的地图">
+<meta property="og:description" content="三个和弦，两分钟，谁都能玩。它把摇滚从体育场拉回了地下室，然后告诉每一个年轻人：你不需要谁的允许，现在就可以开始。">
+<meta property="og:image" content="https://earmap.liangdeer.com/b3-punk/img/b3-punk.jpg">
+<meta property="og:url" content="https://earmap.liangdeer.com/b3-punk/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<!--/share-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Permanent+Marker&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Permanent+Marker&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
+<style>
+/* 全书骨架固定；本章皮肤：朋克 = 复印纸 + 荧光黄 + 墨黑 + 一点粉。layout: 单栏阅读，章首与标题用剪报拼贴，正文保持安静 */
+:root{
+  --paper:#F2F0EA; --paper-2:#E3E0D6; --ink:#141414; --ink-2:#55534E;
+  --hi:#F5D02A; --hi-ink:#141414; --pink:#D6336C; --soft:#FBEFA9;
+  --line:rgba(20,20,20,.18); --card:#FBFAF6;
+  --font-display:"Noto Sans SC","PingFang SC",sans-serif;
+  --font-body:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --font-marker:"Permanent Marker","Comic Sans MS",cursive;
+  --font-mono:"IBM Plex Mono",ui-monospace,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#111111; --paper-2:#1C1C1C; --ink:#EDEAE0; --ink-2:#A8A59C;
+    --hi:#F5D02A; --hi-ink:#111111; --pink:#FF6F9C; --soft:#3A3410;
+    --line:rgba(237,234,224,.18); --card:#181818; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#111111; --paper-2:#1C1C1C; --ink:#EDEAE0; --ink-2:#A8A59C;
+  --hi:#F5D02A; --hi-ink:#111111; --pink:#FF6F9C; --soft:#3A3410;
+  --line:rgba(237,234,224,.18); --card:#181818; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.9;padding-bottom:40px}
+a{color:var(--pink)}
+:focus-visible{outline:3px solid var(--pink);outline-offset:2px}
+.wrap{max-width:700px;margin:0 auto;padding:0 20px}
+.wide{max-width:1040px;margin:0 auto;padding:0 20px}
+
+.albumbar{border-bottom:2px solid var(--ink);font-family:var(--font-mono);font-size:12.5px;background:var(--paper)}
+.albumbar .wide{display:flex;gap:16px;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+.albumbar .book{color:var(--ink-2);letter-spacing:.04em}
+.tracks{display:flex;gap:6px;flex-wrap:wrap}
+.tracks span{padding:3px 9px;border:1px solid var(--line);border-radius:99px;color:var(--ink-2)}
+.tracks span.on{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.tracks span.soon{opacity:.55}
+
+.hero{background:var(--hi);color:var(--hi-ink);border-bottom:2px solid var(--hi-ink)}
+.opener{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:40px;align-items:center;padding-top:44px;padding-bottom:36px}
+.code{font-family:var(--font-mono);font-size:13px;letter-spacing:.08em}
+.ransom{display:flex;gap:10px;margin:16px 0 12px;flex-wrap:wrap}
+.ransom span{font-family:var(--font-display);font-weight:900;font-size:clamp(54px,10vw,96px);line-height:1;padding:4px 14px 10px;display:inline-block}
+.ransom span:nth-child(1){background:#141414;color:#F5D02A;transform:rotate(-4deg)}
+.ransom span:nth-child(2){background:#F2F0EA;color:#141414;border:3px solid #141414;transform:rotate(3deg) translateY(6px)}
+.sub{font-family:var(--font-marker);font-size:28px;margin:6px 0 16px;transform:rotate(-1.5deg)}
+.lede{font-size:18px;margin:0;max-width:28em;color:#2A2A2A}
+.meta-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:18px;font-family:var(--font-mono);font-size:12px;color:#2A2A2A}
+figure{margin:0}
+.art{width:100%;aspect-ratio:4/3;display:block;border:2px solid #141414;background:#F2F0EA}
+.opener figcaption{font-family:var(--font-mono);font-size:12px;color:#2A2A2A;margin-top:8px}
+
+.mapstrip{display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:14px 0 6px;font-size:13px}
+.mapstrip b{font-family:var(--font-mono);font-weight:500;font-size:12px;color:var(--ink-2);margin-right:4px}
+.mapstrip span{padding:3px 10px;border-radius:99px;border:1px dashed var(--line);color:var(--ink-2)}
+.mapstrip span.here{border:2px solid var(--ink);color:var(--ink);font-weight:700;background:var(--hi);color:var(--hi-ink)}
+
+.toc{border:2px solid var(--ink);padding:16px 20px;margin:32px 0;font-size:14.5px;background:var(--card);transform:rotate(-.4deg)}
+.toc b{font-family:var(--font-mono);font-size:12px;color:var(--pink);font-weight:500;letter-spacing:.06em}
+.toc ol{margin:8px 0 0;padding-left:1.4em;columns:2;column-gap:28px}
+.toc li{break-inside:avoid;margin-bottom:2px}
+.toc a{color:var(--ink);text-decoration:none}
+.toc a:hover{background:var(--hi);color:var(--hi-ink)}
+
+article h2{font-family:var(--font-display);font-weight:900;font-size:30px;line-height:1.35;margin:76px 0 16px;text-wrap:balance;scroll-margin-top:20px}
+article h2 .n{font-family:var(--font-marker);font-size:16px;font-weight:400;color:var(--pink);display:block;margin-bottom:6px}
+article h2 .t{background:var(--ink);color:var(--paper);padding:2px 10px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+article h3{font-size:19px;font-weight:700;margin:36px 0 8px;text-wrap:balance}
+article p{margin:0 0 18px}
+.mark{background:linear-gradient(transparent 55%,var(--hi) 55%);color:inherit}
+:root[data-theme="dark"] .mark{background:linear-gradient(transparent 55%,#5A4C0A 55%)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .mark{background:linear-gradient(transparent 55%,#5A4C0A 55%)}}
+.scene{font-weight:500;font-size:18.5px;line-height:1.95;border-left:6px solid var(--ink);padding-left:18px;margin:40px 0}
+.scene p{margin:0 0 12px}
+ul.clean,ol.clean{padding-left:1.3em;margin:0 0 18px}
+ul.clean li,ol.clean li{margin-bottom:8px}
+.k{background:var(--soft);padding:0 5px}
+
+.ask{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:start;background:var(--card);border:2px solid var(--ink);padding:16px 18px;margin:28px 0}
+.ask .who{font-family:var(--font-mono);font-size:12px;background:var(--pink);color:#fff;padding:2px 10px;margin-top:3px;white-space:nowrap}
+.ask p{margin:0}
+.ask p.q{font-weight:700}
+.ask .a{margin-top:8px;color:var(--ink-2);font-size:15.5px}
+
+.lab{background:var(--card);border:2px solid var(--ink);padding:20px;margin:28px 0;box-shadow:6px 6px 0 var(--hi)}
+.lab .head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.lab .head strong{font-size:16px}
+.lab .head .tag{font-family:var(--font-marker);font-size:15px;color:var(--pink)}
+.lab .head small{color:var(--ink-2);font-size:13px}
+.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:14px}
+button{font:inherit;font-size:14px;line-height:1.4;border:2px solid var(--ink);background:transparent;color:var(--ink);padding:6px 14px;cursor:pointer;border-radius:0}
+button.primary{background:var(--ink);color:var(--paper)}
+button:hover{background:var(--hi);color:var(--hi-ink)}
+button.playing{background:var(--pink);border-color:var(--pink);color:#fff}
+.seg{display:inline-flex;border:2px solid var(--ink)}
+.seg button{border:0;padding:5px 11px;font-size:13px}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.controls label{font-size:13px;color:var(--ink-2);display:flex;gap:8px;align-items:center}
+input[type=range]{accent-color:var(--pink)}
+.note{font-size:13.5px;color:var(--ink-2);margin:10px 0 0;line-height:1.75}
+.cols3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:6px}
+.cols2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:6px}
+.opt{border:2px solid var(--ink);padding:12px;background:var(--paper)}
+.opt b{display:block;font-size:15px}
+.opt p{font-size:13.5px;color:var(--ink-2);margin:4px 0 10px;line-height:1.7}
+.strip{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:4px;margin-top:12px}
+.strip i{display:block;height:8px;background:var(--line)}
+.strip i.now{background:var(--pink)}
+
+.fig{margin:34px 0}
+.fig svg{width:100%;height:auto;display:block}
+.fig figcaption,.photo figcaption{font-family:var(--font-mono);font-size:12px;color:var(--ink-2);margin-top:8px;line-height:1.6}
+.fig .frame{background:var(--card);border:2px solid var(--ink);padding:16px}
+.photo{margin:34px 0}
+.photo img{width:100%;display:block;filter:grayscale(1) contrast(1.08);border:2px solid var(--ink)}
+.photo .cap b{color:var(--ink);font-family:var(--font-body);font-size:13.5px;font-weight:700;display:block;margin-bottom:2px}
+.photo-fallback{border:2px dashed var(--ink-2);padding:28px 18px;text-align:center;font-size:13.5px;color:var(--ink-2);background:var(--paper-2);line-height:1.7}
+.photo-fallback a{font-family:var(--font-mono);font-size:12.5px}
+.sv-ink{fill:var(--ink)}.sv-paper{fill:var(--paper)}.sv-p2{fill:var(--paper-2)}.sv-card{fill:var(--card)}
+.sv-hi{fill:var(--hi)}.sv-pink{fill:var(--pink)}.sv-soft{fill:var(--soft)}
+.sv-l{stroke:var(--ink);fill:none}.sv-lp{stroke:var(--pink);fill:none}.sv-lline{stroke:var(--line);fill:none}
+.sv-t{fill:var(--ink);font-family:var(--font-body);font-size:13px}
+.sv-tb{fill:var(--ink);font-family:var(--font-body);font-size:14px;font-weight:700}
+.sv-ts{fill:var(--ink-2);font-family:var(--font-body);font-size:11.5px}
+.sv-m{fill:var(--ink-2);font-family:var(--font-mono);font-size:11px}
+.sv-on{fill:var(--paper);font-family:var(--font-mono);font-size:11px}
+.sv-onhi{fill:#141414;font-family:var(--font-body);font-size:13px;font-weight:700}
+.sv-r{fill:var(--pink);font-family:var(--font-body);font-size:12px}
+.sv-mk{fill:var(--ink);font-family:var(--font-marker);font-size:20px}
+
+table.cmp{width:100%;border-collapse:collapse;font-size:14.5px;margin:18px 0;line-height:1.65}
+table.cmp th,table.cmp td{border:2px solid var(--ink);padding:8px 10px;text-align:left;vertical-align:top}
+table.cmp th{background:var(--ink);color:var(--paper);font-weight:700}
+table.cmp td:first-child{font-weight:700;width:6.5em}
+.tablewrap{overflow-x:auto}
+
+.timeline{list-style:none;padding:0;margin:20px 0;border-left:4px solid var(--ink)}
+.timeline li{position:relative;padding:0 0 20px 22px}
+.timeline li::before{content:"";position:absolute;left:-10px;top:8px;width:16px;height:16px;background:var(--hi);border:2px solid var(--ink)}
+.timeline .yr{font-family:var(--font-mono);font-size:13px;color:var(--pink)}
+.timeline b{display:block;font-size:17px}
+.timeline p{margin:4px 0 0;font-size:15.5px}
+
+.side{font-family:var(--font-mono);font-size:12px;color:var(--ink-2);letter-spacing:.06em;border-bottom:2px solid var(--ink);padding-bottom:6px;margin:30px 0 4px;display:flex;justify-content:space-between;gap:10px}
+.song{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}
+.playlink{display:grid;place-items:center;width:44px;height:44px;background:var(--ink);color:var(--paper);border:2px solid var(--ink)}
+.playlink:hover{background:var(--hi);color:var(--hi-ink)}
+.song .meta{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}
+.song .title{font-weight:900;font-size:17px}
+.song .by{color:var(--ink-2);font-size:14px}
+.song .yr{font-family:var(--font-mono);font-size:12px;color:var(--pink)}
+.song .style{font-family:var(--font-mono);font-size:11.5px;border:1px solid var(--line);padding:0 8px;color:var(--ink-2)}
+.song p{margin:6px 0 8px;font-size:15px;line-height:1.75}
+.song .listen{font-size:14.5px;margin:0 0 8px;padding-left:1.2em}
+.song .listen li{margin-bottom:4px}
+.listen-links{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:6px}
+.listen-links a{font-family:var(--font-mono);font-size:12px;border:1px solid var(--ink);padding:3px 10px;text-decoration:none;color:var(--ink);background:var(--card)}
+.listen-links a.main{background:var(--ink);color:var(--paper)}
+.listen-links a b{color:var(--pink);font-weight:500;margin-right:4px}
+.listen-links a:hover{background:var(--hi);color:var(--hi-ink)}
+
+.mine{border:2px dashed var(--ink-2);padding:16px 18px;margin:28px 0;color:var(--ink-2)}
+.mine .lbl{font-family:var(--font-marker);font-size:15px;color:var(--pink)}
+dl.gloss{display:grid;grid-template-columns:minmax(0,8.5em) minmax(0,1fr);gap:10px 18px;font-size:15px;line-height:1.7;margin:16px 0}
+dl.gloss dt{font-weight:900}
+dl.gloss dd{margin:0;color:var(--ink-2)}
+
+.credits{background:#141414;color:#EDEAE0;margin-top:72px;padding:40px 0 48px;border-top:6px solid var(--hi)}
+.credits h2{font-family:var(--font-marker);font-weight:400;font-size:30px;margin:0 0 16px;color:#F5D02A}
+.credits dl{display:grid;grid-template-columns:minmax(0,9em) minmax(0,1fr);gap:8px 16px;margin:0;font-size:14px;line-height:1.75}
+.credits dt{font-family:var(--font-mono);font-size:12px;opacity:.7;padding-top:3px}
+.credits dd{margin:0}
+.credits a{color:#F5D02A}
+.next{display:flex;justify-content:space-between;gap:12px;margin-top:28px;font-family:var(--font-mono);font-size:13px;opacity:.85;flex-wrap:wrap}
+.stopfab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:10;display:none;background:var(--pink);border-color:var(--pink);color:#fff}
+.stopfab.on{display:inline-block}
+
+@media (max-width:760px){
+  .opener{grid-template-columns:1fr;gap:24px;padding-top:28px}
+  .cols3,.cols2{grid-template-columns:1fr}
+  .toc ol{columns:1}
+  .credits dl,dl.gloss{grid-template-columns:1fr}
+  dl.gloss dd{margin-bottom:6px}
+}
+@media (prefers-reduced-motion:reduce){.toc,.sub,.ransom span{transform:none!important}}
+
+/* ================= B3 正文轻调整：复印纸、传单、演出海报 ================= */
+/* 复印纸：墨粉噪点 + 边缘发灰 */
+body{background-image:radial-gradient(rgba(20,20,20,.07) .7px,rgba(0,0,0,0) 1.2px),radial-gradient(rgba(20,20,20,.05) .6px,rgba(0,0,0,0) 1.1px);background-size:9px 9px,13px 13px;background-position:0 0,5px 7px}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 75% 70% at 50% 50%,rgba(0,0,0,0) 60%,rgba(0,0,0,.10) 100%)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) body{background-image:radial-gradient(rgba(237,234,224,.06) .7px,rgba(0,0,0,0) 1.2px),radial-gradient(rgba(237,234,224,.04) .6px,rgba(0,0,0,0) 1.1px)}:root:not([data-theme="light"]) body::before{background:radial-gradient(ellipse 75% 70% at 50% 50%,rgba(0,0,0,0) 60%,rgba(0,0,0,.35) 100%)}}
+article,.wide,footer{position:relative;z-index:1}
+/* 实验框：钉在排练室墙上的复印传单 */
+.lab{position:relative;transform:rotate(-.5deg)}
+.lab:nth-of-type(even){transform:rotate(.6deg)}
+.lab::before,.lab::after{content:"";position:absolute;top:-12px;width:84px;height:24px;background:rgba(245,208,42,.75);box-shadow:inset 0 0 0 1px rgba(0,0,0,.08);z-index:2}
+.lab::before{left:-14px;transform:rotate(-24deg)}
+.lab::after{right:-14px;transform:rotate(22deg);background:rgba(214,51,108,.55)}
+.lab .head{position:relative}
+.lab .head::after{content:"";position:absolute;top:-12px;left:50%;width:30px;height:6px;margin-left:-15px;border:2px solid #8a8a8a;border-bottom:0;border-radius:1px}
+/* 照片：复印机效果 + 胶带 */
+.photo{position:relative;background:var(--card);padding:12px 12px 4px;border:2px solid var(--ink);transform:rotate(-1deg);margin:40px 6px;box-shadow:6px 6px 0 var(--ink)}
+.photo:nth-of-type(even){transform:rotate(1.2deg)}
+.photo::before{content:"";position:absolute;top:-14px;left:50%;width:120px;height:28px;margin-left:-60px;background:rgba(240,240,232,.82);box-shadow:inset 0 0 0 1px rgba(0,0,0,.08);transform:rotate(-3deg);z-index:2}
+.photo img{filter:grayscale(1) contrast(2.1) brightness(1.08);border:0;mix-blend-mode:multiply}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .photo img{mix-blend-mode:normal}}
+.photo .cap{font-family:var(--font-mono);padding:10px 2px 8px}
+.photo-fallback{background:repeating-linear-gradient(-45deg,rgba(0,0,0,.05) 0 6px,rgba(0,0,0,0) 6px 12px)}
+/* 图解：贴上去的复印件 */
+.fig .frame{position:relative}
+.fig .frame::before{content:"";position:absolute;top:-12px;right:24px;width:90px;height:24px;background:rgba(245,208,42,.75);transform:rotate(6deg)}
+/* 曲目：1970 年代地下演出的手工海报 */
+.side{justify-content:center;border:0;margin:44px 0 10px}
+.side span:first-child{font-family:var(--font-display);font-weight:900;font-size:20px;background:var(--ink);color:var(--paper);padding:4px 14px;transform:rotate(-2deg);display:inline-block}
+.side span:last-child{font-family:var(--font-marker);font-size:18px;color:var(--pink);transform:rotate(3deg);display:inline-block}
+.song{grid-template-columns:118px minmax(0,1fr) 54px;gap:16px;border:0;background:var(--gig,#FBFAF6);color:#141414;padding:20px 18px 22px;margin:22px 0;position:relative;
+  clip-path:polygon(0 3%,4% 0,9% 2%,15% 0,22% 2.5%,30% .5%,38% 2%,47% 0,55% 2.5%,63% .5%,71% 2%,80% 0,88% 2.5%,95% .5%,100% 2%,100% 97%,96% 100%,89% 97.5%,81% 100%,72% 98%,63% 100%,54% 97.5%,46% 100%,37% 98%,28% 100%,19% 97.5%,11% 100%,4% 98%,0 100%);
+  transform:rotate(-.6deg)}
+.song:nth-child(3n+2){--gig:#F5D02A;transform:rotate(.7deg)}
+.song:nth-child(3n){--gig:#F7C6D9;transform:rotate(-.3deg)}
+.gigdate{display:flex;flex-wrap:wrap;gap:3px;align-content:flex-start}
+.gigdate i{font-style:normal;font-family:var(--font-display);font-weight:900;font-size:30px;line-height:1;padding:3px 5px 5px;display:inline-block}
+.gigdate i:nth-child(4n+1){background:#141414;color:#F5D02A;transform:rotate(-5deg)}
+.gigdate i:nth-child(4n+2){background:#fff;color:#141414;border:2px solid #141414;transform:rotate(4deg)}
+.gigdate i:nth-child(4n+3){background:#D6336C;color:#fff;transform:rotate(-2deg)}
+.gigdate i:nth-child(4n){background:#141414;color:#fff;font-family:var(--font-marker);font-weight:400;transform:rotate(6deg)}
+.gigdate small{flex-basis:100%;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.06em;margin-top:8px;color:#333}
+.song .meta{display:block}
+.song .by{display:inline-block;font-family:var(--font-display);font-weight:900;font-size:24px;line-height:1.1;color:#141414;background:none;text-transform:uppercase;letter-spacing:.02em;margin:0 0 4px}
+.song .title{display:block;font-family:var(--font-marker);font-weight:400;font-size:20px;color:#D6336C;margin-bottom:6px}
+.song:nth-child(3n) .title{color:#141414}
+.song .yr{display:none}
+.song .style{display:inline-block;font-family:var(--font-mono);font-size:11px;border:1.5px solid #141414;padding:0 6px;color:#141414;background:transparent}
+.song .style::before{content:"LIVE · "}
+.song p,.song .listen{color:#1d1d1d}
+.playlink{align-self:start;width:52px;height:52px;border-radius:50%;background:#141414;color:#F5D02A;border:3px solid #141414;transform:rotate(-10deg);box-shadow:3px 3px 0 #D6336C}
+.playlink:hover{background:#D6336C;color:#fff}
+.listen-links a{background:transparent;border:1.5px solid #141414;color:#141414}
+.listen-links a.main{background:#141414;color:#F5D02A}
+@media (max-width:760px){.song{grid-template-columns:84px minmax(0,1fr) 46px;gap:10px}.gigdate i{font-size:22px}.song .by{font-size:20px}.lab,.photo,.song{transform:none}}
+@media (prefers-reduced-motion:reduce){.lab,.photo,.song{transform:none}}
+.song{grid-template-columns:128px minmax(0,1fr) 54px}.gigdate{flex-wrap:nowrap;gap:2px}.gigdate small{display:none}.gigdate i{font-size:25px;padding:3px 4px 5px}@media (max-width:760px){.song{grid-template-columns:minmax(0,1fr) 46px}.gigdate{grid-column:1/-1}.gigdate i{font-size:20px}}
+.gigdate{align-items:flex-start;align-self:start}
+/*nav-unify*/.albumbar a{color:inherit;text-decoration:none}.albumbar a.book:hover{text-decoration:underline}.tracks span a{color:inherit;text-decoration:none;display:block}.tracks span:not(.on):hover{opacity:.72}.next a{color:inherit;text-decoration:none;border-bottom:1px solid currentColor}.next a:hover{opacity:.7}</style>
+<link rel="stylesheet" href="../cover-preview.css">
+</head>
+<body>
+
+<header class="albumbar">
+  <div class="wide">
+    <a class="book" href="../index.html" data-nav="toc">耳朵的地图 · 第一张唱片 · SIDE B 摇滚家族 · 目录</a>
+    <nav class="tracks" aria-label="本面曲目">
+      <span><a href="../b1-rock/index.html" data-nav="b1-rock">B1 摇滚</a></span>
+      <span><a href="../b2-hardrock/index.html" data-nav="b2-hardrock">B2 硬摇滚</a></span>
+      <span class="on"><a aria-current="page">B3 朋克</a></span>
+      <span><a href="../b4-metal/index.html" data-nav="b4-metal">B4 金属</a></span>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+<section class="wide opener">
+  <div>
+    <div class="code">SIDE B · TRACK 03 · 枝干</div>
+    <div class="ransom" aria-label="朋克"><span>朋</span><span>克</span></div>
+    <p class="sub">Three chords. Go.</p>
+    <p class="lede">三个和弦，两分钟，谁都能玩。它把摇滚从体育场拉回了地下室，然后告诉每一个年轻人：你不需要谁的允许，现在就可以开始。</p>
+    <div class="meta-row"><span>阅读约 40 分钟</span><span>可听示例 20+ 个</span><span>插图 12 幅</span><span>推荐曲目 12 首</span></div>
+  </div>
+  <figure>
+    <img class="art" src="img/b3-punk.jpg" width="1600" height="1200" alt="荧光黄色的朋克杂志拼贴，剪贴数字 1976 和一枚大别针" style="height:auto">
+    <figcaption>章首插画 · 荧光黄色的朋克杂志拼贴，剪贴数字 1976 和一枚大别针</figcaption>
+    <button class="cover-preview" type="button" data-demo="beat-punk">
+      <span class="preview-play"><span aria-hidden="true">▶</span> 试听 · 朋克</span>
+      <span class="preview-stop"><span aria-hidden="true">■</span> 停止</span>
+    </button>
+  </figure>
+</section>
+</div>
+
+<div class="wide">
+  <div class="mapstrip" aria-label="地图定位">
+    <b>你在这里 →</b>
+    <span>布鲁斯与福音</span><span>摇滚</span><span class="here">朋克</span><span>金属</span><span>嘻哈</span><span>电子</span><span>当代流行</span>
+  </div>
+</div>
+
+<article class="wrap">
+
+  <div class="scene">
+    <p>1976 年 6 月 4 日，英格兰曼彻斯特，一个叫“小自由贸易厅”的地方。</p>
+    <p>台上是一支刚组建不久、没什么人听说过的伦敦乐队，叫 Sex Pistols。台下据说只有几十个人，稀稀拉拉地站着。</p>
+    <p>这场演出后来成了摇滚史上最有名的“没几个人看过”的演出。传说中，台下有后来组建 Joy Division 的两个年轻人、后来成为 The Smiths 主唱的 Morrissey，还有好几个当晚回家就决定组乐队的人。人们后来半开玩笑地说：那天看过演出的人，几乎每一个都去组了乐队。</p>
+    <p>这就是朋克的力量。它的意思不是“你听我弹得多好”，而是“你看，我都行，你也行”。</p>
+  </div>
+
+  <div class="ask">
+    <span class="who">我问</span>
+    <p class="q">再讲讲朋克金属</p>
+  </div>
+
+  <p>当时我把朋克和金属放在一起问，因为它们听起来都“又吵又重”。后来才知道，这两个家族的价值观几乎相反：<span class="mark">朋克反对技巧，金属崇拜技巧</span>。这一章只讲朋克，金属留给下一章。</p>
+  <p>和布鲁斯那一章一样，我先讲朋克为什么会出现，再把它拆成几个零件：三个和弦、快、吵、自己动手、看起来的样子。每个零件都有可以点开听的合成示例。然后去 1976 年的纽约和伦敦，最后看看它留下了哪些后代，包括你可能在 Seacrets 的酒吧里、在《NANA》里听到过的那些声音。</p>
+
+  <nav class="toc" aria-label="本章目录">
+    <b>本章曲目单</b>
+    <ol>
+      <li><a href="#why">为什么会有朋克</a></li>
+      <li><a href="#chords">三个和弦：强力和弦</a></li>
+      <li><a href="#fast">快：速度与鼓</a></li>
+      <li><a href="#loud">吵：声音与制作</a></li>
+      <li><a href="#diy">DIY：自己动手</a></li>
+      <li><a href="#look">样子：朋克的视觉</a></li>
+      <li><a href="#cities">两座城市：纽约与伦敦</a></li>
+      <li><a href="#roots">从布鲁斯到朋克</a></li>
+      <li><a href="#after">朋克之后</a></li>
+      <li><a href="#asia">在日本和中国</a></li>
+      <li><a href="#listen">听：本章十二首曲目</a></li>
+      <li><a href="#practice">练 · 术语表</a></li>
+    </ol>
+  </nav>
+
+  <!-- 01 -->
+  <h2 id="why"><span class="n">01 / why</span><span class="t">为什么会有朋克</span></h2>
+
+  <h3>摇滚变“贵”了</h3>
+  <p>在布鲁斯那一章最后，我们看到摇滚乐从一群穷孩子手里诞生：三个和弦、一把电吉他、一台音箱。可是到了 1970 年代中期，摇滚已经变成了另一种东西。</p>
+  <ul class="clean">
+    <li><b>歌越来越长</b>：前卫摇滚（progressive rock）追求宏大的结构，一首歌动辄十几二十分钟，一整面唱片只放一首。英国乐队 Yes 1972 年的《Close to the Edge》长达 18 分 43 秒</li>
+    <li><b>技术越来越难</b>：吉他手比拼独奏速度，键盘手搬上一整排合成器，鼓手打十分钟的独奏。听众开始仰视台上的人</li>
+    <li><b>舞台越来越远</b>：大乐队在体育场演出，票价昂贵，舞台布景豪华，乐手住豪宅、坐私人飞机。摇滚从“我们的音乐”变成了“他们的表演”</li>
+  </ul>
+  <p>对一个十几岁、没钱、没学过音乐的年轻人来说，这样的摇滚是遥不可及的。你买不起他们用的设备，也弹不出他们的独奏，更不可能站上体育场的舞台。</p>
+
+  <h3>年轻人没有前途</h3>
+  <p>与此同时，1970 年代中后期的英国陷入了经济困境：通货膨胀高企，工厂关闭，罢工不断，青年失业严重。1978 到 1979 年冬天，大规模罢工让垃圾在街上堆积，被称为“不满之冬”。很多工人阶级家庭的孩子看不到任何出路。</p>
+  <p>大西洋对岸的纽约也好不到哪里去。1975 年，纽约市政府几乎破产，治安恶化，大片街区破败不堪，房租却很便宜，于是吸引了大量没钱的艺术家、诗人和乐手。</p>
+  <p>这两种情绪合在一起，一边是对“摇滚贵族”的厌烦，一边是对现实的愤怒和无聊，就是朋克的土壤。</p>
+
+  <h3>朋克的“祖先”</h3>
+  <p>朋克不是凭空出现的。1960 年代后期到 1970 年代初，已经有一些乐队在走“简单、粗糙、吵”的路线，后来被称为“原型朋克”（proto-punk）：</p>
+  <ul class="clean">
+    <li><b>车库摇滚</b>：1960 年代美国各地的年轻人在自家车库里组乐队，技术粗糙但能量十足</li>
+    <li><b>The Velvet Underground</b>（纽约）：噪音、单调的重复、写城市阴暗面的歌词</li>
+    <li><b>The Stooges</b>（底特律）：主唱 Iggy Pop 在台上自残、跳进观众堆里，音乐原始而狂暴</li>
+    <li><b>MC5</b>（底特律）：极其响亮、带着政治口号的硬摇滚</li>
+    <li><b>New York Dolls</b>（纽约）：化着浓妆的街头摇滚。他们后来的经纪人 Malcolm McLaren 回到伦敦后，组建了 Sex Pistols</li>
+  </ul>
+
+  <!-- 02 -->
+  <h2 id="chords"><span class="n">02 / three chords</span><span class="t">三个和弦：强力和弦</span></h2>
+  <p>朋克最常被提到的一句话是“三个和弦就够了”。这里的“和弦”有一个专门的名字：强力和弦（power chord）。理解了它，你就理解了朋克（和后来的金属）听起来为什么是那个样子。</p>
+
+  <h3>少了一个音的和弦</h3>
+  <p>在布鲁斯那一章我们说过，和弦是几个音同时响起。最普通的和弦由三个音组成：根音、三音、五音。其中<span class="mark">三音决定了和弦是大调（明亮）还是小调（忧伤）</span>。</p>
+  <p>强力和弦把三音拿掉了，只剩根音和五音（通常再加一个高八度的根音）。没有了三音，它就既不明亮也不忧伤，只剩一种中性的、坚硬的“力量感”。</p>
+
+  <figure class="fig">
+    <div class="frame"><svg viewBox="0 0 680 240" role="img" aria-label="键盘对比：左边 E 大三和弦按下 E、G♯、B 三个键；右边 E5 强力和弦只按 E、B 和高八度的 E，G♯ 被划掉"><g id="kbc"></g></svg></div>
+    <figcaption>图 1 · 普通和弦和强力和弦。强力和弦去掉了决定“明亮还是忧伤”的三音。</figcaption>
+  </figure>
+
+  <h3>为什么朋克偏爱它</h3>
+  <ol class="clean">
+    <li><b>好学</b>：在吉他上，强力和弦只用两三根手指，而且手形固定。学会一个手形，在指板上上下平移，就能弹出所有的强力和弦。一个下午就能学会，这正是“谁都能玩”的前提</li>
+    <li><b>失真之后依然清楚</b>：吉他接上失真效果后，声音会变“脏”、变厚。一个完整的和弦里音太多，失真之后会糊成一团；强力和弦只有两个音，而且是最和谐的五度关系，失真之后反而又硬又清楚</li>
+    <li><b>不分大小调</b>：同一组强力和弦，配上愤怒的歌词就是愤怒，配上欢快的旋律就是欢快，非常灵活</li>
+  </ol>
+
+  <div class="lab">
+    <div class="head"><span class="tag">实验 01</span><strong>完整和弦 vs 强力和弦</strong><small>同一把合成电吉他</small></div>
+    <div class="controls" style="margin-top:0">
+      <button type="button" data-demo="triad-clean">完整和弦 · 不失真</button>
+      <button type="button" data-demo="triad-dist">完整和弦 · 失真</button>
+      <button class="primary" type="button" data-demo="power-dist">强力和弦 · 失真</button>
+    </div>
+    <p class="note">对比第二个和第三个：完整和弦一失真就“糊”了，有一种刺耳的嗡嗡声；强力和弦失真后干净、坚硬。这就是朋克和金属吉他声音的基础。</p>
+  </div>
+
+  <figure class="fig">
+    <div class="frame"><svg viewBox="0 0 680 250" role="img" aria-label="吉他指板：左边是 E5 强力和弦，用空弦加两根手指；右边是在第五品的 A5 强力和弦，同一个手形整体平移"><g id="fbp"></g></svg></div>
+    <figcaption>图 2 · 一个手形走天下。把左边的手形整体往上移，就是右边的和弦。</figcaption>
+  </figure>
+
+  <h3>全部往下扫</h3>
+  <p>Ramones 的吉他手 Johnny Ramone 有一个出了名的习惯：他几乎只用“下拨”，也就是每一下都从上往下扫弦，以极快的速度连续不停。一般吉他手会上下交替来减轻负担，但只往下扫能让每一下都同样有力，形成一种机关枪一样平均、密集的声音。这也成了朋克吉他的标志性弹法。</p>
+
+  <h3>三个和弦，写一首歌</h3>
+  <p>现在来试试：选一组和弦进行，听听三个强力和弦配上鼓和贝斯，能不能变成一首“朋克歌”。点“播放”时，鼓手会先敲四下鼓棒数拍子，这是朋克现场最经典的开场方式。</p>
+
+  <div class="lab">
+    <div class="head"><span class="tag">实验 02</span><strong>三和弦朋克生成器</strong><small>强力和弦 · 下拨 · 两轮</small></div>
+    <div class="cols3">
+      <div class="opt"><b>I – IV – V</b><p>A、D、E。最传统的三个和弦，和布鲁斯同一套“家、离家、想回家”。</p><button class="primary" type="button" data-demo="prog1">播放</button></div>
+      <div class="opt"><b>I – ♭VII – IV</b><p>E、D、A。车库摇滚和朋克最爱的走法，听起来更“野”。</p><button class="primary" type="button" data-demo="prog2">播放</button></div>
+      <div class="opt"><b>I – V – vi – IV</b><p>E、B、C♯m、A。流行朋克的标配，也是流行歌最常用的“四和弦”。</p><button class="primary" type="button" data-demo="prog3">播放</button></div>
+    </div>
+    <div class="controls">
+      <label for="bpmP">速度 <input id="bpmP" type="range" min="140" max="220" step="1" value="176"> <span id="bpmPv">176</span> BPM</label>
+      <button type="button" data-stop>停止</button>
+    </div>
+    <p class="note">同样是三四个和弦，第一组听着像加速的老摇滚，第二组更粗野，第三组一下子就有了 2000 年代流行朋克的“青春感”。和弦顺序本身就带着情绪。</p>
+  </div>
+
+  <!-- 03 -->
+  <h2 id="fast"><span class="n">03 / fast</span><span class="t">快：速度与鼓</span></h2>
+  <p>朋克的第二个特点是快。音乐的速度用 BPM（每分钟多少拍）来衡量。大部分流行歌在 90 到 130 之间，Chuck Berry 那种早期摇滚大约 160 多，而朋克常常在 170 以上，硬核朋克甚至超过 200。</p>
+
+  <h3>歌也变短了</h3>
+  <p>速度快，加上不要独奏、不要长前奏，朋克歌自然就短。Ramones 的第一张专辑有 14 首歌，加起来不到 30 分钟。和本章开头说的前卫摇滚放在一起比，差别一目了然：</p>
+
+  <figure class="fig">
+    <div class="frame"><svg viewBox="0 0 680 270" role="img" aria-label="条形图：五首歌的时长对比，从 18 分 43 秒到不到 1 分钟"><g id="len"></g></svg></div>
+    <figcaption>图 3 · 歌曲时长对比（录音室版本）。Minor Threat 一首的时长为约数。</figcaption>
+  </figure>
+
+  <h3>鼓：从摇滚到朋克到硬核</h3>
+  <p>鼓是速度的发动机。看下面三种鼓型，每一格是一个八分音符：</p>
+  <ul class="clean">
+    <li><b>基本摇滚</b>：踩镲每个八分音符都打，底鼓在第 1、3 拍，军鼓在第 2、4 拍。几乎所有摇滚乐的基础</li>
+    <li><b>朋克</b>：同样的结构，速度更快，踩镲常换成更吵的叮叮镲或强音镲，底鼓更密</li>
+    <li><b>硬核（skank beat）</b>：底鼓和军鼓一个接一个交替，每个八分音符都在打，像一列失控的火车</li>
+  </ul>
+
+  <figure class="fig">
+    <div class="frame"><svg viewBox="0 0 680 330" role="img" aria-label="三种鼓型的格子图：每行代表踩镲、军鼓、底鼓，每列代表一个八分音符"><g id="drm"></g></svg></div>
+    <figcaption>图 4 · 一小节里的三种鼓型。实心格表示这一下要打。</figcaption>
+  </figure>
+
+  <div class="lab">
+    <div class="head"><span class="tag">实验 03</span><strong>三种鼓型</strong><small>各四小节，配贝斯</small></div>
+    <div class="controls" style="margin-top:0">
+      <button type="button" data-demo="beat-rock">基本摇滚 · 120</button>
+      <button class="primary" type="button" data-demo="beat-punk">朋克 · 180</button>
+      <button type="button" data-demo="beat-hc">硬核 · 220</button>
+      <button type="button" data-stop>停止</button>
+    </div>
+    <p class="note">注意听硬核的鼓：底鼓和军鼓“咚、哒、咚、哒”一刻不停地交替，几乎没有喘息的空间。</p>
+  </div>
+
+  <!-- 04 -->
+  <h2 id="loud"><span class="n">04 / loud</span><span class="t">吵：声音与制作</span></h2>
+
+  <h3>失真、音箱和“毛边”</h3>
+  <p>布鲁斯那一章里，芝加哥的乐手为了在嘈杂的酒吧里被听见，把音箱开大，结果声音“发毛”。朋克把这种毛边推到了极致：吉他接上便宜的失真效果器或直接把音箱开到最大，声音粗糙、刺耳，像砂纸一样。</p>
+
+  <h3>粗糙也是一种选择</h3>
+  <p>1970 年代的大乐队在昂贵的录音棚里花几个月录一张专辑，每一个音都打磨得干干净净。很多朋克乐队则只花几天，甚至一两天就录完，钱不够是一个原因，但更重要的是态度：<span class="mark">朋克认为粗糙才是真实的</span>，太干净的声音反而显得假。后来甚至出现了专门用简陋设备录音的“lo-fi”（低保真）美学。</p>
+
+  <div class="lab">
+    <div class="head"><span class="tag">实验 04</span><strong>录音棚 vs 车库</strong><small>同一段乐队演奏，两种“录音”</small></div>
+    <div class="controls" style="margin-top:0">
+      <button type="button" data-demo="studio">精致录音棚</button>
+      <button class="primary" type="button" data-demo="garage">车库 / 卡带</button>
+      <button type="button" data-stop>停止</button>
+    </div>
+    <p class="note">“车库”版本切掉了高音和低音，加上失真和磁带嘶嘶声，声音像是从一台旧录音机里传出来的。很多人反而觉得这样更有冲击力。</p>
+  </div>
+
+  <h3>唱，还是喊</h3>
+  <p>朋克歌手大多没受过声乐训练，也不想受。他们不追求音准和音色，而是用近乎喊叫的方式把歌词“吐”出来。Sex Pistols 的主唱 Johnny Rotten 那种带着嘲讽的尖利嗓音，The Clash 的 Joe Strummer 那种沙哑的嘶吼，都和“唱得好听”毫无关系。</p>
+  <p>朋克还有一个标志性的声音：<b>团唱</b>（gang vocals）。乐队成员和台下观众一起喊同一句短短的口号，像足球场上的助威。这种“所有人一起喊”的感觉，正是朋克想要的：台上和台下没有距离。</p>
+
+  <div class="lab">
+    <div class="head"><span class="tag">实验 05</span><strong>唱 · 喊 · 团唱</strong><small>用合成“人声”模拟</small></div>
+    <div class="controls" style="margin-top:0">
+      <button type="button" data-demo="sing">唱：有颤音、有滑音</button>
+      <button class="primary" type="button" data-demo="shout">喊：平直、粗糙</button>
+      <button type="button" data-demo="gang">团唱：一群人一起喊</button>
+    </div>
+    <p class="note">合成器发不出真正的字，这里只模拟音色的差别：唱的时候声音圆润、带颤音；喊的时候声音被“压扁”、发毛；团唱则是好几个略有差别的声音叠在一起。</p>
+  </div>
+
+  <!-- 05 -->
+  <h2 id="diy"><span class="n">05 / do it yourself</span><span class="t">DIY：自己动手</span></h2>
+  <p>如果说三个和弦、快、吵是朋克的声音，那么 DIY（do it yourself，自己动手）就是朋克的灵魂。它最大的遗产也许根本不是某一首歌，而是一种做事的方式：<span class="mark">不等别人给机会，自己创造机会</span>。</p>
+
+  <h3>自己办杂志</h3>
+  <p>主流音乐杂志不报道朋克，朋克迷就自己办。1976 年，伦敦一个银行职员 Mark Perry 用复印机做出了一本叫《Sniffin' Glue》的小杂志（fanzine，粉丝杂志），手写标题、打字机排版、错别字随处可见，却卖出了上万份。</p>
+  <p>另一本朋克小杂志《Sideburns》在 1977 年画过一张后来被无数次引用的图：三个吉他和弦的按法示意，配上一句大意是“这是一个和弦，这是另一个，这是第三个，现在去组乐队吧”的话。这几乎成了朋克精神的标语。</p>
+
+  <figure class="fig">
+    <div class="frame"><svg viewBox="0 0 680 300" role="img" aria-label="仿复印小杂志的版面：三张吉他和弦图，标注 A、D、E，旁边手写“组乐队吧！”"><g id="zine"></g></svg></div>
+    <figcaption>图 5 · 致敬朋克小杂志的原创版面。三个和弦就是实验 02 里第一组用到的 A、D、E。非原杂志图片。</figcaption>
+  </figure>
+
+  <h3>自己发唱片</h3>
+  <p>大唱片公司不愿意签朋克乐队，朋克乐队就自己发。1977 年 1 月，曼彻斯特的 Buzzcocks（就是开头那场演出的组织者）自己掏钱、借钱，发行了一张 EP《Spiral Scratch》，成为英国最早的独立发行朋克唱片之一。之后，一批独立唱片公司纷纷出现：</p>
+  <ul class="clean">
+    <li><b>英国</b>：Stiff Records（1976）、Rough Trade（从唱片店起家）、曼彻斯特的 Factory Records</li>
+    <li><b>美国</b>：Black Flag 的吉他手 Greg Ginn 创办的 SST，华盛顿的 Dischord（由 Minor Threat 的主唱 Ian MacKaye 等人创办）。这些厂牌坚持低价、自主，乐队自己订巡演、自己卖唱片</li>
+  </ul>
+  <p>这套“独立”的玩法后来演变成了整个独立音乐（indie）产业。今天在网上自己发歌、自己做宣传的音乐人，走的仍然是朋克开出来的这条路。</p>
+
+  <!-- 06 -->
+  <h2 id="look"><span class="n">06 / the look</span><span class="t">样子：朋克的视觉</span></h2>
+  <p>朋克不只是声音，也是一种“看起来的样子”。很多人第一次接触朋克，是先被它的样子吸引的。</p>
+
+  <h3>穿</h3>
+  <ul class="clean">
+    <li><b>撕破的衣服和别针</b>：故意撕破 T 恤、用别针别起来，既是没钱，也是挑衅</li>
+    <li><b>皮夹克</b>：Ramones 四个人统一的黑色皮夹克加破牛仔裤，成了纽约朋克的制服</li>
+    <li><b>莫西干头</b>：竖起来的彩色鸡冠头，大多是 1980 年代以后才流行的</li>
+    <li><b>Vivienne Westwood</b>：她和 Malcolm McLaren 在伦敦国王路开了一家叫 SEX 的服装店，卖带着挑衅图案的 T 恤、绑带裤和皮衣。Sex Pistols 的成员就在这家店周围被凑到一起。Westwood 后来成为英国最重要的时装设计师之一</li>
+  </ul>
+
+  <h3>看</h3>
+  <p>朋克的平面设计同样“粗糙”：从报纸杂志上剪下字母，像绑匪的勒索信一样东拼西凑；复印机反复复印出来的高反差黑白图；荧光色的色块。Sex Pistols 的唱片封套就是这种风格的代表，由艺术家 Jamie Reid 设计。你在本章标题里看到的歪斜色块和“剪贴”字，用的就是这种视觉语言。</p>
+
+  <figure class="fig">
+    <div class="frame"><svg viewBox="0 0 680 230" role="img" aria-label="剪报风格的字：D、I、Y 三个字母分别在不同底色、不同角度的纸片上，旁边是一枚别针"><g id="cut"></g></svg></div>
+    <figcaption>图 6 · “勒索信”式剪贴字与别针。</figcaption>
+  </figure>
+
+  <div class="ask">
+    <span class="who">我问</span>
+    <div>
+      <p class="q">日漫 NANA 里面好像也是这种风格？</p>
+      <p class="a">是的。《NANA》的女主角之一大崎娜娜是朋克乐队 Blast 的主唱，偶像是 Sex Pistols 的贝斯手 Sid Vicious，穿的大多是 Vivienne Westwood 的设计。故事里的两支乐队，正好对应朋克和精致商业摇滚之间的对立。不过动画和电影里真正发行的歌，大多是制作精良的日式流行摇滚，和 1970 年代那种粗糙的朋克并不一样。第 10 节会再说到。</p>
+    </div>
+  </div>
+
+  <!-- 07 -->
+  <h2 id="cities"><span class="n">07 / NYC × London</span><span class="t">两座城市：纽约与伦敦</span></h2>
+  <p>朋克几乎同时在纽约和伦敦两座城市出现，两边互相影响，但气质很不一样。</p>
+
+  <figure class="fig">
+    <div class="frame"><svg viewBox="0 0 680 280" role="img" aria-label="跨大西洋示意图：左边纽约，右边伦敦，中间是大西洋，三条箭头表示 1975 到 1977 年间两地的人和唱片如何来回影响"><g id="atl"></g></svg></div>
+    <figcaption>图 7 · 大西洋两岸的朋克，1975–1977。</figcaption>
+  </figure>
+
+  <h3>纽约：艺术学校与地下酒吧</h3>
+  <p>纽约朋克的大本营是曼哈顿包厘街 315 号的一家小酒吧 CBGB。老板 Hilly Kristal 1973 年开这家店时，本来想做乡村、蓝草和布鲁斯音乐（CBGB 就是这三种音乐英文的缩写），结果来的全是没人要的年轻乐队。他定了一条规矩：只能演自己写的歌，不许翻唱。</p>
+  <p>纽约的朋克圈子很多元，很多人来自艺术学校或诗歌圈：</p>
+  <ul class="clean">
+    <li><b>Patti Smith</b>：诗人出身，1975 年的专辑《Horses》把诗歌朗诵和粗糙的摇滚结合在一起</li>
+    <li><b>Television</b>：两把吉他交织的长段落，后来被归为后朋克的先驱</li>
+    <li><b>Talking Heads</b>：神经质、带着放克律动的艺术摇滚</li>
+    <li><b>Blondie</b>：把朋克和流行、迪斯科结合，后来成了排行榜冠军</li>
+    <li><b>Ramones</b>：最纯粹、最简单的朋克，1976 年的同名首张专辑被普遍视为朋克的起点</li>
+  </ul>
+
+  <figure class="photo">
+    <img src="img/ramones-1980.jpg" alt="Ramones 1980 年在挪威奥斯陆演出" data-file="Ramones_30081980_10_800.jpg" width="800" height="483" loading="lazy" decoding="async" style="height:auto">
+    <figcaption class="cap"><b>Ramones，奥斯陆，1980 年 8 月</b>Helge Øverås 摄 · <a href="https://commons.wikimedia.org/wiki/File:Ramones_30081980_10_800.jpg">维基共享资源</a> · <a href="https://creativecommons.org/licenses/by/2.5/">CC BY 2.5</a></figcaption>
+  </figure>
+
+  <h3>伦敦：愤怒与丑闻</h3>
+  <p>1976 年 7 月 4 日，Ramones 第一次到伦敦演出。据说台下站着不少后来英国朋克乐队的成员，他们发现原来歌可以这么短、这么快、这么简单。</p>
+  <p>伦敦朋克比纽约更愤怒、更政治化，也更像一场社会事件：</p>
+  <ul class="clean">
+    <li><b>Sex Pistols</b>：1976 年 11 月发行第一张单曲《Anarchy in the U.K.》。12 月 1 日，他们上了一档电视直播节目，在主持人的挑逗下当众说了脏话。第二天，英国小报头版大字写着“The Filth and the Fury!”（下流与狂怒），朋克一夜之间成了全国性的道德恐慌</li>
+    <li><b>The Damned</b>：1976 年 10 月发行《New Rose》，被认为是英国第一张朋克单曲</li>
+    <li><b>The Clash</b>：比 Sex Pistols 更关心政治和社会，后来把雷鬼、斯卡、山区摇滚都融了进来，被称为“唯一重要的乐队”</li>
+    <li><b>Buzzcocks</b>：本章开头那场演出的组织者，把朋克和好听的流行旋律结合，是后来流行朋克的祖师爷之一</li>
+  </ul>
+
+  <figure class="photo">
+    <img src="img/sex-pistols-1977.jpg" alt="Sex Pistols 1977 年 1 月在阿姆斯特丹 Paradiso 演出" data-file="Sex_Pistols_in_Paradiso.jpg">
+    <figcaption class="cap"><b>Sex Pistols，阿姆斯特丹 Paradiso，1977 年 1 月</b>从左到右：鼓手 Paul Cook、贝斯手 Glen Matlock、主唱 Johnny Rotten、吉他手 Steve Jones。Koen Suyk 摄（Anefo），荷兰国家档案馆 · CC BY-SA · 来源：维基共享资源</figcaption>
+  </figure>
+
+  <h3>Sex Pistols 的两年半</h3>
+  <ol class="timeline">
+    <li><span class="yr">1975</span><b>组建</b><p>在 Malcolm McLaren 和 Vivienne Westwood 的服装店周围，几个年轻人凑成了乐队。</p></li>
+    <li><span class="yr">1976.11</span><b>《Anarchy in the U.K.》</b><p>第一张单曲；12 月的电视脏话事件让他们一夜成名，也让很多演出被取消。</p></li>
+    <li><span class="yr">1977.2</span><b>Sid Vicious 加入</b><p>原贝斯手 Glen Matlock 离队，换上了几乎不会弹贝斯、但形象完全“朋克”的 Sid Vicious。</p></li>
+    <li><span class="yr">1977.5</span><b>《God Save the Queen》</b><p>正值英国女王登基 25 周年庆典，这首讽刺王室的歌被 BBC 禁播，很多商店拒绝出售，却仍冲到排行榜第二名。</p></li>
+    <li><span class="yr">1977.10</span><b>唯一一张录音室专辑</b><p>登上英国专辑榜第一。</p></li>
+    <li><span class="yr">1978.1</span><b>解散</b><p>在混乱的美国巡演最后一站之后，乐队解散。一年后，Sid Vicious 因吸毒过量去世，年仅 21 岁。</p></li>
+  </ol>
+  <p>Sex Pistols 只存在了两年半，正式发行的录音室专辑只有一张，却改变了整个英国流行文化。这本身就很“朋克”：不需要长久，不需要完美，只需要足够真实、足够响亮。</p>
+
+  <figure class="photo">
+    <img src="img/clash-1980.jpg" alt="The Clash 1980 年 5 月在奥斯陆演出" data-file="Clash_21051980_12_800.jpg">
+    <figcaption class="cap"><b>The Clash，奥斯陆，1980 年 5 月</b>Helge Øverås 摄 · CC 授权（具体版本以维基共享资源页面为准）</figcaption>
+  </figure>
+
+  <h3>对比一下</h3>
+  <div class="tablewrap">
+  <table class="cmp">
+    <tr><th></th><th>纽约</th><th>伦敦</th></tr>
+    <tr><td>大本营</td><td>CBGB、Max's Kansas City 等地下酒吧</td><td>国王路的服装店、各地小俱乐部</td></tr>
+    <tr><td>参与的人</td><td>艺术学校学生、诗人、落魄乐手</td><td>工人阶级青年、失业少年</td></tr>
+    <tr><td>气质</td><td>冷静、艺术、讽刺</td><td>愤怒、政治、挑衅</td></tr>
+    <tr><td>声音</td><td>从极简（Ramones）到实验（Television）都有</td><td>更快、更吵、口号更多</td></tr>
+    <tr><td>代表</td><td>Ramones、Patti Smith、Television、Talking Heads、Blondie</td><td>Sex Pistols、The Clash、The Damned、Buzzcocks</td></tr>
+  </table>
+  </div>
+
+  <!-- 08 -->
+  <h2 id="roots"><span class="n">08 / roots</span><span class="t">从布鲁斯到朋克</span></h2>
+  <p>还记得布鲁斯那一章的实验 10 吗？我们把一段芝加哥布鲁斯提速、拉直，就变成了早期摇滚。朋克其实就是沿着这条路再往前走一步：<span class="mark">去掉摇摆，去掉独奏，换成强力和弦，再快一点、吵一点</span>。下面用同一个十二小节，连着听这三步：</p>
+
+  <div class="lab">
+    <div class="head"><span class="tag">实验 06</span><strong>布鲁斯 → 摇滚 → 朋克</strong><small>同一个十二小节和弦进行，E 调</small></div>
+    <div class="cols3">
+      <div class="opt"><b>1950s 芝加哥布鲁斯</b><p>100 BPM，shuffle 摇摆，boogie 吉他。</p><button type="button" data-demo="chicago">播放</button></div>
+      <div class="opt"><b>1958 早期摇滚</b><p>168 BPM，拉直成直八分，双音吉他。</p><button type="button" data-demo="rocknroll">播放</button></div>
+      <div class="opt"><b>1976 朋克</b><p>192 BPM，强力和弦全部下拨，没有独奏。</p><button class="primary" type="button" data-demo="punk12">播放</button></div>
+    </div>
+    <div class="strip" data-strip></div>
+    <div class="controls"><button type="button" data-stop>停止</button></div>
+  </div>
+
+  <p>这也解释了一件事：很多早期朋克乐队其实是摇滚老歌迷。Ramones 喜欢 1960 年代的流行女团和冲浪摇滚，The Clash 翻唱过雷鬼和老摇滚。朋克反对的不是摇滚本身，而是摇滚后来变成的样子。它想做的，是让摇滚回到起点。</p>
+
+  <div class="ask">
+    <span class="who">我问</span>
+    <div>
+      <p class="q">我发现我在美国马里兰州大洋村的 Seacrets 餐厅听的就是这种风格</p>
+      <p class="a">很可能是这个家族的“后代”。那里的翻唱乐队常演的是能让全场一起吼的歌，比如 Blink-182、Green Day 这样的流行朋克，以及 Sublime 那种把朋克和雷鬼混在一起的“雷鬼摇滚”。它们都保留了朋克的速度和能量，但旋律更好听、更适合派对。下一节就讲这些后代。</p>
+    </div>
+  </div>
+
+  <!-- 09 -->
+  <h2 id="after"><span class="n">09 / after punk</span><span class="t">朋克之后</span></h2>
+  <p>第一波朋克在 1978 年前后就基本燃尽了。但它像一颗炸弹，炸出了一大片新的音乐。几乎所有后来的“另类”“独立”音乐，都能在这里找到源头。</p>
+
+  <figure class="fig">
+    <div class="frame"><svg viewBox="0 0 680 340" role="img" aria-label="家谱：朋克分出后朋克、硬核、流行朋克三支；后朋克通向新浪潮和哥特；硬核通向 emo 和垃圾摇滚；流行朋克通向 2000 年代的流行朋克"><g id="tree"></g></svg></div>
+    <figcaption>图 8 · 朋克的后代（简化）。</figcaption>
+  </figure>
+
+  <h3>后朋克：从愤怒到阴郁</h3>
+  <p>1978 年以后，一些乐手觉得“三个和弦”已经成了新的套路，开始往更实验、更阴暗的方向走：贝斯不再只弹根音，而是弹出旋律；吉他用清亮、有回声的音色；加入合成器；歌词转向内心和疏离感。代表有曼彻斯特的 Joy Division、伦敦的 Siouxsie and the Banshees、The Cure。后朋克又衍生出了新浪潮（new wave）和哥特摇滚。</p>
+
+  <h3>硬核：更快、更短、更愤怒</h3>
+  <p>1980 年前后，美国西海岸和华盛顿的年轻人把朋克推向极端：速度超过 200，一首歌常常不到一分钟，演出时观众在台下互相冲撞（mosh pit）。代表有洛杉矶的 Black Flag、华盛顿的 Minor Threat 和 Bad Brains、旧金山的 Dead Kennedys。Minor Threat 一首叫《Straight Edge》的歌，还催生了一种拒绝烟酒和毒品的青年亚文化。</p>
+
+  <h3>流行朋克：好听的朋克</h3>
+  <p>保留朋克的速度和吉他，配上好记、好唱的流行旋律。1990 年代，加州的 Green Day 凭专辑《Dookie》（1994）大红大紫；1999 年，Blink-182 的专辑《Enema of the State》让流行朋克成为主流。这也是今天美国酒吧翻唱乐队最爱的一类歌。</p>
+
+  <h3>还有更多</h3>
+  <ul class="clean">
+    <li><b>垃圾摇滚（grunge）</b>：Nirvana 的 Kurt Cobain 是朋克的忠实信徒。《Smells Like Teen Spirit》（1991）把朋克的态度和金属的厚重结合在一起</li>
+    <li><b>Emo</b>：从华盛顿硬核圈子里分出来，更强调个人情绪，2000 年代因 My Chemical Romance 等乐队流行</li>
+    <li><b>Riot grrrl</b>：1990 年代初美国西北部的女性朋克运动，代表乐队 Bikini Kill，把朋克和女性主义结合</li>
+    <li><b>雷鬼朋克、斯卡朋克</b>：The Clash 早就开始把雷鬼混进朋克，后来的 Sublime 等乐队把这条路走成了一种派对音乐</li>
+  </ul>
+
+  <div class="lab">
+    <div class="head"><span class="tag">实验 07</span><strong>三个后代</strong><small>各一小段原创示例</small></div>
+    <div class="cols3">
+      <div class="opt"><b>后朋克</b><p>中速、小调，贝斯弹旋律，清亮的吉他，嗵鼓为主的鼓点。</p><button type="button" data-demo="postpunk">播放</button></div>
+      <div class="opt"><b>硬核</b><p>220 BPM，底鼓军鼓不停交替，十秒钟就结束。</p><button type="button" data-demo="hardcore">播放</button></div>
+      <div class="opt"><b>流行朋克</b><p>四和弦，主歌闷音，副歌全开，一切都很“青春”。</p><button class="primary" type="button" data-demo="poppunk">播放</button></div>
+    </div>
+    <div class="controls"><button type="button" data-stop>停止</button></div>
+  </div>
+
+  <!-- 10 -->
+  <h2 id="asia"><span class="n">10 / Tokyo · Beijing</span><span class="t">在日本和中国</span></h2>
+
+  <h3>日本：THE BLUE HEARTS 与《NANA》</h3>
+  <p>日本在 1970 年代末就有了自己的朋克乐队。到了 1980 年代后期，THE BLUE HEARTS 把朋克的简单直接和日语的真诚歌词结合起来，1987 年的出道单曲《リンダリンダ》（Linda Linda）至今仍是日本几乎人人会唱的歌。</p>
+  <p>《NANA》是另一种意义上的日本朋克：它把 1970 年代伦敦朋克的符号，比如 Sid Vicious、Vivienne Westwood、挂锁项链，搬进了 2000 年代东京的青春故事里。漫画里“朋克乐队 Blast”和“精致的人气乐队 Trapnest”的对立，正好重演了朋克和摇滚贵族之间的那场冲突。如果你是通过《NANA》认识朋克的，回头去听 Sex Pistols，会发现很多细节都对得上。</p>
+
+  <h3>中国：北京的“无聊军队”</h3>
+  <p>1990 年代后期，北京出现了第一批中国朋克乐队，比如脑浊、反光镜、AK-47、69 乐队。他们常在一家叫“嚎叫俱乐部”的小场地演出。1999 年，摩登天空唱片发行了一张朋克合辑，名字就叫《无聊军队》，这个名字后来成了那一代北京朋克的代称。他们唱的是城市年轻人的无聊、躁动和不满，用的仍然是那套三个和弦、快、吵、自己动手的方法。</p>
+
+  <!-- 11 -->
+  <h2 id="listen"><span class="n">11 / listen</span><span class="t">听：本章十二首曲目</span></h2>
+  <p>按时间顺序听。蓝黑色按钮是 YouTube 上的官方音源，其余按钮打开搜索结果。国内收听可以点“网易云”或“QQ音乐”。</p>
+  <div class="side"><span>SIDE A · 1969–1979 · 起源与爆发</span><span>先听这六首</span></div>
+  <div id="songsA"></div>
+  <div class="side"><span>SIDE B · 1980–1994 · 后代</span><span>再听这六首</span></div>
+  <div id="songsB"></div>
+
+  <!-- 12 -->
+  <h2 id="practice"><span class="n">12 / practice</span><span class="t">练 · 术语表</span></h2>
+  <h3>练习 1：数和弦</h3>
+  <p>听《Blitzkrieg Bop》，每当吉他的“声音块”变了，就在心里数一下。整首歌一共用了几个不同的和弦？答案比你想的少。</p>
+  <h3>练习 2：数 BPM</h3>
+  <p>听《Blitzkrieg Bop》和《Basket Case》，跟着军鼓拍手（第 2、4 拍），用手机计时 15 秒，数拍手次数乘以 8，就是大致的 BPM。再拿实验 03 里的三种速度对比一下。</p>
+  <h3>练习 3：找朋克的“祖先”和“后代”</h3>
+  <p>先听 The Stooges，再听 Ramones，再听 Green Day。三首歌跨越 25 年，问自己：哪些东西一直没变？哪些东西变了？</p>
+  <h3>练习 4：用三个和弦写一首歌</h3>
+  <p>打开实验 02，选一组你最喜欢的和弦进行，写两句歌词：第一句说一件让你烦的事，第二句说你打算怎么办。不用押韵，不用唱得好听，朋克从来不要求这些。</p>
+
+  <div class="mine">
+    <div class="lbl">我的听感 · 待写</div>
+    这里留给你：Ramones 和 Sex Pistols 第一次听是什么感觉？在 Seacrets 听到的翻唱里，有没有哪首让你想起这一章？《NANA》里哪个场景和这一章最对得上？
+  </div>
+
+  <h3 id="gloss">术语表</h3>
+  <dl class="gloss">
+    <dt>朋克（punk）</dt><dd>1970 年代中期在纽约和伦敦兴起的摇滚流派与亚文化：简单、快、吵、自己动手</dd>
+    <dt>原型朋克</dt><dd>1960 年代末到 1970 年代初，为朋克铺路的乐队，如 The Stooges、MC5、The Velvet Underground</dd>
+    <dt>强力和弦</dt><dd>只有根音和五音（加高八度根音）的和弦，没有三音，失真后依然清楚</dd>
+    <dt>失真</dt><dd>让吉他声音变得粗糙、厚重的效果，最早来自把音箱开到超负荷</dd>
+    <dt>下拨</dt><dd>只从上往下扫弦的弹法，每一下力度一致，声音密集平均</dd>
+    <dt>BPM</dt><dd>每分钟多少拍，衡量速度的单位。朋克常在 170 以上</dd>
+    <dt>skank beat</dt><dd>底鼓和军鼓在每个八分音符上交替的鼓型，硬核朋克的标志</dd>
+    <dt>lo-fi</dt><dd>低保真，故意或被迫用简陋设备录音形成的粗糙声音美学</dd>
+    <dt>团唱</dt><dd>乐队成员和观众一起喊短口号的演唱方式</dd>
+    <dt>fanzine</dt><dd>粉丝自己用复印机制作的小杂志</dd>
+    <dt>独立厂牌</dt><dd>不属于大唱片集团的唱片公司，朋克之后大量出现</dd>
+    <dt>后朋克</dt><dd>朋克之后更实验、更阴郁的方向，如 Joy Division、The Cure</dd>
+    <dt>硬核</dt><dd>更快、更短、更激烈的美国朋克，如 Black Flag、Minor Threat</dd>
+    <dt>流行朋克</dt><dd>朋克的速度加上流行旋律，如 Green Day、Blink-182</dd>
+    <dt>mosh pit</dt><dd>演出时台下观众互相冲撞的区域</dd>
+  </dl>
+
+</article>
+
+<footer class="credits">
+  <div class="wrap">
+    <h2>Credits</h2>
+    <dl>
+      <dt>插画</dt><dd>章首插画由 AI 生成</dd>
+      <dt>图解</dt><dd>图 1–8（和弦对比、指板、时长、鼓型、小杂志、剪贴字、跨大西洋、家谱）均为本书原创绘制</dd>
+      <dt>照片</dt><dd>来自维基共享资源（Wikimedia Commons），本书收录照片副本：<br>
+        Ramones（1980）：Helge Øverås 摄 · <a href="https://commons.wikimedia.org/wiki/File:Ramones_30081980_10_800.jpg">维基共享资源</a> · <a href="https://creativecommons.org/licenses/by/2.5/">CC BY 2.5</a>；<br>
+        Sex Pistols（1977）：Koen Suyk 摄（Anefo），荷兰国家档案馆，CC BY-SA；<br>
+        The Clash（1980）：Helge Øverås 摄，CC 授权<br>
+        照片已转为黑白以配合本章版式；具体授权版本请以维基共享资源页面为准</dd>
+      <dt>声音示例</dt><dd>本章全部声音示例均由浏览器实时合成，和弦进行、节奏与旋律为原创，无第三方素材</dd>
+      <dt>曲目</dt><dd>仅提供推荐与收听链接，本书不包含任何录音；录音与作品版权归原权利人所有</dd>
+      <dt>授权</dt><dd>本章原创文字、图解与合成示例采用 CC BY-NC-SA 4.0，页面代码采用 MIT 许可证；第三方照片按各自授权使用（CC BY-SA 照片的改动部分同样按 CC BY-SA 提供），曲目、名称与商标不在此授权范围内</dd>
+    </dl>
+    <div class="next"><span><a href="../b2-hardrock/index.html" data-nav="b2-hardrock">← B2 · 硬摇滚</a></span><span><a href="../b4-metal/index.html" data-nav="b4-metal">B4 · 金属 →</a></span></div>
+  </div>
+</footer>
+
+<button class="stopfab" id="stopAll" type="button">停止声音</button>
+
+<script>
+/* ================= 合成音频引擎 ================= */
+let ac=null,master,verbIn;
+function A(){
+  if(!ac){
+    ac=new (window.AudioContext||window.webkitAudioContext)();
+    const comp=ac.createDynamicsCompressor();comp.threshold.value=-14;comp.ratio.value=4;comp.connect(ac.destination);
+    master=ac.createGain();master.gain.value=.85;master.connect(comp);
+    const cv=ac.createConvolver(),len=ac.sampleRate*1.8,b=ac.createBuffer(2,len,ac.sampleRate);
+    for(let c=0;c<2;c++){const d=b.getChannelData(c);for(let i=0;i<len;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/len,3.2);}
+    cv.buffer=b;const vg=ac.createGain();vg.gain.value=.22;cv.connect(vg).connect(comp);verbIn=cv;
+  }
+  if(ac.state==="suspended")ac.resume();
+  return ac;
+}
+const mf=m=>440*Math.pow(2,(m-69)/12);
+let bus=null,timers=[],srcs=[],loopTimer=null,activeBtn=null;
+function newBus(){
+  stopDemos();A();
+  bus=ac.createGain();bus.gain.value=1;bus.connect(master);
+  const s=ac.createGain();s.gain.value=1;bus.connect(s);s.connect(verbIn);
+  return bus;
+}
+function stopDemos(){
+  timers.forEach(clearTimeout);timers=[];clearTimeout(loopTimer);loopTimer=null;
+  srcs.forEach(s=>{try{s.stop()}catch(e){}});srcs=[];
+  if(bus){const b=bus;b.gain.setTargetAtTime(0,ac.currentTime,.03);setTimeout(()=>b.disconnect(),300);bus=null;}
+  document.querySelectorAll(".bar.now,.strip i.now").forEach(x=>x.classList.remove("now"));
+  if(activeBtn){activeBtn.classList.remove("playing");activeBtn=null;}
+  const f=document.getElementById("stopAll");f&&f.classList.remove("on");
+}
+function later(fn,sec){timers.push(setTimeout(fn,Math.max(0,sec*1000)));}
+function track(n){srcs.push(n);return n;}
+
+/* Karplus-Strong 拨弦 */
+const ksCache={};
+function ksBuf(midi,dur,bright,decay){
+  const key=midi+"|"+dur+"|"+bright+"|"+decay;if(ksCache[key])return ksCache[key];
+  const sr=ac.sampleRate,N=Math.max(2,Math.round(sr/mf(midi))),len=Math.floor(sr*dur);
+  const b=ac.createBuffer(1,len,sr),d=b.getChannelData(0),buf=new Float32Array(N);
+  for(let i=0;i<N;i++)buf[i]=Math.random()*2-1;
+  const smooth=Math.round((1-bright)*5);
+  for(let k=0;k<smooth;k++)for(let i=0;i<N;i++)buf[i]=(buf[i]+buf[(i+1)%N])*.5;
+  let idx=0;
+  for(let i=0;i<len;i++){const nx=(idx+1)%N,v=buf[idx];d[i]=v;buf[idx]=decay*.5*(v+buf[nx]);idx=nx;}
+  const fade=Math.min(len,Math.floor(sr*.03));for(let i=0;i<fade;i++)d[len-1-i]*=i/fade;
+  return ksCache[key]=b;
+}
+let shaperCache={};
+function shaper(amount){
+  if(shaperCache[amount])return shaperCache[amount];
+  const n=1024,c=new Float32Array(n);for(let i=0;i<n;i++){const x=i/(n-1)*2-1;c[i]=Math.tanh(x*amount)/Math.tanh(amount);}
+  return shaperCache[amount]=c;
+}
+/* 乐器：ac 木吉他 / el 电吉他干净 / dr 电吉他过载 / bass 贝斯 */
+const INST={
+  ac:{bright:.62,decay:.9965,dur:1.8,vol:.55},
+  el:{bright:.8,decay:.9985,dur:2.2,vol:.4,drive:1.6,lp:3200},
+  dr:{bright:.85,decay:.999,dur:2.4,vol:.22,drive:7,lp:2600},
+  bass:{bright:.25,decay:.995,dur:1.2,vol:.75,lp:900}
+};
+function pluck(t,midi,inst,o={}){
+  const a=A(),I=INST[inst],s=a.createBufferSource();
+  s.buffer=ksBuf(midi,o.dur||I.dur,I.bright,I.decay);
+  const g=a.createGain();g.gain.value=(o.vol||1)*I.vol;
+  let node=g;
+  if(o.from){s.playbackRate.setValueAtTime(Math.pow(2,o.from/12),t);s.playbackRate.setValueAtTime(Math.pow(2,o.from/12),t+(o.hold||0));s.playbackRate.linearRampToValueAtTime(1,t+(o.hold||0)+(o.glide||.18));}
+  if(o.vib){const l=a.createOscillator(),lg=a.createGain();l.frequency.value=5.5;lg.gain.value=.008;l.connect(lg).connect(s.playbackRate);l.start(t+(o.vibAt||.4));l.stop(t+(o.dur||I.dur));track(l);}
+  s.connect(g);
+  if(I.drive){const sh=a.createWaveShaper();sh.curve=shaper(I.drive);sh.oversample="2x";node.connect(sh);node=sh;}
+  if(I.lp){const f=a.createBiquadFilter();f.type="lowpass";f.frequency.value=I.lp;node.connect(f);node=f;}
+  if(inst==="ac"){const pk=a.createBiquadFilter();pk.type="peaking";pk.frequency.value=220;pk.gain.value=5;node.connect(pk);node=pk;}
+  if(o.mute){g.gain.setValueAtTime((o.vol||1)*I.vol,t);g.gain.exponentialRampToValueAtTime(.001,t+o.mute);}
+  node.connect(bus);s.start(t);s.stop(t+(o.dur||I.dur));track(s);
+}
+function strum(t,notes,inst,o={}){notes.forEach((m,k)=>pluck(t+k*(o.spread||.014),m,inst,{vol:o.vol||.6,mute:o.mute,dur:o.dur}));}
+/* 口琴 */
+function harp(t,midi,dur,o={}){
+  const a=A(),os=a.createOscillator(),os2=a.createOscillator();os.type="sawtooth";os2.type="square";
+  const f=mf(midi);
+  [os,os2].forEach((x,k)=>{const ff=f*(k?1.002:1);
+    if(o.from){x.frequency.setValueAtTime(ff*Math.pow(2,o.from/12),t);x.frequency.linearRampToValueAtTime(ff,t+(o.glide||.15));}else x.frequency.setValueAtTime(ff,t);});
+  const lfo=a.createOscillator(),lg=a.createGain();lfo.frequency.value=5.2;lg.gain.value=12;lfo.connect(lg);lg.connect(os.detune);lg.connect(os2.detune);
+  const bp=a.createBiquadFilter();bp.type="bandpass";bp.frequency.value=o.amp?1100:1500;bp.Q.value=o.amp?1.6:1.1;
+  const g=a.createGain(),v=(o.vol||1)*(o.amp?.13:.16);
+  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.04);g.gain.setValueAtTime(v,t+dur-.06);g.gain.linearRampToValueAtTime(0,t+dur);
+  const m2=a.createGain();m2.gain.value=.4;
+  os.connect(bp);os2.connect(m2).connect(bp);let node=bp;
+  if(o.amp){const sh=a.createWaveShaper();sh.curve=shaper(4);const lp=a.createBiquadFilter();lp.type="lowpass";lp.frequency.value=2200;bp.connect(sh).connect(lp);node=lp;}
+  node.connect(g).connect(bus);
+  [os,os2,lfo].forEach(x=>{x.start(t);x.stop(t+dur+.05);track(x);});
+}
+/* 人声（元音“啊”） */
+function voice(t,midi,dur,o={}){
+  const a=A(),os=a.createOscillator();os.type="sawtooth";const f=mf(midi);
+  os.frequency.setValueAtTime(f*Math.pow(2,(o.from==null?-1:o.from)/12),t);os.frequency.linearRampToValueAtTime(f,t+(o.glide||.09));
+  if(o.fall){os.frequency.setValueAtTime(f,t+dur*.6);os.frequency.linearRampToValueAtTime(f*Math.pow(2,o.fall/12),t+dur);}
+  const lfo=a.createOscillator(),lg=a.createGain();lfo.frequency.value=5;lg.gain.setValueAtTime(0,t);lg.gain.linearRampToValueAtTime(o.vibDepth||22,t+Math.min(dur,.5));lfo.connect(lg).connect(os.detune);
+  const g=a.createGain(),v=(o.vol||1)*.5;
+  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.06);g.gain.setValueAtTime(v,t+dur-.1);g.gain.linearRampToValueAtTime(0,t+dur);
+  const out=a.createGain();out.gain.value=1;
+  [[o.vowel==="o"?500:750,7,1],[o.vowel==="o"?900:1200,9,.6],[2600,10,.25]].forEach(([fr,q,amt])=>{const bp=a.createBiquadFilter();bp.type="bandpass";bp.frequency.value=fr;bp.Q.value=q;const gg=a.createGain();gg.gain.value=amt*3;os.connect(bp).connect(gg).connect(out);});
+  out.connect(g).connect(bus);
+  [os,lfo].forEach(x=>{x.start(t);x.stop(t+dur+.05);track(x);});
+}
+/* 鼓 */
+let noiseBuf=null;
+function noise(){if(!noiseBuf){const a=A(),len=a.sampleRate;noiseBuf=a.createBuffer(1,len,a.sampleRate);const d=noiseBuf.getChannelData(0);for(let i=0;i<len;i++)d[i]=Math.random()*2-1;}return noiseBuf;}
+function kick(t,v=1){const a=A(),o=a.createOscillator(),g=a.createGain();o.frequency.setValueAtTime(130,t);o.frequency.exponentialRampToValueAtTime(42,t+.12);g.gain.setValueAtTime(.9*v,t);g.gain.exponentialRampToValueAtTime(.001,t+.32);o.connect(g).connect(bus);o.start(t);o.stop(t+.35);track(o);}
+function snare(t,v=1,brush){const a=A(),n=a.createBufferSource();n.buffer=noise();const f=a.createBiquadFilter();f.type=brush?"bandpass":"highpass";f.frequency.value=brush?2500:1200;const g=a.createGain();g.gain.setValueAtTime((brush?.18:.42)*v,t);g.gain.exponentialRampToValueAtTime(.001,t+(brush?.16:.2));n.connect(f).connect(g).connect(bus);n.start(t);n.stop(t+.25);track(n);
+  if(!brush){const o=a.createOscillator(),og=a.createGain();o.frequency.value=190;og.gain.setValueAtTime(.25*v,t);og.gain.exponentialRampToValueAtTime(.001,t+.09);o.connect(og).connect(bus);o.start(t);o.stop(t+.1);track(o);}}
+function hat(t,v=1){const a=A(),n=a.createBufferSource();n.buffer=noise();const f=a.createBiquadFilter();f.type="highpass";f.frequency.value=7500;const g=a.createGain();g.gain.setValueAtTime(.16*v,t);g.gain.exponentialRampToValueAtTime(.001,t+.05);n.connect(f).connect(g).connect(bus);n.start(t);n.stop(t+.07);track(n);}
+function stomp(t){const a=A(),o=a.createOscillator(),g=a.createGain();o.frequency.setValueAtTime(90,t);o.frequency.exponentialRampToValueAtTime(50,t+.08);g.gain.setValueAtTime(.5,t);g.gain.exponentialRampToValueAtTime(.001,t+.18);o.connect(g).connect(bus);o.start(t);o.stop(t+.2);track(o);}
+
+/* ================= 和弦进行与编曲 ================= */
+const PROG={
+  std:{bars:["I","I","I","I","IV","IV","I","I","V","IV","I","I"]},
+  quick:{bars:["I","IV","I","I","IV","IV","I","I","V","IV","I","V"]},
+  minor:{bars:["i","i","i","i","iv","iv","i","i","bVI","V","i","V"]}
+};
+const DEG={I:[0,"dom"],IV:[5,"dom"],V:[7,"dom"],i:[0,"min"],iv:[5,"min"],bVI:[8,"dom"]};
+const SHAPE={dom:[0,4,7,10],min:[0,3,7,10]};
+function chordOf(key,f){const [r,q]=DEG[f];return SHAPE[q].map(x=>key+r+x);}
+function eighth(t,beat,k,swing){return t+Math.floor(k/2)*beat+(k%2?(swing?beat*2/3:beat/2):0);}
+function lightStrip(strip,t0,barLen,n){
+  if(!strip)return;const cells=[...strip.children];const a=A();
+  for(let b=0;b<n;b++)later(()=>{cells.forEach(c=>c.classList.remove("now"));cells[b]&&cells[b].classList.add("now");},t0-a.currentTime+b*barLen);
+  later(()=>cells.forEach(c=>c.classList.remove("now")),t0-a.currentTime+n*barLen);
+}
+/* 原创旋律：以 E 布鲁斯音阶为基础，[拍, midi, 时值, 选项] */
+const CALL_A=[[0,67,.6,{}],[.67,69,.33,{}],[1,67,.9,{}],[2,64,1.7,{fall:-1}]];
+const CALL_B=[[0,71,.6,{}],[.67,74,.33,{}],[1,71,.6,{}],[1.67,69,.33,{}],[2,67,.6,{}],[2.67,64,1.4,{fall:-1}]];
+const ANS_SLIDE=[[0,67,{from:-2,glide:.2}],[.67,64,{}],[1,62,{}],[1.67,64,{from:-1}],[2.33,59,{}],[3,64,{from:-2,glide:.3}]];
+const ANS_HARP=[[0,67,.5,{from:-1}],[.67,64,.3,{}],[1,62,.6,{}],[2,64,1.2,{from:-1.5,glide:.25}]];
+const ANS_EL=[[0,79,{from:-2,glide:.15,vib:1}],[.67,76,{}],[1,74,{}],[1.33,76,{}],[2,71,{from:-1,vib:1}],[3,76,{vib:1}]];
+
+function sing(t0,beat,bar,phrase){phrase.forEach(([b,m,d,o])=>voice(t0+(bar*4+b)*beat,m,d*beat,o));}
+function answer(t0,beat,bar,kind){
+  if(kind==="slide")ANS_SLIDE.forEach(([b,m,o])=>pluck(t0+(bar*4+b)*beat,m,"ac",Object.assign({vol:.9},o)));
+  if(kind==="harp")ANS_HARP.forEach(([b,m,d,o])=>harp(t0+(bar*4+b)*beat,m+12,d*beat,o));
+  if(kind==="ampharp")ANS_HARP.forEach(([b,m,d,o])=>harp(t0+(bar*4+b)*beat,m+12,d*beat,Object.assign({amp:1},o)));
+  if(kind==="el")ANS_EL.forEach(([b,m,o])=>pluck(t0+(bar*4+b)*beat,m,"dr",Object.assign({vol:1.1},o)));
+}
+/* 三角洲：木吉他拇指低音 + 高音和弦切分 + 人声 + 滑棒回答 */
+function playDelta(t0,o={}){
+  const key=40,bpm=o.bpm||76,beat=60/bpm,bars=PROG.std.bars;
+  bars.forEach((f,bi)=>{
+    const ch=chordOf(key,f),root=ch[0],bt=t0+bi*4*beat;
+    for(let k=0;k<4;k++){const t=bt+k*beat;pluck(t,root,"ac",{vol:.85,mute:beat*.9});stomp(t);
+      if(k%2===1||o.full)strum(t+beat*2/3,[ch[1]+12,ch[2]+12,ch[3]+12],"ac",{vol:.35,mute:.25});}
+  });
+  if(o.vox!==false){[0,4].forEach(b=>sing(t0,beat,b,CALL_A));sing(t0,beat,8,CALL_B);}
+  [2,6,10].forEach(b=>answer(t0,beat,b,o.ans||"slide"));
+  return 12*4*beat;
+}
+/* 芝加哥：过载吉他 boogie（5-6 交替）、贝斯 boogie、鼓 shuffle、口琴 */
+const BOOGIE=[0,4,7,9,10,9,7,4];
+function chicagoBar(t,key,f,beat,o){
+  const r=key+DEG[f][0];
+  for(let k=0;k<8;k++){const t2=eighth(t,beat,k,o.swing);
+    if(o.bass)pluck(t2,r-12+BOOGIE[k],"bass",{vol:.9,mute:beat*.6});
+    if(o.gtr)strum(t2,[r,r+(k%4<2?7:9)],"dr",{vol:.55,mute:beat*.35,spread:.006});
+    if(o.drums){hat(t2,k%2?.6:1);}
+  }
+  if(o.drums)for(let k=0;k<4;k++){const tb=t+k*beat;if(k%2===0)kick(tb,.9);else snare(tb,o.rock?1.1:.8,!o.rock&&o.brush);}
+}
+function playChicago(t0,o={}){
+  const key=40,bpm=o.bpm||100,beat=60/bpm,bars=PROG.std.bars;
+  bars.forEach((f,bi)=>chicagoBar(t0+bi*4*beat,key,f,beat,{swing:true,bass:true,gtr:o.gtr!==false,drums:true}));
+  if(o.vox!==false){[0,4].forEach(b=>sing(t0,beat,b,CALL_A));sing(t0,beat,8,CALL_B);}
+  if(o.ans!==false)[2,6,10].forEach(b=>answer(t0,beat,b,"ampharp"));
+  return 12*4*beat;
+}
+function playRock(t0){
+  const key=40,bpm=168,beat=60/bpm,bars=PROG.std.bars;
+  bars.forEach((f,bi)=>{const t=t0+bi*4*beat,r=key+DEG[f][0];
+    for(let k=0;k<8;k++){const t2=eighth(t,beat,k,false);
+      pluck(t2,r-12+BOOGIE[k],"bass",{vol:.9,mute:beat*.45});
+      strum(t2,[r+12+(k%4<2?7:9),r+24],"dr",{vol:.5,mute:beat*.3,spread:.004});
+      hat(t2,k%2?.5:.9);}
+    for(let k=0;k<4;k++){const tb=t+k*beat;if(k%2===0)kick(tb,1);else snare(tb,1.2);}
+  });
+  return 12*4*beat;
+}
+function playStop(t0){
+  const key=40,bpm=96,beat=60/bpm,bars=PROG.std.bars;
+  for(let bi=0;bi<4;bi++){const t=t0+bi*4*beat,r=key;
+    pluck(t,r-12,"bass",{vol:1,mute:beat*.5});strum(t,[r,r+7,r+12],"dr",{vol:.7,mute:beat*.5});kick(t,1);snare(t,.8);
+    pluck(t+beat*2/3,r-12,"bass",{vol:.9,mute:beat*.4});strum(t+beat*2/3,[r,r+7,r+12],"dr",{vol:.6,mute:beat*.4});kick(t+beat*2/3,.8);
+    voice(t+beat*1.4,bi%2?69:67,beat*.9,{});voice(t+beat*2.4,bi%2?67:64,beat*1.3,{fall:-1});}
+  for(let bi=4;bi<12;bi++)chicagoBar(t0+bi*4*beat,key,bars[bi],beat,{swing:true,bass:true,gtr:true,drums:true});
+  sing(t0,beat,4,CALL_A);sing(t0,beat,8,CALL_B);answer(t0,beat,6,"ampharp");answer(t0,beat,10,"ampharp");
+  return 12*4*beat;
+}
+/* 实验 01：网格 */
+const fab=document.getElementById("stopAll");
+function setActive(b){activeBtn=b;b&&b.classList.add("playing");fab.classList.add("on");}
+function clearActive(){if(activeBtn){activeBtn.classList.remove("playing");activeBtn=null;}fab.classList.remove("on");}
+function stripNear(btn){const lab=btn.closest(".lab");return lab?lab.querySelector("[data-strip]"):null;}
+const DEMOS={
+  chicago:(t,btn)=>{const d=playChicago(t,{});lightStrip(stripNear(btn),t,4*60/100,12);return d;},
+  rocknroll:(t,btn)=>{const d=playRock(t);lightStrip(stripNear(btn),t,4*60/168,12);return d;}
+};
+function runDemo(name,btn){
+  newBus();setActive(btn);
+  const t=A().currentTime+.12,d=DEMOS[name](t,btn)||3;
+  later(()=>{clearActive();},d+.4);
+}
+
+/* ================= 朋克章：乐器补充 ================= */
+INST.pk={bright:.92,decay:.9992,dur:1.8,vol:.17,drive:14,lp:3600};
+INST.cl={bright:.85,decay:.9985,dur:2,vol:.45,lp:5200};
+function crash(t,v=1){const a=A(),n=a.createBufferSource();n.buffer=noise();const f=a.createBiquadFilter();f.type="highpass";f.frequency.value=4500;const g=a.createGain();g.gain.setValueAtTime(.32*v,t);g.gain.exponentialRampToValueAtTime(.001,t+1.3);n.connect(f).connect(g).connect(bus);n.start(t);n.stop(t+1.35);track(n);}
+function stick(t){const a=A(),n=a.createBufferSource();n.buffer=noise();const f=a.createBiquadFilter();f.type="bandpass";f.frequency.value=2600;f.Q.value=3;const g=a.createGain();g.gain.setValueAtTime(.6,t);g.gain.exponentialRampToValueAtTime(.001,t+.05);n.connect(f).connect(g).connect(bus);n.start(t);n.stop(t+.06);track(n);
+  const o=a.createOscillator(),og=a.createGain();o.frequency.value=1900;og.gain.setValueAtTime(.12,t);og.gain.exponentialRampToValueAtTime(.001,t+.03);o.connect(og).connect(bus);o.start(t);o.stop(t+.04);track(o);}
+function tom(t,f=120,v=1){const a=A(),o=a.createOscillator(),g=a.createGain();o.frequency.setValueAtTime(f*1.6,t);o.frequency.exponentialRampToValueAtTime(f,t+.08);g.gain.setValueAtTime(.55*v,t);g.gain.exponentialRampToValueAtTime(.001,t+.35);o.connect(g).connect(bus);o.start(t);o.stop(t+.4);track(o);}
+function shout(t,midi,dur,o={}){
+  const a=A(),os=a.createOscillator(),os2=a.createOscillator();os.type="sawtooth";os2.type="sawtooth";const f=mf(midi)*(o.det||1);
+  os.frequency.setValueAtTime(f*1.03,t);os.frequency.linearRampToValueAtTime(f,t+.04);os.frequency.linearRampToValueAtTime(f*Math.pow(2,(o.fall||-2)/12),t+dur);
+  os2.frequency.setValueAtTime(f*1.012,t);os2.frequency.linearRampToValueAtTime(f*Math.pow(2,(o.fall||-2)/12)*1.01,t+dur);
+  const sh=a.createWaveShaper();sh.curve=shaper(o.drive||5);
+  const g=a.createGain(),v=(o.vol||1)*.32;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.02);g.gain.setValueAtTime(v,t+dur*.7);g.gain.linearRampToValueAtTime(0,t+dur);
+  const out=a.createGain();
+  [[780,5,1],[1250,7,.7],[2700,8,.35]].forEach(([fr,q,amt])=>{const bp=a.createBiquadFilter();bp.type="bandpass";bp.frequency.value=fr;bp.Q.value=q;const gg=a.createGain();gg.gain.value=amt*3;sh.connect(bp).connect(gg).connect(out);});
+  os.connect(sh);os2.connect(sh);out.connect(g).connect(bus);
+  [os,os2].forEach(x=>{x.start(t);x.stop(t+dur+.05);track(x);});
+}
+function lofiBus(){
+  const b=newBus();b.disconnect();
+  const hp=ac.createBiquadFilter();hp.type="highpass";hp.frequency.value=450;
+  const lp=ac.createBiquadFilter();lp.type="lowpass";lp.frequency.value=2600;
+  const sh=ac.createWaveShaper();sh.curve=shaper(2.2);const g=ac.createGain();g.gain.value=.95;
+  b.connect(hp).connect(lp).connect(sh).connect(g).connect(master);
+  const n=ac.createBufferSource();n.buffer=noise();n.loop=true;const nf=ac.createBiquadFilter();nf.type="highpass";nf.frequency.value=4000;const ng=ac.createGain();ng.gain.value=.035;
+  n.connect(nf).connect(ng).connect(b);n.start();track(n);
+  return n;
+}
+/* ================= 朋克章：节奏型 ================= */
+function pcBar(t,beat,root,o={}){for(let k=0;k<8;k++){strum(t+k*beat/2,[root,root+7,root+12],"pk",{vol:o.vol||1,mute:o.mute?beat*.2:beat*.47,spread:.004});}}
+function bassBar(t,beat,root,o={}){for(let k=0;k<8;k++)pluck(t+k*beat/2,root-12,"bass",{vol:o.vol||1.1,mute:beat*.42});}
+function drumBar(t,beat,style,v=1){
+  for(let k=0;k<8;k++){const t2=t+k*beat/2;
+    if(style==="rock"){hat(t2,(k%2?.5:.9)*v);if(k===0||k===4)kick(t2,v);if(k===2||k===6)snare(t2,.9*v);}
+    if(style==="punk"){hat(t2,1*v);if(k===0||k===3||k===4)kick(t2,v);if(k===2||k===6)snare(t2,1.15*v);}
+    if(style==="hc"){hat(t2,.55*v);if(k%2===0)kick(t2,.95*v);else snare(t2,1*v);}
+    if(style==="verse"){hat(t2,.6*v);if(k===0||k===4||k===5)kick(t2,.8*v);if(k===2||k===6)snare(t2,.8*v);}
+    if(style==="post"){if(k%2===0)hat(t2,.5*v);if(k===0||k===4)kick(t2,v);if(k===2||k===6)snare(t2,.6*v);if(k===3)tom(t2,140,v);if(k===5)tom(t2,110,v);if(k===7)tom(t2,90,v);}
+  }
+}
+function countIn(t,beat){for(let k=0;k<4;k++)stick(t+k*beat);return t+4*beat;}
+function bpmP(){return +document.getElementById("bpmP").value;}
+const PROGS={prog1:[45,50,52,50],prog2:[40,38,45,45],prog3:[40,47,49,45]};
+function playProg(t0,roots,bpm){
+  const beat=60/bpm;let t=countIn(t0,beat);
+  for(let c=0;c<2;c++){roots.forEach((r,i)=>{const tb=t+(c*4+i)*4*beat;if(i===0)crash(tb);pcBar(tb,beat,r);bassBar(tb,beat,r);drumBar(tb,beat,"punk");});}
+  const end=t+8*4*beat;strum(end,[roots[0],roots[0]+7,roots[0]+12],"pk",{vol:1.1,dur:1.8});crash(end,1.2);kick(end);
+  return end-t0+1.8;
+}
+function play12punk(t0,btn){
+  const beat=60/192,bars=PROG.std.bars;
+  bars.forEach((f,bi)=>{const r=40+DEG[f][0],tb=t0+bi*4*beat;if(bi===0||bi===4||bi===8)crash(tb);pcBar(tb,beat,r);bassBar(tb,beat,r);drumBar(tb,beat,"punk");});
+  lightStrip(stripNear(btn),t0,4*beat,12);
+  return 48*beat+.5;
+}
+/* ================= 朋克章：示例 ================= */
+Object.assign(DEMOS,{
+  "triad-clean":t=>{strum(t,[40,47,52,56,59,64],"cl",{vol:.8,dur:2.2,spread:.02});return 2.4;},
+  "triad-dist":t=>{strum(t,[40,47,52,56,59,64],"pk",{vol:.9,dur:2.2,spread:.02});return 2.4;},
+  "power-dist":t=>{strum(t,[40,47,52],"pk",{vol:1.3,dur:2.2,spread:.015});return 2.4;},
+  prog1:t=>playProg(t,PROGS.prog1,bpmP()),
+  prog2:t=>playProg(t,PROGS.prog2,bpmP()),
+  prog3:t=>playProg(t,PROGS.prog3,bpmP()),
+  "beat-rock":t=>{const beat=60/120;for(let b=0;b<4;b++){const tb=t+b*4*beat;drumBar(tb,beat,"rock");bassBar(tb,beat,b===2?45:40,{vol:.9});}return 16*beat+.3;},
+  "beat-punk":t=>{const beat=60/180;for(let b=0;b<4;b++){const tb=t+b*4*beat;if(b===0)crash(tb);drumBar(tb,beat,"punk");bassBar(tb,beat,b===2?45:40);pcBar(tb,beat,b===2?45:40,{vol:.7});}return 16*beat+.3;},
+  "beat-hc":t=>{const beat=60/220;for(let b=0;b<4;b++){const tb=t+b*4*beat;if(b===0)crash(tb);drumBar(tb,beat,"hc");bassBar(tb,beat,[40,41,43,41][b]);pcBar(tb,beat,[40,41,43,41][b],{vol:.75});}return 16*beat+.6;},
+  studio:t=>{const beat=60/170;PROGS.prog2.forEach((r,i)=>{const tb=t+i*4*beat;if(i===0)crash(tb);pcBar(tb,beat,r);bassBar(tb,beat,r);drumBar(tb,beat,"punk");});return 16*beat+.6;},
+  garage:t=>DEMOS.studio(t),
+  sing:t=>{[[0,64,.9],[.9,67,.5],[1.4,69,1.4]].forEach(([s,m,d])=>voice(t+s,m,d,{from:-1,vibDepth:30}));return 3.2;},
+  shout:t=>{[[0,64,.5],[.6,67,.35],[1,69,.9]].forEach(([s,m,d])=>shout(t+s,m,d,{}));return 2.3;},
+  gang:t=>{const beat=60/150;for(let r=0;r<4;r++){const tb=t+r*2*beat;kick(tb);snare(tb+beat,1.1);[0,1,2,3,4].forEach(i=>shout(tb+i*.012,r%2?60:57,beat*.55,{det:1+(i-2)*.006,vol:.55,drive:4+i}));}return 8*beat+.5;},
+  punk12:(t,btn)=>play12punk(t,btn),
+  postpunk:t=>{const beat=60/132,bl=[52,52,55,57,59,57,55,50];
+    for(let b=0;b<4;b++){const tb=t+b*4*beat;drumBar(tb,beat,"post");
+      bl.forEach((m,k)=>pluck(tb+k*beat/2,m-(b===3?2:0),"bass",{vol:1.2,mute:beat*.45}));
+      [64,71,74,78,74,71,64,67].forEach((m,k)=>{pluck(tb+k*beat/2,m+12,"cl",{vol:.5});pluck(tb+k*beat/2+.018,m+12,"cl",{vol:.3,from:.08,glide:.01});});}
+    return 16*beat+1;},
+  hardcore:t=>{const beat=60/225,rs=[40,41,43,41,40,41,43,46];rs.forEach((r,i)=>{const tb=t+i*4*beat;if(i%4===0)crash(tb);drumBar(tb,beat,"hc");pcBar(tb,beat,r);bassBar(tb,beat,r);});
+    const end=t+32*beat;strum(end,[40,47,52],"pk",{vol:1.2,mute:.25});crash(end,1.3);kick(end);return 32*beat+1.2;},
+  poppunk:t=>{const beat=60/178,rs=[40,47,49,45];
+    rs.forEach((r,i)=>{const tb=t+i*4*beat;drumBar(tb,beat,"verse",.85);pcBar(tb,beat,r,{mute:true,vol:.8});bassBar(tb,beat,r,{vol:.9});});
+    const t2=t+16*beat;rs.forEach((r,i)=>{const tb=t2+i*4*beat;if(i===0)crash(tb,1.2);drumBar(tb,beat,"punk");pcBar(tb,beat,r);bassBar(tb,beat,r);});
+    [[0,68,1.5],[1.5,68,.5],[2,71,1],[3,69,1],[4,71,1.5],[5.5,71,.5],[6,73,1],[7,71,1],[8,68,2],[10,66,1],[11,64,1],[12,64,2],[14,66,1],[15,68,1]].forEach(([b,m,d])=>voice(t2+b*beat,m,d*beat*.95,{from:-1,vibDepth:14,vol:.8}));
+    return 32*beat+.8;}
+});
+document.getElementById("bpmP").addEventListener("input",e=>document.getElementById("bpmPv").textContent=e.target.value);
+/* 车库版：重写运行逻辑，使用低保真总线 */
+const _run=runDemo;
+runDemo=function(name,btn){
+  if(name!=="garage")return _run(name,btn);
+  const hiss=lofiBus();setActive(btn);const t=A().currentTime+.12,d=DEMOS.studio(t);
+  hiss.stop(t+d);
+  later(stopDemos,d+.4);
+};
+
+/* ================= 推荐曲目 ================= */
+const SONGS=[
+  {side:"A",q:"The Stooges I Wanna Be Your Dog 1969",title:"I Wanna Be Your Dog",by:"The Stooges",yr:"1969",style:"原型朋克",
+   txt:"底特律的 The Stooges 首张专辑里的歌。三个和弦反复轰鸣，加上一个单调到催眠的钢琴音，比朋克早了七年，却已经是朋克的样子。",
+   listen:["整首歌几乎就是三个和弦不停地循环","吉他失真粗糙，没有任何修饰","对比本章实验 02：这就是“三和弦生成器”的原始版本"]},
+  {side:"A",yt:"268C3N2dDYk",title:"Blitzkrieg Bop",by:"Ramones",yr:"1976",style:"纽约朋克",
+   txt:"Ramones 首张专辑的第一首歌，通常被当作朋克的起点。开头那句全员团唱的口号，是朋克最有名的开场之一。",
+   listen:["吉他全部下拨，像机关枪一样平均密集","整首歌只有两分多钟，没有吉他独奏","注意团唱：所有人一起喊同一句"]},
+  {side:"A",yt:"YJRnwaEUNkM",title:"Anarchy in the U.K.",by:"Sex Pistols",yr:"1976",style:"伦敦朋克",
+   txt:"Sex Pistols 的第一张单曲。Johnny Rotten 那种尖利、嘲讽、故意拖长音的唱法，和 Ramones 的憨直完全不同。",
+   listen:["开头的吉他下行和弦，像一堵墙压过来","主唱不是在唱，是在“演”：嘲笑、挑衅","对比 Ramones：伦敦朋克更愤怒，也更像一场表演"]},
+  {side:"A",q:"The Damned New Rose 1976",title:"New Rose",by:"The Damned",yr:"1976",style:"伦敦朋克",
+   txt:"通常被认为是英国第一张朋克单曲，比《Anarchy in the U.K.》还早一个月发行。",
+   listen:["鼓的开场非常有冲击力","速度比 Sex Pistols 更快，更接近后来的硬核"]},
+  {side:"A",q:"Buzzcocks Ever Fallen in Love 1978",title:"Ever Fallen in Love (With Someone You Shouldn't've)",by:"Buzzcocks",yr:"1978",style:"曼彻斯特 · 流行朋克先驱",
+   txt:"本章开头那场演出的组织者。Buzzcocks 把朋克的速度和吉他，配上了一段好记到让人忘不掉的旋律，唱的是爱上不该爱的人。",
+   listen:["朋克的编制，流行歌的旋律","对比后面的 Green Day：二十年后的流行朋克几乎就是这首歌的后代"]},
+  {side:"A",yt:"EfK-WX2pa8c",title:"London Calling",by:"The Clash",yr:"1979",style:"伦敦朋克 · 融合",
+   txt:"同名双专辑的主打歌。The Clash 在这张专辑里把朋克和雷鬼、斯卡、山区摇滚、爵士都融在了一起，证明朋克不只是三个和弦。",
+   listen:["节奏是一种行进式的、略带雷鬼味的律动","Joe Strummer 的嗓音沙哑、带着末日感","对比 Sex Pistols：同样愤怒，但音乐性更丰富"]},
+  {side:"B",q:"Joy Division Love Will Tear Us Apart 1980",title:"Love Will Tear Us Apart",by:"Joy Division",yr:"1980",style:"后朋克",
+   txt:"曼彻斯特的 Joy Division，成员据说就在本章开头那场 Sex Pistols 演出的台下。几年后，他们做出了和朋克完全不同的东西：冷、阴郁、充满疏离感。",
+   listen:["贝斯弹的是旋律，而不只是根音（对照实验 07 的后朋克）","合成器和清亮的吉他，取代了失真的强力和弦","速度放慢了，情绪却更沉重"]},
+  {side:"B",q:"Black Flag Rise Above 1981",title:"Rise Above",by:"Black Flag",yr:"1981",style:"洛杉矶硬核",
+   txt:"Black Flag 是美国硬核的代表，吉他手 Greg Ginn 还创办了独立厂牌 SST。这首歌是硬核圈子里的团结口号。",
+   listen:["速度极快，鼓几乎不停","团唱的副歌像一场集会","对比实验 03 的“硬核”鼓型"]},
+  {side:"B",q:"Minor Threat Straight Edge 1981",title:"Straight Edge",by:"Minor Threat",yr:"1981",style:"华盛顿硬核",
+   txt:"一首不到一分钟的歌，却催生了一整个拒绝烟酒和毒品的青年亚文化。主唱 Ian MacKaye 后来创办了独立厂牌 Dischord。",
+   listen:["数一数它有多短","对比图 3：这就是“不到 1 分钟”的那首"]},
+  {side:"B",q:"THE BLUE HEARTS リンダリンダ",title:"リンダリンダ（Linda Linda）",by:"THE BLUE HEARTS",yr:"1987",style:"日本朋克",
+   txt:"THE BLUE HEARTS 的出道单曲，日本最国民级的朋克歌曲之一。真诚、简单，带着一点笨拙的温柔。",
+   listen:["主歌安静，副歌一下子爆发，全场一起喊","朋克的简单直接，配上日语的直白歌词"]},
+  {side:"B",q:"Nirvana Smells Like Teen Spirit",title:"Smells Like Teen Spirit",by:"Nirvana",yr:"1991",style:"垃圾摇滚",
+   txt:"Kurt Cobain 是朋克的信徒。这首歌把朋克的态度、金属的厚重和流行的旋律揉在一起，让“另类”音乐冲进了主流。",
+   listen:["主歌安静、副歌爆炸的强弱对比","吉他用的仍然是强力和弦"]},
+  {side:"B",yt:"NUTGr5t3MoY",title:"Basket Case",by:"Green Day",yr:"1994",style:"流行朋克",
+   txt:"专辑《Dookie》里的歌，让流行朋克在 1990 年代红遍全球。很多人说它的和弦进行和帕赫贝尔的《卡农》很像。",
+   listen:["主歌闷音、副歌全开，对照实验 07 的流行朋克","速度很快，旋律却非常好记","这类歌就是美国酒吧翻唱乐队的常备曲目"]}
+];
+const ICON="M8 5v14l11-7z";
+SONGS.forEach(s=>{
+  const el=document.createElement("div");el.className="song";
+  const q=encodeURIComponent(s.q||`${s.title} ${s.by}`);
+  const yt=s.yt?`https://www.youtube.com/watch?v=${s.yt}`:`https://www.youtube.com/results?search_query=${q}`;
+  el.innerHTML=`<div class="gigdate">${[...s.yr].map(c=>`<i>${c}</i>`).join("")}<small>${s.side==="A"?"SIDE A":"SIDE B"} · NO FUTURE</small></div>
+  <div><div class="meta"><span class="by">${s.by}</span><span class="title">${s.title}</span><span class="yr">${s.yr}</span><span class="style">${s.style}</span></div>
+  <p>${s.txt}</p><ul class="listen">${s.listen.map(x=>`<li>${x}</li>`).join("")}</ul>
+  <div class="listen-links"><a class="main" href="${yt}" target="_blank" rel="noopener">${s.yt?"YouTube 官方音源":"YouTube 搜索"}</a>
+  <a href="https://music.163.com/#/search/m/?s=${q}&type=1" target="_blank" rel="noopener">网易云</a>
+  <a href="https://y.qq.com/n/ryqq/search?w=${q}" target="_blank" rel="noopener">QQ音乐</a></div></div>
+  <a class="playlink" href="${yt}" target="_blank" rel="noopener" aria-label="在 YouTube 收听 ${s.title}"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="${ICON}"/></svg></a>`;
+  document.getElementById(s.side==="A"?"songsA":"songsB").appendChild(el);
+});
+
+/* ================= 示例调度 ================= */
+document.querySelectorAll("[data-strip]").forEach(s=>{for(let i=0;i<12;i++)s.appendChild(document.createElement("i"));});
+document.querySelectorAll("[data-demo]").forEach(b=>b.addEventListener("click",()=>{if(b.classList.contains("playing")){stopDemos();return;}runDemo(b.dataset.demo,b);}));
+document.querySelectorAll("[data-stop]").forEach(b=>b.addEventListener("click",stopDemos));
+document.getElementById("stopAll").addEventListener("click",stopDemos);
+
+/* ================= 原创图解 ================= */
+const NS="http://www.w3.org/2000/svg";
+function S(p,tag,a,txt){const e=document.createElementNS(NS,tag);for(const k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;p.appendChild(e);return e;}
+/* 图 1 */
+(()=>{const g=document.getElementById("kbc");if(!g)return;
+  const kb=(x0,title,on,cross,label)=>{S(g,"text",{x:x0,y:22,class:"sv-tb"},title);
+    for(let i=0;i<8;i++){const x=x0+i*36,hit=on.includes("w"+i);S(g,"rect",{x,y:36,width:36,height:130,class:hit?"sv-hi":"sv-paper"});S(g,"rect",{x,y:36,width:36,height:130,class:"sv-l","stroke-width":1.5});
+      if(hit)S(g,"circle",{cx:x+18,cy:146,r:7,class:"sv-ink"});}
+    [[1,"b1"],[2,"b2"],[3,"b3"],[5,"b5"],[6,"b6"]].forEach(([after,id])=>{const x=x0+after*36-11;S(g,"rect",{x,y:36,width:22,height:80,class:on.includes(id)?"sv-pink":"sv-ink"});
+      if(cross===id){S(g,"rect",{x,y:36,width:22,height:80,class:"sv-p2"});S(g,"path",{d:`M${x-4} 60 L${x+26} 96 M${x+26} 60 L${x-4} 96`,class:"sv-lp","stroke-width":4});}});
+    S(g,"text",{x:x0,y:196,class:"sv-t"},label);};
+  kb(30,"普通和弦（E 大三和弦）",["w0","b2","w4"],null,"E · G♯ · B　三个音");
+  kb(370,"强力和弦（E5）",["w0","w4","w7"],"b2","E · B · E　没有三音 G♯");
+  S(g,"text",{x:370,y:222,class:"sv-r"},"没有三音 → 不分明亮还是忧伤");
+  S(g,"text",{x:30,y:222,class:"sv-ts"},"G♯ 决定了它是明亮的大调");
+})();
+/* 图 2 */
+(()=>{const g=document.getElementById("fbp");if(!g)return;
+  const board=(x0,fr0,title,dots,mute)=>{S(g,"text",{x:x0,y:22,class:"sv-tb"},title);
+    const fw=56,top=50;for(let s=0;s<6;s++)S(g,"line",{x1:x0,y1:top+s*26,x2:x0+fw*4,y2:top+s*26,class:"sv-l","stroke-width":.8+s*.3});
+    for(let f=0;f<=4;f++)S(g,"line",{x1:x0+f*fw,y1:top,x2:x0+f*fw,y2:top+130,class:"sv-l","stroke-width":f===0&&fr0===0?6:1.2});
+    for(let f=1;f<=4;f++)S(g,"text",{x:x0+(f-.5)*fw,y:top+156,"text-anchor":"middle",class:"sv-m"},(fr0+f)+" 品");
+    ["e","B","G","D","A","E"].forEach((n,s)=>S(g,"text",{x:x0-40,y:top+s*26+4,class:"sv-m"},n));
+    mute.forEach(s=>S(g,"text",{x:x0-16,y:top+s*26+4,"text-anchor":"middle",class:"sv-r"},"×"));
+    dots.forEach(([s,f,lab])=>{const cx=f===0?x0-8:x0+(f-fr0-.5)*fw,cy=top+s*26;S(g,"circle",{cx,cy,r:11,class:f===0?"sv-paper":"sv-ink"});if(f===0)S(g,"circle",{cx,cy,r:11,class:"sv-l","stroke-width":2});
+      S(g,"text",{x:cx,y:cy+4,"text-anchor":"middle",class:f===0?"sv-m":"sv-on"},lab);});};
+  board(70,0,"E5 · 开放把位",[[5,0,"E"],[4,2,"B"],[3,2,"E"]],[0,1,2]);
+  board(400,4,"A5 · 第 5 品（同一个手形）",[[5,5,"A"],[4,7,"E"],[3,7,"A"]],[0,1,2]);
+  S(g,"path",{d:"M 310 110 L 380 110",class:"sv-lp","stroke-width":3});S(g,"path",{d:"M 372 102 L 382 110 L 372 118",class:"sv-lp","stroke-width":3});
+  S(g,"text",{x:316,y:98,class:"sv-r"},"平移");
+})();
+/* 图 3 */
+(()=>{const g=document.getElementById("len");if(!g)return;
+  const D=[["Yes《Close to the Edge》· 1972",1123,"18:43"],["Led Zeppelin《Stairway to Heaven》· 1971",482,"8:02"],["Sex Pistols《Anarchy in the U.K.》· 1976",212,"3:32"],["Ramones《Blitzkrieg Bop》· 1976",132,"2:12"],["Minor Threat《Straight Edge》· 1981",46,"约 0:46"]];
+  const x0=40,W=540;D.forEach(([l,s,v],i)=>{const y=20+i*50,w=Math.max(6,s/1123*W);S(g,"text",{x:x0,y,class:"sv-t"},l);
+    S(g,"rect",{x:x0,y:y+8,width:w,height:18,class:i<2?"sv-ink":"sv-hi"});if(i>=2)S(g,"rect",{x:x0,y:y+8,width:w,height:18,class:"sv-l","stroke-width":1.5});
+    S(g,"text",{x:x0+w+8,y:y+22,class:"sv-m"},v);});
+  S(g,"text",{x:40,y:266,class:"sv-ts"},"黑色：1970 年代初的大型摇滚　黄色：朋克与硬核");
+})();
+/* 图 4 */
+(()=>{const g=document.getElementById("drm");if(!g)return;
+  const G=[["基本摇滚 · ~120",[0,1,2,3,4,5,6,7],[2,6],[0,4]],["朋克 · ~180",[0,1,2,3,4,5,6,7],[2,6],[0,3,4]],["硬核 · 200+",[0,1,2,3,4,5,6,7],[1,3,5,7],[0,2,4,6]]];
+  const x0=170,cw=56,rh=22;G.forEach(([t,h,s,k],gi)=>{const y0=14+gi*106;S(g,"text",{x:20,y:y0+40,class:"sv-tb"},t);
+    for(let c=0;c<8;c++)S(g,"text",{x:x0+c*cw+cw/2,y:y0+4,"text-anchor":"middle",class:"sv-m"},["1","&","2","&","3","&","4","&"][c]);
+    [["踩镲",h,"sv-ink"],["军鼓",s,"sv-pink"],["底鼓",k,"sv-ink"]].forEach(([n,arr,cls],r)=>{const y=y0+12+r*(rh+4);S(g,"text",{x:x0-10,y:y+15,"text-anchor":"end",class:"sv-ts"},n);
+      for(let c=0;c<8;c++){const on=arr.includes(c);S(g,"rect",{x:x0+c*cw+2,y,width:cw-4,height:rh,class:on?cls:"sv-card"});if(!on)S(g,"rect",{x:x0+c*cw+2,y,width:cw-4,height:rh,class:"sv-lline","stroke-width":1});}});});
+})();
+/* 图 5 */
+(()=>{const g=document.getElementById("zine");if(!g)return;
+  S(g,"rect",{x:30,y:20,width:620,height:262,class:"sv-paper",transform:"rotate(-1 340 150)"});S(g,"rect",{x:30,y:20,width:620,height:262,class:"sv-l","stroke-width":2,transform:"rotate(-1 340 150)"});
+  S(g,"rect",{x:70,y:10,width:90,height:22,class:"sv-hi",opacity:.85,transform:"rotate(-8 115 21)"});S(g,"rect",{x:520,y:10,width:90,height:22,class:"sv-hi",opacity:.85,transform:"rotate(6 565 21)"});
+  S(g,"text",{x:60,y:62,class:"sv-m"},"第 1 期 · 复印 50 份 · 免费拿");
+  const chord=(x0,name,frets)=>{const top=90,sw=18,fh=26;
+    for(let s=0;s<6;s++)S(g,"line",{x1:x0+s*sw,y1:top,x2:x0+s*sw,y2:top+fh*4,class:"sv-l","stroke-width":1.2});
+    for(let f=0;f<=4;f++)S(g,"line",{x1:x0,y1:top+f*fh,x2:x0+sw*5,y2:top+f*fh,class:"sv-l","stroke-width":f===0?5:1.2});
+    frets.forEach((f,s)=>{const x=x0+s*sw;if(f==="x")S(g,"text",{x,y:top-8,"text-anchor":"middle",class:"sv-r"},"×");else if(f===0){S(g,"circle",{cx:x,cy:top-12,r:5,class:"sv-l","stroke-width":1.5});}else S(g,"circle",{cx:x,cy:top+(f-.5)*fh,r:7,class:"sv-ink"});});
+    S(g,"text",{x:x0+sw*2.5,y:top+fh*4+38,"text-anchor":"middle",class:"sv-mk"},name);};
+  chord(90,"A",["x",0,2,2,2,0]);chord(250,"D",["x","x",0,2,3,2]);chord(410,"E",[0,2,2,1,0,0]);
+  S(g,"text",{x:540,y:150,class:"sv-mk",transform:"rotate(-8 560 150)"},"组乐队");S(g,"text",{x:550,y:182,class:"sv-mk",transform:"rotate(-8 570 182)"},"吧！");
+  S(g,"path",{d:"M 528 196 Q 560 210 610 190",class:"sv-lp","stroke-width":3});
+})();
+/* 图 6 */
+(()=>{const g=document.getElementById("cut");if(!g)return;
+  [["D",60,"sv-ink","sv-on",-6],["I",170,"sv-hi","sv-onhi",4],["Y",270,"sv-pink","sv-on",-3]].forEach(([c,x,bg,fg,r])=>{
+    const tr=`rotate(${r} ${x+45} 110)`;S(g,"rect",{x,y:40,width:90,height:120,class:bg,transform:tr});if(bg!=="sv-ink")S(g,"rect",{x,y:40,width:90,height:120,class:"sv-l","stroke-width":2,transform:tr});
+    S(g,"text",{x:x+45,y:136,"text-anchor":"middle",class:fg,style:"font-family:var(--font-display);font-weight:900;font-size:86px",transform:tr},c);});
+  S(g,"text",{x:60,y:205,class:"sv-ts"},"从不同报纸上剪下来、贴在一起的字");
+  S(g,"path",{d:"M 420 150 L 600 70",class:"sv-l","stroke-width":4,"stroke-linecap":"round"});
+  S(g,"path",{d:"M 430 160 L 610 80 Q 640 70 630 98 Q 622 116 600 120 L 440 175",class:"sv-l","stroke-width":4,"stroke-linecap":"round"});
+  S(g,"rect",{x:405,y:150,width:34,height:26,rx:6,class:"sv-ink",transform:"rotate(-24 422 163)"});
+  S(g,"text",{x:440,y:205,class:"sv-ts"},"别针：别住撕破的衣服");
+})();
+/* 图 7 */
+(()=>{const g=document.getElementById("atl");if(!g)return;
+  const city=(x,name,items)=>{S(g,"rect",{x,y:30,width:170,height:220,class:"sv-card"});S(g,"rect",{x,y:30,width:170,height:220,class:"sv-l","stroke-width":2});
+    S(g,"rect",{x,y:30,width:170,height:40,class:"sv-ink"});S(g,"text",{x:x+85,y:56,"text-anchor":"middle",class:"sv-on",style:"font-size:15px;font-family:var(--font-body);font-weight:700"},name);
+    items.forEach((t,i)=>S(g,"text",{x:x+14,y:96+i*28,class:"sv-t"},t));};
+  city(30,"纽约",["CBGB 酒吧","Ramones","Patti Smith","Television","Talking Heads","Blondie"]);
+  city(480,"伦敦",["国王路 SEX 服装店","Sex Pistols","The Clash","The Damned","Buzzcocks（曼彻斯特）"]);
+  for(let i=0;i<2;i++)S(g,"path",{d:`M 220 ${226+i*16} q 15 -10 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0`,class:"sv-lline","stroke-width":2});
+  S(g,"text",{x:316,y:276,class:"sv-ts"},"大西洋");
+  const arr=(y,dir,txt,txt2)=>{const x1=dir>0?210:470,x2=dir>0?470:210;S(g,"line",{x1,y1:y,x2,y2:y,class:"sv-lp","stroke-width":3});
+    S(g,"path",{d:dir>0?`M ${x2-10} ${y-8} L ${x2} ${y} L ${x2-10} ${y+8}`:`M ${x2+10} ${y-8} L ${x2} ${y} L ${x2+10} ${y+8}`,class:"sv-lp","stroke-width":3});
+    S(g,"text",{x:222,y:y-24,class:"sv-r"},txt);S(g,"text",{x:222,y:y-8,class:"sv-ts"},txt2);};
+  arr(70,1,"1975 · McLaren 管理 New York Dolls 后回伦敦","把纽约的样子带回伦敦，组建 Sex Pistols");
+  arr(124,1,"1976.7.4 · Ramones 首次在伦敦演出","很多英国乐手在台下");
+  arr(196,-1,"1977 · 英国朋克的唱片和丑闻","反过来影响美国");
+})();
+/* 图 8 */
+(()=>{const g=document.getElementById("tree");if(!g)return;
+  const box=(x,y,w,t,dark)=>{S(g,"rect",{x,y,width:w,height:46,class:dark?"sv-ink":"sv-card"});if(!dark)S(g,"rect",{x,y,width:w,height:46,class:"sv-l","stroke-width":2});
+    S(g,"text",{x:x+w/2,y:y+28,"text-anchor":"middle",class:dark?"sv-on":"sv-t",style:dark?"font-size:16px;font-family:var(--font-body);font-weight:900":""},t);};
+  const link=(x1,y1,x2,y2)=>S(g,"path",{d:`M${x1} ${y1} C ${(x1+x2)/2} ${y1}, ${(x1+x2)/2} ${y2}, ${x2} ${y2}`,class:"sv-lp","stroke-width":2.5});
+  [43,163,283].forEach(y=>link(150,163,200,y));[43,163,283].forEach(y=>link(350,y,400,y));
+  box(20,140,130,"朋克 1976",true);
+  box(200,20,150,"后朋克");box(200,140,150,"硬核");box(200,260,150,"流行朋克");
+  box(400,20,260,"新浪潮 · 哥特 · 独立摇滚");box(400,140,260,"Emo · 垃圾摇滚 · 金属核");box(400,260,260,"Green Day · Blink-182");
+  S(g,"text",{x:200,y:86,class:"sv-ts"},"Joy Division · The Cure");S(g,"text",{x:200,y:206,class:"sv-ts"},"Black Flag · Minor Threat");S(g,"text",{x:200,y:326,class:"sv-ts"},"Buzzcocks 为先驱");
+})();
+/* 外部照片 */
+document.querySelectorAll(".photo img").forEach(img=>{
+  const fail=()=>{const d=document.createElement("div");d.className="photo-fallback";d.innerHTML=`照片待放入：${img.getAttribute("src")}<br><a href="https://commons.wikimedia.org/wiki/File:${img.dataset.file}" target="_blank" rel="noopener">在维基共享资源查看这张照片</a>`;img.replaceWith(d);};
+  if(img.complete&&img.naturalWidth===0)fail();else img.addEventListener("error",fail);
+});
+
+</script>
+<script id="nav-guard">(()=>{document.querySelectorAll(".photo img, figure img").forEach(i=>{const hide=()=>{const f=i.closest("figure")||i.closest(".photo");if(f)f.style.display="none";};if(i.complete&&i.naturalWidth===0&&i.getAttribute("src"))hide();else i.addEventListener("error",hide);});})();</script>
+</body>
+</html>

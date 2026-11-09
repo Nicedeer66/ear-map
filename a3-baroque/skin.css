@@ -1,0 +1,291 @@
+
+/* 全书骨架固定；本章皮肤：巴洛克 = 18 世纪刻版乐谱的扉页：象牙纸、铜版黑、朱红题字、一点金。正文保持安静，标题用衬线体 */
+:root{
+  --paper:#F5F0E4; --paper-2:#EAE2CF; --ink:#1E1A16; --ink-2:#5E554B;
+  --red:#8E1F2B; --denim:#6E5422; --mustard:#B08A3E; --soft:#EFE3BF;
+  --line:rgba(30,26,22,.2); --card:#FBF8F0;
+  --font-display:"Noto Serif SC","Songti SC",serif;
+  --font-body:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --font-wood:"IM Fell English","Noto Serif SC",serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#15120F; --paper-2:#1F1B17; --ink:#EDE5D2; --ink-2:#B2A893;
+    --red:#E3828A; --denim:#D9B565; --mustard:#D9B565; --soft:#3A3020;
+    --line:rgba(237,229,210,.18); --card:#1E1A16; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#15120F; --paper-2:#1F1B17; --ink:#EDE5D2; --ink-2:#B2A893;
+  --red:#E3828A; --denim:#D9B565; --mustard:#D9B565; --soft:#3A3020;
+  --line:rgba(237,229,210,.18); --card:#1E1A16; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.9;padding-bottom:40px}
+a{color:var(--red)}
+:focus-visible{outline:3px solid var(--denim);outline-offset:2px}
+.wrap{max-width:700px;margin:0 auto;padding:0 20px}
+.wide{max-width:1040px;margin:0 auto;padding:0 20px}
+
+.albumbar{border-bottom:1px solid var(--line);font-family:var(--font-mono);font-size:12.5px;background:var(--paper)}
+.albumbar .wide{display:flex;gap:16px;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+.albumbar .book{color:var(--ink-2);letter-spacing:.04em}
+.tracks{display:flex;gap:6px;flex-wrap:wrap}
+.tracks span{padding:3px 9px;border:1px solid var(--line);border-radius:99px;color:var(--ink-2)}
+.tracks span.on{background:var(--red);border-color:var(--red);color:var(--paper)}
+.tracks span.soon{opacity:.55}
+
+/* 章首：刻版乐谱扉页，颜色固定 */
+.hero{background:#F5F0E4;color:#1E1A16;border-bottom:1px solid rgba(30,26,22,.25)}
+.opener{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:40px;align-items:center;padding-top:44px;padding-bottom:44px}
+.code{font-family:var(--font-mono);font-size:13px;letter-spacing:.08em;color:#5E554B}
+.titlepage{border:3px double #1E1A16;padding:22px 26px 20px;margin:16px 0 14px;text-align:center;position:relative;background:#FBF8F0}
+.titlepage::before{content:"";position:absolute;inset:6px;border:1px solid rgba(30,26,22,.35);pointer-events:none}
+.titlepage .orn{font-family:var(--font-wood);font-size:22px;color:#8E1F2B;letter-spacing:.5em}
+.titlepage h1{font-family:var(--font-display);font-weight:900;font-size:clamp(54px,9vw,90px);line-height:1.1;margin:6px 0 2px;color:#8E1F2B;letter-spacing:.12em}
+.titlepage .latin{font-family:var(--font-wood);font-size:22px;letter-spacing:.12em;color:#1E1A16}
+.titlepage .latin i{color:#8E1F2B}
+.titlepage .rule{height:1px;background:#1E1A16;margin:10px 24%}
+.sub{font-family:var(--font-wood);font-style:italic;font-size:22px;margin:8px 0 14px;text-align:center}
+.lede{font-size:18px;margin:0;max-width:30em;color:#1E1A16}
+.meta-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:18px;font-family:var(--font-mono);font-size:12px;color:#5E554B}
+figure{margin:0}
+.art{width:100%;aspect-ratio:4/5;display:block;border:3px double #1E1A16;background:#F5F0E4}
+.opener figcaption{font-family:var(--font-mono);font-size:12px;color:#5E554B;margin-top:10px}
+
+.mapstrip{display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:14px 0 6px;font-size:13px}
+.mapstrip b{font-family:var(--font-mono);font-weight:500;font-size:12px;color:var(--ink-2);margin-right:4px}
+.mapstrip span{padding:3px 10px;border-radius:99px;border:1px dashed var(--line);color:var(--ink-2)}
+.mapstrip span.here{border:1px solid var(--red);background:var(--red);font-weight:700;color:var(--paper)}
+
+.toc{border-top:3px double var(--ink);border-bottom:3px double var(--ink);padding:16px 4px;margin:32px 0;font-size:14.5px}
+.toc b{font-family:var(--font-wood);font-size:16px;color:var(--red);font-weight:400;letter-spacing:.04em}
+.toc ol{margin:8px 0 0;padding-left:1.4em;columns:2;column-gap:28px}
+.toc li{break-inside:avoid;margin-bottom:2px}
+.toc a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--ink-2)}
+.toc a:hover{color:var(--red)}
+
+article h2{font-family:var(--font-display);font-weight:900;font-size:30px;line-height:1.35;margin:80px 0 16px;text-wrap:balance;scroll-margin-top:20px}
+article h2 .n{font-family:var(--font-wood);font-size:15px;font-weight:400;color:var(--red);display:block;margin-bottom:6px;letter-spacing:.06em}
+article h2 .n::before{content:"❦ "}
+article h3{font-family:var(--font-display);font-size:20px;font-weight:900;margin:36px 0 8px;text-wrap:balance}
+article p{margin:0 0 18px}
+.mark{background:linear-gradient(transparent 60%,var(--soft) 60%);color:inherit}
+.scene{font-family:var(--font-display);font-weight:600;font-size:18.5px;line-height:2;border-left:3px solid var(--red);padding-left:20px;margin:40px 0}
+.scene p{margin:0 0 12px}
+ul.clean,ol.clean{padding-left:1.3em;margin:0 0 18px}
+ul.clean li,ol.clean li{margin-bottom:8px}
+.k{background:var(--soft);padding:0 5px;border-radius:3px}
+
+.ask{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:start;background:var(--card);border:1px solid var(--line);border-left:5px solid var(--denim);padding:16px 18px;margin:28px 0;border-radius:4px}
+.ask .who{font-family:var(--font-mono);font-size:12px;background:var(--denim);color:var(--paper);padding:2px 10px;margin-top:3px;white-space:nowrap;border-radius:3px}
+.ask p{margin:0}
+.ask p.q{font-weight:700}
+
+.lab{background:var(--card);border:1px solid var(--line);border-top:3px double var(--ink);padding:20px;margin:28px 0;border-radius:4px;box-shadow:0 1px 0 var(--line)}
+.lab .head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.lab .head strong{font-size:16px}
+.lab .head .tag{font-family:var(--font-wood);font-size:14px;color:var(--red);letter-spacing:.04em}
+.lab .head small{color:var(--ink-2);font-size:13px}
+.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:14px}
+button{font:inherit;font-size:14px;line-height:1.4;border:1px solid var(--ink);background:transparent;color:var(--ink);padding:6px 14px;cursor:pointer;border-radius:2px}
+button.primary{background:var(--denim);border-color:var(--denim);color:var(--paper)}
+button:hover{background:var(--soft);color:var(--ink)}
+button.playing{background:var(--red);border-color:var(--red);color:var(--paper)}
+.controls label{font-size:13px;color:var(--ink-2);display:flex;gap:8px;align-items:center}
+.note{font-size:13.5px;color:var(--ink-2);margin:10px 0 0;line-height:1.75}
+.cols3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:6px}
+.cols2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:6px}
+.cols4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:6px}
+.opt{border:1px solid var(--line);padding:12px;background:var(--paper);border-radius:4px}
+.opt b{display:block;font-size:15px}
+.opt p{font-size:13.5px;color:var(--ink-2);margin:4px 0 10px;line-height:1.7}
+.strip{display:grid;grid-template-columns:repeat(var(--n,12),minmax(0,1fr));gap:4px;margin-top:12px}
+.strip i{display:block;height:8px;background:var(--line);border-radius:2px}
+.strip i.now{background:var(--red)}
+
+.fig{margin:34px 0}
+.fig svg{width:100%;height:auto;display:block}
+.fig figcaption,.photo figcaption{font-family:var(--font-mono);font-size:12px;color:var(--ink-2);margin-top:8px;line-height:1.6}
+.fig .frame{background:var(--card);border:1px solid var(--line);padding:16px;border-radius:4px}
+.photo{margin:34px 0}
+.photo img{width:100%;display:block;filter:sepia(.35) contrast(1.04);border:1px solid var(--line);border-radius:4px}
+.photo .cap b{color:var(--ink);font-family:var(--font-body);font-size:13.5px;font-weight:700;display:block;margin-bottom:2px}
+.photo-fallback{border:1px dashed var(--ink-2);padding:28px 18px;text-align:center;font-size:13.5px;color:var(--ink-2);background:var(--paper-2);line-height:1.7;border-radius:4px}
+.photo-fallback a{font-family:var(--font-mono);font-size:12.5px}
+.sv-ink{fill:var(--ink)}.sv-paper{fill:var(--paper)}.sv-p2{fill:var(--paper-2)}.sv-card{fill:var(--card)}
+.sv-red{fill:var(--red)}.sv-denim{fill:var(--denim)}.sv-must{fill:var(--mustard)}.sv-soft{fill:var(--soft)}
+.sv-l{stroke:var(--ink);fill:none}.sv-lr{stroke:var(--red);fill:none}.sv-ld{stroke:var(--denim);fill:none}.sv-lline{stroke:var(--line);fill:none}
+.sv-t{fill:var(--ink);font-family:var(--font-body);font-size:13px}
+.sv-tb{fill:var(--ink);font-family:var(--font-display);font-size:15px;font-weight:900}
+.sv-ts{fill:var(--ink-2);font-family:var(--font-body);font-size:11.5px}
+.sv-m{fill:var(--ink-2);font-family:var(--font-mono);font-size:11px}
+.sv-on{fill:var(--paper);font-family:var(--font-body);font-size:12.5px;font-weight:700}
+.sv-onm{fill:var(--paper);font-family:var(--font-mono);font-size:12px}
+.sv-r{fill:var(--red);font-family:var(--font-body);font-size:12px}
+.sv-d{fill:var(--denim);font-family:var(--font-body);font-size:12px}
+.sv-wood{fill:var(--ink);font-family:var(--font-wood);font-size:18px}
+
+table.cmp{width:100%;border-collapse:collapse;font-size:14.5px;margin:18px 0;line-height:1.65}
+table.cmp th,table.cmp td{border-bottom:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+table.cmp th{font-family:var(--font-display);font-weight:900;border-bottom:3px double var(--ink)}
+table.cmp td:first-child{font-weight:700;width:6.5em}
+.tablewrap{overflow-x:auto}
+
+.timeline{list-style:none;padding:0;margin:20px 0;border-left:2px solid var(--ink)}
+.timeline li{position:relative;padding:0 0 20px 22px}
+.timeline li::before{content:"❦";position:absolute;left:-9px;top:2px;font-size:15px;color:var(--red);background:var(--paper);line-height:1.2}
+.timeline .yr{font-family:var(--font-mono);font-size:13px;color:var(--red)}
+.timeline b{display:block;font-size:17px}
+.timeline p{margin:4px 0 0;font-size:15.5px}
+
+.side{font-family:var(--font-mono);font-size:12px;color:var(--ink-2);letter-spacing:.06em;border-bottom:3px double var(--ink);padding-bottom:6px;margin:30px 0 4px;display:flex;justify-content:space-between;gap:10px}
+.song{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}
+.playlink{display:grid;place-items:center;width:44px;height:44px;background:var(--red);color:var(--paper);border-radius:2px}
+.playlink:hover{background:var(--red)}
+.song .meta{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}
+.song .title{font-family:var(--font-display);font-weight:900;font-size:17px}
+.song .by{color:var(--ink-2);font-size:14px}
+.song .yr{font-family:var(--font-mono);font-size:12px;color:var(--red)}
+.song .style{font-family:var(--font-mono);font-size:11.5px;border:1px solid var(--line);border-radius:99px;padding:0 8px;color:var(--ink-2)}
+.song p{margin:6px 0 8px;font-size:15px;line-height:1.75}
+.song .listen{font-size:14.5px;margin:0 0 8px;padding-left:1.2em}
+.song .listen li{margin-bottom:4px}
+.listen-links{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:6px}
+.listen-links a{font-family:var(--font-mono);font-size:12px;border:1px solid var(--line);border-radius:99px;padding:3px 10px;text-decoration:none;color:var(--ink);background:var(--card)}
+.listen-links a.main{background:var(--red);border-color:var(--red);color:var(--paper)}
+.listen-links a:hover{border-color:var(--red);color:var(--red)}
+.listen-links a.main:hover{background:var(--red);color:#FAF5EA}
+
+.mine{border:1px dashed var(--ink-2);padding:16px 18px;margin:28px 0;color:var(--ink-2);border-radius:4px}
+.mine .lbl{font-family:var(--font-wood);font-size:14px;color:var(--red)}
+dl.gloss{display:grid;grid-template-columns:minmax(0,8.5em) minmax(0,1fr);gap:10px 18px;font-size:15px;line-height:1.7;margin:16px 0}
+dl.gloss dt{font-weight:900;font-family:var(--font-display)}
+.photo img{filter:sepia(.15) contrast(1.02)}
+.drop::first-letter{font-family:var(--font-display);font-weight:900;color:var(--red);float:left;font-size:3.1em;line-height:1;margin:.08em .12em 0 0}
+dl.gloss dd{margin:0;color:var(--ink-2)}
+
+.credits{background:#1E1A16;color:#EDE5D2;margin-top:72px;padding:40px 0 48px;border-top:6px double #B08A3E}
+.credits h2{font-family:var(--font-wood);font-weight:400;font-style:italic;font-size:32px;margin:0 0 16px;color:#D9B565}
+.credits dl{display:grid;grid-template-columns:minmax(0,9em) minmax(0,1fr);gap:8px 16px;margin:0;font-size:14px;line-height:1.75}
+.credits dt{font-family:var(--font-mono);font-size:12px;opacity:.7;padding-top:3px}
+.credits dd{margin:0}
+.credits a{color:#D9B565}
+.next{display:flex;justify-content:space-between;gap:12px;margin-top:28px;font-family:var(--font-mono);font-size:13px;opacity:.85;flex-wrap:wrap}
+.stopfab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:10;display:none;background:var(--red);border-color:var(--red);color:#FAF5EA}
+.stopfab.on{display:inline-block}
+
+@media (max-width:760px){
+  .opener{grid-template-columns:1fr;gap:24px;padding-top:28px}
+  .cols3,.cols2,.cols4{grid-template-columns:1fr}
+  .toc ol{columns:1}
+  .credits dl,dl.gloss{grid-template-columns:1fr}
+  dl.gloss dd{margin-bottom:6px}
+}
+
+/* ================= A3 正文皮肤 v2：刻版乐谱与书页 ================= */
+:root:not(#x){--gold:#A8843A;--goldL:#D9B565;--rule:#1E1A16}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]):not(#x){--gold:#D9B565;--goldL:#F0D58F;--rule:#EDE5D2}}
+body{background-image:radial-gradient(circle at 12% 18%,rgba(150,110,50,.06),rgba(0,0,0,0) 30%),radial-gradient(circle at 88% 62%,rgba(150,110,50,.05),rgba(0,0,0,0) 28%),radial-gradient(circle at 30% 85%,rgba(150,110,50,.05),rgba(0,0,0,0) 25%)}
+/* 书页：正文栏两侧的版心线 */
+article.wrap{position:relative;max-width:760px;padding:10px 50px 40px;margin-top:20px;border-left:1px solid var(--line);border-right:1px solid var(--line);box-shadow:-6px 0 0 -5px var(--line),6px 0 0 -5px var(--line)}
+article p{text-align:justify;text-justify:inter-ideograph}
+
+/* 小节标题：居中、罗马数字、花饰线 */
+article h2{text-align:center;margin:96px 0 30px;font-size:30px;letter-spacing:.08em}
+article h2 .n{font-family:var(--font-wood);font-style:italic;font-size:20px;letter-spacing:.06em;color:var(--red);margin-bottom:8px}
+article h2 .n::before{content:""}
+article h2::after{content:"❦";display:block;margin:14px auto 0;width:280px;max-width:80%;font-size:18px;color:var(--gold);line-height:1;
+  background:linear-gradient(var(--rule),var(--rule)) left center/42% 1px no-repeat,linear-gradient(var(--rule),var(--rule)) right center/42% 1px no-repeat}
+/* 首字下沉 */
+article h2+p::first-letter,article h2+.ask+p::first-letter{font-family:var(--font-display);font-weight:900;color:var(--red);float:left;font-size:3.3em;line-height:1;margin:.08em .14em 0 0;padding:.06em .1em;border:1px solid var(--gold);background:var(--soft)}
+article h3{text-align:center;font-size:18px;letter-spacing:.12em;margin:44px 0 14px;font-weight:600}
+article h3::before,article h3::after{content:" — ";color:var(--gold);font-weight:400}
+.mark{background:none;font-style:normal;border-bottom:1px solid var(--red);box-shadow:inset 0 -3px 0 rgba(142,31,43,.08)}
+
+/* 开场：题记 */
+.scene{border:0;text-align:center;font-family:var(--font-display);font-style:normal;padding:34px 30px 30px;margin:44px 0;position:relative;
+  background:linear-gradient(var(--rule),var(--rule)) top/100% 1px no-repeat,linear-gradient(var(--rule),var(--rule)) 0 4px/100% 1px no-repeat,linear-gradient(var(--rule),var(--rule)) bottom/100% 1px no-repeat,linear-gradient(var(--rule),var(--rule)) 0 calc(100% - 4px)/100% 1px no-repeat}
+.scene::before{content:"✠";position:absolute;top:-14px;left:50%;margin-left:-16px;width:32px;text-align:center;background:var(--paper);color:var(--red);font-size:20px}
+.scene p:first-child{font-family:var(--font-wood);font-style:italic;color:var(--red);font-size:17px}
+
+/* 目录：旧书目录，罗马数字与引线 */
+.toc{border:0;padding:20px 10px;margin:44px 0}
+.toc b{display:block;text-align:center;font-family:var(--font-wood);font-style:italic;font-size:24px;color:var(--ink);letter-spacing:.1em;margin-bottom:10px}
+.toc b::before{content:"INDEX · "}
+.toc ol{columns:1;counter-reset:t;list-style:none;padding:0;max-width:480px;margin:0 auto}
+.toc li{counter-increment:t;display:flex;align-items:baseline;gap:8px;margin:0;padding:3px 0}
+.toc li a{order:1;border:0;white-space:nowrap}
+.toc li::after{content:"";order:2;flex:1;border-bottom:1px dotted var(--ink-2);transform:translateY(-4px)}
+.toc li::before{content:counter(t,upper-roman);order:3;font-family:var(--font-wood);font-style:italic;color:var(--red);min-width:2.6em;text-align:right}
+
+/* 实验框：谱表 */
+.lab{border:3px double var(--rule);border-radius:0;box-shadow:none;padding:0 22px 22px;background:var(--card);position:relative}
+.lab::before,.lab::after{content:"❧";position:absolute;bottom:4px;font-size:14px;color:var(--gold)}
+.lab::before{left:8px;transform:scaleX(-1)}.lab::after{right:8px}
+.lab .head{margin:0 -22px 16px;padding:24px 22px 18px 74px;position:relative;
+  background:repeating-linear-gradient(180deg,rgba(0,0,0,0) 0 7px,var(--rule) 7px 8px) center 18px/100% 41px no-repeat;opacity:1}
+.lab .head::before{content:"𝄞";position:absolute;left:18px;top:2px;font-size:52px;line-height:1;color:var(--ink);font-family:"Noto Music","Bravura","Segoe UI Symbol",serif}
+.lab .head>*{background:var(--card);padding:0 6px;position:relative}
+.lab .head .tag{font-family:var(--font-wood);font-style:italic;font-size:20px;color:var(--red)}
+.lab .head strong{font-family:var(--font-display);font-size:17px}
+.opt{border:1px solid var(--line);border-radius:0;background:var(--paper);position:relative}
+.opt::before{content:"";position:absolute;inset:3px;border:1px solid var(--line);pointer-events:none}
+
+/* 按钮：小型大写的铜版字 / 朱红火漆 */
+button{font-family:var(--font-display);letter-spacing:.12em;border:1px solid var(--rule);border-radius:0;background:transparent;padding:6px 16px;box-shadow:2px 2px 0 var(--line)}
+button:hover{background:var(--soft);color:var(--ink)}
+button.primary{background:var(--red);border-color:var(--gold);color:#FBF8F0;box-shadow:0 0 0 2px var(--card),0 0 0 3px var(--gold)}
+button.playing{background:var(--rule);color:var(--paper);border-color:var(--rule)}
+button.playing::after{content:" ♪";animation:bq 1s infinite steps(2)}
+@keyframes bq{50%{opacity:.2}}
+.strip i{height:4px;border-radius:0;background:var(--line)}.strip i.now{background:var(--red)}
+
+/* 图解：铜版画的双线框 */
+.fig .frame{border:1px solid var(--rule);border-radius:0;padding:20px;box-shadow:0 0 0 4px var(--card),0 0 0 5px var(--rule);margin:6px}
+.fig figcaption,.photo figcaption{font-family:var(--font-display);font-style:normal;font-size:12.5px;text-align:center}
+
+/* 图片：镀金画框 + 铜牌 */
+.photo{padding:18px;background:var(--card);border:14px solid transparent;border-image:linear-gradient(135deg,#7A5A20,#E6C77A 25%,#8C6A28 50%,#F0D58F 75%,#7A5A20) 1;box-shadow:0 10px 24px rgba(0,0,0,.18);margin:44px 10px}
+.photo img{border:0;border-radius:0;filter:sepia(.1) contrast(1.02)}
+.photo .cap{margin:16px auto 0;max-width:420px;padding:8px 14px;background:linear-gradient(180deg,#E9D49A,#BE9A4C);color:#2A1E0C;border-radius:2px;box-shadow:inset 0 1px 0 rgba(255,255,255,.5)}
+.photo .cap b{color:#2A1E0C}
+.photo-fallback{border-radius:0}
+
+/* 宽屏：图注变成页边旁注 */
+@media (min-width:1200px){
+  .fig{position:relative}
+  .fig figcaption{position:absolute;left:-250px;top:6px;width:200px;text-align:right;font-style:italic;font-size:12.5px;line-height:1.7;margin:0;border-right:1px solid var(--gold);padding-right:12px}
+  .lab .note{position:relative}
+}
+
+/* 曲目：音乐会节目单 */
+.side{justify-content:center;flex-direction:column;align-items:center;gap:2px;border:0;margin:44px 0 10px;font-family:var(--font-wood);font-style:italic;font-size:16px;color:var(--ink);letter-spacing:.12em}
+.side::before{content:"❦";color:var(--gold)}
+.side span:last-child{display:none}
+.song{grid-template-columns:54px minmax(0,1fr) 40px;border-bottom:1px solid var(--line);padding:20px 0}
+.pnum{font-family:var(--font-wood);font-style:italic;font-size:22px;color:var(--red);text-align:center;padding-top:0;border-right:1px solid var(--gold);margin-right:14px;line-height:1.2}
+.song .meta{display:flex;align-items:baseline;gap:8px}
+.song .title{font-family:var(--font-display);font-size:18px}
+.song .by{font-style:italic;font-family:var(--font-display);color:var(--ink-2)}
+.song .meta::after{content:"";flex:1;border-bottom:1px dotted var(--ink-2);transform:translateY(-4px);min-width:20px;order:4}
+.song .yr{order:5;font-family:var(--font-wood);font-style:italic;font-size:15px;color:var(--red)}
+.song .style{order:6;border:0;padding:0;font-style:italic}
+.playlink{width:36px;height:36px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#B73A46,#8E1F2B 60%,#5E1019);color:#F5E6C8;box-shadow:0 0 0 2px #C9A050;align-self:start}
+.listen-links a{border-radius:0;background:transparent;font-family:var(--font-display)}
+.listen-links a.main{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* 留白与术语表 */
+.mine{border:0;border-left:2px solid var(--red);font-style:italic;font-family:var(--font-display);background:linear-gradient(90deg,var(--soft),rgba(0,0,0,0))}
+.mine .lbl{font-family:var(--font-wood);font-style:italic;font-size:16px}.mine .lbl::before{content:"Notæ · "}
+dl.gloss{display:block;columns:2;column-gap:36px;column-rule:1px solid var(--line)}
+dl.gloss dt{break-after:avoid;font-family:var(--font-display);color:var(--red);font-size:15px;margin-top:10px}
+dl.gloss dd{break-before:avoid;break-inside:avoid;margin:2px 0 0;padding-left:1em;text-indent:-1em;font-size:14px}
+dl.gloss dd::before{content:"— ";color:var(--gold)}
+#gloss::before,#gloss::after{content:""}
+
+@media (max-width:760px){article.wrap{padding:10px 20px;border:0;box-shadow:none}dl.gloss{columns:1}.song .meta::after{display:none}.photo{margin:30px 0}}
+button.primary{color:var(--paper)}

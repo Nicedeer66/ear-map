@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A1 布鲁斯 · 耳朵的地图</title>
+<!--share-->
+<meta name="description" content="一种“笑着哭”的音乐。三个和弦，十二小节，后来几乎所有的摇滚、R&amp;B 和说唱，都能在这里找到祖先。">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="耳朵的地图">
+<meta property="og:title" content="A1 布鲁斯 · 耳朵的地图">
+<meta property="og:description" content="一种“笑着哭”的音乐。三个和弦，十二小节，后来几乎所有的摇滚、R&amp;B 和说唱，都能在这里找到祖先。">
+<meta property="og:image" content="https://earmap.liangdeer.com/a1-blues/img/a1-blues.jpg">
+<meta property="og:url" content="https://earmap.liangdeer.com/a1-blues/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<!--/share-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&family=Special+Elite&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&family=Special+Elite&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
+<style>
+/* 全书骨架固定；本章皮肤：布鲁斯 = 靛蓝牛仔布 + 牛皮纸。layout: 单栏阅读 680px，章首与实验室加宽 */
+:root{
+  --paper:#EFE6D6; --paper-2:#E6DAC4; --ink:#1F1B16; --ink-2:#5A5045;
+  --indigo:#2E3A6B; --indigo-soft:#D9DCE8; --rust:#A4472A;
+  --line:rgba(31,27,22,.16); --card:#F7F1E6;
+  --font-display:"Noto Serif SC","Songti SC",serif;
+  --font-body:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --font-type:"Special Elite","Courier New",monospace;
+  --font-mono:"IBM Plex Mono",ui-monospace,monospace;
+  --cI:#2E3A6B; --cIV:#A4472A; --cV:#6B5A2E;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#15161C; --paper-2:#1C1E27; --ink:#ECE4D4; --ink-2:#A9A091;
+    --indigo:#93A3DE; --indigo-soft:#262B40; --rust:#E08A63;
+    --line:rgba(236,228,212,.16); --card:#1D1F29;
+    --cI:#93A3DE; --cIV:#E08A63; --cV:#CDB77A; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#15161C; --paper-2:#1C1E27; --ink:#ECE4D4; --ink-2:#A9A091;
+  --indigo:#93A3DE; --indigo-soft:#262B40; --rust:#E08A63;
+  --line:rgba(236,228,212,.16); --card:#1D1F29;
+  --cI:#93A3DE; --cIV:#E08A63; --cV:#CDB77A; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.9;padding-bottom:40px}
+a{color:var(--indigo)}
+:focus-visible{outline:2px solid var(--rust);outline-offset:2px}
+.wrap{max-width:700px;margin:0 auto;padding:0 20px}
+.wide{max-width:1040px;margin:0 auto;padding:0 20px}
+
+.albumbar{border-bottom:1px solid var(--line);font-family:var(--font-mono);font-size:12.5px}
+.albumbar .wide{display:flex;gap:16px;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+.albumbar .book{color:var(--ink-2);letter-spacing:.04em}
+.tracks{display:flex;gap:6px;flex-wrap:wrap}
+.tracks span{padding:3px 9px;border:1px solid var(--line);border-radius:99px;color:var(--ink-2)}
+.tracks span.on{background:var(--indigo);border-color:var(--indigo);color:var(--paper)}
+.tracks span.soon{opacity:.55}
+
+.opener{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:40px;align-items:center;padding-top:48px;padding-bottom:28px}
+.code{font-family:var(--font-mono);font-size:13px;color:var(--rust);letter-spacing:.08em}
+h1{font-family:var(--font-display);font-weight:900;font-size:clamp(48px,9vw,84px);line-height:1;margin:14px 0 10px;text-wrap:balance}
+.sub{font-family:var(--font-type);font-size:24px;color:var(--indigo);margin:0 0 18px}
+.lede{font-size:18px;color:var(--ink-2);margin:0;max-width:28em}
+.meta-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:18px;font-family:var(--font-mono);font-size:12px;color:var(--ink-2)}
+figure{margin:0}
+.art{width:100%;aspect-ratio:4/3;display:block;border-radius:4px;background:var(--paper-2)}
+figcaption{font-family:var(--font-mono);font-size:12px;color:var(--ink-2);margin-top:8px}
+
+.mapstrip{display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:14px 0 6px;font-size:13px}
+.mapstrip b{font-family:var(--font-mono);font-weight:500;font-size:12px;color:var(--ink-2);margin-right:4px}
+.mapstrip span{padding:3px 10px;border-radius:99px;border:1px dashed var(--line);color:var(--ink-2)}
+.mapstrip span.here{border:1px solid var(--indigo);color:var(--indigo);font-weight:500}
+
+.toc{border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin:32px 0;font-size:14.5px;background:var(--card)}
+.toc b{font-family:var(--font-mono);font-size:12px;color:var(--rust);font-weight:500;letter-spacing:.06em}
+.toc ol{margin:8px 0 0;padding-left:1.4em;columns:2;column-gap:28px}
+.toc li{break-inside:avoid;margin-bottom:2px}
+.toc a{color:var(--ink);text-decoration:none}
+.toc a:hover{color:var(--indigo)}
+
+article h2{font-family:var(--font-display);font-weight:600;font-size:30px;line-height:1.35;margin:72px 0 14px;text-wrap:balance;scroll-margin-top:20px}
+article h2 .n{font-family:var(--font-mono);font-size:13px;font-weight:400;color:var(--rust);display:block;margin-bottom:6px;letter-spacing:.06em}
+article h3{font-size:19px;font-weight:700;margin:36px 0 8px;text-wrap:balance}
+article p{margin:0 0 18px}
+.scene{font-family:var(--font-display);font-weight:600;font-size:19px;line-height:1.95;border-left:3px solid var(--rust);padding-left:18px;margin:40px 0}
+.scene p{margin:0 0 12px}
+ul.clean,ol.clean{padding-left:1.3em;margin:0 0 18px}
+ul.clean li,ol.clean li{margin-bottom:8px}
+.k{background:var(--indigo-soft);padding:0 5px;border-radius:3px}
+.lyric{font-family:var(--font-display);font-size:17px;background:var(--card);border-radius:12px;padding:14px 18px;margin:0 0 18px;border:1px solid var(--line)}
+.lyric p{margin:0}
+.lyric .tag{font-family:var(--font-mono);font-size:12px;color:var(--rust);margin-right:10px}
+.lyric small{display:block;font-family:var(--font-body);font-size:12.5px;color:var(--ink-2);margin-top:8px}
+
+.ask{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:start;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:28px 0}
+.ask .who{font-family:var(--font-mono);font-size:12px;background:var(--ink);color:var(--paper);border-radius:99px;padding:2px 10px;margin-top:3px;white-space:nowrap}
+.ask p{margin:0}
+.ask p.q{font-weight:500}
+.ask small{display:block;font-family:var(--font-mono);font-size:11.5px;color:var(--ink-2);font-weight:400;margin-top:4px}
+
+.lab{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;margin:28px 0}
+.lab .head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.lab .head strong{font-size:16px}
+.lab .head .tag{font-family:var(--font-mono);font-size:11.5px;color:var(--rust);letter-spacing:.06em}
+.lab .head small{color:var(--ink-2);font-size:13px}
+.grid12{display:grid;grid-template-columns:auto repeat(4,minmax(0,1fr));gap:8px;align-items:stretch}
+.rowlab{font-size:12.5px;color:var(--ink-2);padding-right:6px;display:flex;flex-direction:column;justify-content:center;line-height:1.45}
+.rowlab b{color:var(--ink);font-weight:500}
+.bar{border-radius:8px;padding:10px 4px;text-align:center;border:1px solid var(--line);transition:transform .12s,background .12s;font-family:var(--font-mono)}
+.bar .c{font-size:18px;font-weight:500;display:block;line-height:1.2}
+.bar .r{font-size:11px;color:var(--ink-2)}
+.bar[data-f="I"] .c{color:var(--cI)}
+.bar[data-f="IV"] .c{color:var(--cIV)}
+.bar[data-f="V"] .c{color:var(--cV)}
+.bar.now{background:var(--ink);transform:translateY(-2px)}
+.bar.now .c,.bar.now .r{color:var(--paper)}
+.strip{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:4px;margin-top:12px}
+.strip i{display:block;height:8px;border-radius:3px;background:var(--line);transition:background .1s}
+.strip i.now{background:var(--rust)}
+.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:14px}
+button{font:inherit;font-size:14px;line-height:1.4;border-radius:99px;border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 15px;cursor:pointer}
+button.primary{background:var(--ink);color:var(--paper)}
+button:hover{background:var(--paper-2)}
+button.primary:hover{background:var(--indigo);border-color:var(--indigo)}
+button.playing{background:var(--rust);border-color:var(--rust);color:var(--paper)}
+.seg{display:inline-flex;border:1px solid var(--ink);border-radius:99px;overflow:hidden}
+.seg button{border:0;border-radius:0;padding:6px 12px;font-size:13px}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.controls label{font-size:13px;color:var(--ink-2);display:flex;gap:8px;align-items:center}
+input[type=range]{accent-color:var(--rust)}
+.note{font-size:13.5px;color:var(--ink-2);margin:10px 0 0;line-height:1.75}
+.cols2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:6px}
+.opt{border:1px solid var(--line);border-radius:12px;padding:14px;background:var(--paper)}
+.opt b{display:block;font-size:15px}
+.opt p{font-size:13.5px;color:var(--ink-2);margin:4px 0 10px;line-height:1.7}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.gallery button{border-radius:12px;text-align:left;padding:10px 12px;font-size:14px}
+.gallery button small{display:block;font-size:11.5px;color:var(--ink-2);font-family:var(--font-mono)}
+.gallery button.playing small{color:var(--paper)}
+.pads{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-top:10px}
+.pad{border-radius:10px;padding:14px 2px;text-align:center;font-family:var(--font-mono);font-size:15px}
+.pad small{display:block;font-size:10.5px;color:var(--ink-2)}
+.pad.blue{border-color:var(--rust);color:var(--rust)}
+.pad.hit{background:var(--ink);color:var(--paper)}
+
+.traits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:20px 0}
+.trait{border-top:2px solid var(--ink);padding-top:10px}
+.trait .t{font-family:var(--font-mono);font-size:12px;color:var(--rust)}
+.trait h3{margin:4px 0 4px;font-size:17px}
+.trait p{font-size:15px;color:var(--ink-2);margin:0;line-height:1.75}
+
+.timeline{list-style:none;padding:0;margin:20px 0;border-left:2px solid var(--line)}
+.timeline li{position:relative;padding:0 0 22px 22px}
+.timeline li::before{content:"";position:absolute;left:-7px;top:9px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--indigo)}
+.timeline .yr{font-family:var(--font-mono);font-size:13px;color:var(--indigo)}
+.timeline b{display:block;font-size:17px}
+.timeline p{margin:4px 0 0;font-size:15.5px}
+
+.side{font-family:var(--font-mono);font-size:12px;color:var(--ink-2);letter-spacing:.06em;border-bottom:1px solid var(--line);padding-bottom:6px;margin:30px 0 4px;display:flex;justify-content:space-between;gap:10px}
+.song{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}
+.playbtn{width:44px;height:44px;border-radius:50%;padding:0;display:grid;place-items:center;background:var(--indigo);border-color:var(--indigo);color:var(--paper)}
+.playbtn:hover{background:var(--rust);border-color:var(--rust)}
+.playbtn svg{width:16px;height:16px}
+.song .meta{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}
+.song .title{font-weight:700;font-size:17px}
+.song .by{color:var(--ink-2);font-size:14px}
+.song .yr{font-family:var(--font-mono);font-size:12px;color:var(--rust)}
+.song .style{font-family:var(--font-mono);font-size:11.5px;border:1px solid var(--line);border-radius:99px;padding:0 8px;color:var(--ink-2)}
+.song p{margin:6px 0 8px;font-size:15px;line-height:1.75}
+.song .listen{font-size:14.5px;margin:0 0 8px;padding-left:1.2em}
+.song .listen li{margin-bottom:4px}
+.cues{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.cue{font-family:var(--font-mono);font-size:12px;border:1px solid var(--line);border-radius:99px;padding:3px 10px;background:var(--card);color:var(--ink);cursor:pointer}
+.cue b{color:var(--rust);font-weight:500;margin-right:4px}
+.cue:hover{border-color:var(--indigo);background:var(--card)}
+.filepick{font-family:var(--font-mono);font-size:12px;color:var(--ink-2);cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.filepick input{display:none}
+.fstate{font-family:var(--font-mono);font-size:11.5px;color:var(--ink-2)}
+.fstate.ok{color:var(--indigo)}
+.fstate.miss{color:var(--rust)}
+.pair{background:var(--card);border-radius:14px;padding:16px 18px;margin:20px 0;border:1px solid var(--line)}
+.pair .vs{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:10px;align-items:center;margin-top:10px}
+.pair .vs a{display:block;text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:14px;background:var(--paper)}
+.pair .vs a small{display:block;color:var(--ink-2);font-family:var(--font-mono);font-size:11.5px}
+.pair .arrow{font-family:var(--font-mono);color:var(--rust)}
+
+.mine{border:1.5px dashed var(--ink-2);border-radius:14px;padding:16px 18px;margin:28px 0;color:var(--ink-2)}
+.mine .lbl{font-family:var(--font-mono);font-size:12px;color:var(--rust)}
+dl.gloss{display:grid;grid-template-columns:minmax(0,8.5em) minmax(0,1fr);gap:10px 18px;font-size:15px;line-height:1.7;margin:16px 0}
+dl.gloss dt{font-weight:700}
+dl.gloss dd{margin:0;color:var(--ink-2)}
+
+.credits{background:var(--ink);color:var(--paper);margin-top:72px;padding:40px 0 48px}
+.credits h2{font-family:var(--font-type);font-weight:400;font-size:26px;margin:0 0 16px;color:var(--paper)}
+.credits dl{display:grid;grid-template-columns:minmax(0,9em) minmax(0,1fr);gap:8px 16px;margin:0;font-size:14px;line-height:1.75}
+.credits dt{font-family:var(--font-mono);font-size:12px;opacity:.7;padding-top:3px}
+.credits dd{margin:0}
+.credits a{color:inherit}
+.next{display:flex;justify-content:space-between;gap:12px;margin-top:28px;font-family:var(--font-mono);font-size:13px;opacity:.85;flex-wrap:wrap}
+
+.player{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--line);z-index:10;padding:10px 0 calc(10px + env(safe-area-inset-bottom))}
+.player .wide{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:14px;align-items:center}
+.player .now b{display:block;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.player .bar2{display:flex;gap:8px;align-items:center;font-family:var(--font-mono);font-size:11.5px;color:var(--ink-2)}
+.player .bar2 input{flex:1;min-width:60px}
+.player .tools{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.player .tools button,.player .tools label{font-family:var(--font-mono);font-size:12px;border:1px solid var(--line);border-radius:99px;padding:4px 10px;color:var(--ink);cursor:pointer;background:transparent;line-height:1.5}
+.player .tools label input{display:none}
+.player .msg{font-family:var(--font-mono);font-size:11.5px;color:var(--rust)}
+
+/* 插图 */
+.fig{margin:34px 0}
+.fig svg{width:100%;height:auto;display:block}
+.fig figcaption,.photo figcaption{font-family:var(--font-mono);font-size:12px;color:var(--ink-2);margin-top:8px;line-height:1.6}
+.fig .frame{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+.photo{margin:34px 0}
+.photo img{width:100%;display:block;border-radius:4px;background:var(--paper-2)}
+.photo .cap b{color:var(--ink);font-family:var(--font-body);font-size:13.5px;font-weight:500;display:block;margin-bottom:2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
+.two .photo{margin:0}
+.photo-fallback{border:1px dashed var(--ink-2);border-radius:6px;padding:28px 18px;text-align:center;font-size:13.5px;color:var(--ink-2);background:var(--paper-2);line-height:1.7}
+.photo-fallback a{font-family:var(--font-mono);font-size:12.5px}
+.sv-ink{fill:var(--ink)}.sv-paper{fill:var(--paper)}.sv-p2{fill:var(--paper-2)}.sv-card{fill:var(--card)}
+.sv-ind{fill:var(--indigo)}.sv-rust{fill:var(--rust)}.sv-soft{fill:var(--indigo-soft)}
+.sv-l{stroke:var(--ink);fill:none}.sv-li{stroke:var(--indigo);fill:none}.sv-lr{stroke:var(--rust);fill:none}.sv-lline{stroke:var(--line);fill:none}
+.sv-t{fill:var(--ink);font-family:var(--font-body);font-size:13px}
+.sv-ts{fill:var(--ink-2);font-family:var(--font-body);font-size:11.5px}
+.sv-m{fill:var(--ink-2);font-family:var(--font-mono);font-size:11px}
+.sv-on{fill:var(--paper);font-family:var(--font-mono);font-size:11px}
+.sv-r{fill:var(--rust);font-family:var(--font-body);font-size:12px}
+.listen-links{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:6px}
+.listen-links a{font-family:var(--font-mono);font-size:12px;border:1px solid var(--line);border-radius:99px;padding:3px 10px;text-decoration:none;color:var(--ink);background:var(--card)}
+.listen-links a.main{background:var(--indigo);border-color:var(--indigo);color:var(--paper)}
+.listen-links a b{color:var(--rust);font-weight:500;margin-right:4px}
+.listen-links a.main b{color:var(--paper)}
+.stopfab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:10;display:none;background:var(--rust);border-color:var(--rust);color:var(--paper)}
+.stopfab.on{display:inline-block}
+
+@media (max-width:760px){
+  .two{grid-template-columns:1fr}
+  .opener{grid-template-columns:1fr;gap:24px;padding-top:28px}
+  .traits,.cols2{grid-template-columns:1fr}
+  .toc ol{columns:1}
+  .grid12{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .rowlab{grid-column:1/-1;flex-direction:row;gap:8px;padding:6px 0 0}
+  .credits dl,dl.gloss{grid-template-columns:1fr}
+  dl.gloss dd{margin-bottom:6px}
+  .player .wide{grid-template-columns:auto minmax(0,1fr)}
+  .player .tools{grid-column:1/-1;justify-content:flex-start}
+  .pair .vs{grid-template-columns:1fr}
+  .pair .arrow{text-align:center}
+  .pads{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+@media (prefers-reduced-motion:reduce){.bar,.strip i{transition:none}}
+
+/* ================= A1 正文皮肤 v2：78 转唱片与点唱机 ================= */
+:root:not(#x){--kraft:#D9C29A;--kraft2:#C8AD7F;--stain:rgba(120,80,30,.10);--chrome:linear-gradient(180deg,#FFFFFF,#BFC3C9 45%,#7D838C 55%,#E6E8EB);--labelA:#2E3A6B;--labelB:#A4472A}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]):not(#x){--kraft:#3A3226;--kraft2:#2C2519;--stain:rgba(201,168,106,.06)}}
+/* 旧唱片封套：牛皮纸色 + 咖啡杯印 */
+body{background-image:radial-gradient(circle at 14% 22%,rgba(0,0,0,0) 0 54px,var(--stain) 55px 58px,rgba(0,0,0,0) 60px),radial-gradient(circle at 86% 58%,rgba(0,0,0,0) 0 70px,var(--stain) 71px 75px,rgba(0,0,0,0) 77px),radial-gradient(ellipse at 30% 80%,var(--stain),rgba(0,0,0,0) 30%),radial-gradient(ellipse at 70% 10%,var(--stain),rgba(0,0,0,0) 25%);background-attachment:fixed}
+/* 小节标题：78 转唱片标签 */
+article h2{display:grid;grid-template-columns:96px minmax(0,1fr);gap:20px;align-items:center;margin:84px 0 22px;font-size:29px}
+article h2 .n{grid-row:1;width:96px;height:96px;border-radius:50%;margin:0;display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--font-type);font-size:10.5px;line-height:1.3;color:#F3EADA;letter-spacing:.04em;padding:0 26px;
+  background:radial-gradient(circle,#15120E 0 3px,var(--labelA) 3.5px 30px,#F3EADA 30.5px 31.5px,var(--labelA) 32px 34px,#111 34.5px),repeating-radial-gradient(circle,rgba(255,255,255,.06) 0 1px,rgba(0,0,0,0) 1px 3px);
+  box-shadow:0 0 0 1px #000,0 6px 12px rgba(0,0,0,.25);transform:rotate(-8deg)}
+article h2:nth-of-type(even) .n{background:radial-gradient(circle,#15120E 0 3px,var(--labelB) 3.5px 30px,#F3EADA 30.5px 31.5px,var(--labelB) 32px 34px,#111 34.5px),repeating-radial-gradient(circle,rgba(255,255,255,.06) 0 1px,rgba(0,0,0,0) 1px 3px)}
+article h3{font-family:var(--font-type);font-weight:400;font-size:20px;letter-spacing:.02em;border-bottom:1px solid var(--line);padding-bottom:4px;display:inline-block}
+/* 开场：田野录音的登记卡 */
+.scene{border:0;background:var(--card);padding:44px 26px 20px;position:relative;font-weight:500;font-size:18px;
+  background-image:linear-gradient(180deg,rgba(0,0,0,0) 30px,var(--rust) 30px 32px,rgba(0,0,0,0) 32px),repeating-linear-gradient(180deg,rgba(0,0,0,0) 0 34px,rgba(46,58,107,.15) 34px 35px);box-shadow:0 1px 0 var(--line),0 12px 24px rgba(0,0,0,.12);transform:rotate(-.5deg)}
+.scene::before{content:"FIELD RECORDING · SIDE A · TRACK 01";position:absolute;top:8px;left:26px;font-family:var(--font-type);font-size:13px;color:var(--rust);letter-spacing:.06em}
+.scene::after{content:"No. 1936";position:absolute;top:6px;right:22px;font-family:var(--font-type);font-size:13px;color:var(--indigo)}
+/* “我问”：点歌单 */
+.ask{border:2px dashed var(--ink-2);border-radius:4px;background:var(--card)}
+.ask .who{border-radius:2px;background:var(--rust);color:#FFF8EC;font-family:var(--font-type);transform:rotate(-4deg)}
+.ask .who::before{content:"REQUEST · "}
+/* 目录：点唱机的选曲条 */
+.toc{border:0;background:transparent;padding:0;margin:40px 0}
+.toc b{display:block;text-align:center;font-family:var(--font-type);font-size:18px;color:var(--ink);margin-bottom:12px}
+.toc b::before{content:"♪ SELECT A TUNE · "}
+.toc ol{list-style:none;padding:0;columns:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;counter-reset:j}
+.toc li{counter-increment:j;margin:0;background:#FBF6EA;color:#1F1B16;border:1px solid #c9bda6;border-top:6px solid var(--labelB);border-bottom:6px solid var(--labelA);padding:6px 10px 6px 54px;position:relative;font-size:14px;line-height:1.5;min-height:44px;display:flex;align-items:center}
+.toc li::before{content:counter(j,decimal-leading-zero);position:absolute;left:8px;top:50%;transform:translateY(-50%);font-family:var(--font-type);font-size:15px;color:#FBF6EA;background:#1F1B16;width:36px;text-align:center;border-radius:3px;padding:2px 0}
+.toc a{color:#1F1B16}
+/* 实验框：点唱机 */
+.lab{position:relative;border:0;border-radius:150px 150px 20px 20px/70px 70px 20px 20px;padding:10px;margin:40px 0;
+  background:linear-gradient(90deg,#C8402A,#F0A23A 18%,#F6D35E 32%,#5FA57A 50%,#F6D35E 68%,#F0A23A 82%,#C8402A);box-shadow:0 0 0 3px #3A2C20,0 16px 30px rgba(0,0,0,.25)}
+.jbox{background:var(--card);border-radius:140px 140px 12px 12px/62px 62px 12px 12px;padding:34px 20px 20px;position:relative;
+  box-shadow:inset 0 0 0 2px rgba(0,0,0,.15)}
+.jbox::after{content:"";display:block;height:10px;margin-top:16px;border-radius:5px;background:repeating-linear-gradient(90deg,#B9BEC5 0 6px,#6E747C 6px 8px)}
+.lab .head{flex-direction:column;align-items:center;text-align:center;gap:4px;margin:0 auto 18px;max-width:430px;background:#FBF6EA;color:#1F1B16;border:1px solid #c9bda6;border-top:7px solid var(--labelB);border-bottom:7px solid var(--labelA);padding:8px 14px}
+.lab .head .tag{font-family:var(--font-type);font-size:13px;color:var(--labelB);letter-spacing:.1em}
+.lab .head .tag::before{content:"SELECTION · "}
+.lab .head strong{font-family:var(--font-display);font-size:18px;color:#1F1B16}
+.lab .head small{color:#5A5045}
+.opt{border-radius:8px;background:var(--paper)}
+/* 按钮：点唱机的选曲键 */
+button{border-radius:5px;border:1px solid #6E747C;background:var(--chrome);color:#1F1B16;box-shadow:0 3px 0 #3A3F46,inset 0 1px 0 #fff;font-weight:700;padding:6px 16px}
+button:hover{background:linear-gradient(180deg,#FFFFFF,#D3D6DB 45%,#9097A0 55%,#F0F1F3);color:#1F1B16}
+button.primary{background:linear-gradient(180deg,#F07A5A,#C8402A 55%,#9A2A18);border-color:#7A1E10;color:#FFF5EA;box-shadow:0 3px 0 #5A140A,inset 0 1px 0 rgba(255,255,255,.4)}
+button.primary:hover{background:linear-gradient(180deg,#F58C6E,#D24D36 55%,#A3301E);border-color:#7A1E10}
+button.playing{background:linear-gradient(180deg,#FFE7A0,#F0B23D 55%,#C98A1A);border-color:#8A5A10;color:#3A2400;box-shadow:0 1px 0 #6A4208,0 0 14px rgba(240,178,61,.8);transform:translateY(2px)}
+.seg{border-radius:5px;border-color:#6E747C}
+.seg button{box-shadow:none;border-radius:0}
+.gallery button{border-radius:5px}
+.pad{border-radius:6px}
+.strip i{border-radius:1px;background:rgba(0,0,0,.12)}.strip i.now{background:var(--labelB);box-shadow:0 0 6px var(--labelB)}
+/* 图解：牛皮纸唱片封套（上沿一个拇指缺口） */
+.fig .frame{position:relative;border:0;border-radius:3px;padding:26px 18px 18px;background:var(--card);box-shadow:0 0 0 12px var(--kraft),0 0 0 13px var(--kraft2),0 12px 20px 12px rgba(0,0,0,.12);margin:14px}
+.fig .frame::before{content:"";position:absolute;top:-13px;left:50%;width:70px;height:26px;margin-left:-35px;border-radius:0 0 35px 35px;background:var(--paper);box-shadow:inset 0 -1px 0 var(--kraft2)}
+.fig figcaption{margin-top:22px;font-family:var(--font-type);font-size:12.5px}
+/* 照片：相册衬纸 + 相角（不裁切照片本身） */
+.photo{background:#F6F0E2;padding:14px 14px 6px;box-shadow:0 8px 18px rgba(0,0,0,.18);position:relative}
+.photo::before{content:"";position:absolute;inset:6px 6px auto 6px;height:calc(100% - 12px);pointer-events:none;
+  background:linear-gradient(135deg,#1F1B16 0 14px,rgba(0,0,0,0) 14px) top left/24px 24px no-repeat,linear-gradient(225deg,#1F1B16 0 14px,rgba(0,0,0,0) 14px) top right/24px 24px no-repeat}
+.photo img{border-radius:0}
+.photo .cap{font-family:var(--font-type);color:#5A5045;padding:10px 4px 8px}
+.photo .cap b{color:#1F1B16}
+.two{gap:22px}
+.two .photo:nth-child(1){transform:rotate(-1deg)}.two .photo:nth-child(2){transform:rotate(1deg)}
+/* 歌词卡：唱片标签上的字 */
+.lyric{border-radius:4px;font-family:var(--font-type);border-left:4px solid var(--labelB)}
+/* 曲目：唱片架上的 78 转唱片 */
+.side{justify-content:center;border:0;margin:42px 0 14px}
+.side span:first-child{font-family:var(--font-type);font-size:15px;color:#F3EADA;background:#15120E;border-radius:999px;padding:8px 22px;box-shadow:0 0 0 4px var(--labelA)}
+.side span:last-child{display:none}
+.song{grid-template-columns:96px minmax(0,1fr);gap:18px;background:var(--kraft);color:#1F1B16;border:0;border-radius:4px;margin:14px 0;padding:16px 18px 16px 14px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08),0 6px 12px rgba(0,0,0,.08)}
+.song .playbtn{width:92px!important;height:92px!important;border-radius:50%!important;color:#F3EADA!important;
+  background:radial-gradient(circle,#15120E 0 2.5px,var(--labelB) 3px 26px,#F3EADA 26.5px 27.5px,var(--labelB) 28px 31px,#111 31.5px),repeating-radial-gradient(circle,rgba(255,255,255,.07) 0 1px,rgba(0,0,0,0) 1px 3px)!important;
+  box-shadow:0 0 0 1px #000,0 6px 10px rgba(0,0,0,.3);transition:transform .6s}
+.song:nth-child(even) .playbtn{background:radial-gradient(circle,#15120E 0 2.5px,var(--labelA) 3px 26px,#F3EADA 26.5px 27.5px,var(--labelA) 28px 31px,#111 31.5px),repeating-radial-gradient(circle,rgba(255,255,255,.07) 0 1px,rgba(0,0,0,0) 1px 3px)!important}
+.song .playbtn:hover{transform:rotate(200deg)}
+.song .title{font-family:var(--font-display);font-size:18px;color:#1F1B16}
+.song .by{color:#3A2E22;font-weight:500}
+.song .yr{font-family:var(--font-type);color:#7A2A12}
+.song .style{border-color:rgba(31,27,22,.35);color:#3A2E22}
+.song p,.song .listen{color:#2A231B}
+.listen-links a{background:rgba(255,255,255,.5);border-color:rgba(31,27,22,.3);color:#1F1B16;border-radius:4px}
+.listen-links a.main{background:#1F1B16;border-color:#1F1B16;color:#F3EADA}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .song,:root:not([data-theme="light"]) .song .title,:root:not([data-theme="light"]) .song p,:root:not([data-theme="light"]) .song .listen,:root:not([data-theme="light"]) .song .by{color:#EDE3CF}
+  :root:not([data-theme="light"]) .song .yr{color:#F0A27E}:root:not([data-theme="light"]) .song .style{color:#D8CBB2;border-color:rgba(237,227,207,.35)}
+  :root:not([data-theme="light"]) .listen-links a{background:rgba(0,0,0,.25);color:#EDE3CF;border-color:rgba(237,227,207,.25)}:root:not([data-theme="light"]) .listen-links a.main{background:#EDE3CF;color:#1F1B16}}
+/* 留白与术语表：打字机索引卡 */
+.mine{border:0;border-radius:2px;background:var(--card);font-family:var(--font-type);box-shadow:0 1px 0 var(--line),0 8px 16px rgba(0,0,0,.1);background-image:repeating-linear-gradient(180deg,rgba(0,0,0,0) 0 27px,rgba(46,58,107,.14) 27px 28px)}
+.mine .lbl{font-family:var(--font-type)}.mine .lbl::before{content:"LINER NOTES · "}
+dl.gloss dt{font-family:var(--font-type);font-weight:400;color:var(--rust)}
+dl.gloss dt,dl.gloss dd{border-bottom:1px dashed var(--line);padding-bottom:8px}
+@media (max-width:760px){article h2{grid-template-columns:72px minmax(0,1fr);gap:14px}article h2 .n{width:72px;height:72px;padding:0 14px;font-size:9px}
+  .toc ol{grid-template-columns:1fr}.song{grid-template-columns:70px minmax(0,1fr)}.song .playbtn{width:68px!important;height:68px!important}.lab{border-radius:90px 90px 16px 16px/50px 50px 16px 16px}.jbox{border-radius:82px 82px 10px 10px/44px 44px 10px 10px}.scene{transform:none}}
+
+article h2 .n{align-items:flex-end;padding:0 24px 20px;font-size:10px;line-height:1.2}
+.pad{color:#1F1B16}.pad small{color:#5A5045}.pad.blue{color:#A4472A}.pad.hit{background:linear-gradient(180deg,#FFE7A0,#F0B23D 55%,#C98A1A);color:#3A2400}
+.gallery button small{color:#5A5045}
+/*nav-unify*/.albumbar a{color:inherit;text-decoration:none}.albumbar a.book:hover{text-decoration:underline}.tracks span a{color:inherit;text-decoration:none;display:block}.tracks span:not(.on):hover{opacity:.72}.next a{color:inherit;text-decoration:none;border-bottom:1px solid currentColor}.next a:hover{opacity:.7}</style>
+<link rel="stylesheet" href="../cover-preview.css">
+</head>
+<body>
+
+<header class="albumbar">
+  <div class="wide">
+    <a class="book" href="../index.html" data-nav="toc">耳朵的地图 · 第一张唱片 · SIDE A 根源 · 目录</a>
+    <nav class="tracks" aria-label="本面曲目">
+      <span><a href="../intro/index.html" data-nav="intro">Intro 怎么听</a></span>
+      <span class="on"><a aria-current="page">A1 布鲁斯</a></span>
+      <span><a href="../a2-folk/index.html" data-nav="a2-folk">A2 民歌与乡村</a></span>
+      <span><a href="../a3-baroque/index.html" data-nav="a3-baroque">A3 巴洛克</a></span>
+      <span><a href="../a4-jazz/index.html" data-nav="a4-jazz">A4 爵士</a></span>
+    </nav>
+  </div>
+</header>
+
+<section class="wide opener">
+  <div>
+    <div class="code">SIDE A · TRACK 01 · 根</div>
+    <h1>布鲁斯</h1>
+    <p class="sub">Cross Road Blues</p>
+    <p class="lede">一种“笑着哭”的音乐。三个和弦，十二小节，后来几乎所有的摇滚、R&amp;B 和说唱，都能在这里找到祖先。</p>
+    <div class="meta-row"><span>阅读约 35 分钟</span><span>可听示例 20+ 个</span><span>插图 14 幅</span><span>推荐曲目 10 首</span></div>
+  </div>
+  <figure>
+    <img class="art" src="img/a1-blues.jpg" width="1600" height="1200" alt="木刻版画风格的密西西比三角洲，黄昏中的土路交叉口和电线杆" style="height:auto">
+    <figcaption>章首插画 · 木刻版画风格的密西西比三角洲，黄昏中的土路交叉口和电线杆</figcaption>
+    <button class="cover-preview" type="button" data-demo="chicago">
+      <span class="preview-play"><span aria-hidden="true">▶</span> 试听 · 布鲁斯</span>
+      <span class="preview-stop"><span aria-hidden="true">■</span> 停止</span>
+    </button>
+  </figure>
+</section>
+
+<div class="wide">
+  <div class="mapstrip" aria-label="地图定位">
+    <b>你在这里 →</b>
+    <span class="here">布鲁斯与福音</span><span>民歌与乡村</span><span>欧洲古典</span><span>摇滚</span><span>嘻哈</span><span>电子</span><span>当代流行</span>
+  </div>
+</div>
+
+<article class="wrap">
+
+  <div class="scene">
+    <p>1936 年 11 月，得克萨斯州圣安东尼奥的一家旅馆。</p>
+    <p>一个二十五岁的黑人青年抱着一把木吉他，据说面朝墙角坐着录音。有人说他太害羞，不愿意让在场的白人制作人看见自己的手；也有人说，墙角能把吉他的声音拢起来，听着更响。</p>
+    <p>他叫 Robert Johnson。他这一生只录下了二十九首歌，两年后在密西西比去世，年仅二十七岁，死因至今说不清楚。关于他，流传最广的是一个传说：他曾在午夜的十字路口，把灵魂卖给魔鬼，换来了一手无人能及的吉他。</p>
+    <p>二十多年后，他的录音被重新发行成唱片，漂洋过海到了英国。一群十几岁的英国少年反复听着这些沙沙作响的老录音，后来他们组成了乐队，叫滚石，叫 Cream，叫 Led Zeppelin。</p>
+  </div>
+
+  <div class="ask">
+    <span class="who">我问</span>
+    <p class="q">详细讲讲布鲁斯，它为什么是现代流行音乐的根？</p>
+  </div>
+
+  <p>这一章想回答的就是这个问题。我会先讲布鲁斯是在什么样的土地上长出来的，再把它拆开，看看它由哪些零件组成：十二小节、三个和弦、蓝调音、呼应、shuffle 律动、木吉他和电吉他。每个零件都配了可以直接点开听的声音示例，全部是浏览器现场合成的。最后，我们沿着时间线走一遍，看这些零件怎么一个个被摇滚、R&amp;B 和流行音乐继承下去。</p>
+
+  <nav class="toc" aria-label="本章目录">
+    <b>本章曲目单</b>
+    <ol>
+      <li><a href="#origin">土地：布鲁斯从哪里来</a></li>
+      <li><a href="#form">骨架：十二小节与三个和弦</a></li>
+      <li><a href="#blue">灵魂：蓝调音与布鲁斯音阶</a></li>
+      <li><a href="#call">对话：呼应</a></li>
+      <li><a href="#groove">身体：shuffle 律动</a></li>
+      <li><a href="#sound">音色：从木吉他到电吉他</a></li>
+      <li><a href="#history">历史：五个时期</a></li>
+      <li><a href="#legacy">遗产：为什么说它是根</a></li>
+      <li><a href="#listen">听：本章十首曲目</a></li>
+      <li><a href="#practice">练：四个小练习</a></li>
+      <li><a href="#gloss">术语表</a></li>
+    </ol>
+  </nav>
+
+  <!-- 01 -->
+  <h2 id="origin"><span class="n">01 / 土地</span>布鲁斯从哪里来</h2>
+
+  <h3>一个“最南方的地方”</h3>
+  <p>在美国密西西比州西北部，密西西比河和亚祖河之间，有一片极其平坦、土壤肥沃的冲积平原，叫作密西西比三角洲（Mississippi Delta）。这里曾是美国最重要的棉花产区之一，也是黑人人口比例最高、种族压迫最严酷的地区之一，有人称它是“地球上最南方的地方”。布鲁斯最核心的发源地就在这里。</p>
+
+  <figure class="fig">
+    <div class="frame">
+    <svg viewBox="0 0 540 690" role="img" aria-label="示意地图：密西西比河由北向南流过，三角洲位于孟菲斯与维克斯堡之间；虚线箭头从三角洲指向北方的圣路易斯、芝加哥和底特律">
+      <defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1L9 5L1 9z" class="sv-rust"/></marker></defs>
+      <ellipse cx="312" cy="30" rx="30" ry="62" class="sv-soft"/>
+      <text x="350" y="40" class="sv-ts">密歇根湖</text>
+      <ellipse cx="163" cy="468" rx="34" ry="74" class="sv-soft"/>
+      <ellipse cx="163" cy="468" rx="34" ry="74" class="sv-li" stroke-width="1" stroke-dasharray="3 3"/>
+      <path d="M123.5 24.5 L150.5 110 L119 191 L168.5 239 L213.5 312.5 L200 335 L174.4 395.75 L137 438.5 L128 474.5 L137.9 521.75 L105.5 582.5 L173 627 L204.5 663.5" class="sv-li" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M213.5 312.5 L300 290 L371 258.5 L425 218" class="sv-li" stroke-width="2" stroke-linejoin="round" opacity=".6"/>
+      <path d="M165 430 Q 300 300 280 104" class="sv-lr" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#ah)"/>
+      <path d="M180 425 Q 420 280 484 86" class="sv-lr" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#ah)"/>
+      <path d="M150 425 Q 120 330 162 250" class="sv-lr" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#ah)"/>
+      <g class="sv-ink">
+        <circle cx="284" cy="93" r="5"/><circle cx="490" cy="73" r="5"/><circle cx="169" cy="239" r="4"/>
+        <circle cx="174" cy="396" r="4"/><circle cx="152" cy="438" r="4"/><circle cx="138" cy="522" r="4"/><circle cx="173" cy="627" r="4"/>
+      </g>
+      <text x="294" y="98" class="sv-t">芝加哥</text>
+      <text x="436" y="62" class="sv-t">底特律</text>
+      <text x="96" y="236" class="sv-t">圣路易斯</text>
+      <text x="184" y="400" class="sv-t">孟菲斯</text>
+      <text x="198" y="452" class="sv-t">克拉克斯代尔</text>
+      <text x="198" y="490" class="sv-r">密西西比三角洲</text>
+      <text x="40" y="526" class="sv-t">维克斯堡</text>
+      <text x="184" y="632" class="sv-t">新奥尔良</text>
+      <text x="228" y="350" class="sv-ts">61 号公路与铁路沿河北上</text>
+      <text x="385" y="215" class="sv-ts">俄亥俄河</text>
+      <line x1="300" y1="560" x2="330" y2="560" class="sv-li" stroke-width="3"/><text x="340" y="564" class="sv-ts">密西西比河</text>
+      <line x1="300" y1="586" x2="330" y2="586" class="sv-lr" stroke-width="2" stroke-dasharray="6 5"/><text x="340" y="590" class="sv-ts">大迁徙方向（约 1916–1970）</text>
+      <ellipse cx="315" cy="612" rx="14" ry="7" class="sv-soft"/><text x="340" y="616" class="sv-ts">三角洲（示意范围）</text>
+    </svg>
+    </div>
+    <figcaption>图 1 · 布鲁斯的地理：从三角洲到北方工业城市。按经纬度粗略绘制的示意图，非精确比例。</figcaption>
+  </figure>
+
+  <h3>自由之后，并没有真正自由</h3>
+  <p>1865 年美国废除奴隶制，但对南方黑人来说，生活并没有变好多少。大部分人成了“分成佃农”：租种白人地主的土地，收成后按比例交租，年年欠债，几乎不可能翻身。19 世纪末开始，南方各州又陆续通过了一系列种族隔离法律，也就是“吉姆·克劳法”，学校、车厢、饮水处都分黑白，黑人的投票权被各种手段剥夺。</p>
+  <p>布鲁斯就诞生在这个时期（大约 1890 年代到 1900 年代）。它唱的是这片土地上最具体的东西：干不完的活、还不清的债、离开的爱人、发大水、坐火车去北方的梦想。英语里 blue 有“忧郁”的意思，“have the blues”就是“心情低落”，这个词后来成了这种音乐的名字。</p>
+
+  <h3>它的五个前身</h3>
+  <ol class="clean">
+    <li><b>劳动号子（work songs）</b>：一群人干活时一人领唱、众人应和，用歌声统一节奏。这是“呼应”结构的来源之一</li>
+    <li><b>田野呼喊（field hollers）</b>：一个人在田里干活时拖长了嗓子随口喊唱，音高忽上忽下、自由滑动，没有固定节拍。布鲁斯那种“滑来滑去”的唱法，很大程度上来自这里。下面的“音色画廊”里可以听到模拟的呼喊</li>
+    <li><b>黑人灵歌（spirituals）</b>：奴隶时代在教会里唱的宗教歌曲，后来发展出福音音乐。布鲁斯常被叫作“魔鬼的音乐”，和灵歌正好是一体两面：一个唱给上帝，一个唱给世俗生活</li>
+    <li><b>非洲的音乐传统</b>：呼应、可以弯曲的音高、多层交错的节奏，这些特点通过一代代人的口耳相传保留了下来。三角洲还流行一种叫“diddley bow”的单弦琴，常常就是把一根铁丝钉在门板或墙上，用瓶子在弦上滑动来改变音高。很多人认为它的源头是非洲的单弦乐器，后来的滑棒吉他也和它一脉相承</li>
+    <li><b>欧洲的乐器与和声</b>：吉他、钢琴、口琴这些便宜好学的乐器，以及以“三个和弦”为基础的和声体系</li>
+  </ol>
+
+  <figure class="fig">
+    <div class="frame">
+    <svg viewBox="0 0 600 230" role="img" aria-label="单弦琴示意图：一块木板上钉着一根铁丝，两端用线轴垫高，一个玻璃瓶压在铁丝上滑动">
+      <rect x="40" y="110" width="520" height="56" rx="3" class="sv-p2"/>
+      <rect x="40" y="110" width="520" height="56" rx="3" class="sv-l" stroke-width="1.5"/>
+      <path d="M50 124 C 180 120, 300 130, 550 122 M50 140 C 200 146, 360 134, 550 142 M50 156 C 220 152, 380 160, 550 154" class="sv-l" stroke-width=".6" opacity=".5"/>
+      <rect x="76" y="92" width="14" height="22" rx="2" class="sv-ink"/>
+      <rect x="510" y="92" width="14" height="22" rx="2" class="sv-ink"/>
+      <line x1="83" y1="93" x2="517" y2="93" class="sv-l" stroke-width="2"/>
+      <g transform="rotate(-18 300 70)">
+        <rect x="282" y="20" width="36" height="74" rx="10" class="sv-ind" opacity=".85"/>
+        <rect x="292" y="2" width="16" height="24" rx="3" class="sv-ind" opacity=".85"/>
+      </g>
+      <path d="M 250 60 L 210 40" class="sv-l" stroke-width=".8"/><text x="96" y="38" class="sv-t">玻璃瓶当滑棒</text>
+      <path d="M 450 93 L 470 50" class="sv-l" stroke-width=".8"/><text x="440" y="42" class="sv-t">一根铁丝</text>
+      <path d="M 83 90 L 70 60" class="sv-l" stroke-width=".8"/><text x="22" y="54" class="sv-ts">垫高的线轴</text>
+      <text x="230" y="200" class="sv-t">木板、门板或者屋墙</text>
+      <text x="230" y="220" class="sv-ts">在铁丝上滑动瓶子，音高连续变化</text>
+    </svg>
+    </div>
+    <figcaption>图 2 · 单弦琴（diddley bow）示意。很多三角洲音乐人小时候的第一件“乐器”。可在实验 07 听到模拟声音。</figcaption>
+  </figure>
+  <p>所以布鲁斯本身就是一个混血儿：非洲的嗓音和律动，加上欧洲的乐器和和弦。后来的整部美国流行音乐史，都在重复这种混合。</p>
+
+  <h3>一个火车站的下午</h3>
+  <p>关于布鲁斯最早的文字记录之一，来自一位叫 W.C. Handy 的黑人乐队指挥。据他自传里的回忆，1903 年前后，他在密西西比一个叫 Tutwiler 的小火车站等车，火车晚点了九个小时。他看到一个衣衫破旧的黑人坐在旁边，一边用小刀在吉他弦上滑动，一边反复唱着一句关于“去两条铁路交汇的地方”的歌词。Handy 后来说，那是他听过的最奇怪的音乐。</p>
+  <p>几年后，他开始把这种音乐写成乐谱发表，包括后来红遍全国的《St. Louis Blues》（1914）。他因此被称为“布鲁斯之父”。准确地说，他不是布鲁斯的发明者，而是第一批把它记录下来、推向大众的人。</p>
+
+  <div class="two">
+    <figure class="photo">
+      <img src="img/wc-handy-1941.jpg" alt="W.C. Handy 1941 年的肖像" data-file="W._C._Handy_(1941_Van_Vechten_portrait).jpg">
+      <figcaption class="cap"><b>W.C. Handy，1941 年</b>Carl Van Vechten 摄 · 美国国会图书馆藏 · 公有领域</figcaption>
+    </figure>
+    <figure class="photo">
+      <img src="img/st-louis-blues-1914.jpg" alt="1914 年出版的《St. Louis Blues》乐谱第一页" data-file="W._C._Handy_-_The_%22St._Louis_Blues%22_-_First_page.jpg">
+      <figcaption class="cap"><b>《St. Louis Blues》乐谱首页，1914 年</b>W.C. Handy 作曲 · 公有领域</figcaption>
+    </figure>
+  </div>
+
+  <h3>唱片公司发现了新市场</h3>
+  <p>1920 年，黑人女歌手 Mamie Smith 录制了《Crazy Blues》，销量好得惊人。唱片公司这才发现，原来有一个巨大的黑人听众市场。他们开始专门为黑人听众录制唱片，并把这类唱片叫作“种族唱片”（race records）。</p>
+  <p>1920 年代最早红起来的布鲁斯明星其实是女性：被称为“布鲁斯之母”的 Ma Rainey，以及被称为“布鲁斯女皇”的 Bessie Smith。她们在剧院和巡回演出团里演唱，身后是爵士乐手伴奏，这种风格叫“经典女声布鲁斯”。而三角洲那些背着木吉他四处流浪的男歌手，要到 1920 年代末才陆续被录音。</p>
+
+  <div class="two">
+    <figure class="photo">
+      <img src="img/ma-rainey-1923.jpg" alt="Ma Rainey 与她的乐队，1923 年" data-file="Ma_Rainey,_1923.jpg">
+      <figcaption class="cap"><b>Ma Rainey（中）与她的乐队，1923 年</b>“布鲁斯之母”。身后是爵士乐手伴奏 · 维基共享资源，美国公有领域</figcaption>
+    </figure>
+    <figure class="photo">
+      <img src="img/bessie-smith-1936.jpg" alt="Bessie Smith 手持羽毛的肖像，1936 年" data-file="Bessie_Smith_(1936)_by_Carl_Van_Vechten.jpg">
+      <figcaption class="cap"><b>Bessie Smith，1936 年</b>“布鲁斯女皇”。Carl Van Vechten 摄，Adam Cuerden 修复 · 美国国会图书馆藏 · 公有领域（按摄影师遗产方要求，未裁切、未上色）</figcaption>
+    </figure>
+  </div>
+
+  <!-- 02 -->
+  <h2 id="form"><span class="n">02 / 骨架</span>十二小节与三个和弦</h2>
+
+  <h3>先认识几个词</h3>
+  <ul class="clean">
+    <li><b>拍和小节</b>：跟着音乐拍手，每一下就是一拍。布鲁斯通常四拍一组，一组叫一个小节</li>
+    <li><b>和弦</b>：几个音同时响起，构成一种“颜色”。吉他手扫一下弦，听到的就是一个和弦</li>
+    <li><b>I、IV、V</b>：用罗马数字给和弦编号。如果一首歌在 C 调，那么从 C 开始数，第一个音 C 上的和弦叫 I，第四个音 F 上的叫 IV，第五个音 G 上的叫 V。用数字而不用字母的好处是：换到任何调，关系都不变</li>
+  </ul>
+  <p>这三个和弦的“性格”很不一样。I 是家，稳定、安心；IV 是离开家出门走走，有一点展开的感觉；V 是最紧张的位置，听着就“想回家”。几乎所有的布鲁斯，都是在这三个和弦之间按固定顺序走一圈。</p>
+
+  <h3>标准的十二小节</h3>
+  <p>把三个和弦按下面的顺序排成十二个小节，就是一轮标准的布鲁斯。点“播放”，跟着高亮的格子走一遍。伴奏是用合成木吉他弹的 shuffle 节奏，低音由拇指拨出来。</p>
+
+  <div class="lab" id="lab12">
+    <div class="head"><span class="tag">实验 01</span><strong>十二小节 · C 调</strong><small>I = 家　IV = 离家　V = 最紧张</small></div>
+    <div class="grid12" id="grid12"></div>
+    <div class="controls">
+      <button class="primary" type="button" id="play12">播放一轮</button>
+      <button type="button" data-stop>停止</button>
+      <span class="seg" role="group" aria-label="变体">
+        <button type="button" data-var="std" aria-pressed="true">标准</button>
+        <button type="button" data-var="quick" aria-pressed="false">快四 + 回转</button>
+        <button type="button" data-var="minor" aria-pressed="false">小调布鲁斯</button>
+      </span>
+      <label for="bpm12">速度 <input id="bpm12" type="range" min="60" max="140" step="1" value="92"> <span id="bpm12v">92</span></label>
+    </div>
+    <p class="note" id="varNote">走到第 5 格，和声“离开了家”；第 9 格最紧张；然后一路回家。</p>
+  </div>
+
+  <h3>为什么用的是“七和弦”</h3>
+  <p>你可能注意到了，格子里写的是 C7、F7、G7，而不是 C、F、G。后面这个“7”表示在普通的三个音之上，再加一个比较“刺”的音（降七级音）。在传统和声里，这种和弦只该出现在 V 的位置，因为它听着不稳定，急着解决。布鲁斯却让三个和弦全都带上这个音，结果每个和弦都带着一点“不安分”的味道，这正是布鲁斯听着“又甜又涩”的原因之一。</p>
+
+  <h3>歌词：AAB 结构</h3>
+  <p>十二小节正好分成三行，每行四小节。歌词也跟着分成三句，最常见的形式叫 AAB：</p>
+  <div class="lyric">
+    <p><span class="tag">A</span>天没亮我就起了床，口袋里一个钱也没有</p>
+    <p><span class="tag">A</span>天没亮我就起了床，口袋里一个钱也没有</p>
+    <p><span class="tag">B</span>老板说今天没活干，明天你也不用再来了</p>
+    <small>为了说明结构，这几句是本书原创的仿写，不是真实歌词。</small>
+  </div>
+  <p>第一句提出一个处境；第二句原样重复（或者稍微改几个字）；第三句给出转折、结论或一个苦涩的笑话。这样设计很实用：歌手唱第二遍的时候，可以一边唱一边想第三句怎么编；听众听到第二遍，也能跟上一起唱。而且每句歌词通常只占每行的前两小节，后两小节空出来，留给吉他或口琴“回答”，这就是第 04 节要讲的呼应。</p>
+
+  <h3>三种常见的变体</h3>
+  <ul class="clean">
+    <li><b>快四（quick change）</b>：第 2 小节就提前跳到 IV，然后再回到 I。让开头不那么单调，芝加哥布鲁斯里很常见</li>
+    <li><b>回转（turnaround）</b>：最后一小节不停在 I，而是走到 V，制造“还没完”的紧张感，引出下一轮。很多布鲁斯的结尾，吉他手都会弹一段固定的下行小乐句作为回转</li>
+    <li><b>小调布鲁斯</b>：把和弦换成小调，听起来更暗、更忧伤。B.B. King 的《The Thrill Is Gone》就是代表</li>
+  </ul>
+  <p>回到上面的实验 01，切换“快四 + 回转”和“小调布鲁斯”，对比听一下。除了十二小节，也有八小节、十六小节的布鲁斯，还有像 John Lee Hooker 那样几乎整首歌只用一个和弦的。早期三角洲布鲁斯的小节数常常不规整，歌手唱到哪里就换到哪里，“标准十二小节”是后来才逐渐固定下来的。</p>
+
+  <!-- 03 -->
+  <h2 id="blue"><span class="n">03 / 灵魂</span>蓝调音与布鲁斯音阶</h2>
+  <p>如果说十二小节是布鲁斯的骨架，蓝调音就是它的灵魂。很多人说不清布鲁斯是什么，但一听到这种音，马上就知道“这是布鲁斯”。</p>
+
+  <h3>大调和小调之间的那道缝</h3>
+  <p>先做个对比。同样以 C 为根音，第三个音如果是 E，听起来明亮、开心，这叫大三度；如果降低半音变成 E♭，听起来暗淡、忧伤，这叫小三度。西方古典音乐里，一首曲子要么用大调、要么用小调，界线分明。</p>
+  <p>布鲁斯偏不选。伴奏的和弦是明亮的大调，歌手和吉他手却常常唱、弹那个降低的音，或者干脆停在两者之间，从下面慢慢“推”上去。这种落在缝隙里的音，就叫蓝调音（blue note）。明亮的和弦配上往下沉的旋律，就是“笑着哭”。</p>
+
+  <div class="lab">
+    <div class="head"><span class="tag">实验 02</span><strong>亲耳听“蓝调音”</strong><small>同一个 C7 和弦，换不同的第三个音</small></div>
+    <div class="controls" style="margin-top:0">
+      <button type="button" data-demo="third-major">大三度 · 明亮</button>
+      <button type="button" data-demo="third-minor">小三度 · 忧伤</button>
+      <button class="primary" type="button" data-demo="third-bend">蓝调音 · 推弦</button>
+      <button type="button" data-demo="third-slide">蓝调音 · 滑棒</button>
+    </div>
+    <p class="note">“推弦”是左手手指把琴弦往旁边推，琴弦绷紧、音高上升；“滑棒”是用一个玻璃瓶颈或金属管在弦上滑。两种方式都能停在两个音中间，钢琴就做不到，因为钢琴键之间没有“缝”。</p>
+  </div>
+
+  <h3>不止一个蓝调音</h3>
+  <p>布鲁斯里常被“降低”的音主要有三个：第三音、第五音和第七音。把它们和其他几个音放在一起，就得到了布鲁斯音阶。以 E 调为例，它只有六个音：</p>
+  <p class="lyric" style="font-family:var(--font-mono);text-align:center">E　G　A　<span style="color:var(--rust)">B♭</span>　B　D　（E）</p>
+  <p>和普通的大调音阶（E F♯ G♯ A B C♯ D♯）相比，它少了几个音，多了一个 B♭。这个 B♭ 就是降五级音，是布鲁斯音阶里最“刺耳”、也最有味道的那个音。在中世纪，和它同样距离的音程曾被称为“魔鬼音程”。</p>
+
+  <figure class="fig">
+    <div class="frame">
+    <svg viewBox="0 0 680 250" role="img" aria-label="钢琴键盘示意：E G A B♭ B D E 被标出，B♭ 用红色标出；G 与 G♯ 之间标注蓝调音的位置">
+      <g id="kb"></g>
+    </svg>
+    </div>
+    <figcaption>图 3 · E 布鲁斯音阶在键盘上的位置。钢琴只能在 G 和 G♯ 之间二选一；吉他和人声可以停在两者中间。</figcaption>
+  </figure>
+
+  <figure class="fig">
+    <div class="frame">
+    <svg viewBox="0 0 680 250" role="img" aria-label="吉他指板示意：开放把位上的 E 布鲁斯音阶，每根弦上标出可以弹的音">
+      <g id="fb"></g>
+    </svg>
+    </div>
+    <figcaption>图 4 · 吉他开放把位上的 E 布鲁斯音阶。黑色是根音 E，红色是 B♭。三角洲布鲁斯常用 E 调，正因为这些音大多落在空弦上，好弹又响亮。</figcaption>
+  </figure>
+
+  <div class="lab">
+    <div class="head"><span class="tag">实验 03</span><strong>大调音阶 vs 布鲁斯音阶</strong><small>E 调 · 合成木吉他</small></div>
+    <div class="controls" style="margin-top:0">
+      <button type="button" data-demo="scale-major">大调音阶</button>
+      <button type="button" data-demo="scale-blues">布鲁斯音阶</button>
+    </div>
+  </div>
+
+  <h3>自己即兴一下</h3>
+  <p>布鲁斯音阶有个神奇之处：只要伴奏是布鲁斯，你在这六个音里随便按，听起来都“对”。这也是为什么无数吉他手学的第一个音阶就是它。打开伴奏，点下面的音块（电脑上也可以按键盘 A S D F G H J），试着弹一句，停两拍，再弹一句。</p>
+
+  <div class="lab">
+    <div class="head"><span class="tag">实验 04</span><strong>即兴音阶板 · E 调</strong><small>先开伴奏，再点音块</small></div>
+    <div class="controls" style="margin-top:0">
+      <button class="primary" type="button" data-demo="jam-loop">开始芝加哥式伴奏（循环）</button>
+      <button type="button" data-stop>停止</button>
+      <span class="seg" role="group" aria-label="音色">
+        <button type="button" data-padtone="el" aria-pressed="true">电吉他</button>
+        <button type="button" data-padtone="harp" aria-pressed="false">口琴</button>
+        <button type="button" data-padtone="ac" aria-pressed="false">木吉他</button>
+      </span>
+      <label for="bendPad"><input type="checkbox" id="bendPad"> 推弦进入</label>
+    </div>
+    <div class="pads" id="pads"></div>
+    <p class="note">红色的 B♭ 就是“魔鬼音”，试试让它在一句话的中间一闪而过，然后落到 B 或 E 上。勾选“推弦进入”，每个音都会从下面滑上来。</p>
+  </div>
+
+  <!-- 04 -->
+  <h2 id="call"><span class="n">04 / 对话</span>呼应</h2>
+  <p>布鲁斯不是一个人在自言自语，而是一场对话。歌手唱一句，然后停下；吉他、口琴或者钢琴接过去“回答”一句。这种一来一回的结构叫呼应（call and response）。</p>
+  <p>它最早来自非洲的集体音乐和美国南方的劳动号子：领唱喊一句，众人回一句。到了布鲁斯里，回答的“众人”变成了乐器。前面说过，每行歌词只占前两小节，后两小节正好留给乐器：</p>
+  <ul class="clean">
+    <li>第 1–2 小节：歌手唱 A</li>
+    <li>第 3–4 小节：吉他回答</li>
+    <li>第 5–6 小节：歌手唱第二遍 A</li>
+    <li>第 7–8 小节：吉他再回答</li>
+    <li>第 9–10 小节：歌手唱 B</li>
+    <li>第 11–12 小节：吉他收尾</li>
+  </ul>
+
+  <figure class="fig">
+    <div class="frame">
+    <svg viewBox="0 0 680 170" role="img" aria-label="十二小节呼应示意：人声在第 1-2、5-6、9-10 小节，乐器在第 3-4、7-8、11-12 小节">
+      <g id="crl"></g>
+    </svg>
+    </div>
+    <figcaption>图 5 · 一轮十二小节里的“问”与“答”。</figcaption>
+  </figure>
+
+  <div class="lab">
+    <div class="head"><span class="tag">实验 05</span><strong>一问一答</strong><small>合成的“人声”唱，乐器答</small></div>
+    <div class="controls" style="margin-top:0">
+      <button class="primary" type="button" data-demo="cr-guitar">人声 + 滑棒吉他回答</button>
+      <button type="button" data-demo="cr-harp">人声 + 口琴回答</button>
+      <button type="button" data-stop>停止</button>
+    </div>
+    <div class="strip" data-strip></div>
+    <p class="note">这里的“人声”是用滤波器模拟的元音，没有歌词。注意听：人声停下来的地方，乐器马上接上，像在说“我懂”。</p>
+  </div>
+  <p>B.B. King 把这种对话发挥到了极致。他几乎从不一边唱一边弹：唱完一句，放下嗓子，拿起吉他回一句。他的吉他甚至有自己的名字，叫“Lucille”。据他回忆，1949 年他在阿肯色州一家舞厅演出时，两个男人为一个叫 Lucille 的女人打架，打翻了取暖的煤油桶，引发大火。他冲回火场抢出了吉他，后来就把所有的吉他都叫作 Lucille，提醒自己别再干这种傻事。</p>
+
+  <figure class="photo">
+    <img src="img/bb-king-2009.jpg" alt="B.B. King 2009 年演出时弹吉他" data-file="B.B._King_in_2009.jpg">
+    <figcaption class="cap"><b>B.B. King 与 Lucille，2009 年</b>Tom Beetz 摄 · CC BY 2.0 · 来源：维基共享资源</figcaption>
+  </figure>
+
+  <!-- 05 -->
+  <h2 id="groove"><span class="n">05 / 身体</span>shuffle 律动</h2>
+  <p>布鲁斯的节奏有一种特别的“摇晃感”，最好用身体去感受。把每一拍再分成两半，正常的分法是平均的“哒、哒、哒、哒”，叫直八分（straight）。布鲁斯通常把每一拍分成“长、短”，听起来像“哒——哒、哒——哒”，或者像马蹄声、像走路时一瘸一拐的步子，这叫 shuffle（拖步）。</p>
+  <p>更准确地说，shuffle 是把一拍分成三份，前两份连在一起当“长”，第三份当“短”。这种三连音的律动后来被爵士乐继承，叫 swing（摇摆）；而摇滚乐把它拉直成平均的八分音符，速度加快，就变成了摇滚的律动。</p>
+
+  <figure class="fig">
+    <div class="frame">
+    <svg viewBox="0 0 680 190" role="img" aria-label="节奏示意：直八分把一拍平均分成两份；shuffle 把一拍分成三份，前两份连成长音，第三份是短音">
+      <g id="rhy"></g>
+    </svg>
+    </div>
+    <figcaption>图 6 · 直八分与 shuffle。每个长方形是一拍，竖线把它切开。</figcaption>
+  </figure>
+
+  <div class="lab">
+    <div class="head"><span class="tag">实验 06</span><strong>同一段低音，两种律动</strong><small>先直八分，再 shuffle</small></div>
+    <div class="controls" style="margin-top:0">
+      <button type="button" data-demo="straight">直八分</button>
+      <button class="primary" type="button" data-demo="shuffle">Shuffle</button>
+      <button type="button" data-demo="both">连续对比</button>
+    </div>
+    <p class="note">低音弹的是一段经典的 boogie 低音线：根音、三音、五音、六音、降七音、六音、五音、三音，一上一下，像在爬楼梯。这段走法后来几乎原封不动地进了早期摇滚乐。</p>
+  </div>
+
+  <!-- 06 -->
+  <h2 id="sound"><span class="n">06 / 音色</span>从木吉他到电吉他</h2>
+  <p>布鲁斯在半个世纪里，从密西西比的门廊走进了芝加哥的酒吧，声音也彻底变了样。先听听布鲁斯里最常见的几种声音。</p>
+
+  <div class="lab">
+    <div class="head"><span class="tag">实验 07</span><strong>音色画廊</strong><small>点一下听一段</small></div>
+    <div class="gallery">
+      <button type="button" data-demo="g-holler">田野呼喊<small>无伴奏、自由滑音</small></button>
+      <button type="button" data-demo="g-diddley">单弦琴<small>diddley bow · 瓶子滑弦</small></button>
+      <button type="button" data-demo="g-acoustic">木吉他<small>手指拨弦 · 拇指弹低音</small></button>
+      <button type="button" data-demo="g-slide">滑棒吉他<small>bottleneck</small></button>
+      <button type="button" data-demo="g-clean">电吉他 · 干净<small>1940s 早期电声</small></button>
+      <button type="button" data-demo="g-drive">电吉他 · 过载<small>音箱开到最大</small></button>
+      <button type="button" data-demo="g-harp">口琴 · 原声<small>“口袋里的乐器”</small></button>
+      <button type="button" data-demo="g-ampharp">口琴 · 接麦克风<small>芝加哥式</small></button>
+      <button type="button" data-demo="g-bass">低音贝斯<small>boogie 走法</small></button>
+      <button type="button" data-demo="g-drums">鼓组<small>shuffle 节奏</small></button>
+    </div>
+    <p class="note">所有音色都是用代码合成的近似效果。吉他用的是一种模拟琴弦振动的算法（Karplus-Strong），口琴和人声用的是振荡器加滤波器。和真实乐器比当然粗糙，但足够听出差别。</p>
+  </div>
+
+  <h3>三角洲：一个人，一把木吉他</h3>
+  <p>早期三角洲布鲁斯几乎都是独奏。歌手一个人坐在门廊、小酒馆（juke joint）或者街角，用一把便宜的木吉他给自己伴奏。为了一个人撑起整个乐队，他们发展出了一套技巧：拇指在低音弦上一直“咚、咚、咚”地弹出低音和节奏，其他手指在高音弦上弹旋律和回答，有时还用滑棒在弦上滑出哭腔一样的声音。很多人还会用脚踩地板打拍子。</p>
+  <p>这种音乐粗粝、私人、情绪浓烈，节奏和小节都很自由，像是在讲述一件自己身上发生的事。</p>
+
+  <figure class="photo">
+    <img src="img/juke-joint-1939.jpg" alt="1939 年密西西比州克拉克斯代尔附近一家小酒馆里，人们在跳舞" data-file="Jitterbug_Wolcott_FSA.jpg">
+    <figcaption class="cap"><b>星期六晚上的 juke joint，1939 年 11 月</b>密西西比州克拉克斯代尔郊外。Marion Post Wolcott 为美国农业安全局（FSA）拍摄 · 公有领域</figcaption>
+  </figure>
+
+  <h3>芝加哥：插上电，组成乐队</h3>
+  <p>1910 年代到 1970 年，大约六百万南方黑人陆续北上，去芝加哥、底特律、纽约这些工业城市找工作，这被称为“大迁徙”。布鲁斯也跟着他们进了城。城里的酒吧人声嘈杂，一把木吉他根本听不见，于是乐手们换上了电吉他，接上音箱。音箱开得太大，声音会失真、发毛，这种“脏”的声音后来反而成了芝加哥布鲁斯的标志。</p>
+  <p>乐队也壮大了：电吉他、贝斯、鼓、钢琴，还有接上麦克风的口琴。口琴手 Little Walter 把小小的口琴对着麦克风吹，再接进吉他音箱，声音变得像萨克斯一样粗壮。同样一段十二小节，下面分别用两种方式演奏：</p>
+
+  <figure class="fig">
+    <div class="frame">
+    <svg viewBox="0 0 680 260" role="img" aria-label="编制对比：左边三角洲只有一把木吉他和踩地的脚；右边芝加哥有电吉他和音箱、口琴和麦克风、贝斯、鼓">
+      <g id="lineup"></g>
+    </svg>
+    </div>
+    <figcaption>图 7 · 从一个人到一支乐队。</figcaption>
+  </figure>
+
+  <div class="lab">
+    <div class="head"><span class="tag">实验 08</span><strong>同一段十二小节，两种布鲁斯</strong><small>E 调</small></div>
+    <div class="cols2">
+      <div class="opt"><b>三角洲版 · 1930s</b><p>一把木吉他：拇指弹低音，滑棒弹回答，配一段“人声”。速度慢、节奏松。</p><button class="primary" type="button" data-demo="delta">播放三角洲版</button></div>
+      <div class="opt"><b>芝加哥版 · 1950s</b><p>乐队：过载电吉他的 boogie 节奏型、贝斯、鼓、接麦克风的口琴回答。</p><button class="primary" type="button" data-demo="chicago">播放芝加哥版</button></div>
+    </div>
+    <div class="strip" data-strip></div>
+    <div class="controls"><button type="button" data-stop>停止</button></div>
+  </div>
+
+  <h3>停顿式 riff</h3>
+  <p>芝加哥布鲁斯还有一个标志性的写法，叫“停顿式”（stop-time）：整个乐队在小节的第一拍一起重重打一下，然后突然全部安静，把空间留给歌手；几个小节之后，乐队才一起冲进来。Muddy Waters 的《Hoochie Coochie Man》就是最有名的例子。下面是用同样手法写的一段示例：</p>
+  <div class="lab">
+    <div class="head"><span class="tag">实验 09</span><strong>停顿式 → 全乐队</strong><small>前四小节停顿，第五小节冲进来</small></div>
+    <div class="controls" style="margin-top:0"><button class="primary" type="button" data-demo="stoptime">播放</button><button type="button" data-stop>停止</button></div>
+    <div class="strip" data-strip></div>
+  </div>
+
+  <!-- 07 -->
+  <h2 id="history"><span class="n">07 / 历史</span>五个时期</h2>
+  <ol class="timeline">
+    <li><span class="yr">1890s–1910s</span><b>萌芽：口头传统</b><p>在三角洲和南方各地的种植园、小酒馆、街头流传，没有录音，也几乎没有乐谱。W.C. Handy 等人开始把它写成乐谱发表。</p></li>
+    <li><span class="yr">1920s</span><b>唱片时代与经典女声布鲁斯</b><p>Mamie Smith 的《Crazy Blues》（1920）打开了“种族唱片”市场。Ma Rainey、Bessie Smith 成为第一代布鲁斯明星，由爵士乐手伴奏，在剧院演出。</p></li>
+    <li><span class="yr">1920s 末–1930s</span><b>乡村布鲁斯：三角洲、德州与东海岸</b><p>唱片公司深入南方录音。三角洲有 Charley Patton、Son House、Robert Johnson；得州有 Blind Lemon Jefferson；东海岸的“皮埃蒙特布鲁斯”则以轻快精巧的指弹著称，代表人物有 Blind Willie McTell。</p></li>
+    <li><span class="yr">1940s–1950s</span><b>城市布鲁斯：电气化与芝加哥</b><p>得州的 T-Bone Walker 是最早一批把电吉他用于布鲁斯的人。1941 年，民俗学家 Alan Lomax 在三角洲为美国国会图书馆录下了一个年轻的拖拉机手 Muddy Waters；两年后，Muddy Waters 搬到了芝加哥。1950 年成立的 Chess 唱片公司，签下了 Muddy Waters、Howlin' Wolf、Little Walter，贝斯手兼词曲作者 Willie Dixon 为他们写了大量名曲。孟菲斯的 B.B. King 则把布鲁斯吉他独奏推向了新的高度。</p></li>
+    <li><span class="yr">1960s 以后</span><b>复兴、出口与布鲁斯摇滚</b><p>英国掀起“布鲁斯热潮”，滚石、The Yardbirds、Cream、Eric Clapton 疯狂模仿芝加哥布鲁斯。与此同时，美国的民谣复兴运动重新“找回”了一批被遗忘的老布鲁斯歌手：1963 年找到了 Mississippi John Hurt，1964 年找到了 Son House 和 Skip James，他们在晚年重新登台录音。之后，布鲁斯和摇滚融合成“布鲁斯摇滚”，从 Jimi Hendrix 到 1980 年代的 Stevie Ray Vaughan，一直延续到今天。</p></li>
+  </ol>
+
+  <!-- 08 -->
+  <h2 id="legacy"><span class="n">08 / 遗产</span>为什么说它是根</h2>
+  <p>现在可以回答开头的问题了。布鲁斯的遗产可以拆成五条“遗传路径”，每一条都能在后来的音乐里清楚地听到。先看一张家谱：</p>
+
+  <figure class="fig">
+    <div class="frame">
+    <svg viewBox="0 0 680 290" role="img" aria-label="家谱：布鲁斯分出爵士、节奏布鲁斯和摇滚乐三支；节奏布鲁斯发展为灵魂乐与放克，再到嘻哈；摇滚乐发展为布鲁斯摇滚，再到硬摇滚与金属">
+      <g id="tree"></g>
+    </svg>
+    </div>
+    <figcaption>图 8 · 布鲁斯的后代（简化）。之后的章节会沿着每一支继续往下走。</figcaption>
+  </figure>
+
+  <h3>1. 和声骨架 → 摇滚乐</h3>
+  <p>早期摇滚乐很多就是提速、加重的十二小节布鲁斯。把 shuffle 拉直成平均的八分音符，速度加快一倍，鼓的第二拍和第四拍打得更重，吉他弹成连续的双音，布鲁斯就变成了摇滚。Chuck Berry 的《Johnny B. Goode》、猫王的《Hound Dog》，都是标准的十二小节。</p>
+  <div class="lab">
+    <div class="head"><span class="tag">实验 10</span><strong>布鲁斯变成摇滚</strong><small>同一个十二小节和弦进行</small></div>
+    <div class="controls" style="margin-top:0">
+      <button type="button" data-demo="chicago">芝加哥布鲁斯 · 100 BPM · shuffle</button>
+      <button class="primary" type="button" data-demo="rocknroll">早期摇滚 · 168 BPM · 直八分</button>
+      <button type="button" data-stop>停止</button>
+    </div>
+    <div class="strip" data-strip></div>
+  </div>
+
+  <h3>2. 乐队编制 → 摇滚乐队</h3>
+  <p>芝加哥布鲁斯确立的“电吉他、贝斯、鼓加主唱”，就是后来摇滚乐队的标准配置，到今天几乎没有变过。连过载失真的电吉他音色，最早也是从芝加哥的小酒吧里来的。</p>
+
+  <h3>3. 音阶和唱腔 → 吉他独奏与流行唱法</h3>
+  <p>你在实验 04 里按过的布鲁斯音阶，是摇滚、金属吉他独奏最基础的语言。推弦、滑音这些技巧，也直接继承自布鲁斯吉他手。R&amp;B 和流行歌手那种拐弯、滑音、一个字唱好几个音的唱法，也来自布鲁斯和福音。</p>
+
+  <h3>4. 名字本身 → R&amp;B</h3>
+  <p>R&amp;B 就是 Rhythm and Blues（节奏布鲁斯）。1949 年，《公告牌》杂志用这个词替换了带歧视色彩的“种族唱片”榜单名，指的正是节奏更强、适合跳舞的城市布鲁斯。之后的灵魂乐、放克，一直到嘻哈，都从这条线长出来。</p>
+
+  <h3>5. 英国摇滚的老师</h3>
+  <p>1961 年，Robert Johnson 的录音被重新发行成唱片《King of the Delta Blues Singers》，深刻影响了英国的一代年轻乐手。滚石乐队的名字取自 Muddy Waters 的歌《Rollin' Stone》；Eric Clapton 把 Robert Johnson 的《Cross Road Blues》改编成了摇滚版《Crossroads》；Led Zeppelin 的《Whole Lotta Love》借用了 Willie Dixon 写给 Muddy Waters 的《You Need Love》，后来被起诉，最终在作曲署名中加上了 Dixon 的名字。</p>
+
+  <h3>还有一条：用第一人称唱自己的生活</h3>
+  <p>布鲁斯之前，美国的主流流行歌大多由职业词曲作者写成，唱的是标准化的爱情。布鲁斯歌手唱的是“我”：我的贫穷、我的欲望、我被抛弃、我要离开。这种直白、真实的第一人称，后来被摇滚、民谣、灵魂乐和说唱一路继承下来。说唱讲究“keep it real”，源头可以一直追到这里。</p>
+
+  <div class="ask">
+    <span class="who">补充</span>
+    <div>
+      <p>“布鲁斯是根”是一种简化。现代流行音乐还有福音、白人乡村和民谣、职业流行曲、拉丁音乐等来源。更准确地说，布鲁斯是摇滚和黑人音乐两大家族中最核心的单一来源。</p>
+      <p style="margin-top:10px">这段历史也有沉重的一面。很多黑人布鲁斯音乐人签下了不公平的合同，没有拿到应得的版权收入；他们的作品被白人乐手翻唱后大红大紫，原作者却长期默默无闻。猫王的《Hound Dog》和 Led Zeppelin 的官司，都发生在这个背景之下。</p>
+    </div>
+  </div>
+
+  <!-- 09 -->
+  <h2 id="listen"><span class="n">09 / 听</span>本章十首曲目</h2>
+  <p>每首歌都附上了收听链接。蓝色按钮是 YouTube 上由唱片公司提供的官方音源，时间标签会直接跳到对应位置；没有找到官方音源的，按钮会打开 YouTube 搜索。国内收听可以点“网易云”或“QQ音乐”，会打开对应的搜索结果。</p>
+  <p>听的时候，按时间顺序来。你会听到布鲁斯从一个人的木吉他，一步步变成一支插电的乐队，最后变成摇滚乐。</p>
+  <div class="side"><span>SIDE A · 乡间与唱片时代</span><span>1925–1965</span></div>
+  <div id="songsA"></div>
+  <div class="side"><span>SIDE B · 城市与电声</span><span>1948–1969</span></div>
+  <div id="songsB"></div>
+
+  <div class="pair">
+    <b>对比听：原版和它的“后代”</b>
+    <div class="vs">
+      <a href="https://www.youtube.com/results?search_query=Big+Mama+Thornton+Hound+Dog+1952" target="_blank" rel="noopener">Big Mama Thornton《Hound Dog》<small>1952 · 布鲁斯原唱，低沉凶猛</small></a>
+      <span class="arrow">→</span>
+      <a href="https://www.youtube.com/results?search_query=Elvis+Presley+Hound+Dog+1956" target="_blank" rel="noopener">猫王《Hound Dog》<small>1956 · 提速、摇滚化</small></a>
+    </div>
+    <div class="vs">
+      <a href="https://www.youtube.com/results?search_query=Robert+Johnson+Cross+Road+Blues" target="_blank" rel="noopener">Robert Johnson《Cross Road Blues》<small>1936 · 一把木吉他</small></a>
+      <span class="arrow">→</span>
+      <a href="https://www.youtube.com/results?search_query=Cream+Crossroads+live" target="_blank" rel="noopener">Cream《Crossroads》<small>1968 · Eric Clapton 的布鲁斯摇滚版</small></a>
+    </div>
+    <div class="vs">
+      <a href="https://www.youtube.com/results?search_query=Muddy+Waters+You+Need+Love+1962" target="_blank" rel="noopener">Muddy Waters《You Need Love》<small>1962 · Willie Dixon 作曲</small></a>
+      <span class="arrow">→</span>
+      <a href="https://www.youtube.com/results?search_query=Led+Zeppelin+Whole+Lotta+Love" target="_blank" rel="noopener">Led Zeppelin《Whole Lotta Love》<small>1969 · 加大音量与失真</small></a>
+    </div>
+  </div>
+
+  <!-- 10 -->
+  <h2 id="practice"><span class="n">10 / 练</span>四个小练习</h2>
+  <h3>练习 1：数一轮十二小节</h3>
+  <p>播放《Johnny B. Goode》，等人声进来后，跟着鼓数“1-2-3-4”，每数完四拍，就在实验 01 的表格里往下跳一格。走到第 5 小节，你应该能听到和声换了；第 9 小节最紧张；然后回家。熟练之后，换成《Hoochie Coochie Man》再数一遍，看看停顿式的部分在第几小节结束。</p>
+  <h3>练习 2：找呼应</h3>
+  <p>听《The Thrill Is Gone》，每当 B.B. King 唱完一句，就在心里说“问”；吉他接上时，说“答”。数一数第一段里一共有几次问答。再听《St. Louis Blues》，这一次回答的乐器换成了短号。</p>
+  <h3>练习 3：盲听分辨</h3>
+  <p>把《Cross Road Blues》《Death Letter》《Hoochie Coochie Man》《Juke》的开头各听十秒，打乱顺序请别人放给你，判断哪首是三角洲木吉他、哪首是芝加哥电声乐队。提示：听有没有鼓，吉他的声音是“干净”还是“发毛”。</p>
+  <h3>练习 4：自己写一段 AAB</h3>
+  <p>用自己最近的一件烦心事，写三句歌词：第一句说处境，第二句重复，第三句来个转折或自嘲。打开实验 04 的伴奏，试着用两三个音哼出来。不用唱得好，布鲁斯从来不要求唱得好。</p>
+
+  <div class="mine">
+    <div class="lbl">我的听感 · 待写</div>
+    这里留给你：第一次听 Robert Johnson 是什么感觉？十首歌里哪一首最打动你？你在哪里听到过布鲁斯的影子？
+  </div>
+
+  <!-- 11 -->
+  <h2 id="gloss"><span class="n">11 / 术语表</span>本章出现的词</h2>
+  <dl class="gloss">
+    <dt>十二小节布鲁斯</dt><dd>最标准的布鲁斯形式：12 个小节为一轮，用 I、IV、V 三个和弦，按固定顺序循环</dd>
+    <dt>I、IV、V</dt><dd>以调的第一、四、五个音为根音的和弦。I 是“家”，IV 是“离家”，V 是“最紧张、想回家”</dd>
+    <dt>属七和弦</dt><dd>在普通三和弦上再加一个降七级音的和弦，记作 C7、F7 等，听起来不稳定、带一点“刺”</dd>
+    <dt>AAB</dt><dd>布鲁斯歌词的常见结构：一句、重复一句、再一句转折</dd>
+    <dt>蓝调音</dt><dd>被降低或落在两个音“中间”的音，主要是第三、第五、第七音</dd>
+    <dt>布鲁斯音阶</dt><dd>以 E 调为例：E G A B♭ B D，摇滚与布鲁斯吉他独奏的基础</dd>
+    <dt>推弦（bend）</dt><dd>手指把琴弦往旁边推，使音高升高，能做出“中间的音”</dd>
+    <dt>滑棒（slide / bottleneck）</dt><dd>用玻璃瓶颈或金属管在琴弦上滑动，发出连续变化的音高</dd>
+    <dt>呼应</dt><dd>一方“问”、一方“答”的音乐结构，来自非洲音乐与劳动号子</dd>
+    <dt>shuffle</dt><dd>每拍分成“长、短”的摇晃律动，本质是三连音</dd>
+    <dt>boogie</dt><dd>一种上下来回的低音走法和节奏型，后来进入摇滚乐</dd>
+    <dt>停顿式（stop-time）</dt><dd>乐队只在第一拍齐奏一下，然后留出空白给歌手</dd>
+    <dt>快四、回转</dt><dd>12 小节的常见变体：第 2 小节提前到 IV；最后一小节走到 V，引出下一轮</dd>
+    <dt>juke joint</dt><dd>美国南方黑人社区的简陋小酒馆，早期布鲁斯的主要演出场所</dd>
+    <dt>种族唱片（race records）</dt><dd>1920–40 年代唱片业对面向黑人听众的唱片的称呼，1949 年被“R&amp;B”取代</dd>
+  </dl>
+
+</article>
+
+<footer class="credits">
+  <div class="wrap">
+    <h2>Credits</h2>
+    <dl>
+      <dt>插画</dt><dd>章首插画由 AI 生成</dd>
+      <dt>图解</dt><dd>图 1–8（地图、单弦琴、键盘、指板、呼应、节奏、编制、家谱）均为本书原创绘制</dd>
+      <dt>照片</dt><dd>全部来自维基共享资源（Wikimedia Commons），本书附带缩小后的副本，未裁切、未修改内容：<br>
+        W.C. Handy 肖像（1941）、Bessie Smith 肖像（1936）：Carl Van Vechten 摄，美国国会图书馆藏，公有领域；<br>
+        《St. Louis Blues》乐谱首页（1914）：公有领域；Ma Rainey 与乐队（1923）：美国公有领域；<br>
+        juke joint（1939）：Marion Post Wolcott 为美国农业安全局拍摄，公有领域；<br>
+        B.B. King（2009）：Tom Beetz 摄，CC BY 2.0</dd>
+      <dt>声音示例</dt><dd>本章全部 20 多个声音示例均由浏览器实时合成，旋律与伴奏为原创，无第三方素材</dd>
+      <dt>歌词示例</dt><dd>AAB 示例为本书原创仿写</dd>
+      <dt>曲目</dt><dd>仅提供推荐与收听链接，本书不包含任何录音；录音与作品版权归原权利人所有</dd>
+      <dt>授权</dt><dd>本章原创文字、图解与合成示例采用 CC BY-NC-SA 4.0，页面代码采用 MIT 许可证；第三方照片按各自授权使用，曲目、名称与商标不在此授权范围内</dd>
+      <dt>说明</dt><dd>曲目中标“约”的时间点为大致位置，不同版本的录音可能略有出入</dd>
+    </dl>
+    <div class="next"><span><a href="../intro/index.html" data-nav="intro">← Intro · 怎么听</a></span><span><a href="../a2-folk/index.html" data-nav="a2-folk">A2 · 民歌与乡村 →</a></span></div>
+  </div>
+</footer>
+
+<button class="stopfab" id="stopAll" type="button">停止声音</button>
+
+<script>
+/*__BLUES__*/
+
+</script>
+<script>
+document.querySelectorAll(".lab").forEach(l=>{const j=document.createElement("div");j.className="jbox";while(l.firstChild)j.appendChild(l.firstChild);l.appendChild(j);});
+</script>
+<script id="nav-guard">(()=>{document.querySelectorAll(".photo img, figure img").forEach(i=>{const hide=()=>{const f=i.closest("figure")||i.closest(".photo");if(f)f.style.display="none";};if(i.complete&&i.naturalWidth===0&&i.getAttribute("src"))hide();else i.addEventListener("error",hide);});})();</script>
+</body>
+</html>
