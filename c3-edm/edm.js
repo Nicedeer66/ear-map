@@ -122,7 +122,7 @@ const SONGS=[
   {side:"A",q:"Yellow Magic Orchestra Rydeen",title:"Rydeen",by:"Yellow Magic Orchestra",yr:"1979",style:"日本电子流行",
    txt:"日本乐队 YMO 的器乐曲，明亮的合成器旋律和电子鼓。它和很多日本游戏音乐听起来是一家人。",listen:["旋律是用什么音色演奏的？","对照 Lab 07 的芯片音乐"]},
   {side:"A",q:"Frankie Knuckles Your Love",title:"Your Love",by:"Frankie Knuckles",yr:"1987",style:"芝加哥浩室",
-   txt:"浩室“教父”的经典之作。一条不断循环的合成器琶音，加上温暖的人声和四拍底鼓。",listen:["四拍底鼓和反拍的开镲，对照图 2","那条琶音循环了多久？"]},
+   txt:"浩室“教父”的经典之作，由 Jamie Principle 创作并演唱。一条不断循环的合成器琶音，加上温暖的人声和四拍底鼓。",listen:["四拍底鼓和反拍的开镲，对照图 2","那条琶音循环了多久？"]},
   {side:"A",q:"Phuture Acid Tracks",title:"Acid Tracks",by:"Phuture",yr:"1987",style:"酸性浩室",
    txt:"十多分钟几乎只有鼓机和一台 TB-303。它给“酸性浩室”起了名字。",listen:["303 什么时候变亮、什么时候变闷？对照图 3","对照 Lab 02 的“酸性”"]},
   {side:"A",q:"Rhythim Is Rhythim Strings of Life",title:"Strings of Life",by:"Rhythim Is Rhythim（Derrick May）",yr:"1987",style:"底特律 Techno",

@@ -177,7 +177,7 @@ const SONGS=[
   {side:"B",q:"Death Pull the Plug",title:"Pull the Plug",by:"Death",yr:"1988",style:"死亡金属",
    txt:"来自佛罗里达的 Death 被很多人看作死亡金属的奠基者之一。乐队核心 Chuck Schuldiner 后来把这种音乐带向了更复杂、更有旋律的方向。",
    listen:["人声是嘶吼：对照 Lab VI","鼓在冲击鼓和普通节奏之间切换"]},
-  {side:"B",q:"唐朝 梦回唐朝",title:"梦回唐朝",by:"唐朝乐队",yr:"1992",style:"中文重金属",
+  {side:"B",q:"唐朝 梦回唐朝",title:"梦回唐朝",by:"唐朝乐队",yr:"1991",style:"中文重金属",
    txt:"七分多钟，失真吉他、五声音阶的旋律和京剧式的唱腔。第一张中文重金属专辑的同名曲。",
    listen:["哪些段落来自金属，哪些来自中国的传统？对照 Lab XI","吉他独奏用了什么音阶？"]},
   {side:"B",q:"Dimmu Borgir Progenies of the Great Apocalypse",title:"Progenies of the Great Apocalypse",by:"Dimmu Borgir",yr:"2003",style:"交响黑金属",

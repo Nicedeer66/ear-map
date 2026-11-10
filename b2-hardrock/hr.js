@@ -144,7 +144,7 @@ const SONGS=[
   {side:"B",q:"Guns N' Roses Sweet Child o' Mine",title:"Sweet Child o' Mine",by:"Guns N' Roses",yr:"1987",style:"硬摇滚",
    txt:"那段开头的吉他分解琶音，据说原本是吉他手的手指热身练习。",
    listen:["开头的琶音一直在重复同一个形状，只是底下的和弦在变","对比 1980 年代的华丽：这首歌的声音更“脏”"]},
-  {side:"B",q:"黑豹 无地自容",title:"无地自容",by:"黑豹乐队",yr:"1992",style:"中文硬摇滚",
+  {side:"B",q:"黑豹 无地自容",title:"无地自容",by:"黑豹乐队",yr:"1991",style:"中文硬摇滚",
    txt:"失真吉他的前奏、高亢的嗓音和强力抒情的副歌，是 1990 年代初中文硬摇滚最有代表性的一首。",
    listen:["和《Dream On》比较：哪里像强力抒情曲？","吉他独奏用的还是五声音阶吗？"]},
   {side:"B",q:"B'z ultra soul",title:"ultra soul",by:"B'z",yr:"2001",style:"日本硬摇滚",
