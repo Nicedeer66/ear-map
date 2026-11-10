@@ -24,6 +24,7 @@
 | `body.html` 或 `src.html` | **源文件**：页面 HTML 模板，含 `/*__CSS__*/`、`/*__ENGINE__*/`、`/*__XXX__*/` 等占位符 |
 | `skin.css` | 这一章的皮肤（A1、A2、B3 的样式写在 `src.html` 里） |
 | `*.js` | 这一章的声音示例、图解、推荐曲目 |
+| `docs/` | README 用的截图（cover.jpg、chapters.jpg），不属于网站页面 |
 | `build.py` | 把模板、样式、音频引擎和章节脚本拼成 `index.html` |
 | `index.html` | **生成结果**，可直接打开，也是线上发布的文件 |
 | `img/` | 章首插画和第三方照片 |

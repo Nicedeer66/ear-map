@@ -1,10 +1,30 @@
 # 耳朵的地图 · A Map for Your Ears
 
+**[▶ 在线阅读 earmap.liangdeer.com](https://earmap.liangdeer.com)**
+
+[![在线阅读](https://img.shields.io/badge/在线阅读-earmap.liangdeer.com-1a1a1a)](https://earmap.liangdeer.com)
+![14 章](https://img.shields.io/badge/章节-14-b5452f)
+![330+ 示例](https://img.shields.io/badge/可听示例-330%2B-2f6f8f)
+![零依赖](https://img.shields.io/badge/依赖-0-4a7a3a)
+[![内容 CC BY-NC-SA 4.0](https://img.shields.io/badge/内容-CC%20BY--NC--SA%204.0-lightgrey)](LICENSE-CONTENT.md)
+[![代码 MIT](https://img.shields.io/badge/代码-MIT-lightgrey)](LICENSE)
+
+[![耳朵的地图 · 目录页](docs/cover.jpg)](https://earmap.liangdeer.com)
+
 一本可以**边读边听**的音乐入门书。不用识谱，不用会乐器。
 
 全书按一张双唱片编排，共 14 章：每一章讲一种音乐从哪里来、为什么听起来是这样，配有可以在浏览器里直接播放的示例、代码绘制的图解，以及一份推荐歌单。
 
 所有声音示例都由浏览器用 Web Audio **当场合成**，旋律和编配为原创（少数使用公有领域的传统歌曲，均已注明）。推荐曲目只提供 YouTube、网易云音乐、QQ 音乐的收听链接，**本书不包含任何录音**。
+
+| 14 章 | 约 11 小时阅读 | 330+ 个可听示例 | 140 幅图解 | 166 首推荐曲目 |
+|:-:|:-:|:-:|:-:|:-:|
+
+每一章都有自己的视觉风格，像一张唱片里风格各异的单曲：
+
+[![巴洛克、朋克、嘻哈三章的开头](docs/chapters.jpg)](https://earmap.liangdeer.com)
+
+> **In English:** *A Map for Your Ears* is a free, Chinese-language web book that teaches you to *hear* music — 14 chapters from the blues to today's pop, each with 20–40 sound demos synthesized live in your browser with the Web Audio API, hand-coded diagrams, and a curated listening list. No recordings, no frameworks, no build step: just static HTML. [Read it online →](https://earmap.liangdeer.com)
 
 ## 目录
 
