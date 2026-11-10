@@ -44,7 +44,7 @@ const coverPoints=[
   ["D1",203,595,-1],["D2",303,700]
 ];
 coverPoints.forEach(([code,x,y,side=1,gap=15])=>{
-  S(coverLabels,"text",{x:x+side*gap,y,"text-anchor":side===1?"start":"end"},BY[code].name);
+  S(coverLabels,"text",{x:x+side*gap,y,"text-anchor":side===1?"start":"end","data-code":code},BY[code].name);
 });
 
 (()=>{const g=document.getElementById("map-fig");if(!g)return;const COL=[[170,"SIDE A · 根源","A"],[320,"SIDE B · 摇滚家族","B"],[470,"SIDE C · 律动","C"],[610,"SIDE D · 今天","D"]];
